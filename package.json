@@ -1,5 +1,47 @@
 {
   "name": "ripoints",
+  "description": "Web software for the development of academic gamification of the Riwi training center",
+  "keywords": [
+    "training",
+    "center",
+    "coders",
+    "points",
+    "gamification",
+    "riwi",
+    "healthy competition"
+  ],
+  "authors": [
+    {
+      "name": "Javier Cómbita Téllez",
+      "email": "jcomte23@outlook.com",
+      "url": "https://javiercombita.com"
+    },
+    {
+      "name": "Mateo Alvarez Yepes",
+      "email": "matheoz2003@gmail.com",
+      "url": "https://github.com/mateoalvarez-dev"
+    },
+    {
+      "name": "Sebastian Moreno Echeverri",
+      "email": "sebastianmorenoecheverri@gmail.com",
+      "url": "https://github.com/Cvaz007"
+    },
+    {
+      "name": "Cristian Javier Martínez Torres",
+      "email": "charlsmaritz@gmail.com",
+      "url": "https://github.com/cristianbyte"
+    },
+    {
+      "name": "Hector Alejandro Montaña",
+      "email": "hectoalemf@hotmail.com",
+      "url": "https://github.com/ralexale"
+    },
+    {
+      "name": "Jhoan Esteban Perez Herrera",
+      "email": "estebani1421@gmail.com",
+      "url": "https://desarrollador.com"
+    }
+  ],
   "private": true,
   "version": "0.0.0",
   "type": "module",
