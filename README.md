@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://purepng.com/public/uploads/large/purepng.com-gold-coinsflatcoinsroundmetalgold-1421526479322px4ti.png" width="300" alt="logo"></p>
 
-<p align="center">Web software for the development of academic gamification of the Riwi training center.</p>
+<p align="center">Software web para el desarrollo de gamificación académica del centro de formación Riwi.</p>
 
 ## Cómo Utilizar
 
