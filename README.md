@@ -40,13 +40,11 @@
 
 ## Autor
 
-Este proyecto fue creado por **[Javier Cómbita Téllez](https://javiercombita.com/)**.
-
-Si tienes preguntas o comentarios sobre el proyecto, puedes contactar a Javier Cómbita Téllez en <a href="mailto:jcomte23@outlook.com" target="_blank">Jcomte23@outlook.com</a>
+Este proyecto fue creado por **[Javier Cómbita Téllez](https://javiercombita.com)**, **[Mateo Alvarez Yepes](https://github.com/mateoalvarez-dev)**, **[Sebastian Moreno Echeverri](https://github.com/Cvaz007)**, **[Cristian Javier Martínez Torres](https://github.com/cristianbyte)**, **[Hector Alejandro Montaña](https://github.com/ralexale)**  and **[Jhoan Esteban Perez Herrera](https://desarrollador.com)**. 
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```deploy``` main
+¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```deploy```
 
 ## Estado del Proyecto
 
