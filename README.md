@@ -46,7 +46,7 @@ Si tienes preguntas o comentarios sobre el proyecto, puedes contactar a Javier C
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama main
+¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```deploy``` main
 
 ## Estado del Proyecto
 
