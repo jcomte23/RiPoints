@@ -44,7 +44,7 @@ Este proyecto fue creado por **[Javier Cómbita Téllez](https://javiercombita.c
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```deploy```
+¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```develop```
 
 ## Estado del Proyecto
 
