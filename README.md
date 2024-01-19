@@ -38,7 +38,7 @@
    ```
 
 
-## Autor
+## Autores
 
 Este proyecto fue creado por **[Javier Cómbita Téllez](https://javiercombita.com)**, **[Mateo Alvarez Yepes](https://github.com/mateoalvarez-dev)**, **[Sebastian Moreno Echeverri](https://github.com/Cvaz007)**, **[Cristian Javier Martínez Torres](https://github.com/cristianbyte)**, **[Hector Alejandro Montaña](https://github.com/ralexale)**  and **[Jhoan Esteban Perez Herrera](https://desarrollador.com)**. 
 
