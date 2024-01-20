@@ -7,20 +7,43 @@ body {
 }
 
 .header{
+    position: absolute;
     height: 40vh;
     background-image: url(../../img/img_desktop/background_desktop.webp);
     background-size: cover; /* Hace que la imagen cubra completamente el contenedor */
     background-position: center; /* Centra la imagen dentro del contenedor */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    z-index: -1;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+main section{
+    width: 50vw;
+    height: 100vh;
 }
 
 @media screen and (max-width: 576px)  {
     body{
         background-image: url(../../img/img_mobile/background_mobile.webp);
         background-repeat: no-repeat;
+        background-size: 100% auto; 
+        margin: 0; 
     }
     
     .header{
         display: none;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    main section{
+        width: 100vw;
     }
 }
