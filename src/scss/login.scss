@@ -8,19 +8,19 @@ body {
 
 .header{
     height: 40vh;
+    background-image: url(../../img/img_desktop/background_desktop.webp);
+    background-size: cover; /* Hace que la imagen cubra completamente el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
 }
-
-.main{
-    height: 60vh;
-}
-
 
 @media screen and (max-width: 576px)  {
-    .header{
-        height: 50vh;
+    body{
+        background-image: url(../../img/img_mobile/background_mobile.webp);
+        background-repeat: no-repeat;
     }
     
-    .main{
-        height: 50vh;
+    .header{
+        display: none;
     }
 }
