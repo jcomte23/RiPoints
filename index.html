@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,41 +21,35 @@
   <title>Codigo R</title>
 </head>
 
-<body>
-  <header class="container-fluid header">
+  <body>
+    <header class="container-fluid header"></header>
 
-  </header>
+    <main class="main">
+      <section
+        class="d-flex flex-column justify-content-center align-items-center"
+      >
+        <article>
+          <h1 id="welcome" class="text-white ">Bienvenido a</h1>
+        </article>
+        <figure id="codigoR">
+          <h1>Código</h1>
+          <img src="./public/img/img_desktop/r-logo.svg" alt="img codigoR" />
+        </figure>
+        <figure>
+          <img
+            src="./img/img_desktop/saly_desktop.webp"
+            alt="img login"
+            width="464"
+            height="464"
+          />
+        </figure>
+      </section>
 
-  <main class="main">
-    <section class="d-flex flex-column justify-content-evenly align-items-center">
-      <article class="">
-        <h1>Ripoints</h1>
-      </article>
-      <figure class="d-flex flex-column justify-content-center align-items-center">
-        <img class="logo-login" src="./img/img_desktop/saly_desktop.webp" alt="img login" width="410" height="343">
-      </figure>
-    </section>
-    <section class="d-flex flex-column justify-content-center align-items-center">
-      <form action="./src/pages/coder/index.html" class="row g-3 card">
-        <div class="col-12">
-          <label for="user" class="form-label">User</label>
-          <input type="text" class="form-control" id="user">
-        </div>
-        <div class="col-12">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
-      </form>
-    </section>
-  </main>
+      <section
+        class="d-flex flex-column justify-content-center align-items-center" id="sectionForm"></section>
+    </main>
 
-
-
-  <script type="module" src="./src/js/translator.js"></script>
-  <script type="module" src="./src/js/login.js"></script>
-</body>
-
+    <script type="module" src="./src/js/translator.js"></script>
+    <script type="module" src="./src/js/login.js"></script>
+  </body>
 </html>
