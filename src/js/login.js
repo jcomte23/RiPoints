@@ -1,5 +1,5 @@
-import "../scss/login.scss";
 import * as bootstrap from "bootstrap";
+import "../scss/login.scss";
 import { showLogin } from "../components/login";
 import { getAllUsers } from "./data";
 import { showValidation, showValidationAccount } from "./validations/validationForm";
@@ -8,7 +8,7 @@ const sectionForm = document.getElementById("sectionForm");
 showLogin(sectionForm);
 let listUsersCache;
 document.addEventListener("DOMContentLoaded", async () => {
-   listUsersCache = await getAllUsers();
+  listUsersCache = await getAllUsers();
 });
 
 
