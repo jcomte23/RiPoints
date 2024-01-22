@@ -59,7 +59,7 @@ export const showLogin = (element) => {
             <label class="btn" for="btn-Admin">Admin</label>
           </div>
           <div class="col-12 d-flex justify-content-center mb-lg-4">
-            <button id="btn-login" type="submit" class="btn btn-primary w-75">Iniciar sesión</button>
+            <button id="btn-login" type="button" class="btn btn-primary w-75">Iniciar sesión</button>
           </div>
         </form>
   `;
