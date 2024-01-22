@@ -11,3 +11,21 @@ $theme-colors: (
     "yellow": $yellow,
     "tomato": $tomato,
 );
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.uno{
+    border: 1px solid red;
+}
+
+.dos{
+    border: 1px solid blue;
+}
+
+.tres{
+    border: 1px solid yellow;
+}
