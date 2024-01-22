@@ -1,14 +1,16 @@
-import "../scss/login.scss";
 import * as bootstrap from "bootstrap";
+import "../scss/login.scss";
 import { showLogin } from "../components/login";
 import { getAllUsers } from "./data";
-import { showValidation } from "./validations/validationForm";
+import { showValidation, showValidationAccount } from "./validations/validationForm";
 
 const sectionForm = document.getElementById("sectionForm");
 showLogin(sectionForm);
+let listUsersCache;
+document.addEventListener("DOMContentLoaded", async () => {
+  listUsersCache = await getAllUsers();
+});
 
-getAllUsers();
-const listUsersCache = JSON.parse(localStorage.getItem("usersCache"));
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
@@ -30,9 +32,15 @@ form.addEventListener("submit", (event) => {
   });
 
   if (!userSerch) {
-    alert("Usuario o contraseña incorrecta");
-  } else alert("Todo correcto");
+    showValidationAccount(form);
+  } else redirect(userSerch.rol);
 });
+
+const redirect = (rol) => {
+  location.href = `src/pages/${rol}/index.html`;
+}
+
+
 
 
 
