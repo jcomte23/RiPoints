@@ -27,6 +27,17 @@ main section{
     height: 100vh;
 }
 
+figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-login{
+    width: 70%;
+    height: auto;
+}
+
 @media screen and (max-width: 576px)  {
     body{
         background-image: url(../../img/img_mobile/background_mobile.webp);
