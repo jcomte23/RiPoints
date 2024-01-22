@@ -1,5 +1,4 @@
-
-export const getAllUsers = async() => {
-  const users = await fetch("../data/users.json");
-  console.log(users);
+export const getAllUsers = async () => {
+  const data = await fetch("/src/js/data/users.json").then(response => response.json());
+  return data.users;
 };

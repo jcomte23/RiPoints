@@ -50,7 +50,16 @@ main section{
     #btn-login{
         height: 54px;
         box-shadow: 0px 4px 19px 0px rgba(119 ,147,65,0.3);
-        margin-top: 10%;
+        
+    }
+
+    #validationAccount{
+        height: 50px;
+        color: red;
+    }
+
+    .danger{
+        outline: 1px solid red;
     }
 }
 
