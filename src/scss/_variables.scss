@@ -12,6 +12,12 @@ $theme-colors: (
     "tomato": $tomato,
 );
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .uno{
     border: 1px solid red;
 }
