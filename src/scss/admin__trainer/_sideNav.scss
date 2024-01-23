@@ -1,0 +1,39 @@
+@use "../variables" as v;
+
+.side-nav {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 0 10px;
+    width: 250px;
+
+    .container__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        padding: 10px;
+        width: 100%;
+
+        li {
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            font-size: 26px;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        li:hover {
+            background: linear-gradient(
+                270deg,
+                rgba(255, 255, 255, 0.21) -244.61%,
+                rgba(255, 255, 255, 0) 109.32%
+            );
+        }
+    }
+}

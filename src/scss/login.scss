@@ -39,10 +39,13 @@ main {
 
 #form {
     border-radius: 40px;
-    height: 60vh;
+    height: 65vh;
+    min-height: 500px;
     width: 540px;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
-    padding: 10px 20px;
+    padding: 10px 30px;
 
     .container__inputs {
         display: flex;
@@ -66,6 +69,7 @@ main {
 
     #btn-login {
         height: 54px;
+
         box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.3);
     }
 
@@ -144,7 +148,6 @@ main {
             width: 100%;
             justify-content: center;
         }
-
     }
 
     body {
@@ -154,23 +157,20 @@ main {
         background-size: cover;
         background-position: center;
         margin: 0;
-
-
     }
 
     .character {
         background-image: url("/img/img_mobile/saly_mobile.webp");
         background-position: center;
         position: absolute;
-
-
+        top: 1dvh;
     }
 
-    .container__welcome{
+    .container__welcome {
         display: flex;
         justify-content: center;
         align-items: center;
-        #welcome{
+        #welcome {
             width: 60%;
             height: 25%;
         }
@@ -182,13 +182,12 @@ main {
             justify-content: center;
             align-items: center;
 
-
             h1 {
                 font-size: 34px;
                 font-weight: bold;
                 height: auto;
             }
-            img{
+            img {
                 height: 60px;
                 width: 60px;
                 margin-bottom: 5px;
@@ -196,15 +195,12 @@ main {
         }
     }
 
-
-
     #form {
         width: 90%;
         height: 40dvh;
-        display: flex;
-        flex-direction: column;
+        min-height: 350px;
         border-radius: 10px;
-        gap: 10px;
+        gap: 5%;
         .form-control {
             height: 66px;
         }
