@@ -4,7 +4,7 @@ import Backend from 'i18next-http-backend';
 let language
 
 function updateContent() {
-    const elements = document.querySelectorAll(".translate");
+    const elements = document.querySelectorAll("[data-i18n]");
     elements.forEach((el) => {
         const key = el.getAttribute("data-i18n");
         el.innerHTML = i18next.t(key);
