@@ -1,6 +1,6 @@
 export const showLogin = (element) => {
-  //esa accion no se que tan buena sea, ya que se ejecuta sin validar
-  element.innerHTML = `
+    //esa accion no se que tan buena sea, ya que se ejecuta sin validar
+    element.innerHTML = `
   <form class="card needs-validation" id="form" novalidate>
 
         <p id="login">Iniciar sesión</p>
