@@ -24,19 +24,15 @@ main {
     height: 100%;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 
     & :nth-child(1) {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
-}
-
-main section {
-    width: 50vw;
-    height: 100vh;
 }
 
 #form {
@@ -44,29 +40,40 @@ main section {
     height: 70%;
     width: 540px;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    padding: 10px 20px;
 
-    .form-control {
-        height: 66px;
-    }
+    .container__inputs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        justify-content: start;
 
-    .form-label {
-        font-size: 28px;
+        input {
+            height: 66px;
+        }
+        label {
+            font-size: 28px;
+        }
     }
 
     #login {
         font-weight: 500;
-        margin-top: 15%;
+        font-size: 64px;
     }
 
     #btn-login {
         height: 54px;
         box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.3);
-
     }
 
     #validationAccount {
-        height: 50px;
         color: red;
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        width: 100%;
+        margin-bottom: 5px;
     }
 
     .danger {
@@ -83,7 +90,8 @@ main section {
 #welcome {
     font-size: 80px;
     font-weight: bold;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
 }
 
 #codigoR {
@@ -102,7 +110,7 @@ main section {
 }
 
 .character {
-    background-image: url(../../public/img/img_desktop/saly_desktop.webp);
+    background-image: url("/img/img_desktop/saly_desktop.webp");
     background-position: center;
     background-repeat: no-repeat;
     width: 464px;
@@ -114,28 +122,35 @@ main section {
         display: none !important;
     }
 
-
     main {
         flex-direction: column;
         align-items: center;
-        padding: 40px;
-
+        justify-content: center;
+        width: 100%;
         & :nth-child(1) {
             display: flex;
             justify-content: start;
         }
+
+        & :nth-child(2) {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
     }
 
-
     body {
-        background-image: url(../../img/img_mobile/background_mobile.webp);
+        flex-direction: column;
+        background-image: url("/img/img_mobile/background_mobile.webp");
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: cover;
+        background-position: center;
         margin: 0;
+        min-height: 100dvh;
     }
 
     .character {
-        background-image: url(../../public/img/img_mobile/saly_mobile.webp);
+        background-image: url("/img/img_mobile/saly_mobile.webp");
         background-position: center;
         background-repeat: no-repeat;
         width: 305px;
@@ -154,30 +169,41 @@ main section {
     }
 
     #form {
-        display: none !important;
+        margin-bottom: 10px;
+        width: 90%;
+        height: 80%;
+
+        border-radius: 10px;
+
+        justify-content: center;
 
         .form-control {
             height: 66px;
         }
 
         .form-label {
-            font-size: 28px;
+            display: none;
         }
 
         #login {
+            font-size: 24px;
             font-weight: 500;
-            margin-top: 15%;
+            text-align: start;
         }
 
         #btn-login {
             height: 54px;
+            display: flex;
+            font-size: 24px;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.3);
-
         }
 
         #validationAccount {
             height: 50px;
             color: red;
+            display: none;
         }
 
         .danger {

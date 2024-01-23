@@ -12,20 +12,20 @@ $theme-colors: (
     "tomato": $tomato,
 );
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.uno{
+.uno {
     border: 1px solid red;
 }
 
-.dos{
+.dos {
     border: 1px solid blue;
 }
 
-.tres{
+.tres {
     border: 1px solid yellow;
 }
