@@ -22,6 +22,67 @@
 </head>
 
 <body>
+    <nav class="navbar fixed-top" >
+        <!-- Bootstrap settings: don't touch -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+        <!-- content side menu -->
+        <div class="offcanvas-body">
+          <div class="menu__header">
+            <div class="menu__header--lang">
+              <img src="/img/img_globales/EN.png" alt="">
+              <h4>EN</h4>
+            </div>
+            <a  href="https://moodle.riwi.io" class="btn btn-primary" target="_blank" >Ir a moodle</a>
+          </div>
+  
+          <a href="./coder.html" class="btn btn-primary btn-block bi bi-arrow-left" > Log Out</a>
+        </div>
+      </nav>
+    
+      <img src="/img/img_globales/menu.png" alt="" class="menu__button navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" />
+  
+      <section>
+        <div class="containerCoder">
+          <h3 class="coder__header" >Your score</h3>
+          <div class="coder__profile profile__danger">
+            <div class="coder__profile__clanShiled profile__danger"></div>
+          </div>
+          <h4 class="coder__name" >Jackeline Narvaez</h4>
+        </div>
+      </section>
+        <div class="floatingBackground">
+          <div class="coder">
+            <h3 class="coder__header" >Your score</h3>
+            <div class="coder__profile profile__danger">
+              <div class="coder__profile__clanShiled profile__danger"></div>
+            </div>
+            <h4 class="coder__name" >Jackeline Narvaez</h4>  
+            <h5 class="coder__points--title">Total Points</h5>
+            <div class="coder__points">
+                <div class="coder__points__coin">
+                    
+                </div>
+
+                <span  id="counter" >580</span>
+            </div>
+          </div>
+          <!-- Floating background -->
+          <div class="graphic__month">
+            <canvas id="graphic"></canvas>
+          </div>
+        </div>
+
+
+
+
+
+    <script type="module" src="/src/js/coder.js"></script>
+    <script type="module" src="/src/js/coderAnimation.js"></script>
     
 </body>
 </html>

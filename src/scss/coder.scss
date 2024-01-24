@@ -1,0 +1,314 @@
+@import "bootstrap/scss/bootstrap";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.menu__button {
+  width: 5rem;
+  height: 5rem;
+  padding: 1.5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  filter: invert(100%);
+}
+
+section {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+  background-color: #6b5cff;
+  background-image: url(/img/img_globales/background-mobile.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.containerCoder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 45vh;
+  position: fixed;
+}
+
+.containerCoder .coder__header {
+  color: white;
+  font-family: ubuntu-bold;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  text-shadow: 0 0.2rem 0.3rem black;
+}
+
+.coder__name {
+  color: white;
+  font-weight: 800;
+  font-size: 1.8rem;
+  height: 5vh;
+  text-shadow: 0 0.2rem 0.3rem black;
+}
+
+.coder__profile {
+  position: relative;
+  min-width: calc(20vh + 3vw);
+  min-height: calc(20vh + 3vw);
+  aspect-ratio: 1/1;
+  background-image: url(/img/img_globales/avatar.jpg);
+  background-size: contain;
+  border-radius: 50%;
+  border: 0.5rem solid white;
+  box-shadow: 0 0 0.2rem black;
+  margin-bottom: 1rem;
+}
+
+.coder__profile__clanShiled {
+  position: absolute;
+  width: calc(9vh + 1vw);
+  height: calc(9vh + 1vw);
+  background-color: white;
+  background-image: url(/img/img_globales/clanShield.jpg);
+  background-position: center;
+  background-size: contain;
+  bottom: -1rem;
+  right: -1rem;
+  border-radius: 50%;
+  border: 0.5rem solid white;
+}
+
+.coder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: 30vh;
+  width: 45%;
+  margin-top: 3vh;
+}
+
+.coder__points--title {
+  font-weight: light;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 0;
+}
+
+.coder__points {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.coder__points__coin {
+  width: 7rem;
+  height: 7rem;
+  margin-top: -0.5rem;
+  border-radius: 50%;
+  background-image: url(/img/img_globales/coin.webp);
+  background-size: contain;
+  background-position: center;
+  flex-direction: row-reverse;
+}
+
+.floatingBackground {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: -10vh;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #181e4b;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.offcanvas {
+  background-color: #6b5cff;
+  max-width: 80%;
+}
+
+.btn-close {
+  filter: invert(100%);
+  display: none;
+}
+
+.floatingBackground :is(.coder__header, .coder__profile, .coder__name) {
+  display: none;
+}
+
+/* NAVBAR */
+
+.offcanvas-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu__header {
+  width: 100%;
+}
+
+.menu__header--lang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  color: white;
+}
+.menu__header--lang h4 {
+  font-size: 2.2rem;
+}
+
+.menu__header--lang img {
+  width: 4rem;
+}
+
+.btn-primary {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: #181e4b;
+}
+
+.offcanvas-body button {
+  margin-bottom: 1rem;
+}
+
+/* GRAPHICS */
+
+.graphic__month {
+  width: 80%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphic__month #graphic {
+  height: 30vh !important;
+}
+
+.containerCoder__animation {
+  view-timeline-name: --profile;
+  view-timeline-axis: block;
+
+  animation-timeline: --profile;
+  animation-name: show;
+  animation-range: entry 100% cover 95%;
+  animation-fill-mode: both;
+}
+
+.profile__danger {
+  animation: danger 1s infinite ease;
+}
+
+@keyframes danger {
+  0%,
+  100% {
+    border: 0.5rem solid white;
+    box-shadow: 0 0 0.2rem black;
+  }
+  50% {
+    border: 0.5rem solid rgb(255, 36, 36);
+    box-shadow: 0 0 1rem rgb(255, 36, 36);
+  }
+}
+
+@keyframes show {
+  60% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+@media (orientation: landscape) {
+  .floatingBackground :is(.coder__profile, .coder__name) {
+    display: initial;
+  }
+
+  .coder {
+    justify-content: center;
+  }
+
+  .coder__name {
+    text-align: center;
+    height: auto;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  section {
+    position: absolute;
+    background-image: url(/img/img_globales/backgroundPC.svg);
+    background-size: cover;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .coder {
+    position: relative;
+    width: 40%;
+    height: 50vh;
+    justify-content: space-evenly;
+  }
+
+  .coder__points {
+    flex-direction: row;
+    height: auto;
+    transform: translate(-0.8rem, -1rem);
+  }
+
+  .coder__points img {
+    width: 6rem;
+  }
+
+  .floatingBackground {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 80%;
+    height: 90%;
+    padding: 0 5%;
+    margin-top: unset;
+    padding-top: unset;
+    border-radius: 1rem;
+    background-color: #181e4b;
+  }
+  .graphic__month {
+    width: 60%;
+  }
+}
