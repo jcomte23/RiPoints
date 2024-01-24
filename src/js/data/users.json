@@ -7,6 +7,14 @@
       "lastname": "Moreno",
       "password": "12345m",
       "userName": "12345"
+    },
+    {
+      "id": 1,
+      "rol": "admin",
+      "name": "Capitain",
+      "lastname": "America",
+      "password": "12345",
+      "userName": "admin"
     }
   ]
 }
