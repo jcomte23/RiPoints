@@ -1,75 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../scss/tables.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Web software for the development of academic gamification of the Riwi training center"
-    />
-    <meta
-      name="keywords"
-      content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH"
-    />
-    <meta
-      name="sitedomain"
-      content="https://ripoints.io/src/pages/admin/index.html"
-    />
+    <meta name="description"
+        content="Web software for the development of academic gamification of the Riwi training center" />
+    <meta name="keywords"
+        content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH" />
+    <meta name="sitedomain" content="https://ripoints.io/src/pages/admin/index.html" />
     <meta name="organization" content="riwi" />
-    <meta
-      name="author"
-      content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera"
-    />
-    <meta
-      name="designer"
-      content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera"
-    />
+    <meta name="author"
+        content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
+    <meta name="designer"
+        content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
     <meta name="revisit-after" content="15days" />
     <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon" />
     <title>Admin</title>
-  </head>
+</head>
 
-  <body class="bg-secondary" id="body-dashboard">
+<body class="bg-secondary" id="body-dashboard">
     <aside class="side-nav"></aside>
 
     <main class="container__table" id="containerTable">
-      <form class="d-flex flex-column ">
-        <h2>Corders</h2>
-        <input
-          class="my-2 search"
-          type="text"
-          name=""
-          id="searchKeywords"
-          placeholder="Search"
-        />
-        <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
-          <label for="dateStart">Desde:</label>
-          <input type="date" name="" id="dateStart" />
-          <label for="dateEnd">Hasta:</label>
-          <input type="date" name="" id="dateEnd" />
-        </div>
-      </form>
-
-      <!-- Seccion para la tabla de clanes -->
-      <section class="p-1">
-        <article class="bg-secondary rankings-clanes text-white px-4">
-            <h1>ranking clanes</h1>
-        </article>
-        <article class="">
-            <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-primary rounded-pill mx-4">Posicion</button>
-                <button type="button" class="btn btn-primary rounded-pill mx-5 w-100">Clan</button>
-                <button type="button" class="btn btn-primary rounded-pill mx-4">Puntos</button>
+        <form class="d-flex flex-column ">
+            <h2>Corders</h2>
+            <input class="my-2 search" type="text" name="" id="searchKeywords" placeholder="Search" />
+            <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
+                <label for="dateStart">Desde:</label>
+                <input type="date" name="" id="dateStart" />
+                <label for="dateEnd">Hasta:</label>
+                <input type="date" name="" id="dateEnd" />
             </div>
-        </article>
-    </section>
+        </form>
+
+        <!-- Seccion para la tabla de clanes -->
+        <section class="p-1">
+            <article class="bg-secondary rankings-clanes text-white px-4">
+                <h1>ranking clanes</h1>
+            </article>
+            <article class="">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary rounded-pill mx-4">Posicion</button>
+                    <button type="button" class="btn btn-primary rounded-pill mx-5 w-100">Clan</button>
+                    <button type="button" class="btn btn-primary rounded-pill mx-4">Puntos</button>
+                </div>
+            </article>
+        </section>
     </main>
 
     <script type="module" src="../../js/main.js"></script>
     <script src="../../components/side-nav.js"></script>
     <!-- <script type="module" src="../../components/table-coders.js"></script> -->
-  </body>
+</body>
+
 </html>
