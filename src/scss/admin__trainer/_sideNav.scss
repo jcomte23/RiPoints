@@ -13,10 +13,10 @@
     .container__links {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 10px;
+        justify-content: start;
+        gap: .8rem;
         list-style: none;
-        padding: 0 2rem;
+        padding: 0;
         width: 100%;
 
         li {
@@ -24,7 +24,7 @@
             cursor: pointer;
             display: flex;
             font-size: 26px;
-            gap: 10px;
+            gap: .5rem;
             justify-content: start;
             padding: 10px;
             width: 100%;
@@ -36,6 +36,10 @@
                 rgba(255, 255, 255, 0.21) -244.61%,
                 rgba(255, 255, 255, 0) 109.32%
             );
+        }
+        li img{
+            min-width: 2rem;
+            min-height: 2rem;
         }
     }
 }
