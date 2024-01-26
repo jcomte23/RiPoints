@@ -53,4 +53,6 @@ sideNavSelector.addEventListener('click',(event)=> {
             break;
     }}
 )
+//default
+showCoders(showView)
 
