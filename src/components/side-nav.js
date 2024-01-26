@@ -1,3 +1,7 @@
+import { showClans } from "./clans";
+import { showCoders } from "./coders";
+import { showDashboard } from "./dashboard";
+
 const sideNav = () => {
     const nav = document.querySelector(".side-nav");
 
@@ -29,3 +33,24 @@ const sideNav = () => {
 };
 
 sideNav();
+const showView = document.getElementById('containerTable')
+const sideNavSelector = document.getElementsByTagName('ul')[0]
+sideNavSelector.addEventListener('click',(event)=> {
+
+    let selected = event.target
+    let ulList = Array.from(selected.parentElement.children);
+    let position = ulList.indexOf(selected);
+
+    switch (position) {
+        case 0:
+            showDashboard(showView)
+            break;
+        case 1:
+            showClans(showView)
+            break;
+        default:
+            showCoders(showView)
+            break;
+    }}
+)
+

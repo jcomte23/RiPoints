@@ -1,3 +1,18 @@
+export const showCoders = (element) => {
+    element.innerHTML = ` 
+    <form class="d-flex flex-column ">
+    <h2>Corders</h2>
+    <input class="my-2 search" type="text" name="" id="searchKeywords" placeholder="Search" />
+    <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
+        <label for="dateStart">Desde:</label>
+        <input type="date" name="" id="dateStart" />
+        <label for="dateEnd">Hasta:</label>
+        <input type="date" name="" id="dateEnd" />
+    </div>
+    </form> 
+    `
+}
+
 export const containerTable = document.getElementById("containerTable");
 
 //creando form: no se usa innerHTML para sguir lineamientos de seguridad.
