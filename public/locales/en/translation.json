@@ -1,4 +1,8 @@
 {
     "code":"code",
+    "login":"Sign in",
+    "login_title":"login",
+    "password":"password",
+    "user":"user",
     "welcome_to": "welcome to"
 }

@@ -1,4 +1,8 @@
 {
     "code":"código",
+    "login":"iniciar sesión",
+    "login_title":"login",
+    "password":"contraseña",
+    "user":"usuario",
     "welcome_to": "bienvenido a"
 }
