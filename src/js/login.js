@@ -23,12 +23,9 @@ form.addEventListener("submit", (event) => {
     if (!value) return showValidation();
     user[key] = value;
   }
+
   const userSerch = listUsersCache.find((userCache) => {
-    return (
-      userCache.user === user.user &&
-      userCache.password === user.password &&
-      userCache.options === user.options
-    );
+      return (userCache.userName == user.userName) && (userCache.password === user.password)
   });
 
   if (!userSerch) {
