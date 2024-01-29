@@ -1,5 +1,9 @@
 {
+    "clans":"clanes",
     "code":"código",
+    "developers":"desarrolladores",
+    "dashboard":"panel",
+    "load_docs":"carga docs",
     "login":"iniciar sesión",
     "login_title":"Accede",
     "password":"contraseña",

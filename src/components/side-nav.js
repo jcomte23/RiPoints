@@ -18,19 +18,20 @@ const sideNav = () => {
     <ul class="container__links">
         <li>
             <img src="/icons/dashboard-icon.svg" alt="dashboard-icon" />
-            Dashbard
+            <span data-i18n="dashboard" class="text-capitalize"></span>
+            
         </li>
         <li>
             <img src="/icons/clanes-icon.svg" alt="clanes" />
-            Clanes
+            <span data-i18n="clans" class="text-capitalize"></span>
         </li>
         <li>
             <img src="/icons/coder-icon.svg" alt="coders" />
-            Coders
+            <span data-i18n="developers" class="text-capitalize"></span>
         </li>
         <li>
             <img src="/icons/file_upload_white.svg" alt="file" width="25" height="25" id="abc"/>
-            Carga Docs
+            <span data-i18n="load_docs" class="text-capitalize"></span>
         </li>
     </ul>
     
