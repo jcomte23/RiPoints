@@ -38,7 +38,7 @@ export const showLogin = (element) => {
         </div>
          
           <div class="col-12 d-flex justify-content-center mb-lg-4">
-            <button id="btn-login" type="submit" class="btn btn-primary w-100" data-i18n="login">Iniciar sesión</button>
+            <button id="btn-login" type="submit" class="btn btn-primary w-100 text-capitalize" data-i18n="login">Iniciar sesión</button>
           </div>
         </form>
   `;

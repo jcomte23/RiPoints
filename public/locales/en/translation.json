@@ -1,5 +1,9 @@
 {
+    "clans":"clans",
     "code":"code",
+    "developers":"developers",
+    "dashboard":"dashboard",
+    "load_docs":"load docs",
     "login":"Sign in",
     "login_title":"login",
     "password":"password",

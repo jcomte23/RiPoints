@@ -1,7 +1,11 @@
 {
+    "clans":"clanes",
     "code":"código",
+    "developers":"desarrolladores",
+    "dashboard":"panel",
+    "load_docs":"carga docs",
     "login":"iniciar sesión",
-    "login_title":"login",
+    "login_title":"Accede",
     "password":"contraseña",
     "user":"usuario",
     "welcome_to": "bienvenido a"
