@@ -7,26 +7,21 @@ const sideNav = () => {
   const nav = document.querySelector(".side-nav");
 
   nav.innerHTML = `
-    
     <figure>
-        <img
-            src="/img/img_globales/rlogo-r-white.svg"
-            alt="Logo riwi R"
-        />
+        <img src="/img/img_globales/rlogo-r-white.svg" alt="Logo riwi R" width="183" height="183"/>
     </figure>
 
     <ul class="container__links">
         <li>
-            <img src="/icons/dashboard-icon.svg" alt="dashboard-icon" />
+            <img src="/icons/dashboard-icon.svg" alt="dashboard-icon" width="24" height="23" />
             <span data-i18n="dashboard" class="text-capitalize"></span>
-            
         </li>
         <li>
-            <img src="/icons/clanes-icon.svg" alt="clanes" />
+            <img src="/icons/clanes-icon.svg" alt="clanes" width="25" height="25" />
             <span data-i18n="clans" class="text-capitalize"></span>
         </li>
         <li>
-            <img src="/icons/coder-icon.svg" alt="coders" />
+            <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
             <span data-i18n="developers" class="text-capitalize"></span>
         </li>
         <li>
@@ -34,13 +29,13 @@ const sideNav = () => {
             <span data-i18n="load_docs" class="text-capitalize"></span>
         </li>
     </ul>
-    
     `;
 };
 
 sideNav();
 const showView = document.getElementById("containerTable");
 const sideNavSelector = document.getElementsByTagName("ul")[0];
+
 sideNavSelector.addEventListener("click", (event) => {
   let selected = event.target;
   let ulList = Array.from(selected.parentElement.children);
@@ -60,5 +55,6 @@ sideNavSelector.addEventListener("click", (event) => {
       break;
   }
 });
+
 //default
 showCoders(showView);
