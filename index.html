@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Web software for the development of academic gamification of the Riwi training center"
-    />
-    <meta
-      name="keywords"
-      content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH"
-    />
-    <meta name="sitedomain" content="https://ripoints.io" />
-    <meta name="organization" content="riwi" />
-    <meta
-      name="author"
-      content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera"
-    />
-    <meta
-      name="designer"
-      content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera"
-    />
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta name="revisit-after" content="15days" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <title>Codigo R</title>
-  </head>
 
-  <body>
-    <header class="container-fluid header"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Web software for the development of academic gamification of the Riwi training center" />
+  <meta name="keywords"
+    content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH" />
+  <meta name="sitedomain" content="https://ripoints.io" />
+  <meta name="organization" content="riwi" />
+  <meta name="author"
+    content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
+  <meta name="designer"
+    content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="revisit-after" content="15days" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <title>Codigo R</title>
+</head>
 
-    <main class="main">
-      <section>
-        <div class="container__welcome">
-            <h1 id="welcome" class="text-white">Bienvenido a</h1>
+<body>
+  <header class="container-fluid header"></header>
+  <div class="position-absolute top-0 end-0 py-6 px-2 mt-2">
+    <button type="button" class="btn btn-outline-light text-center px-1" onclick="changeLanguage('es')">
+      <span class="d-flex flex-column px-1 pt-1 pb-1">
+        <span class="pb-2">ES</span>
+        <span>Español</span>
+      </span>
+    </button>
+    <button type="button" class="btn btn-outline-light text-center px-1" onclick="changeLanguage('en')">
+      <span class="d-flex flex-column px-1 pt-1 pb-1">
+        <span class="pb-2">EN</span>
+        <span>English</span>
+      </span>
+    </button>
+  </div>
 
-          <figure id="codigoR">
-            <h1>Código</h1>
-            <img src="/img/img_desktop/r-logo.svg" alt="img codigoR" />
-          </figure>
-          
-        </div>
+  <main class="main">
+    <section>
+      <div class="container__welcome">
+        <h1 id="welcome" class="text-white" data-i18n="welcome_to"></h1>
 
-        <figure class="character"></figure>
-      </section>
+        <figure id="codigoR">
+          <h1 data-i18n="code"></h1>
+          <img src="/img/img_desktop/r-logo.svg" alt="img codigoR" />
+        </figure>
 
-      <section class="" id="sectionForm"></section>
+      </div>
 
-      <!-- <figure class="logo">
-                <img src="" alt="logo" />
-            </figure> -->
-    </main>
+      <figure class="character"></figure>
+    </section>
 
-    <script type="module" src="./src/js/translator.js"></script>
-    <script type="module" src="./src/js/login.js"></script>
-  </body>
+    <section class="" id="sectionForm"></section>
+  </main>
+
+  <script type="module" src="./src/js/translator.js"></script>
+  <script type="module" src="./src/js/login.js"></script>
+</body>
+
 </html>
