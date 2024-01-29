@@ -1,7 +1,7 @@
-import { showFileAttachment } from "./FileAttachment";
 import { showClans } from "./clans";
 import { showCoders } from "./coders";
 import { showDashboard } from "./dashboard";
+import { showFileAttachment } from "./FileAttachment";
 
 const sideNav = () => {
   const nav = document.querySelector(".side-nav");
