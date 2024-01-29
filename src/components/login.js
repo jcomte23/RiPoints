@@ -2,7 +2,7 @@ export const showLogin = (element) => {
   //esa accion no se que tan buena sea, ya que se ejecuta sin validar
   element.innerHTML = `
   <form class="card needs-validation" id="form" novalidate>
-    <p id="login" data-i18n="login_title"></p>
+    <p id="login" class="mb-0" data-i18n="login_title"></p>
     <div class='container__inputs'>
       <div class="col-12 d-flex flex-column align-items-start p-2 ">
         <label for="user" class="form-label text-capitalize" data-i18n="user"></label>
