@@ -1,5 +1,5 @@
+@use "./variables" as v;
 @import "bootstrap/scss/bootstrap";
-@import "./variables";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
 
 * {
@@ -70,6 +70,7 @@ section {
   aspect-ratio: 1/1;
   background-image: url(/img/img_globales/avatar.webp);
   background-size: contain;
+  background-color: v.$primary;
   border-radius: 50%;
   border: 0.5rem solid white;
   box-shadow: 0 0 0.2rem black;
@@ -80,10 +81,10 @@ section {
   position: absolute;
   width: calc(9vh + 1vw);
   height: calc(9vh + 1vw);
-  background-color: white;
-  background-image: url(/img/img_globales/clanShield.webp);
-  background-position: center;
+  background-color: v.$primary;
+  background-image: url(/img/img_globales/eagle-esport-gaming-team-logo_343694-1252_1.webp);
   background-size: contain;
+  object-position: center;
   bottom: -1rem;
   right: -1rem;
   border-radius: 50%;
