@@ -1,4 +1,4 @@
-import * as XLSX from 'xlsx';
+import * as ExcelJS from 'exceljs';
 
 export function handleFileSelect() {
     const fileInput = document.getElementById('formFile');
@@ -19,10 +19,15 @@ export function handleFileSelect() {
 
         reader.onload = function (e) {
             const data = new Uint8Array(e.target.result);
-            const workbook = XLSX.read(data, { type: 'array' });
 
-            // Aquí puedes acceder a las hojas y celdas del archivo Excel
-            console.log(workbook.Sheets);
+            const workbook = new ExcelJS.Workbook();
+            workbook.xlsx.load(data).then(function () {
+                // Aquí puedes acceder a las hojas y celdas del archivo Excel
+                workbook.eachSheet(function (worksheet, sheetId) {
+                    console.log('Hoja:', sheetId);
+                    console.log(worksheet.getSheetValues());
+                });
+            });
         };
 
         reader.readAsArrayBuffer(file);
