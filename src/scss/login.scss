@@ -5,7 +5,7 @@
 
 body {
     font-family: "Ubuntu", sans-serif !important;
-    height: 85svh !important;
+    height: 85vh !important;
 }
 
 .header {
@@ -239,5 +239,52 @@ main {
 
     .left-info {
         justify-content: start;
+    }
+}
+
+@media screen and (min-width:1920px) {
+    body{
+        height: 91vh !important;
+    }
+
+    #welcome {
+        font-size: clamp(2.25rem, -1.1875rem + 11vw, 5rem);
+    }
+
+    #codigoR {
+        h1 {
+            font-size: 70px;
+        }
+    }
+    
+    #codigoR img{
+        width: 45%;
+    }
+    
+    .character img{
+        width: 100%;
+    }
+
+    #form {
+        width: 500px;
+        height: auto;
+
+        .container__inputs {    
+            input {
+                height: 60px;
+            }
+            label {
+                font-size: 40px;
+            }
+        }
+    
+        #login {
+            font-weight: 500;
+            font-size: 52px;
+        }
+    
+        #btn-login {
+            height: 54px;
+        }
     }
 }
