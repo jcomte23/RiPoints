@@ -1,5 +1,5 @@
 export const showDashboard = (element) => {
-    element.innerHTML = ` dahsboard
+    element.innerHTML = ` dashboard
     `
 }
 
