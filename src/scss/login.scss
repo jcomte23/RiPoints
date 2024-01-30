@@ -116,6 +116,10 @@ main {
 }
 
 @media screen and (max-width: 576px) {
+    body{
+        height: 91vh !important;
+    }
+
     .header {
         display: none !important;
     }
@@ -239,6 +243,17 @@ main {
 
     .left-info {
         justify-content: start;
+    }
+
+    footer div{
+        width: 66%;
+    }
+
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+    body{
+        height: 93vh !important;
     }
 }
 
