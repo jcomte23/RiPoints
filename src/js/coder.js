@@ -1,37 +1,90 @@
 import * as bootstrap from "bootstrap";
 import "../scss/coder.scss";
-import Chart from 'chart.js/auto';
-
+import Chart from "chart.js/auto";
 
 // Obtén el contexto del canvas
-var ctx = document.getElementById('graphic').getContext('2d');
+const ctx = document.querySelector("#graphic__week");
 
-// Datos para el gráfico
-var datos = {
-    labels: ['Lunes','Martes', 'Miercoles','Jueves',"viernes"],
-    datasets: [{
-    label: 'Points',
-    backgroundColor: '#fff',
-    borderColor: '#000',
-    borderWidth: 1,
-    data: [50, 30, 80, 60,20],
-}]
+const mothChart = document.querySelector("#graphic__moth");
+Chart.defaults.color = "#fff";
+
+const renderweekChart = () => {
+  const datos = {
+    labels: ["Lunes", "Martes", "Miercoles", "Jueves", "viernes"],
+    datasets: [
+      {
+        label: "Points",
+        backgroundColor: "#fff",
+        borderColor: "#000",
+        borderWidth: 1,
+        borderRadius: 5,
+        data: [50, 30, 80, 60, 20],
+      },
+    ],
+  };
+
+  // Opciones del gráfico
+  const opciones = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
+  // Crea el gráfico de barras
+  const weekchart = new Chart(ctx, {
+    type: "bar",
+    data: datos,
+    options: opciones,
+  });
+
+  return weekchart;
 };
 
-// Opciones del gráfico
-var opciones = {
-scales: {
-    y: {
-    beginAtZero: true
-    }
-}
+const rendermothChart = () => {
+  const datos = {
+    labels: [
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+    ],
+    datasets: [
+      {
+        label: "Points",
+        backgroundColor: "#fff",
+        borderColor: "#000",
+        borderWidth: 1,
+        color: "#fff",
+        borderRadius: 5,
+        data: [50, 30, 80, 60, 20, 20, 100, 200],
+      },
+    ],
+  };
+
+  // Opciones del gráfico
+  const opciones = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
+  // Crea el gráfico de barras
+  const createMothChart = new Chart(mothChart, {
+    type: "bar",
+    data: datos,
+    options: opciones,
+  });
+
+  return createMothChart;
 };
 
-// Crea el gráfico de barras
-var miGrafico = new Chart(ctx, {
-type: 'bar',
-data: datos,
-options: opciones
-});
-
-
+rendermothChart();
+renderweekChart();
