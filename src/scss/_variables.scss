@@ -1,0 +1,31 @@
+$primary: #6b5cff;
+$secondary: #181e4b;
+$mint: #5acca4;
+$yellow: #e6ca52;
+$tomato: #fe654f;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "mint": $mint,
+  "yellow": $yellow,
+  "tomato": $tomato,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.uno {
+  border: 1px solid red;
+}
+
+.dos {
+  border: 1px solid blue;
+}
+
+.tres {
+  border: 1px solid yellow;
+}

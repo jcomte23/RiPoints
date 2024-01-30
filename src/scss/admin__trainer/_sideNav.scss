@@ -1,0 +1,51 @@
+@use "../variables" as v;
+
+.side-nav {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100dvh;
+    padding: 0 10px;
+    width: 15rem;
+
+    .container__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: .8rem;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+
+        li {
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            gap: .5rem;
+            justify-content: start;
+            padding: 10px;
+            width: 100%;
+        }
+
+        li:hover {
+            background: linear-gradient(
+                270deg,
+                rgba(255, 255, 255, 0.21) -244.61%,
+                rgba(255, 255, 255, 0) 109.32%
+            );
+        }
+        li img{
+            min-width: 2rem;
+            min-height: 2rem;
+        }
+        li span{
+            pointer-events: none;
+            font-size: 1.1rem;
+        }
+    }
+}
+

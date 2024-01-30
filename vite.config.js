@@ -5,9 +5,15 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        'coder/pages/index': 'src/pages/coder/index_coder.html',
+        'admin_index': 'src/pages/admin/index.html',
+        'trainer_index': 'src/pages/trainer/index.html',
+        'coder_index': 'src/pages/coder/index.html',
         // Agrega más páginas según sea necesario
       },
     },
   },
 });
+
+
+
+

@@ -26,13 +26,19 @@
    git checkout ramaPersonal
    ```
 
-3. **Descarga las librerias del Proyecto:**
+3. **De ser necesario, descarga los ultimos cambios:**
+
+   ```bash
+   git pull origin develop
+   ```
+
+4. **Descarga las librerias del Proyecto:**
 
    ```bash
    npm install
    ```
 
-4. **Ejecuta el servidor de desarrollo:**
+5. **Ejecuta el servidor de desarrollo:**
    ```bash
    npm run dev
    ```
@@ -44,7 +50,7 @@ Este proyecto fue creado por **[Javier Cómbita Téllez](https://javiercombita.c
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```deploy```
+¡Las contribuciones son bienvenidas! Si tiene ideas para mejoras o nuevas funciones, no dudes en enviarlas a la rama ```develop```
 
 ## Estado del Proyecto
 

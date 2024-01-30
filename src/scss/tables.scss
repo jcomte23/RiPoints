@@ -1,0 +1,28 @@
+@use "variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import "bootstrap/scss/bootstrap";
+@import "./variables";
+
+.search{
+  height: 3rem;
+  padding: 0 1rem;
+  border: .13rem solid v.$secondary;
+  border-radius: 5rem;
+  caret-color: v.$primary;
+}
+
+.search:focus{
+  outline: none;
+}
+
+.dates input{
+  border: .1rem solid v.$secondary;
+  border-radius: 0.3rem;
+  padding: .2rem .4rem;
+  color: v.$secondary;
+}
+
+.form-control{
+  border: none !important;
+}
+
