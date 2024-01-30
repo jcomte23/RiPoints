@@ -23,6 +23,7 @@
             border-radius: 10px;
             cursor: pointer;
             display: flex;
+            align-items: center;
             font-size: 26px;
             gap: .5rem;
             justify-content: start;
@@ -40,6 +41,10 @@
         li img{
             min-width: 2rem;
             min-height: 2rem;
+        }
+        li span{
+            pointer-events: none;
+            font-size: 1.1rem;
         }
     }
 }
