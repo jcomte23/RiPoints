@@ -1,4 +1,9 @@
 .form-coders{
     padding: 1rem;
-    border: unset;
+    border: none;
+    outline: none;
+}
+
+.form-coders h2{
+    text-transform: capitalize;
 }

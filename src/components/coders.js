@@ -10,7 +10,7 @@ export function showCoders(element){
     }
     element.innerHTML = `
     <form class="d-flex form-control flex-column form-coders">
-       <h2>Corders</h2>
+       <h2 data-i18n="developers" ></h2>
        <input class="my-2 search" type="text" name="" id="searchKeywords" placeholder="Search" />
        <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
            <label for="dateStart">Desde:</label>
@@ -56,6 +56,12 @@ export function showCoders(element){
 
     </form> 
     `
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+    })
+    
     // const containerTable = document.getElementById("containerTable");
 
     // //creando form: no se usa innerHTML para sguir lineamientos de seguridad.
