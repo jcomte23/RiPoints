@@ -1,5 +1,4 @@
 import * as bootstrap from "bootstrap";
-import "../../scss/coders.scss";
 
 document.addEventListener('DOMContentLoaded', function () {
     let myInput = document.getElementById('searchKeywords');

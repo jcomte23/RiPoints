@@ -1,5 +1,4 @@
 @use "../variables" as v;
-@import "bootstrap/scss/bootstrap";
 
 .container__table {
     background-color: #fff;
@@ -112,21 +111,21 @@
   margin-top: 3rem;
 }
 
-.coder__profile {
-  position: relative;
-  width: 98%;
-  height: 100%;
-  aspect-ratio: 0/0;
-  background-image: url(/public/img/img_globales/avatar.webp);
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 50%;
-  border: 0.5rem solid white;
-  box-shadow: 0 0 0.2rem black;
-  margin-bottom: 1rem;
-  z-index: 1;
-}
+// .coder__profile {
+//   position: relative;
+//   width: 98%;
+//   height: 100%;
+//   aspect-ratio: 0/0;
+//   background-image: url(/public/img/img_globales/avatar.webp);
+//   object-fit: cover;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   border-radius: 50%;
+//   border: 0.5rem solid white;
+//   box-shadow: 0 0 0.2rem black;
+//   margin-bottom: 1rem;
+//   z-index: 1;
+// }
 
 .coder__profile__clanShiled {
   position: absolute;
