@@ -1,5 +1,5 @@
 import * as bootstrap from "bootstrap";
-import "../scss/coder.scss";
+import "../../scss/coder.scss";
 import Chart from "chart.js/auto";
 
 // Obtén el contexto del canvas
