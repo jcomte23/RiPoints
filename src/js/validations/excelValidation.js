@@ -1,17 +1,25 @@
 import * as ExcelJS from 'exceljs';
 
-export function handleFileSelect() {
-    const fileInput = document.getElementById('formFile');
-    const file = fileInput.files[0];
+export function handleFileSelect(fileInput = false) {
+    let file;
+
+    if (fileInput instanceof DataTransfer) {
+        // If a DataTransfer object is provided, take the file from the object
+        file = fileInput.files[0];
+    } else {
+        // If a DataTransfer object is not provided, get the file from the INPUT
+        file = document.getElementById('formFile').files[0];
+    }
+
 
     if (file) {
         const allowedExtensions = ['xlsx'];
         const fileExtension = file.name.split('.').pop().toLowerCase();
 
-        // Validar el tipo de archivo
+       // Validate the file type
         if (allowedExtensions.indexOf(fileExtension) === -1) {
             alert('Por favor, selecciona un archivo con formato xlsx válido.');
-            fileInput.value = ''; // Limpiar el valor del input para que el usuario pueda seleccionar otro archivo
+            fileInput.value = ''; // Clear the input value so the user can select another file
             return;
         }
 
@@ -22,7 +30,7 @@ export function handleFileSelect() {
 
             const workbook = new ExcelJS.Workbook();
             workbook.xlsx.load(data).then(function () {
-                // Aquí puedes acceder a las hojas y celdas del archivo Excel
+                // You can access the sheets and cells of the Excel file here
                 workbook.eachSheet(function (worksheet, sheetId) {
                     console.log('Hoja:', sheetId);
                     console.log(worksheet.getSheetValues());
@@ -31,5 +39,11 @@ export function handleFileSelect() {
         };
 
         reader.readAsArrayBuffer(file);
+
+        // LOAD SUCCESSFULL
+        const imageIdicator = document.querySelector('#labelFile figure img')
+        imageIdicator.src = '/icons/file_uploaded.svg'
+        document.querySelector('#labelFile h3').textContent = '¡SUCCESS!'
+
     }
 }
