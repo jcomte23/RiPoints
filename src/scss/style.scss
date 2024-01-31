@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import "./variables";
-@import "./admin__trainer/sideNav";
-@import "./admin__trainer/container_table";
 @import "bootstrap/scss/bootstrap";
 
-body {
+@import "./admin__trainer/container_table";
+@import "./admin__trainer/sideNav";
+@import "./coder.scss";
+@import "./coders.scss";
+
+
+* {
     font-family: "Ubuntu", sans-serif !important;
 }
 
@@ -13,3 +17,4 @@ body {
     display: flex;
     align-items: center;
 }
+ 

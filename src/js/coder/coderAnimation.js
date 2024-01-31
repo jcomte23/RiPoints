@@ -1,6 +1,3 @@
-
-
-
 let counts = setInterval(updated);
 let limit = +document.getElementById('counter').innerText
 let upto = 0;
