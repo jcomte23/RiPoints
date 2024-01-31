@@ -2,7 +2,10 @@ import * as bootstrap from "bootstrap";
 import "../scss/login.scss";
 import { showLogin } from "../components/login";
 import { getAllUsers } from "./data";
-import { showValidation, showValidationAccount } from "./validations/validationForm";
+import {
+  showValidation,
+  showValidationAccount,
+} from "./validations/validationForm";
 
 const sectionForm = document.getElementById("sectionForm");
 showLogin(sectionForm);
@@ -10,7 +13,6 @@ let listUsersCache;
 document.addEventListener("DOMContentLoaded", async () => {
   listUsersCache = await getAllUsers();
 });
-
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
@@ -24,20 +26,18 @@ form.addEventListener("submit", (event) => {
     user[key] = value;
   }
 
-  const userSerch = listUsersCache.find((userCache) => {
-      return (userCache.userName == user.userName) && (userCache.password === user.password)
+  const userSearch = listUsersCache.find((userCache) => {
+    return (
+      userCache.userName == user.userName &&
+      userCache.password === user.password
+    );
   });
-
-  if (!userSerch) {
+  console.log(userSearch);
+  if (!userSearch) {
     showValidationAccount(form);
-  } else redirect(userSerch.rol);
+  } else redirect(userSearch.rol);
 });
 
 const redirect = (rol) => {
   location.href = `src/pages/${rol}/index.html`;
-}
-
-
-
-
-
+};
