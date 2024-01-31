@@ -32,6 +32,11 @@ const sideNav = () => {
             <span data-i18n="load_docs" class="text-capitalize"></span>
         </li>
     </ul>
+
+    <a class="menu__header--lang btn btn-primary">
+      <div class="lang--flag"></div>
+      <h4 data-i18n="lang" >EN</h4>
+    </a>
     `;
 };
 
