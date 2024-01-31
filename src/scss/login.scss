@@ -116,12 +116,23 @@ main {
 }
 
 @media screen and (max-width: 576px) {
-    body{
+    body {
         height: 91vh !important;
+        flex-direction: column;
+        background-image: url("/svgs/background-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
     }
+
 
     .header {
         display: none !important;
+    }
+
+    #welcome {
+        font-size: clamp(2.25rem, -1.1875rem + 11vw, 5rem);
     }
 
     main {
@@ -146,23 +157,15 @@ main {
         }
     }
 
-    body {
-        flex-direction: column;
-        background-image: url("/svgs/background-mobile.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        margin: 0;
-    }
-
+    
     .character {
-        background-image: url("/img/img_mobile/saly_mobile.webp");
         background-position: center;
         position: absolute;
         top: 1dvh;
     }
 
     .character img{
+        margin-top: 35%;
         width: 70%;
         height: auto;
     }
