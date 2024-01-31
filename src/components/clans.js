@@ -1,6 +1,8 @@
+
+
 export const showClans = (element) => {
     element.innerHTML = `
-        <section class="p-1">
+        <section class="p-1 clans-table">
         <article class="bg-secondary rankings-clanes text-center text-white px-4">
             <h1 data-i18n="clan_ranking" class="text-capitalize">clasificación de clanes</h1>
         </article>

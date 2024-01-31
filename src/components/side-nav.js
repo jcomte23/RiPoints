@@ -1,3 +1,6 @@
+import * as bootstrap from "bootstrap";
+
+
 import { showClans } from "./clans";
 import { showCoders } from "./coders";
 import { showDashboard } from "./dashboard";
