@@ -26,11 +26,15 @@
   border: none !important;
 }
 
-#file_input{
-  border-style: dotted;
-  border-color: #C7C2FF;
+.file_input{
+  border: dashed .2rem v.$secondary;
+  border-radius: 1rem;
+  &.active{
+    border: dashed .2rem v.$mint;
+    color: v.$mint;
+  }
 }
 
-#formFile{
+.file_input input{
   display: none;
 }
