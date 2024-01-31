@@ -1,7 +1,6 @@
-import * as bootstrap from "bootstrap";
 import "../scss/login.scss";
 import { showLogin } from "../components/login";
-import { getAllUsers } from "./data";
+import { getRolUser, getUser } from "./services/getUser";
 import {
   showValidation,
   showValidationAccount,
@@ -9,33 +8,28 @@ import {
 
 const sectionForm = document.getElementById("sectionForm");
 showLogin(sectionForm);
-let listUsersCache;
-document.addEventListener("DOMContentLoaded", async () => {
-  listUsersCache = await getAllUsers();
-});
+let userSearch;
 
 const form = document.querySelector("form");
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async(event) => {
   event.preventDefault();
 
   const formData = new FormData(form);
-
   const user = {};
   for (const [key, value] of formData) {
     if (!value) return showValidation();
     user[key] = value;
   }
 
-  const userSearch = listUsersCache.find((userCache) => {
-    return (
-      userCache.userName == user.userName &&
-      userCache.password === user.password
-    );
-  });
-  console.log(userSearch);
-  if (!userSearch) {
+  userSearch = await getUser(user);
+  if (userSearch) {
+    const userRol = await getRolUser(userSearch.idRol);
+    redirect(userRol.name);
+  }else{
     showValidationAccount(form);
-  } else redirect(userSearch.rol);
+  }
+  console.log(userSearch);
+  console.log(userRol);
 });
 
 const redirect = (rol) => {
