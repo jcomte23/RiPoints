@@ -11,7 +11,7 @@ showLogin(sectionForm);
 let userSearch;
 
 const form = document.querySelector("form");
-form.addEventListener("submit", async(event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const formData = new FormData(form);
@@ -22,14 +22,13 @@ form.addEventListener("submit", async(event) => {
   }
 
   userSearch = await getUser(user);
+  localStorage.setItem("userStorage", JSON.stringify(userSearch));
   if (userSearch) {
     const userRol = await getRolUser(userSearch.idRol);
     redirect(userRol.name);
-  }else{
+  } else {
     showValidationAccount(form);
   }
-  console.log(userSearch);
-  console.log(userRol);
 });
 
 const redirect = (rol) => {
