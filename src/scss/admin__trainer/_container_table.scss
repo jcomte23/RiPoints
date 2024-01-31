@@ -59,10 +59,6 @@
   --bs-modal-width: 600px;
 }
 
-.btn_actions {
-  display: flex;
-  justify-content: space-evenly;
-}
 
 .title__text {
   text-align: center;
@@ -136,7 +132,7 @@
   position: absolute;
   width: 44%;
   height: 45%;
-
+  
   /* height: calc(11vh + 0vw); */
   background-color: white;
   background-image: url(/public/img/img_globales/clanShield.webp);
@@ -201,6 +197,7 @@ svg {
   height: 17rem;
   margin: 1px 45px;
   border-radius: 1rem;
+  font-size: 25px;
 }
 ::placeholder {
   font-size: 1.5rem; 
@@ -216,4 +213,17 @@ svg {
   font-size: 1.5rem; 
 }
 
+
+button.btn__delete {
+  background-color: #eae4e4; 
+  border-color: #eae4e4; 
+  color: #000000; 
+}
+
+button.btn-success {
+  background-color: #eae4e4; 
+  border-color: #eae4e4; 
+  color: #040404; 
+
+}
     
