@@ -104,7 +104,7 @@ export function showCoders(element) {
           
           <div class="btn_actions m-5 ">
             <button class="btn__delete btn btn-danger btn-lg col-md-5 m-1" id="save-modal">Cancelar</button>
-            <button class="btn btn-success btn-lg col-md-5 m-1" id="save-modal">Guardar</button>
+            <button class="btn__succes btn btn-success btn-lg col-md-5 m-1" id="save-modal">Guardar</button>
           </div>
         </div>
       </div>
