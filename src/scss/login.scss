@@ -18,42 +18,21 @@
 }
 
 
-.main__login {
-    border: 1px solid red;
-
-    // & :nth-child(1) {
-    //     border: 1px solid red;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
-}
-
 #welcome {
     font-size: clamp(1.5rem, -1rem + 8vw, 3rem);
-    font-weight: bold;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 #codigoR {
     background: v.$secondary;
-    display: flex;
-    align-items: center;
-    color: white;
     border-radius: 26px;
-
-    h1 {
-        font-size: 40px;
-        font-weight: bold;
-    }
 }
 
-#codigoR img{
-    border: 1px solid red;
-    // width: 25% !important;
-    height: auto;
-}
+
+
+
+
+
 
 .logo {
     position: absolute;
