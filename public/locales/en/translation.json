@@ -11,5 +11,9 @@
     "name_project":"Ripoints",
     "password":"password",
     "user":"user",
-    "welcome_to": "welcome to"
+    "welcome_to": "welcome to",
+    "P":"Attendance",
+    "R":"Late",
+    "FJ":"Excused Absence",
+    "FI":"Unexcused Absence"
 }

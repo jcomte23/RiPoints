@@ -11,5 +11,9 @@
     "name_project":"Ripoints",
     "password":"contraseña",
     "user":"usuario",
-    "welcome_to": "bienvenido a"
+    "welcome_to": "bienvenido a",
+    "P":"Presente",
+    "R":"Retardo",
+    "FJ":"Falta Justificada",
+    "FI":"Falta Injustificada"
 }
