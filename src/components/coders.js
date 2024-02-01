@@ -1,4 +1,5 @@
 export function showCoders(element) {
+  const user =  localStorage.getItem("userStorage");
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }

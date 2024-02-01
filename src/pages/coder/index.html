@@ -21,18 +21,18 @@
   <title>Coder</title>
 </head>
 
-<body>
+<body class="coder__body">
   <nav class="navbar fixed-top">
     <!-- Bootstrap settings: don't touch -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end show" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <!-- content side menu -->
       <div class="offcanvas-body">
         <div class="menu__header">
-          <div class="menu__header--lang">
-            <img src="/img/img_globales/EN.webp" alt="">
-            <h4>EN</h4>
-          </div>
-          <a href="https://moodle.riwi.io" class="btn btn-primary-coder" target="_blank" rel="noopener">Ir a moodle</a>
+          <a class="menu__header--lang btn btn-primary">
+            <div class="lang--flag"></div>
+            <h4 data-i18n="lang" >EN</h4>
+          </a>
+          <a href="https://moodle.riwi.io" class="btn btn-primary" target="_blank" rel="noopener">Ir a moodle</a>
         </div>
 
         <a href="./coder.html" class="btn btn-primary-coder btn-block bi bi-arrow-left"> Log Out</a>
@@ -52,43 +52,8 @@
     </div>
   </section>
   <div class="floatingBackground">
-    <div class="coder">
-      <h3 class="coder__header">Your score</h3>
-      <div class="coder__profile profile__danger">
-        <div class="coder__profile__clanShiled profile__danger"></div>
-      </div>
-      <h4 class="coder__name">Jackeline Narvaez</h4>
-      <h5 class="coder__points--title">Total Points</h5>
-      <div class="coder__points">
-        <div class="coder__points__coin">
-
-        </div>
-
-        <span id="counter">580</span>
-      </div>
-    </div>
-    <!-- Floating background -->
-    <div class="container-graphics">
-      
-      <div class="container-graphic">
-        <span>Grafica Semanal</span>
-        <canvas id="graphic__week" class="graphic"></canvas>
-      </div>
-
-      <div class="container-graphic">
-        <span>Grafica Mensual</span>
-        <canvas id="graphic__moth" class="graphic"></canvas>
-      </div>
-    </div>
-<!-- 
-    <canvas id="graphic__week" class="graphic"></canvas>
-    <canvas id="graphic__moth" class="graphic"></canvas> -->
 
   </div>
-
-
-
-
 
   <script type="module" src="../../js/coder/coder.js"></script>
   <script type="module" src="../../js/coder/coderAnimation.js"></script>

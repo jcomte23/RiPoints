@@ -1,10 +1,12 @@
 @use "variables" as v;
 
 
-body {
+.login__body {
     font-family: "Ubuntu", sans-serif !important;
     height: 85vh !important;
 }
+
+
 
 .header {
     position: absolute;
@@ -17,9 +19,11 @@ body {
     top: 0;
 }
 
-main {
+
+.main__login {
     height: 100%;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -114,7 +118,7 @@ main {
 }
 
 @media screen and (max-width: 576px) {
-    body {
+    .login__body{
         height: 91vh !important;
         flex-direction: column;
         background-image: url("/svgs/background-mobile.svg");
@@ -133,7 +137,7 @@ main {
         font-size: clamp(2.25rem, -1.1875rem + 11vw, 5rem);
     }
 
-    main {
+    .main__login {
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -155,7 +159,15 @@ main {
         }
     }
 
-    
+    body {
+        flex-direction: column;
+        background-image: url("/svgs/background-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+    }
+
     .character {
         background-position: center;
         position: absolute;
@@ -246,20 +258,23 @@ main {
         justify-content: start;
     }
 
-    footer div{
-        width: 66%;
+    footer{
+      
+        div{
+            width: 66%;
+        }
     }
 
 }
 
 @media screen and (min-width: 577px) and (max-width: 1024px) {
-    body{
+    .login__body{
         height: 93vh !important;
     }
 }
 
 @media screen and (min-width:1920px) {
-    body{
+    .login__body{
         height: 91vh !important;
     }
 
