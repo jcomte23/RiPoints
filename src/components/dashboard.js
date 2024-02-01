@@ -1,44 +1,20 @@
-import Chart from "chart.js/auto";
-
-let language;
-if (localStorage.getItem("lang")) {
-    language=localStorage.getItem("lang")
-}else{
-    language="en"
-}
-
-function readLanguageFile(){
-    return fetch(`/public/locales/${language}/translation.json`);
-}
+import { pieChart, lineChart } from "./pieChart";
+import '../scss/dashboard.scss'
 
 export const showDashboard = (element) => {
-    element.innerHTML = ` <div>
-    <canvas id="myChart"></canvas>
-  </div>
-  
-    `;
-    
-    const ctx = document.getElementById('myChart');
-    
-    readLanguageFile().then(data => data.json()).then(data => {
-        console.log("DATOSSS", data)
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-              labels: [data.P, data.R, data.FJ, data.FI],
-              datasets: [{
-                backgroundColor:[
-                    '#5acca4',
-                    '#6b5cff',
-                    '#e6ca52',
-                    '#fe654f'
-                ],
-                label: '# of Votes',
-                data: [19, 5, 3, 2],
-                borderWidth: 1
-              }]
-            },
-          });
-    })
-}
+  element.innerHTML = ` 
+    <div class='dashboard' >
+      <div class='dashboard__pie' >
+          <div class='pieChart' ></div>
+      </div>
 
+      <div class='dashboard__line' >
+          
+      </div>
+    </div>
+    `;
+  let dataPie = [50,8,5,6]
+  pieChart(document.querySelector('.pieChart'), dataPie);
+  lineChart(document.querySelector('.dashboard__line'), dataPie);
+
+}
