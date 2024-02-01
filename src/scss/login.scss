@@ -43,6 +43,12 @@
 
 @media screen and (min-width: 1024px) {
     main{
+        height: 89vh !important;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main{
         height: 93vh !important;
     }
 }
