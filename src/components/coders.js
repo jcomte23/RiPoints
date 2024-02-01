@@ -86,8 +86,8 @@ export function showCoders(element) {
           
           <div class="container__profile">
             <div class="profile__imgs">
-              <div class="coder__profile__table profile__danger">
-                <div class="coder__profile__clan__table profile__danger"></div>
+              <div class="coder__profile__table ">
+                <div class="coder__profile__clan__table "></div>
               </div>
             </div>
             
