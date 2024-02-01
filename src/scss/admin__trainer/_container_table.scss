@@ -111,21 +111,21 @@
   margin-top: 3rem;
 }
 
-// .coder__profile {
-//   position: relative;
-//   width: 98%;
-//   height: 100%;
-//   aspect-ratio: 0/0;
-//   background-image: url(/public/img/img_globales/avatar.webp);
-//   object-fit: cover;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   border-radius: 50%;
-//   border: 0.5rem solid white;
-//   box-shadow: 0 0 0.2rem black;
-//   margin-bottom: 1rem;
-//   z-index: 1;
-// }
+.coder__profile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 0/0;
+  background-image: url(/public/img/img_globales/avatar.webp);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  border: 0.5rem solid white;
+  box-shadow: 0 0 0.2rem black;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
 
 .coder__profile__clanShiled {
   position: absolute;
@@ -151,7 +151,7 @@
   position: absolute;
   display: flex;
   right: 11%;
-  bottom: 54%;
+  bottom: 52%;
   justify-content: space-between;
 }
 
@@ -171,6 +171,7 @@
   width: 9rem;
   font-size: 6rem;
   border-radius: 11px;
+  outline: none;
 }
 
 #plusSign {
@@ -197,6 +198,7 @@ svg {
   margin: 1px 45px;
   border-radius: 1rem;
   font-size: 25px;
+  outline: none;
 }
 ::placeholder {
   font-size: 1.5rem; 
@@ -224,5 +226,11 @@ button.btn-success {
   border-color: #eae4e4; 
   color: #040404; 
 
+  
+
+button.btn-close {
+  padding: 2.25% 96.25%;
+  filter:invert(1);
+
+  
 }
-    
