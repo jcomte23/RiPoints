@@ -1,22 +1,12 @@
 import i18next from 'i18next';
 import Backend from 'i18next-http-backend';
 
-const btnLang = document.querySelector('.menu__header--lang')
-
-btnLang.addEventListener('click',()=>{
-    btnLang.children[0].classList.toggle('es')
-    console.log('changing language...')
-
-    // here the action
-
-})
-
 let language
 
 if (localStorage.getItem("lang")) {
     language=localStorage.getItem("lang")
 }else{
-    language="es"
+    language="en"
 }
 
 i18next.use(Backend).init(
