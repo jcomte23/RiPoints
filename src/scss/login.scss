@@ -16,6 +16,10 @@
     top: 0;
 }
 
+main{
+    margin-bottom: 5px;
+}
+
 #welcome {
     font-size: 55px;
     margin-top: 20px;
@@ -35,6 +39,7 @@
 @media screen and (min-width: 576px) and (max-width: 768px){
     main{
         height: 93vh !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -42,6 +47,7 @@
 @media screen and (min-width: 768px) and (max-width: 992px){
     main{
         height: 93vh !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -49,6 +55,7 @@
 @media screen and (min-width: 992px) and (max-width: 1200px){ 
     main{
         height: 93vh !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -56,6 +63,7 @@
 @media screen and (min-width: 1200px) and (max-width: 1400px){
     main{
         height: 93vh !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -63,6 +71,7 @@
 @media screen and (min-width: 1400px){
     main{
         height: 93vh !important;
+        margin-bottom: 0 !important;
     }
 
     #welcome{
