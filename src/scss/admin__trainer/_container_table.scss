@@ -151,7 +151,7 @@
   position: absolute;
   display: flex;
   right: 11%;
-  bottom: 55%;
+  bottom: 52%;
   justify-content: space-between;
 }
 
@@ -231,6 +231,17 @@ button.btn-success {
 button.btn-close {
   padding: 2.25% 96.25%;
   filter:invert(1);
+  
 
   
+}
+
+button.btn__delete:hover{
+  background: v.$tomato;
+  color: white;
+}
+
+button.btn__succes:hover{
+  background: v.$mint;
+  color: white;
 }
