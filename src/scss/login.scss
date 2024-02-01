@@ -195,16 +195,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 0% !important;
+
+            div{
+                margin-top: 0 !important;
+            }
 
             h1 {
                 font-size: 34px;
                 font-weight: bold;
                 height: auto;
+                margin-left: 40px;
             }
             img {
                 height: 60px;
                 width: 60px;
-                margin-bottom: 5px;
+                margin-top: 10px;
+                margin-right: 30px;
             }
         }
     }
