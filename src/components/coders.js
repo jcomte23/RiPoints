@@ -94,7 +94,7 @@ export function showCoders(element) {
             <div class="container__points">
               <div class="total__points" id="totalPoints">12</div>
               <span id="plusSign">+</span>
-              <input class="asignador__points" type="number" id="numberInput" value="0" min="0">
+              <input class="asignador__points" type="number" id="numberInput" value="0" >
             </div>
           </div>
           
@@ -117,6 +117,28 @@ export function showCoders(element) {
         event.preventDefault();
         
     });
+    
+      
+    const assigment = document.querySelector(".asignador__points");
+    const plusSign = document.getElementById("plusSign");
 
- 
-}
+    let isFirstTime = true;
+
+    assigment.addEventListener("input", (event) => {
+      if (assigment.value.startsWith("-") && isFirstTime) {
+        plusSign.textContent = "-";
+        assigment.value = assigment.value.slice(1); 
+        isFirstTime = false; 
+      } else if (!assigment.value.startsWith("-")) {
+        plusSign.textContent = "+";
+        isFirstTime = true; 
+      }
+
+      console.log(assigment.value);
+    });
+
+
+
+    
+  }
+  
