@@ -38,8 +38,8 @@
     </button>
   </div> -->
 
-  <main class="d-flex flex-column flex-sm-row justify-content-around align-items-center">
-    <section class="">
+  <main class="d-flex flex-column flex-sm-column flex-md-row justify-content-around align-items-center">
+    <section class="col-sm-5 col-lg-4">
       <article class="container__welcome text-center d-flex flex-column justify-content-center align-items-center">
         <h1 id="welcome" class="text-white text-capitalize fw-bold" data-i18n="welcome_to"></h1>
         <figure id="codigoR"
@@ -53,14 +53,14 @@
       </figure>
     </section>
 
-    <section id="sectionForm" >
-      <form class="card needs-validation m-5 rounded-5 px-4 py-2" id="form" novalidate>
-        <div class='container__inputs w-100 d-flex flex-column align-items-start gap-3'>
-          <div>
+    <section id="sectionForm" class="col-sm-6 col-lg-4" >
+      <form class="card needs-validation rounded-5 px-4 py-5 m-0" id="form" novalidate>
+        <div class='d-flex flex-column align-items-start gap-3'>
+          <div class="col-12">
             <label for="user" class="form-label text-capitalize fs-3" data-i18n="user"></label>
-            <input name="userName" type="text" class="form-control" id="user" required placeholder="" />
+            <input name="userName" type="text" class="form-control " id="user" required placeholder="" />
           </div>
-          <div>
+          <div class="col-12">
             <label for="password" class="form-label text-capitalize fs-3" data-i18n="password"></label>
             <input name="password" type="password" class="form-control" id="password" required placeholder="" />
           </div>
@@ -70,15 +70,15 @@
     </section>
   </main>
 
-  <footer class="d-flex  flex-wrap justify-content-between align-items-center py-3  px-3 border-top">
-    <div class="col-md-6 d-flex align-items-center">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-3 border-top">
+    <div class="col-6 d-flex align-items-center">
       <a href="https://riwi.io/" target="_blank"
         class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
         <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Riwi</span>
       </a>
     </div>
 
-    <ul class="nav mb-3 mb-md-0 col-md-6 d-flex justify-content-end list-unstyled">
+    <ul class="nav mb-3 mb-md-0 col-6 d-flex justify-content-end list-unstyled">
       <li class="ms-3"><a class="text-body-secondary" href="https://instagram.com/riwi.io/" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram"
             viewBox="0 0 16 16">
