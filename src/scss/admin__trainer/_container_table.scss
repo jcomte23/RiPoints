@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   background: #181E4B;
+  padding-top: 3rem;
 }
 
 .modal-dialog {
@@ -97,8 +98,8 @@
 }
 
 .profile__imgs {
-  height: 10rem;
-  width: 10rem;
+  height: 9rem;
+  width: 9rem;
 }
 
 .container__profile {
@@ -108,7 +109,7 @@
   display: flex;
   align-items: flex-end;
   margin-bottom: 9%;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .coder__profile__table {
@@ -147,11 +148,11 @@
 
 .container__points {
   width: 60%;
-  height: 13%;
+  height: 11%;
   position: absolute;
   display: flex;
   right: 11%;
-  bottom: 52%;
+  bottom: 57%;
   justify-content: space-between;
 }
 
@@ -229,8 +230,13 @@ button.btn-success {
 }
 
 button.btn-close {
-  padding: 2.25% 96.25%;
-  filter:invert(1);
+  filter: invert(1);
+  position: absolute;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  top: 0;
+  font-size: 121%;
   
 
   
