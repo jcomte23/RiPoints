@@ -30,12 +30,6 @@
     // }
 }
 
-.logo {
-    position: absolute;
-    bottom: 2.5%;
-    right: 24%;
-}
-
 #welcome {
     font-size: clamp(1.5rem, -1rem + 8vw, 3rem);
     font-weight: bold;
@@ -48,6 +42,7 @@
     align-items: center;
     color: white;
     border-radius: 26px;
+
     h1 {
         font-size: 40px;
         font-weight: bold;
@@ -55,9 +50,20 @@
 }
 
 #codigoR img{
-    width: 35%;
+    border: 1px solid red;
+    // width: 25% !important;
     height: auto;
 }
+
+.logo {
+    position: absolute;
+    bottom: 2.5%;
+    right: 24%;
+}
+
+
+
+
 
 .character img{
     width: 70%;
