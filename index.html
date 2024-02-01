@@ -42,7 +42,8 @@
     <section class="main__login-left">
       <article class="container__welcome text-center d-flex flex-column justify-content-center align-items-center">
         <h1 id="welcome" class="text-white text-capitalize fw-bold" data-i18n="welcome_to"></h1>
-        <figure id="codigoR" class="bg-secondary rounded-5 d-flex justify-content-center align-items-center text-white py-2 w-50">
+        <figure id="codigoR"
+          class="bg-secondary rounded-5 d-flex justify-content-center align-items-center text-white py-2 w-50">
           <span data-i18n="code" class="text-capitalize fs-1 fw-bold"></span>
           <img src="/img/img_desktop/r-logo.svg" alt="img codigoR" class="w-25" width="122" height="63" />
         </figure>
@@ -52,7 +53,20 @@
       </figure>
     </section>
 
-    <section id="sectionForm" class="dos">
+    <section id="sectionForm">
+      <form class="card needs-validation m-5 rounded-5 px-4 py-2" id="form" novalidate>
+        <div class='container__inputs w-100 d-flex flex-column align-items-start gap-3'>
+          <div>
+            <label for="user" class="form-label text-capitalize fs-3" data-i18n="user"></label>
+            <input name="userName" type="text" class="form-control" id="user" required placeholder="" />
+          </div>
+          <div>
+            <label for="password" class="form-label text-capitalize fs-3" data-i18n="password"></label>
+            <input name="password" type="password" class="form-control" id="password" required placeholder="" />
+          </div>
+          <button id="btn-login" type="submit" class="btn btn-primary h-50 w-100 text-capitalize" data-i18n="login"></button>
+        </div>
+      </form>
     </section>
   </main>
 
