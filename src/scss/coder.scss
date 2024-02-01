@@ -1,6 +1,4 @@
 @use "./variables" as v;
-@import "bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
 
 * {
   margin: 0;
@@ -19,7 +17,7 @@
   filter: invert(100%);
 }
 
-section {
+.sectionCoder {
   position: relative;
   display: flex;
   align-items: start;
@@ -27,7 +25,7 @@ section {
   width: 100%;
   height: 60vh;
   background-color: #6b5cff;
-  background-image: url(/img/img_globales/background-mobile.webp);
+  background-image: url(/svgs/background-mobile.svg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -168,27 +166,56 @@ section {
 
 .menu__header {
   width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.offcanvas-body .btn{
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu__header--lang {
+  align-self: flex-end;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
   align-items: center;
-  height: 10vh;
+  height: 5vh;
+  width: 100%;
+  padding: 0 1rem;
   color: white;
+  background-color: v.$secondary;
+  border-radius: var(--bs-border-radius);
+  cursor: pointer;
 }
 
 .menu__header--lang h4 {
-  font-size: 2.2rem;
+  font-size: 1rem;
+  margin: 0;
 }
 
-.menu__header--lang img {
-  width: 4rem;
+.lang--flag {
+  width: 3rem;
+  height: 2rem;
+  background-image: url(/img/img_globales/EN.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.es{
+  background-image: url(/img/img_globales/ES.webp);
 }
 
-.btn-primary {
+.btn-primary-coder {
   outline: none;
   border: none;
+  color: white;
   width: 100%;
   background-color: #181e4b;
 }
@@ -220,7 +247,6 @@ section {
         color: white;
         text-align: left;
   
-  
         span {
           font-size: 24px;
         }
@@ -229,8 +255,6 @@ section {
           width: 100% !important;
           height: 100% !important;
         }
-  
-  
       }
 
       .container-history {
@@ -339,7 +363,7 @@ section {
     height: auto;
   }
 
-  body {
+  .coder__body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,7 +371,7 @@ section {
     width: 100vw;
   }
 
-  section {
+  .sectionCoder {
     position: absolute;
     background-image: url(/img/img_globales/backgroundPC.svg);
     background-size: cover;

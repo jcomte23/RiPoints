@@ -6,7 +6,7 @@ let language
 if (localStorage.getItem("lang")) {
     language=localStorage.getItem("lang")
 }else{
-    language="es"
+    language="en"
 }
 
 i18next.use(Backend).init(

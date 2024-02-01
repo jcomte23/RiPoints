@@ -1,12 +1,13 @@
 import * as bootstrap from "bootstrap";
-import "../scss/coder.scss";
+
 import Chart from "chart.js/auto";
+import { renderCoder } from "../../components/coder";
 
-// Obtén el contexto del canvas
-const ctx = document.querySelector("#graphic__week");
 
-const mothChart = document.querySelector("#graphic__moth");
 Chart.defaults.color = "#fff";
+
+const floatingBackground = document.querySelector(".floatingBackground");
+renderCoder(floatingBackground);
 
 const renderweekChart = () => {
   const datos = {
@@ -31,7 +32,7 @@ const renderweekChart = () => {
       },
     },
   };
-
+  const ctx = document.querySelector("#graphic__week");
   // Crea el gráfico de barras
   const weekchart = new Chart(ctx, {
     type: "bar",
@@ -77,6 +78,7 @@ const rendermothChart = () => {
   };
 
   // Crea el gráfico de barras
+  const mothChart = document.querySelector("#graphic__moth");
   const createMothChart = new Chart(mothChart, {
     type: "bar",
     data: datos,
