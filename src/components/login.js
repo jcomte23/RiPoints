@@ -1,34 +1,29 @@
-// export const showLogin = (element) => {
-//   //esa accion no se que tan buena sea, ya que se ejecuta sin validar
-//   element.innerHTML = `
-//   <form class="card needs-validation uno rounded-5" id="form" novalidate>
-//     <p id="login" class="mb-0" data-i18n="login_title"></p>
-//     <div class='container__inputs'>
-//       <div class="col-12 d-flex flex-column align-items-start p-2 ">
-//         <label for="user" class="form-label text-capitalize" data-i18n="user"></label>
-//         <input name="userName" type="text" class="form-control" id="user" required
-//           placeholder="Ingresa tu usuario" />
-//         <div class="invalid-feedback">
-//           Este campo es obligatorio
-//         </div>
-//       </div>
+export const showLogin = (element) => {
+  //esa accion no se que tan buena sea, ya que se ejecuta sin validar
+  element.innerHTML = 
+  `
+    <div class="position-relative">
+        <span class="position-absolute span_lang lang_en top-0 fs-3 z-3 end-0 text-body-secondary"
+            onclick="changeLanguage('en')">EN</span>
+        <span class="position-absolute span_lang lang_es top-0 fs-3 z-3 end-0 text-body-secondary"
+            onclick="changeLanguage('es')">ES</span>
+    </div>
 
-//       <div class="col-12 d-flex flex-column align-items-start p-2 ">
-//         <label for="password" class="form-label text-capitalize" data-i18n="password"></label>
-//         <input name="password" type="password" class="form-control" id="password" required
-//           placeholder="Ingresa tu contraseña" />
-//         <div class="invalid-feedback">
-//           Este campo es obligatorio
-//         </div>
-//       </div>
-
-//       <div id="validationAccount"></div>
-//     </div>
-
-//     <div class="col-12 d-flex justify-content-center mb-lg-4">
-//       <button id="btn-login" type="submit" class="btn btn-primary w-100 text-capitalize" data-i18n="login">Iniciar
-//         sesión</button>
-//     </div>
-//   </form>
-//   `;
-// };
+    <form
+    class="card needs-validation d-flex flex-column justify-content-center align-items-center rounded-5 px-4 py-5 m-0 "
+    id="form" novalidate>
+        <div class='d-flex flex-column col-xxl-11 align-items-start gap-3 '>
+            <div class="col-12">
+            <label for="user" class="form-label text-capitalize" data-i18n="user"></label>
+            <input name="userName" type="text" class="form-control " id="user" required placeholder="" />
+            </div>
+            <div class="col-12">
+            <label for="password" class="form-label text-capitalize" data-i18n="password"></label>
+            <input name="password" type="password" class="form-control" id="password" required placeholder="" />
+            </div>
+            <button id="btn-login" type="submit" class="btn btn-primary h-50 mt-4 w-100  text-capitalize"
+            data-i18n="login"></button>
+        </div>
+    </form>
+  `;
+};
