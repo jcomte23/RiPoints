@@ -3,18 +3,32 @@ import { handleFileSelect } from '../js/validations/excelValidation'
 export const showFileAttachment = (element) => {
 
     element.innerHTML = ` 
-        <div class="m-4 p-2 gap-4 d-flex flex-column">
-            <h1 class="fw-bold">Carga de puntos</h1>
-            <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
-                <label for="date" class="fs-4">Fecha:</label>
-                <input class="" type="date" name="" id="date" />
+        <div class="file">
+            <h1 data-i18n="loadFile" class="fw-bold">Carga de puntos</h1>
+            <div class='fileInfo' >
+                <div class="fileInfo__row" >
+                    <div data-i18n="development" class='fileInfo__row--item'>Desarrollo de software</div>
+                    <div data-i18n="waiting" class='waiting'></div>
+                </div>
+                <div class="fileInfo__row" >
+                    <div data-i18n="english" class='fileInfo__row--item'>Ingles</div>
+                    <div data-i18n="waiting" class='waiting'></div>
+                </div>
+                <div class="fileInfo__row" >
+                    <div data-i18n="humanity" class='fileInfo__row--item'>Habilidades</div>
+                    <div data-i18n="waiting" class='waiting'></div>
+                </div>
+                <div class="fileInfo__row" >
+                    <div data-i18n="review" class='fileInfo__row--item'>Review</div>
+                    <div data-i18n="waiting" class='waiting'></div>
+                </div>
             </div>
-            <label for='formFile' class="d-flex flex-column gap-4 py-3 w-50 align-items-center file_input" id="labelFile">
+            <label for='formFile' class="d-flex flex-column gap-4 py-3 align-items-center file_input" id="labelFile">
                 <figure>
                     <img src="/icons/file_upload.svg" width="100" alt="logo">
                 </figure>
-                <h3>Drop your file here!</h3>
-                <p>Only .xlsx files are accepted.</p>
+                <h3 data-i18n="developers" >Drop your file here!</h3>
+                <p data-i18n="developers" >Only .xlsx files are accepted.</p>
                 <input class="form-control" type="file" id="formFile">
             </label>
         </div>`;
@@ -45,7 +59,9 @@ export const showFileAttachment = (element) => {
     function handleDrop(e) {
         e.preventDefault();
         const dt = e.dataTransfer;
-        handleFileSelect(dt);
+        handleFileSelect(dt, (sheets) => {
+            console.log(sheets);
+        });
     }
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(event => {

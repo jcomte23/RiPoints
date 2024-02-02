@@ -23,5 +23,11 @@
         "thursday",
         "friday"
     ],
-    "week": "week"
+    "week": "week",
+    "loadFile":"Load Documents",
+    "development":"Software Development",
+    "english":"English",
+    "humanity":"Life skills",
+    "review":"Software review",
+    "waiting":"Waiting for documents..."
 }

@@ -65,4 +65,4 @@ sideNavSelector.addEventListener("click", (event) => {
 });
 
 //default
-showDashboard(showView);
+showFileAttachment(showView);
