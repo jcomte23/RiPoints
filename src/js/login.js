@@ -1,10 +1,9 @@
 import "../scss/login.scss";
 import { smallAlertError } from "./alerts";
 import { showLogin } from "../components/login";
-import { getRolUser, getUser } from "./services/getUser";
+import { getUser } from "./services/getUser";
 import {
   showValidation,
-  showValidationAccount,
 } from "./validations/validationForm";
 
 const sectionForm = document.getElementById("sectionForm");
@@ -20,7 +19,7 @@ form.addEventListener("submit", async (event) => {
     if (!value) return showValidation();
     user[key] = value;
   }
-
+  
   userSearch = await getUser(user);
   if (userSearch === null) {
     let idioma = localStorage.getItem("lang")
@@ -38,38 +37,21 @@ form.addEventListener("submit", async (event) => {
     }
   } else {
     localStorage.setItem("userStorage", JSON.stringify(userSearch));
-    console.log(userSearch);
-    switch (userSearch.idRol) {
-      case 1:
-        window.location.href = `src/pages/admin/index.html`;
+    localStorage.setItem("isAutorizated", "true")
+    switch (userSearch.role.name) {
+      case "admin":
+        redirect(userSearch.role.name);
         break;
-      case 2:
-        window.location.href = `src/pages/trainer/index.html`;
+      case "trainer":
+        redirect(userSearch.role.name);
         break;
-      case 3:
-        window.location.href = `src/pages/coder/index.html`;
+      case "coder":
+        redirect(userSearch.role.name);
         break;
       default:
-        window.location.href = `/`;
         break;
     }
   }
-
-
-
-  // localStorage.setItem("userStorage", JSON.stringify(userSearch));
-  // if (userSearch) {
-  //   const userRol = await getRolUser(userSearch.idRol);
-  //   redirect(userRol.name);
-  // } else {
-  //   let idioma = localStorage.getItem("lang")
-  //   if (idioma=="es") {
-  //     smallAlertError("Usuario o contraseña incorrectos")
-  //   } else {
-  //     smallAlertError("Incorrect username or password")
-  //   }
-  //   // showValidationAccount(form);
-  // }
 });
 
 const redirect = (rol) => {
