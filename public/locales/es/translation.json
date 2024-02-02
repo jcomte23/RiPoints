@@ -23,5 +23,10 @@
         "jueves",
         "viernes"
     ],
-    "week": "semana"
+    "week": "semana",
+    "gotomoodle": "Ir a moodle",
+    "logout": "Salir",
+    "yourscore": "Tu Puntuación",
+    "totalpoints":"Puntos Totales",
+    "weeklychart":"Grafica Semanal"
 }

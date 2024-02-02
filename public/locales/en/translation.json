@@ -23,5 +23,10 @@
         "thursday",
         "friday"
     ],
-    "week": "week"
+    "week": "week",
+    "gotomoodle": "Go to moodle",
+    "logout": "Log Out",
+    "yourscore": "Your Score",
+    "totalpoints":"Total Points",
+    "weeklychart":"Weekly Chart"
 }

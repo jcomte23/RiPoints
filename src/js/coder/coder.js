@@ -2,14 +2,15 @@ import * as bootstrap from "bootstrap";
 
 import Chart from "chart.js/auto";
 import { renderCoder } from "../../components/coder";
-
+import { getLanguague } from './../js/translator';
 
 Chart.defaults.color = "#fff";
 
 const floatingBackground = document.querySelector(".floatingBackground");
 renderCoder(floatingBackground);
 
-const renderweekChart = () => {
+const  renderweekChart = async () => {
+  let dictionary = await (await readLanguageFile()).json();
   const datos = {
     labels: ["Lunes", "Martes", "Miercoles", "Jueves", "viernes"],
     datasets: [
