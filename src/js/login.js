@@ -1,10 +1,9 @@
 import "../scss/login.scss";
 import { smallAlertError } from "./alerts";
 import { showLogin } from "../components/login";
-import { getRolUser, getUser } from "./services/getUser";
+import { getUser } from "./services/getUser";
 import {
   showValidation,
-  showValidationAccount,
 } from "./validations/validationForm";
 
 const sectionForm = document.getElementById("sectionForm");
@@ -12,6 +11,8 @@ showLogin(sectionForm);
 
 let userSearch;
 const form = document.querySelector("form");
+const userName = document.getElementById("user");
+const password = document.getElementById("password");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
@@ -22,7 +23,10 @@ form.addEventListener("submit", async (event) => {
   }
 
   userSearch = await getUser(user);
+
   if (userSearch === null) {
+    form.classList.remove("was-validated")
+    userName.classList.add("is-invalid")
     let idioma = localStorage.getItem("lang")
     if (idioma == "es") {
       smallAlertError("usuario no encontrado")
@@ -30,6 +34,10 @@ form.addEventListener("submit", async (event) => {
       smallAlertError("user not found")
     }
   } else if (userSearch === undefined) {
+    form.classList.remove("was-validated")
+    userName.classList.remove("is-invalid")
+    userName.classList.add("is-valid")
+    password.classList.add("is-invalid")
     let idioma = localStorage.getItem("lang")
     if (idioma == "es") {
       smallAlertError("contraseña incorrecta")
@@ -37,39 +45,23 @@ form.addEventListener("submit", async (event) => {
       smallAlertError("incorrect password")
     }
   } else {
+    showValidation()
     localStorage.setItem("userStorage", JSON.stringify(userSearch));
-    console.log(userSearch);
-    switch (userSearch.idRol) {
-      case 1:
-        window.location.href = `src/pages/admin/index.html`;
+    localStorage.setItem("isAutorizated", "true")
+    switch (userSearch.role.name) {
+      case "admin":
+        redirect(userSearch.role.name);
         break;
-      case 2:
-        window.location.href = `src/pages/trainer/index.html`;
+      case "trainer":
+        redirect(userSearch.role.name);
         break;
-      case 3:
-        window.location.href = `src/pages/coder/index.html`;
+      case "coder":
+        redirect(userSearch.role.name);
         break;
       default:
-        window.location.href = `/`;
         break;
     }
   }
-
-
-
-  // localStorage.setItem("userStorage", JSON.stringify(userSearch));
-  // if (userSearch) {
-  //   const userRol = await getRolUser(userSearch.idRol);
-  //   redirect(userRol.name);
-  // } else {
-  //   let idioma = localStorage.getItem("lang")
-  //   if (idioma=="es") {
-  //     smallAlertError("Usuario o contraseña incorrectos")
-  //   } else {
-  //     smallAlertError("Incorrect username or password")
-  //   }
-  //   // showValidationAccount(form);
-  // }
 });
 
 const redirect = (rol) => {
