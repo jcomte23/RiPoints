@@ -73,11 +73,7 @@ main{
 }
 
 // lg
-@media screen and (min-width: 992px) and (max-width: 1200px){ 
-    body{
-        background-color: red;
-    }
-    
+@media screen and (min-width: 992px) and (max-width: 1200px){     
     main{
         height: 93vh !important;
         margin-bottom: 0 !important;
@@ -86,8 +82,7 @@ main{
 }
 
 // xl
-@media screen and (min-width: 1200px) and (max-width: 1400px){
-    
+@media screen and (min-width: 1200px) and (max-width: 1400px){   
     main{
         height: 93vh !important;
         margin-bottom: 0 !important;

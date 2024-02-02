@@ -1,4 +1,5 @@
 import "../scss/login.scss";
+import { smallAlertError } from "./alerts";
 import { showLogin } from "../components/login";
 import { getRolUser, getUser } from "./services/getUser";
 import {
@@ -13,7 +14,6 @@ let userSearch;
 const form = document.querySelector("form");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-
   const formData = new FormData(form);
   const user = {};
   for (const [key, value] of formData) {
@@ -27,7 +27,13 @@ form.addEventListener("submit", async (event) => {
     const userRol = await getRolUser(userSearch.idRol);
     redirect(userRol.name);
   } else {
-    showValidationAccount(form);
+    let idioma = localStorage.getItem("lang")
+    if (idioma=="es") {
+      smallAlertError("Usuario o contraseña incorrectos")
+    } else {
+      smallAlertError("Incorrect username or password")
+    }
+    // showValidationAccount(form);
   }
 });
 
