@@ -1,7 +1,9 @@
 export const getUser = async (user) => {
   const response = await fetch(`${import.meta.env.VITE_BASE_URL}/user`);
   const data = await response.json();
-  
+
+  console.log(data);
+
   return data.find((userCache) => {
     return (
       userCache.userName == user.userName &&
