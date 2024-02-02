@@ -60,7 +60,7 @@ export function showCoders(element) {
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
           <div class="title__text">
-            <h2 id="codeR">Codigo </h2><img src="/public/img/img_desktop/r-logo.svg" alt="">
+            <h2 id="codeR">Codigo </h2><img src="/img/img_desktop/r-logo.svg" alt="">
           </div>
           
           <div class="information__coder">
