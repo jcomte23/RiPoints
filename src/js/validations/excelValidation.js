@@ -1,6 +1,6 @@
 import * as ExcelJS from 'exceljs';
 
-export function handleFileSelect(fileInput = false) {
+export function handleFileSelect(fileInput = false, callback) {
     let file;
 
     if (fileInput instanceof DataTransfer) {
@@ -30,11 +30,14 @@ export function handleFileSelect(fileInput = false) {
 
             const workbook = new ExcelJS.Workbook();
             workbook.xlsx.load(data).then(function () {
+                let sheets = [];
+                
                 // You can access the sheets and cells of the Excel file here
                 workbook.eachSheet(function (worksheet, sheetId) {
-                    console.log('Hoja:', sheetId);
-                    console.log(worksheet.getSheetValues());
+                    sheets.push({ sheetId, sheetName: worksheet.name, data: worksheet.getSheetValues() });
                 });
+
+                callback(sheets);
             });
         };
 

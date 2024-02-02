@@ -41,6 +41,7 @@
   --bs-modal-footer-border-width: none;
   --bs-modal-header-border-color: none;
   font-family: "Ubuntu";
+  border-radius: 2rem;
 }
 
 .modal-body .btn-close {
@@ -53,7 +54,9 @@
   flex-direction: column;
   background: #181E4B;
   padding-top: 3rem;
+  border-radius: 1rem;
 }
+
 
 .modal-dialog {
   --bs-modal-width: 600px;
@@ -177,7 +180,7 @@
 
 #plusSign {
   text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   color: white;
 }
 
