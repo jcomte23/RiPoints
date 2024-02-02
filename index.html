@@ -23,20 +23,6 @@
 
 <body class="login__body ">
   <header class="container-fluid header"></header>
-  <!-- <div class="position-absolute top-0 end-0 py-6 px-2 mt-2">
-    <button type="button" class="btn btn-outline-light text-center px-1" onclick="changeLanguage('es')">
-      <span class="d-flex flex-column px-1 pt-1 pb-1">
-        <span class="pb-2">ES</span>
-        <span>Español</span>
-      </span>
-    </button>
-    <button type="button" class="btn btn-outline-light text-center px-1" onclick="changeLanguage('en')">
-      <span class="d-flex flex-column px-1 pt-1 pb-1">
-        <span class="pb-2">EN</span>
-        <span>English</span>
-      </span>
-    </button>
-  </div> -->
 
   <main class="d-flex flex-column flex-sm-column px-2  flex-md-row justify-content-around align-items-center">
     <section class="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
@@ -45,17 +31,26 @@
         <figure id="codigoR"
           class="bg-secondary rounded-5 d-flex justify-content-center align-items-center text-white py-2 px-5 w-50">
           <span data-i18n="code" class="text-capitalize fs-1 fw-bold"></span>
-          <img src="/img/img_desktop/r-logo.svg" alt="img codigoR" id="logo-Riwi" class="w-50" width="122" height="63" />
+          <img src="/img/img_desktop/r-logo.svg" alt="img codigoR" id="logo-Riwi" class="w-50" width="122"
+            height="63" />
         </figure>
       </article>
       <figure class="character d-flex justify-content-center">
-        <img src="./img/img_desktop/saly_desktop.webp" alt="logo login"  class="w-75 h-auto" width="410" height="334">
+        <img src="./img/img_desktop/saly_desktop.webp" alt="logo login" class="w-75 h-auto" width="410" height="334">
       </figure>
     </section>
 
-    <section id="sectionForm" class="col-sm-8 col-md-5 col-lg-4 col-xl-3 col-xxl-4" >
-      <form class="card needs-validation d-flex flex-column justify-content-center align-items-center rounded-5 px-4 py-5 m-0 " id="form" novalidate>
+    <section id="sectionForm" class="col-sm-8 col-md-5 col-lg-4 col-xl-3 col-xxl-4">
+      <div class="position-relative">
+        <span class="position-absolute span_lang lang_en top-0 fs-3 z-3 end-0 text-body-secondary" onclick="changeLanguage('en')">EN</span>
+        <span class="position-absolute span_lang lang_es top-0 fs-3 z-3 end-0 text-body-secondary" onclick="changeLanguage('es')">ES</span>
+      </div>
+      <form
+        class="card needs-validation d-flex flex-column justify-content-center align-items-center rounded-5 px-4 py-5 m-0 "
+        id="form" novalidate>
+        
         <div class='d-flex flex-column col-xxl-11 align-items-start gap-3 '>
+          
           <div class="col-12">
             <label for="user" class="form-label text-capitalize" data-i18n="user"></label>
             <input name="userName" type="text" class="form-control " id="user" required placeholder="" />
@@ -64,7 +59,8 @@
             <label for="password" class="form-label text-capitalize" data-i18n="password"></label>
             <input name="password" type="password" class="form-control" id="password" required placeholder="" />
           </div>
-          <button id="btn-login" type="submit" class="btn btn-primary h-50 mt-4 w-100  text-capitalize" data-i18n="login"></button>
+          <button id="btn-login" type="submit" class="btn btn-primary h-50 mt-4 w-100  text-capitalize"
+            data-i18n="login"></button>
         </div>
       </form>
     </section>
@@ -72,8 +68,7 @@
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5 border-top">
     <div class="col-6 d-flex align-items-center">
-      <a href="https://riwi.io/" target="_blank"
-        class="text-body-secondary text-decoration-none lh-1">
+      <a href="https://riwi.io/" target="_blank" class="text-body-secondary text-decoration-none lh-1">
         <span class="text-body-secondary">&copy; 2024 Riwi</span>
       </a>
     </div>
