@@ -1,24 +1,24 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 
 export const showFileAttachment = (element) => {
-
+    let daysPerClass = {};
     element.innerHTML = ` 
         <div class="file">
             <h1 data-i18n="loadFile" class="fw-bold">Carga de puntos</h1>
             <div class='fileInfo' >
-                <div class="fileInfo__row" >
+                <div class="fileInfo__row" id="development">
                     <div data-i18n="development" class='fileInfo__row--item'>Desarrollo de software</div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
-                <div class="fileInfo__row" >
+                <div class="fileInfo__row" id="english">
                     <div data-i18n="english" class='fileInfo__row--item'>Ingles</div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
-                <div class="fileInfo__row" >
+                <div class="fileInfo__row" id="skills">
                     <div data-i18n="humanity" class='fileInfo__row--item'>Habilidades</div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
-                <div class="fileInfo__row" >
+                <div class="fileInfo__row" id="review">
                     <div data-i18n="review" class='fileInfo__row--item'>Review</div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
@@ -37,6 +37,12 @@ export const showFileAttachment = (element) => {
 
     const inputElement = element.querySelector('#formFile');
     const labelFile = document.getElementById('labelFile');
+
+    const developmentContainer = document.getElementById("development");
+    const englishContainer = document.getElementById("english");
+    const skillsContainer = document.getElementById("skills");
+    const reviewContainer = document.getElementById("review");
+
     inputElement.addEventListener('change', handleFileSelect);
 
     const active = () => {
@@ -56,11 +62,49 @@ export const showFileAttachment = (element) => {
         })
     }
 
+    function appendDay(className, element){
+        let formatted = className.toLowerCase();
+        console.log("appending to", formatted);
+
+        if(formatted.includes("desarrollo")){
+            developmentContainer.append(element);
+            developmentContainer.children[0].classList.add("loaded");
+        }else if(formatted.includes("ingles")){
+            englishContainer.append(element);
+            englishContainer.children[0].classList.add("loaded");
+        }else if(formatted.includes("habilidades")){
+            skillsContainer.append(element);
+            skillsContainer.children[0].classList.add("loaded");
+        }else{
+            reviewContainer.append(element);
+            reviewContainer.children[0].classList.add("loaded");
+        }
+    }
+
     function handleDrop(e) {
         e.preventDefault();
         const dt = e.dataTransfer;
         handleFileSelect(dt, (sheets) => {
-            console.log(sheets);
+            document.querySelectorAll(".waiting").forEach(element => element.style.display = "none");
+
+            let className = sheets[0].data[1][2];
+            let aux = [];
+
+            sheets.forEach(el => {
+                aux.push({ sheetName: el.sheetName, data: el.data.slice(4) });
+            });
+
+            aux.forEach(el => {
+                if(!document.querySelector(`.${className[0].toLowerCase()}_${el.sheetName}`)){
+                    let div = document.createElement("div");
+                    div.textContent = el.sheetName;
+                    div.classList.add("days", `${className[0].toLowerCase()}_${el.sheetName}`);
+                    appendDay(className, div);
+                }
+            })
+
+            daysPerClass[className] = aux;
+            console.log(daysPerClass);
         });
     }
 

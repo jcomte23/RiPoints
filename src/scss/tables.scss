@@ -64,6 +64,7 @@
     justify-content: center;
     flex-direction: row;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .fileInfo__row--item{
@@ -78,6 +79,11 @@
     border: .15rem solid v.$primary;
     border-radius: 5rem;
   }
+  .loaded{
+    border: unset;
+    background-color: v.$mint;
+    color: white;
+  }
   .waiting{
     display: flex;
     align-items: center;
@@ -85,6 +91,18 @@
     font-style: italic;
     opacity: .3;
     animation: waiting 1s ease infinite;  
+  }
+  .days{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: v.$mint;
+    color: white;
+    border-radius: 3rem;
   }
 
 }
