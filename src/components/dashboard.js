@@ -13,8 +13,11 @@ export const showDashboard = (element) => {
       </div>
     </div>
     `;
-  let dataPie = [50,8,5,6]
-  pieChart(document.querySelector('.pieChart'), dataPie);
-  lineChart(document.querySelector('.dashboard__line'), dataPie);
+
+    let list = ['Clan Gosling','Clan Dell','Clan Ritchie','Clan Linus','Clan Lorevace','Clan Vinour']
+
+  
+  pieChart(document.querySelector('.pieChart'), list);
+  lineChart(document.querySelector('.dashboard__line'), list);
 
 }

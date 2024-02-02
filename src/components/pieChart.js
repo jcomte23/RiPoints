@@ -5,115 +5,114 @@ function readLanguageFile(){
     return fetch(`/locales/${getLanguague()}/translation.json`);
 }
 
-export const lineChart = async (element) => {
+function toCapitalize(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+export const lineChart = async (element, list, language) => {
   element.innerHTML = `<canvas id="myLineChart"></canvas>`;
-  
+
   let dictionary = await (await readLanguageFile()).json();
-  
-  const data = {
-    labels: dictionary.days,
-    datasets: [
-      {
-        label: dictionary.FI,
-        data: [10,5,14,6,8],
-        borderColor: "#fe654f",
-        backgroundColor: "#fe654f33",
-        fill: true
-      },
-      {
-        label: dictionary.FJ,
-        data: [20,14,36,19,28],
-        borderColor: "#e6ca52",
-        backgroundColor: "#e6ca5233",
-        fill: true
-      },
-      {
-        label: dictionary.R,
-        data: [10,12,25,13,18],
-        borderColor: "#6b5cff",
-        backgroundColor: "#6b5cff33",
-        fill: true
-      },
-      {
-        label: dictionary.P,
-        data: [246,250,241,250,255],
-        borderColor: "#5acca4",
-        backgroundColor: "#5acca433",
-        fill: true
-      },
-    ]
-  };
-    const config = {
-    type: 'line',
-    data: data,
-    options: {
-      responsive: true,
-      plugins: {
-        title: {
-          display: true,
-          text: (ctx) => dictionary.P
-        },
-        tooltip: {
-          mode: 'index'
-        },
-      },
-      interaction: {
-        mode: 'nearest',
-        axis: 'x',
-        intersect: false
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: ''
-          },
-          grid: {
-            display: false
-          }
-        },
-        y: {
-          stacked: true,
-          title: {
-            display: true,
-            text: dictionary.P
-          },
-          grid: {
-            display: false
-          }
-        }
-      }
-    }
+
+  const createChart = () => {
+    const data = {
+      labels: dictionary.days.map((day) => {
+        return toCapitalize(day);
+      }),
+      datasets: list.map((clan) => {
+        return {
+          label: clan,
+          data: [10, 5, 14, 6, 8],
+          borderColor: "#fe654f",
+          backgroundColor: "#fe654f33",
+          fill: false,
+        };
+      }),
     };
-    
-  const ctx = document.getElementById('myLineChart');
-  Chart.defaults.color = '#FFFFFF';
+
+    const config = {
+      type: "line",
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: (ctx) => dictionary.Pp,
+          },
+          tooltip: {
+            mode: "index",
+          },
+        },
+        interaction: {
+          mode: "nearest",
+          axis: "x",
+          intersect: false,
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: "",
+            },
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            stacked: true,
+            title: {
+              display: true,
+              text: dictionary.Pp,
+            },
+            grid: {
+              display: false,
+            },
+          },
+        },
+      },
+    };
+
+    const ctx = document.getElementById("myLineChart");
+    Chart.defaults.color = "#FFFFFF";
 
     new Chart(ctx, config);
-    
-}
+  };
+
+  // Llama a la función para inicializar el gráfico
+  createChart();
+
+  // Si la variable de idioma cambia, vuelve a pintar el gráfico
+  language.addEventListener("change", async () => {
+    dictionary = await (await readLanguageFile()).json();
+    createChart();
+  });
+};
 
 
-export const pieChart = async (element,num) => {
+
+export const pieChart = async (element,list,clanData=[45,34,23,53,76,54]) => {
     element.innerHTML = ` <canvas id="myChart"></canvas>`;
-  
-  let dictionary = await (await readLanguageFile()).json();
     
   const ctx = document.getElementById('myChart');
   new Chart(ctx, {
     type: 'pie',
     responsive: true,
     data: {
-              labels: [dictionary.P, dictionary.R, dictionary.FJ, dictionary.FI],
+              labels: list.map((clan)=>{return clan}),
               datasets: [{
                 backgroundColor:[
-                    '#5acca4',
-                    '#6b5cff',
-                    '#e6ca52',
-                    '#fe654f'
+                   "#181e4b",
+                   "#6b5cff",
+                   "#5acca4",
+                   "#2D9596",
+                   "#e6ca52",
+                   "#fe654f",
+                   "#40A2E3",
+                   "#DCFFB7",
+                   "#ffffff",
                 ],
-                label: '# of Votes',
-                data: [num[0], num[1], num[2], num[3]],
+                label: 'Rankig: ',
+                data: clanData.map((data)=>{return data}),
                 borderWidth: 1
               }]
             },
