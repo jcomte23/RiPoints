@@ -9,7 +9,7 @@ export function getLanguague() {
   }
 }
 
-let language = getLanguague();
+export var language = getLanguague();
 
 i18next
   .use(Backend)
