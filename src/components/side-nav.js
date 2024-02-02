@@ -66,4 +66,4 @@ sideNavSelector.addEventListener("click", (event) => {
 
 changeLanguageOnClick();
 //default
-showFileAttachment(showView);
+showDashboard(showView);
