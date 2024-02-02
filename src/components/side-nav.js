@@ -66,4 +66,4 @@ sideNavSelector.addEventListener("click", (event) => {
 
 changeLanguageOnClick();
 //default
-showDashboard(showView);
+showCoders(showView);

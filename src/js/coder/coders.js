@@ -1,7 +1,8 @@
-import * as bootstrap from "bootstrap";
-
 document.addEventListener('DOMContentLoaded', function () {
-    let myInput = document.getElementById('searchKeywords');
+    
+  console.log('nes');
+  
+  let myInput = document.getElementById('searchKeywords');
     let myTableRows = document.querySelectorAll('#myTable tbody tr');
     myInput.addEventListener('keyup', function () {
         let value = myInput.value.toLowerCase();
