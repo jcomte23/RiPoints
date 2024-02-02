@@ -1,3 +1,4 @@
+import { changeLanguageOnClick } from "../js/translator"; 
 export const renderCoder = (element) => {
   const user = { name: "jose", lastName: "perez" };
   element.innerHTML = `
@@ -71,3 +72,5 @@ export const renderCoder = (element) => {
 </div>
   `;
 };
+
+changeLanguageOnClick();
