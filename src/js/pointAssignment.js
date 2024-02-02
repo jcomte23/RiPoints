@@ -20,3 +20,13 @@ function calcPoints(...asistencias){
   
   return (toFix[sum]) ? point_result[points.indexOf(toFix[sum])] : point_result[points.indexOf(sum)];
 }
+
+function assignRealValue(...assists){
+  let values = [1, 0.01, 0.1, 0];
+  if(assists.filter(el => el === 1).length > 1) return 0.01;
+  let asistPos = assists.indexOf(1);
+  return (asistPos >= 0) ? values[asistPos] : 0;
+}
+
+
+export { calcPoints, assignRealValue };

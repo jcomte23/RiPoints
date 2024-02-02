@@ -1,4 +1,35 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
+import { calcPoints, assignRealValue } from '../js/pointAssignment';
+
+function getClansPoints(data){
+    let areas = {};
+
+    for(let classObject of Object.entries(data)){
+        classObject[1].forEach(element => {
+            if(areas[classObject[0]]) {
+                let aux = {
+                    day: element.sheetName,
+                    clans: {
+
+                    }
+                };
+
+                element.data.forEach(el => {
+                    let clan = el[3];
+                    if(aux.clans[clan]) aux.clans[clan].push(assignRealValue(...el.slice(4)));
+                    else aux.clans[clan] = [assignRealValue(...el.slice(4))];
+                })
+
+                areas[classObject[0]].push(aux);
+            }
+            else {
+                areas[classObject[0]] = [];
+            }
+        })
+    }
+
+    console.log("AREAS", areas);
+}
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -91,7 +122,7 @@ export const showFileAttachment = (element) => {
             let aux = [];
 
             sheets.forEach(el => {
-                aux.push({ sheetName: el.sheetName, data: el.data.slice(4) });
+                aux.push({ sheetName: el.sheetName, data: el.data.slice(5).filter(el => el.length !== 0) });
             });
 
             aux.forEach(el => {
@@ -105,6 +136,9 @@ export const showFileAttachment = (element) => {
 
             daysPerClass[className] = aux;
             console.log(daysPerClass);
+            if(Object.keys(daysPerClass).length === 4) {
+                getClansPoints(daysPerClass);
+            };
         });
     }
 
