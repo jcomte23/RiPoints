@@ -1,15 +1,15 @@
 export const getUser = async (user) => {
-  const response = await fetch(`${import.meta.env.VITE_BASE_URL}/user`);
+  const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users?userName=${user.userName}`);
   const data = await response.json();
-
-  console.log(data);
-
-  return data.find((userCache) => {
-    return (
-      userCache.userName == user.userName &&
-      userCache.password === user.password
-    );
-  });
+  if (data.length === 0) {
+    return null
+  }else{
+    if (data[0].password===user.password) {
+      return data[0]
+    }else{
+      return undefined
+    }
+  }
 };
 
 //Esta validacion no es tan necesaria pero por buenas practicas la hago
