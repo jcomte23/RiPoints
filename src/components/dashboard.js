@@ -1,5 +1,6 @@
 import { pieChart, lineChart } from "./pieChart";
 import '../scss/dashboard.scss'
+import { updateContent } from "../js/translator";
 
 export const showDashboard = (element) => {
   element.innerHTML = ` 
@@ -19,5 +20,6 @@ export const showDashboard = (element) => {
   
   pieChart(document.querySelector('.pieChart'), list);
   lineChart(document.querySelector('.dashboard__line'), list);
-
+  
+  updateContent()
 }

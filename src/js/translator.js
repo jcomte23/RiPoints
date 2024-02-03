@@ -9,7 +9,7 @@ export function getLanguague() {
   }
 }
 
-export var language = getLanguague();
+let language = getLanguague();
 
 i18next
   .use(Backend)
@@ -24,7 +24,7 @@ i18next
   })
   .then(() => updateContent());
 
-function updateContent() {
+export function updateContent() {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((el) => {
     const key = el.getAttribute("data-i18n");

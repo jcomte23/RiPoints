@@ -8,84 +8,74 @@ function readLanguageFile(){
 function toCapitalize(string){
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-export const lineChart = async (element, list, language) => {
+export const lineChart = async (element, list) => {
   element.innerHTML = `<canvas id="myLineChart"></canvas>`;
 
   let dictionary = await (await readLanguageFile()).json();
 
-  const createChart = () => {
-    const data = {
-      labels: dictionary.days.map((day) => {
-        return toCapitalize(day);
-      }),
-      datasets: list.map((clan) => {
-        return {
-          label: clan,
-          data: [10, 5, 14, 6, 8],
-          borderColor: "#fe654f",
-          backgroundColor: "#fe654f33",
-          fill: false,
-        };
-      }),
-    };
+  const data = {
+    labels: dictionary.days.map((day) => {
+      return toCapitalize(day);
+    }),
+    datasets: list.map((clan) => {
+      return {
+        label: clan,
+        data: [10, 5, 14, 6, 8],
+        borderColor: "#fe654f",
+        backgroundColor: "#fe654f33",
+        fill: false,
+      };
+    }),
+  };
 
-    const config = {
-      type: "line",
-      data: data,
-      options: {
-        responsive: true,
-        plugins: {
+  const config = {
+    type: "line",
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: (ctx) => dictionary.Pp,
+        },
+        tooltip: {
+          mode: "index",
+        },
+      },
+      interaction: {
+        mode: "nearest",
+        axis: "x",
+        intersect: false,
+      },
+      scales: {
+        x: {
           title: {
             display: true,
-            text: (ctx) => dictionary.Pp,
+            text: "",
           },
-          tooltip: {
-            mode: "index",
+          grid: {
+            display: false,
           },
         },
-        interaction: {
-          mode: "nearest",
-          axis: "x",
-          intersect: false,
-        },
-        scales: {
-          x: {
-            title: {
-              display: true,
-              text: "",
-            },
-            grid: {
-              display: false,
-            },
+        y: {
+          stacked: true,
+          title: {
+            display: true,
+            text: dictionary.Pp,
           },
-          y: {
-            stacked: true,
-            title: {
-              display: true,
-              text: dictionary.Pp,
-            },
-            grid: {
-              display: false,
-            },
+          grid: {
+            display: false,
           },
         },
       },
-    };
-
-    const ctx = document.getElementById("myLineChart");
-    Chart.defaults.color = "#FFFFFF";
-
-    new Chart(ctx, config);
+    },
   };
 
-  // Llama a la función para inicializar el gráfico
-  createChart();
+  const ctx = document.getElementById("myLineChart");
+  Chart.defaults.color = "#FFFFFF";
 
-  // Si la variable de idioma cambia, vuelve a pintar el gráfico
-  language.addEventListener("change", async () => {
-    dictionary = await (await readLanguageFile()).json();
-    createChart();
-  });
+  new Chart(ctx, config);
+  
 };
 
 

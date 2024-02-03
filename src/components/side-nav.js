@@ -61,9 +61,7 @@ sideNavSelector.addEventListener("click", (event) => {
       break;
   }
 });
-
-
-
 changeLanguageOnClick();
 //default
-showCoders(showView);
+
+showFileAttachment(showView);

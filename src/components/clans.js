@@ -1,3 +1,4 @@
+import { updateContent } from "../js/translator";
 
 
 export const showClans = (element) => {
@@ -80,5 +81,6 @@ export const showClans = (element) => {
             </table>
         </section>
     `
+ updateContent()
 }
 

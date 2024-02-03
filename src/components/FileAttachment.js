@@ -1,10 +1,11 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
+import { updateContent } from '../js/translator'
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
     element.innerHTML = ` 
         <div class="file">
-            <h1 data-i18n="loadFile" class="fw-bold">Carga de puntos</h1>
+            <h1 data-i18n="loadFile" class="fw-bold"></h1>
             <div class='fileInfo' >
                 <div class="fileInfo__row" id="development">
                     <div data-i18n="development" class='fileInfo__row--item'>Desarrollo de software</div>
@@ -23,7 +24,7 @@ export const showFileAttachment = (element) => {
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
             </div>
-            <label for='formFile' class="d-flex flex-column gap-4 py-3 align-items-center file_input" id="labelFile">
+            <label for='formFile' class="d-flex flex-column py-2 align-items-center file_input" id="labelFile">
                 <figure>
                     <img src="/icons/file_upload.svg" width="100" alt="logo">
                 </figure>
@@ -113,4 +114,6 @@ export const showFileAttachment = (element) => {
     });
 
     labelFile.addEventListener('drop', handleDrop);
+
+    updateContent()
 };
