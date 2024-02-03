@@ -1,6 +1,33 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { calcPoints, assignRealValue } from '../js/pointAssignment';
 
+function defineTotalPoints(data){
+    let pointsPerDay = {};
+    let entries = Object.entries(data);
+
+    entries[0][1].forEach((element, outIndex) => {
+
+        pointsPerDay[element.day] = {};
+
+        Object.entries(element.clans).forEach((clan, clanIndex) => {
+            clan[1].forEach((point, index) => {
+
+                let pointSum = calcPoints(point,
+                Object.entries(entries[1][1][outIndex].clans)[clanIndex][1][index],
+                Object.entries(entries[2][1][outIndex].clans)[clanIndex][1][index], 
+                Object.entries(entries[3][1][outIndex].clans)[clanIndex][1][index]);
+
+                if(pointsPerDay[element.day][clan[0]]){
+                    pointsPerDay[element.day][clan[0]] += pointSum;
+                }else pointsPerDay[element.day][clan[0]] = pointSum;
+
+            })
+        })
+    })
+
+    return pointsPerDay;
+}
+
 function getClansPoints(data){
     let areas = {};
 
@@ -16,6 +43,7 @@ function getClansPoints(data){
 
                 element.data.forEach(el => {
                     let clan = el[3];
+                    if(!clan) return;
                     if(aux.clans[clan]) aux.clans[clan].push(assignRealValue(...el.slice(4)));
                     else aux.clans[clan] = [assignRealValue(...el.slice(4))];
                 })
@@ -28,7 +56,7 @@ function getClansPoints(data){
         })
     }
 
-    console.log("AREAS", areas);
+    return areas;
 }
 
 export const showFileAttachment = (element) => {
@@ -135,9 +163,9 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-            console.log(daysPerClass);
             if(Object.keys(daysPerClass).length === 4) {
-                getClansPoints(daysPerClass);
+                // THIS RETURNS ALL THE POINTS ASSIGNED PER DAY AND CLAN
+                console.log(defineTotalPoints(getClansPoints(daysPerClass)));
             };
         });
     }
