@@ -9,13 +9,13 @@ export function getLanguague() {
   }
 }
 
-let language = getLanguague();
+export var language = getLanguague();
 
 i18next
   .use(Backend)
   .init({
     lng: language,
-    debug: true,
+    debug: false,
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
