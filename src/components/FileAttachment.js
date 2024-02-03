@@ -6,7 +6,6 @@ function defineTotalPoints(data){
     let entries = Object.entries(data);
 
     entries[0][1].forEach((element, outIndex) => {
-
         pointsPerDay[element.day] = {};
 
         Object.entries(element.clans).forEach((clan, clanIndex) => {
@@ -28,31 +27,28 @@ function defineTotalPoints(data){
     return pointsPerDay;
 }
 
-function getClansPoints(data){
+function getClansAssists(data){
     let areas = {};
 
     for(let classObject of Object.entries(data)){
         classObject[1].forEach(element => {
-            if(areas[classObject[0]]) {
-                let aux = {
-                    day: element.sheetName,
-                    clans: {
+            areas[classObject[0]] || (areas[classObject[0]] = []);
 
-                    }
-                };
+            let aux = {
+                day: element.sheetName,
+                clans: {
 
-                element.data.forEach(el => {
-                    let clan = el[3];
-                    if(!clan) return;
-                    if(aux.clans[clan]) aux.clans[clan].push(assignRealValue(...el.slice(4)));
-                    else aux.clans[clan] = [assignRealValue(...el.slice(4))];
-                })
+                }
+            };
 
-                areas[classObject[0]].push(aux);
-            }
-            else {
-                areas[classObject[0]] = [];
-            }
+            element.data.forEach(el => {
+                let clan = el[3];
+                if(!clan) return;
+                if(aux.clans[clan]) aux.clans[clan].push(assignRealValue(...el.slice(4)));
+                else aux.clans[clan] = [assignRealValue(...el.slice(4))];
+            })
+
+            areas[classObject[0]].push(aux);
         })
     }
 
@@ -165,7 +161,9 @@ export const showFileAttachment = (element) => {
             daysPerClass[className] = aux;
             if(Object.keys(daysPerClass).length === 4) {
                 // THIS RETURNS ALL THE POINTS ASSIGNED PER DAY AND CLAN
-                console.log(defineTotalPoints(getClansPoints(daysPerClass)));
+                let clansAssists = getClansAssists(daysPerClass);
+                let result = defineTotalPoints(clansAssists);
+                console.log({ clansAssists, clansTotalPoints: result });
             };
         });
     }

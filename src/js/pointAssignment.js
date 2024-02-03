@@ -28,5 +28,13 @@ function assignRealValue(...assists){
   return (asistPos >= 0) ? values[asistPos] : 0;
 }
 
+function saveClansPoints(clanPoints){
+  sessionStorage.setItem("clansPoints", JSON.stringify(clanPoints));
+}
 
-export { calcPoints, assignRealValue };
+function getSavedClansPoints(){
+  return JSON.parse(sessionStorage.getItem("clansPoints"));
+}
+
+
+export { calcPoints, assignRealValue, saveClansPoints, getSavedClansPoints };
