@@ -1,5 +1,6 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
+import { defineTotalPoints, getClansAssists } from '../js/pointAssignment';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -92,7 +93,7 @@ export const showFileAttachment = (element) => {
             let aux = [];
 
             sheets.forEach(el => {
-                aux.push({ sheetName: el.sheetName, data: el.data.slice(4) });
+                aux.push({ sheetName: el.sheetName, data: el.data.slice(5).filter(el => el.length !== 0) });
             });
 
             aux.forEach(el => {
@@ -105,7 +106,12 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-            console.log(daysPerClass);
+            if(Object.keys(daysPerClass).length === 4) {
+                // THIS RETURNS ALL THE POINTS ASSIGNED PER DAY AND CLAN
+                let clansAssists = getClansAssists(daysPerClass);
+                let result = defineTotalPoints(clansAssists);
+                console.log({ clansAssists, clansTotalPoints: result });
+            };
         });
     }
 
