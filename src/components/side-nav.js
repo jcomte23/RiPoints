@@ -4,10 +4,12 @@ import { showCoders } from "./coders";
 import { showDashboard } from "./dashboard";
 import { showFileAttachment } from "./FileAttachment";
 import { changeLanguageOnClick } from "../js/translator"; 
-
+import '../scss/tables.scss'
 
 const sideNav = () => {
   const nav = document.querySelector(".side-nav");
+  const session = localStorage.getItem("userStorage")
+  const role = JSON.parse(session).roleId
   nav.innerHTML = `
     <figure>
       <img src="/img/img_globales/rlogo-r-white.svg" alt="Logo riwi R" width="183" height="183"/>
@@ -32,7 +34,7 @@ const sideNav = () => {
     </ul>
     <a class="menu__header--lang btn btn-primary">
       <div class="lang--flag"></div>
-      <h4 data-i18n="lang">EN</h4>
+      <h4 data-i18n="lang"></h4>
     </a>
   `;
 };

@@ -35,5 +35,7 @@
     "yourscore": "Tu Puntuación",
     "totalpoints":"Puntos Totales",
     "weeklychart":"Grafica Semanal",
-    "Pp":"Asistencia"
+    "Pp":"Asistencia",
+    "drop":"Arrastra tus archivos aquí!",
+    "filesfilter":"Solo archivos .xlsx son permitidos."
 }

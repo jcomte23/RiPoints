@@ -9,19 +9,19 @@ export const showFileAttachment = (element) => {
             <h1 data-i18n="loadFile" class="fw-bold"></h1>
             <div class='fileInfo' >
                 <div class="fileInfo__row" id="development">
-                    <div data-i18n="development" class='fileInfo__row--item'>Desarrollo de software</div>
+                    <div data-i18n="development" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
                 <div class="fileInfo__row" id="english">
-                    <div data-i18n="english" class='fileInfo__row--item'>Ingles</div>
+                    <div data-i18n="english" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
                 <div class="fileInfo__row" id="skills">
-                    <div data-i18n="humanity" class='fileInfo__row--item'>Habilidades</div>
+                    <div data-i18n="humanity" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
                 <div class="fileInfo__row" id="review">
-                    <div data-i18n="review" class='fileInfo__row--item'>Review</div>
+                    <div data-i18n="review" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
             </div>
@@ -29,8 +29,8 @@ export const showFileAttachment = (element) => {
                 <figure>
                     <img src="/icons/file_upload.svg" width="100" alt="logo">
                 </figure>
-                <h3 data-i18n="developers" >Drop your file here!</h3>
-                <p data-i18n="developers" >Only .xlsx files are accepted.</p>
+                <h3 data-i18n="drop" >Drop your file here!</h3>
+                <p data-i18n="filesfilter" >Only .xlsx files are accepted.</p>
                 <input class="form-control" type="file" id="formFile">
             </label>
         </div>`;

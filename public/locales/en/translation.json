@@ -35,5 +35,7 @@
     "yourscore": "Your Score",
     "totalpoints":"Total Points",
     "weeklychart":"Weekly Chart",
-    "Pp":"Attendance"
+    "Pp":"Attendance",
+    "drop":"Drop your file here!",
+    "filesfilter":"Only .xlsx files are accepted."
 }
