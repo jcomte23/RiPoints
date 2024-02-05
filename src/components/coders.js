@@ -1,20 +1,15 @@
 import { updateContent } from "../js/translator";
+import { filter } from "../js/coder/coders";
 
 export function showCoders(element) {
-  const user =  localStorage.getItem("userStorage");
-    while (element.firstChild) {
-        element.removeChild(element.firstChild);
-    }
-    element.innerHTML = `
+  const user = localStorage.getItem("userStorage");
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+  element.innerHTML = `
     <form class="d-flex form-control flex-column form-coders">
        <h2 data-i18n="developers" ></h2>
        <input class="my-2 search" type="text" name="" id="searchKeywords" placeholder="Search" />
-       <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
-           <label for="dateStart">Desde:</label>
-           <input type="date" name="" id="dateStart" />
-           <label for="dateEnd">Hasta:</label>
-           <input type="date" name="" id="dateEnd" />
-       </div>
 
     <table id="myTable" class="table mt-3">
         <thead>
@@ -114,33 +109,30 @@ export function showCoders(element) {
   </div>
     `;
 
-    const form = document.querySelector("form");
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        
-    });
-    
-      
-    const assigment = document.querySelector(".asignador__points");
-    const plusSign = document.getElementById("plusSign");
+  filter();
 
-    let isFirstTime = true;
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
 
-    assigment.addEventListener("input", (event) => {
-      if (assigment.value.startsWith("-") && isFirstTime) {
-        plusSign.textContent = "-";
-        assigment.value = assigment.value.slice(1); 
-        isFirstTime = false; 
-      } else if (!assigment.value.startsWith("-")) {
-        plusSign.textContent = "+";
-        isFirstTime = true; 
-      }
+  const assigment = document.querySelector(".asignador__points");
+  const plusSign = document.getElementById("plusSign");
 
-      console.log(assigment.value);
-    });
+  let isFirstTime = true;
 
+  assigment.addEventListener("input", (event) => {
+    if (assigment.value.startsWith("-") && isFirstTime) {
+      plusSign.textContent = "-";
+      assigment.value = assigment.value.slice(1);
+      isFirstTime = false;
+    } else if (!assigment.value.startsWith("-")) {
+      plusSign.textContent = "+";
+      isFirstTime = true;
+    }
 
+    console.log(assigment.value);
+  });
 
-    updateContent()
-  }
-  
+  updateContent();
+}
