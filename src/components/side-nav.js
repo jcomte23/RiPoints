@@ -4,12 +4,12 @@ import { showCoders } from "./coders";
 import { showDashboard } from "./dashboard";
 import { showFileAttachment } from "./FileAttachment";
 import { changeLanguageOnClick } from "../js/translator";
-import '../scss/tables.scss'
+import "../scss/tables.scss";
 
 const sideNav = () => {
   const nav = document.querySelector(".side-nav");
-  const session = localStorage.getItem("userStorage")
-  const role = JSON.parse(session).roleId
+  const session = localStorage.getItem("userStorage");
+  const role = JSON.parse(session).roleId;
   switch (role) {
     case "1":
       nav.innerHTML = `
@@ -39,8 +39,8 @@ const sideNav = () => {
           <h4 data-i18n="lang"></h4>
         </a>
         <button type="button" data-i18n="logout" class="btn btn-primary-coder btn-block bi bi-arrow-left" id="btn-logout"></button>
-      `
-    break;
+      `;
+      break;
     case "2":
       nav.innerHTML = `
         <figure>
@@ -61,13 +61,12 @@ const sideNav = () => {
           <h4 data-i18n="lang"></h4>
         </a>
         <button type="button" data-i18n="logout" class="btn btn-primary-coder btn-block bi bi-arrow-left" id="btn-logout"></button>
-      `
-    break;
+      `;
+      break;
 
     default:
       break;
   }
-
 };
 
 sideNav();
@@ -97,4 +96,4 @@ sideNavSelector.addEventListener("click", (event) => {
 changeLanguageOnClick();
 //default
 
-showFileAttachment(showView);
+showCoders(showView);
