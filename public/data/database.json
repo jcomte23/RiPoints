@@ -442,31 +442,83 @@
   "clansTrainers": [
     {
       "id": "1",
-      "userId": "3",
-      "clanId": "lovelace"
+      "userId": "t1",
+      "clanId": "dell"
     },
     {
       "id": "2",
-      "userId": "3",
+      "userId": "t2",
+      "clanId": "gates"
+    },
+    {
+      "id": "3",
+      "userId": "t3",
+      "clanId": "gosling"
+    },
+    {
+      "id": "4",
+      "userId": "t4",
+      "clanId": "jobs"
+    },
+    {
+      "id": "5",
+      "userId": "t5",
+      "clanId": "linus"
+    },
+    {
+      "id": "6",
+      "userId": "t6",
+      "clanId": "lovelace"
+    },
+    {
+      "id": "7",
+      "userId": "t1",
       "clanId": "meta"
+    },
+    {
+      "id": "8",
+      "userId": "t2",
+      "clanId": "ritchie"
+    },
+    {
+      "id": "8",
+      "userId": "t3",
+      "clanId": "tesla"
+    },
+    {
+      "id": "8",
+      "userId": "t4",
+      "clanId": "van_rossum"
     }
   ],
   "scoreCoins": [
     {
-      "id": 1,
-      "userId": "3",
-      "date": "2023-10-10",
-      "winCoins": 8,
+      "id": "1",
+      "date": {
+        "day":"monday",
+        "month":"april",
+        "fullDate":"2024-2-5"
+      },
+      "userId": "1",
+      "pointsaAllocator": "angela",
+      "observation": "se porto bien clases",
+      "regularCoins": 2,
       "attendantCoins": 2,
-      "amount": 10
-    }
-  ],
-  "clanCoins": [
+      "amount": 4
+    },
     {
-      "id": 1,
-      "idClan": 1,
-      "date": "2023-10",
-      "amount": 120
+      "id": "1",
+      "date": {
+        "day":"monday",
+        "month":"april",
+        "fullDate":"2024-2-5"
+      },
+      "userId": "1",
+      "pointsaAllocator": "liliana",
+      "observation": "se porto bien clases",
+      "regularCoins": 3,
+      "attendantCoins": 0,
+      "amount": 4
     }
   ]
 }
