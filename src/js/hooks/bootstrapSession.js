@@ -14,6 +14,11 @@
   } else if(!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="trainer"){
     window.location.href = "/src/pages/trainer/index.html"
   } else if(!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="coder"){
-    window.location.href = "/src/pages/coder/index.html"
+    if (!authorized) {
+      alert("hola")
+      // window.location.href = "/"
+    }else{
+      window.location.href = "/src/pages/coder/index.html"
+    }
   }
 })()
