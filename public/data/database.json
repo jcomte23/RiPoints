@@ -57,7 +57,7 @@
   ],
   "users": [
     {
-      "id": "1",
+      "id": "a1",
       "roleId": "1",
       "name": "jackeline",
       "lastName": "narvaez",
@@ -65,12 +65,86 @@
       "userName": "jackeline"
     },
     {
-      "id": "2",
+      "id": "a2",
       "roleId": "1",
       "name": "mauricio",
       "lastName": "otalvaro",
       "password": "mauricio",
       "userName": "mauricio"
+    },
+    {
+      "id": "a3",
+      "roleId": "1",
+      "name": "admin",
+      "lastName": "example",
+      "password": "1",
+      "userName": "1"
+    },
+    {
+      "id": "t1",
+      "roleId": "2",
+      "name": "trainer",
+      "lastName": "example",
+      "password": "2",
+      "userName": "2"
+    },
+    {
+      "id": "t2",
+      "roleId": "2",
+      "name": "Christopher",
+      "lastName": "Smith",
+      "password": "2",
+      "userName": "trainer_chris"
+    },
+    {
+      "id": "t3",
+      "roleId": "2",
+      "name": "Emily",
+      "lastName": "Davis",
+      "password": "2",
+      "userName": "trainer_emily"
+    },
+    {
+      "id": "t4",
+      "roleId": "2",
+      "name": "Brandon",
+      "lastName": "Martinez",
+      "password": "2",
+      "userName": "trainer_brandon"
+    },
+    {
+      "id": "t5",
+      "roleId": "2",
+      "name": "Jessica",
+      "lastName": "Taylor",
+      "password": "2",
+      "userName": "trainer_jess"
+    },
+    {
+      "id": "t1",
+      "roleId": "2",
+      "name": "Alexandra",
+      "lastName": "Johnson",
+      "password": "2",
+      "userName": "trainer_alex"
+    },
+    {
+      "id": "1",
+      "roleId": "3",
+      "userName": "3",
+      "name": "coder",
+      "lastName": "example",
+      "password": "3",
+      "clanId": "lovelace"
+    },
+    {
+      "id": "2",
+      "roleId": "3",
+      "userName": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "password": "3",
+      "clanId": "lovelace"
     },
     {
       "id": "3",
