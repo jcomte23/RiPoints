@@ -121,7 +121,7 @@
       "userName": "trainer_jess"
     },
     {
-      "id": "t1",
+      "id": "t6",
       "roleId": "2",
       "name": "Alexandra",
       "lastName": "Johnson",
@@ -129,1354 +129,314 @@
       "userName": "trainer_alex"
     },
     {
-      "id": "1",
       "roleId": "3",
-      "userName": "3",
-      "name": "coder",
-      "lastName": "example",
-      "password": "3",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "2",
-      "roleId": "3",
-      "userName": "jcomte23",
-      "name": "Javier",
-      "lastName": "Cómbita Téllez",
-      "password": "3",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "3",
-      "roleId": "3",
-      "userName": "gonzalez",
-      "name": "santiago",
-      "lastName": "gonzalez",
-      "password": "gonzalez",
-      "clanId": "gosling"
-    },
-    {
-      "id": "4",
-      "roleId": "3",
-      "userName": "rodriguez",
-      "name": "valentina",
-      "lastName": "rodriguez",
-      "password": "rodriguez",
-      "clanId": "dell"
-    },
-    {
-      "id": "5",
-      "roleId": "3",
-      "userName": "garcia",
-      "name": "mateo",
-      "lastName": "garcia",
-      "password": "garcia",
-      "clanId": "gosling"
-    },
-    {
-      "id": "6",
-      "roleId": "3",
-      "userName": "fernandez",
-      "name": "isabella",
-      "lastName": "fernandez",
-      "password": "fernandez",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "7",
-      "roleId": "3",
-      "userName": "lopez",
-      "name": "sebastian",
-      "lastName": "lopez",
-      "password": "lopez",
-      "clanId": "meta"
-    },
-    {
-      "id": "8",
-      "roleId": "3",
-      "userName": "martinez",
-      "name": "sophia",
-      "lastName": "martinez",
-      "password": "martinez",
-      "clanId": "dell"
-    },
-    {
-      "id": "9",
-      "roleId": "3",
-      "userName": "sanchez",
-      "name": "martin",
-      "lastName": "sanchez",
-      "password": "sanchez",
-      "clanId": "gates"
-    },
-    {
-      "id": "10",
-      "roleId": "3",
-      "userName": "perez",
-      "name": "emma",
-      "lastName": "perez",
-      "password": "perez",
-      "clanId": "linus"
-    },
-    {
-      "id": "11",
-      "roleId": "3",
-      "userName": "gomez",
-      "name": "nicolas",
-      "lastName": "gomez",
-      "password": "gomez",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "12",
-      "roleId": "3",
-      "userName": "diaz",
-      "name": "mia",
-      "lastName": "diaz",
-      "password": "diaz",
-      "clanId": "gosling"
-    },
-    {
-      "id": "13",
-      "roleId": "3",
-      "userName": "vasquez",
-      "name": "leonardo",
-      "lastName": "vasquez",
-      "password": "vasquez",
-      "clanId": "meta"
-    },
-    {
-      "id": "14",
-      "roleId": "3",
-      "userName": "torres",
-      "name": "olivia",
-      "lastName": "torres",
-      "password": "torres",
-      "clanId": "meta"
-    },
-    {
-      "id": "15",
-      "roleId": "3",
-      "userName": "ramirez",
-      "name": "lucas",
-      "lastName": "ramirez",
-      "password": "ramirez",
-      "clanId": "dell"
-    },
-    {
-      "id": "16",
-      "roleId": "3",
-      "userName": "morales",
-      "name": "camila",
-      "lastName": "morales",
-      "password": "morales",
-      "clanId": "tesla"
-    },
-    {
-      "id": "17",
-      "roleId": "3",
-      "userName": "romero",
-      "name": "matias",
-      "lastName": "romero",
-      "password": "romero",
-      "clanId": "gates"
-    },
-    {
-      "id": "18",
-      "roleId": "3",
-      "userName": "herrera",
-      "name": "victoria",
-      "lastName": "herrera",
-      "password": "herrera",
-      "clanId": "gosling"
-    },
-    {
-      "id": "19",
-      "roleId": "3",
-      "userName": "jimenez",
-      "name": "emiliano",
-      "lastName": "jimenez",
-      "password": "jimenez",
-      "clanId": "tesla"
-    },
-    {
-      "id": "20",
-      "roleId": "3",
-      "userName": "navarro",
-      "name": "amelia",
-      "lastName": "navarro",
-      "password": "navarro",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "21",
-      "roleId": "3",
-      "userName": "silva",
-      "name": "gabriel",
-      "lastName": "silva",
-      "password": "silva",
-      "clanId": "tesla"
-    },
-    {
-      "id": "22",
-      "roleId": "3",
-      "userName": "castro",
-      "name": "sofia",
-      "lastName": "castro",
-      "password": "castro",
-      "clanId": "gates"
-    },
-    {
-      "id": "23",
-      "roleId": "3",
-      "userName": "ortiz",
-      "name": "daniel",
-      "lastName": "ortiz",
-      "password": "ortiz",
-      "clanId": "jobs"
-    },
-    {
-      "id": "24",
-      "roleId": "3",
-      "userName": "ruiz",
-      "name": "valeria",
-      "lastName": "ruiz",
-      "password": "ruiz",
-      "clanId": "meta"
-    },
-    {
-      "id": "25",
-      "roleId": "3",
-      "userName": "espinosa",
-      "name": "samuel",
-      "lastName": "espinosa",
-      "password": "espinosa",
-      "clanId": "tesla"
-    },
-    {
-      "id": "26",
-      "roleId": "3",
-      "userName": "rios",
-      "name": "antonella",
-      "lastName": "rios",
-      "password": "rios",
-      "clanId": "linus"
-    },
-    {
-      "id": "27",
-      "roleId": "3",
-      "userName": "mendoza",
-      "name": "benjamin",
-      "lastName": "mendoza",
-      "password": "mendoza",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "28",
-      "roleId": "3",
-      "userName": "castro",
-      "name": "renata",
-      "lastName": "castro",
-      "password": "castro",
-      "clanId": "gosling"
-    },
-    {
-      "id": "29",
-      "roleId": "3",
-      "userName": "alvarez",
-      "name": "alejandro",
-      "lastName": "alvarez",
-      "password": "alvarez",
-      "clanId": "linus"
-    },
-    {
-      "id": "30",
-      "roleId": "3",
-      "userName": "vargas",
-      "name": "renzo",
-      "lastName": "vargas",
-      "password": "vargas",
-      "clanId": "linus"
-    },
-    {
-      "id": "31",
-      "roleId": "3",
-      "userName": "reyes",
-      "name": "mariana",
-      "lastName": "reyes",
-      "password": "reyes",
-      "clanId": "dell"
-    },
-    {
-      "id": "32",
-      "roleId": "3",
-      "userName": "medina",
-      "name": "juanPablo",
-      "lastName": "medina",
-      "password": "medina",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "33",
-      "roleId": "3",
-      "userName": "paredes",
-      "name": "natalia",
-      "lastName": "paredes",
-      "password": "paredes",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "34",
-      "roleId": "3",
-      "userName": "bravo",
-      "name": "adrian",
-      "lastName": "bravo",
-      "password": "bravo",
-      "clanId": "gates"
-    },
-    {
-      "id": "35",
-      "roleId": "3",
-      "userName": "guzman",
-      "name": "isadora",
-      "lastName": "guzman",
-      "password": "guzman",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "36",
-      "roleId": "3",
-      "userName": "carrasco",
-      "name": "andres",
-      "lastName": "carrasco",
-      "password": "carrasco",
-      "clanId": "dell"
-    },
-    {
-      "id": "37",
-      "roleId": "3",
-      "userName": "flores",
-      "name": "luciana",
-      "lastName": "flores",
-      "password": "flores",
-      "clanId": "linus"
-    },
-    {
-      "id": "38",
-      "roleId": "3",
-      "userName": "aguilar",
-      "name": "thiago",
-      "lastName": "aguilar",
-      "password": "aguilar",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "39",
-      "roleId": "3",
-      "userName": "rojas",
-      "name": "julieta",
-      "lastName": "rojas",
-      "password": "rojas",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "40",
-      "roleId": "3",
-      "userName": "araya",
-      "name": "francisco",
-      "lastName": "araya",
-      "password": "araya",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "41",
-      "roleId": "3",
-      "userName": "contreras",
-      "name": "alonso",
-      "lastName": "contreras",
-      "password": "contreras",
-      "clanId": "meta"
-    },
-    {
-      "id": "42",
-      "roleId": "3",
-      "userName": "mora",
-      "name": "sofia",
-      "lastName": "mora",
-      "password": "mora",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "43",
-      "roleId": "3",
-      "userName": "maldonado",
-      "name": "nicolas",
-      "lastName": "maldonado",
-      "password": "maldonado",
-      "clanId": "gosling"
-    },
-    {
-      "id": "44",
-      "roleId": "3",
-      "userName": "navarro",
-      "name": "valentina",
-      "lastName": "navarro",
-      "password": "navarro",
-      "clanId": "tesla"
-    },
-    {
-      "id": "45",
-      "roleId": "3",
-      "userName": "vasquez",
-      "name": "mauricio",
-      "lastName": "vasquez",
-      "password": "vasquez",
-      "clanId": "gates"
-    },
-    {
-      "id": "46",
-      "roleId": "3",
-      "userName": "bravo",
-      "name": "camila",
-      "lastName": "bravo",
-      "password": "bravo",
-      "clanId": "tesla"
-    },
-    {
-      "id": "47",
-      "roleId": "3",
-      "userName": "flores",
-      "name": "armando",
-      "lastName": "flores",
-      "password": "flores",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "48",
-      "roleId": "3",
-      "userName": "gonzalez",
-      "name": "antonia",
-      "lastName": "gonzalez",
-      "password": "gonzalez",
-      "clanId": "jobs"
-    },
-    {
-      "id": "49",
-      "roleId": "3",
-      "userName": "rodriguez",
-      "name": "martin",
-      "lastName": "rodriguez",
-      "password": "rodriguez",
-      "clanId": "linus"
-    },
-    {
-      "id": "50",
-      "roleId": "3",
-      "userName": "garcia",
-      "name": "isabella",
-      "lastName": "garcia",
-      "password": "garcia",
-      "clanId": "dell"
-    },
-    {
-      "id": "51",
-      "roleId": "3",
-      "userName": "fernandez",
-      "name": "salvador",
-      "lastName": "fernandez",
-      "password": "fernandez",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "52",
-      "roleId": "3",
-      "userName": "lopez",
-      "name": "valeria",
-      "lastName": "lopez",
-      "password": "lopez",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "53",
-      "roleId": "3",
-      "userName": "martinez",
-      "name": "rodrigo",
-      "lastName": "martinez",
-      "password": "martinez",
-      "clanId": "gates"
-    },
-    {
-      "id": "54",
-      "roleId": "3",
-      "userName": "sanchez",
-      "name": "isidora",
-      "lastName": "sanchez",
-      "password": "sanchez",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "55",
-      "roleId": "3",
-      "userName": "perez",
-      "name": "alfredo",
-      "lastName": "perez",
-      "password": "perez",
-      "clanId": "gosling"
-    },
-    {
-      "id": "56",
-      "roleId": "3",
-      "userName": "gomez",
-      "name": "regina",
-      "lastName": "gomez",
-      "password": "gomez",
-      "clanId": "tesla"
-    },
-    {
-      "id": "57",
-      "roleId": "3",
-      "userName": "diaz",
-      "name": "tomas",
-      "lastName": "diaz",
-      "password": "diaz",
-      "clanId": "gates"
-    },
-    {
-      "id": "58",
-      "roleId": "3",
-      "userName": "vasquez",
-      "name": "lucia",
-      "lastName": "vasquez",
-      "password": "vasquez",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "59",
-      "roleId": "3",
-      "userName": "torres",
-      "name": "emiliano",
-      "lastName": "torres",
-      "password": "torres",
-      "clanId": "gosling"
-    },
-    {
-      "id": "60",
-      "roleId": "3",
-      "userName": "ramirez",
-      "name": "amelia",
-      "lastName": "ramirez",
-      "password": "ramirez",
-      "clanId": "gosling"
-    },
-    {
-      "id": "61",
-      "roleId": "3",
-      "userName": "morales",
-      "name": "nelson",
-      "lastName": "morales",
-      "password": "morales",
-      "clanId": "linus"
-    },
-    {
-      "id": "62",
-      "roleId": "3",
-      "userName": "romero",
-      "name": "mila",
-      "lastName": "romero",
-      "password": "romero",
-      "clanId": "dell"
-    },
-    {
-      "id": "63",
-      "roleId": "3",
-      "userName": "herrera",
-      "name": "omar",
-      "lastName": "herrera",
-      "password": "herrera",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "64",
-      "roleId": "3",
-      "userName": "jimenez",
-      "name": "catalina",
-      "lastName": "jimenez",
-      "password": "jimenez",
-      "clanId": "dell"
-    },
-    {
-      "id": "65",
-      "roleId": "3",
-      "userName": "navarro",
-      "name": "juan",
-      "lastName": "navarro",
-      "password": "navarro",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "66",
-      "roleId": "3",
-      "userName": "silva",
-      "name": "valentina",
-      "lastName": "silva",
-      "password": "silva",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "67",
-      "roleId": "3",
-      "userName": "mora",
-      "name": "santiago",
-      "lastName": "mora",
-      "password": "mora",
-      "clanId": "tesla"
-    },
-    {
-      "id": "68",
-      "roleId": "3",
-      "userName": "paredes",
-      "name": "renata",
-      "lastName": "paredes",
-      "password": "paredes",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "69",
-      "roleId": "3",
-      "userName": "labra",
-      "name": "gonzalo",
-      "lastName": "labra",
-      "password": "labra",
-      "clanId": "dell"
-    },
-    {
-      "id": "70",
-      "roleId": "3",
-      "userName": "carvajal",
-      "name": "elisa",
-      "lastName": "carvajal",
-      "password": "carvajal",
-      "clanId": "tesla"
-    },
-    {
-      "id": "71",
-      "roleId": "3",
-      "userName": "olivares",
-      "name": "pablo",
-      "lastName": "olivares",
-      "password": "olivares",
-      "clanId": "meta"
-    },
-    {
-      "id": "72",
-      "roleId": "3",
-      "userName": "gutierrez",
-      "name": "daniella",
-      "lastName": "gutierrez",
-      "password": "gutierrez",
-      "clanId": "jobs"
-    },
-    {
-      "id": "73",
-      "roleId": "3",
-      "userName": "segovia",
-      "name": "luis",
-      "lastName": "segovia",
-      "password": "segovia",
-      "clanId": "tesla"
-    },
-    {
-      "id": "74",
-      "roleId": "3",
-      "userName": "alarcon",
-      "name": "antonia",
-      "lastName": "alarcon",
-      "password": "alarcon",
-      "clanId": "meta"
-    },
-    {
-      "id": "75",
-      "roleId": "3",
-      "userName": "inostroza",
-      "name": "alan",
-      "lastName": "inostroza",
-      "password": "inostroza",
-      "clanId": "meta"
-    },
-    {
-      "id": "76",
-      "roleId": "3",
-      "userName": "zepeda",
-      "name": "fernanda",
-      "lastName": "zepeda",
-      "password": "zepeda",
-      "clanId": "dell"
-    },
-    {
-      "id": "77",
-      "roleId": "3",
-      "userName": "penaloza",
-      "name": "javier",
-      "lastName": "penaloza",
-      "password": "penaloza",
-      "clanId": "linus"
-    },
-    {
-      "id": "78",
-      "roleId": "3",
-      "userName": "aviles",
-      "name": "regina",
-      "lastName": "aviles",
-      "password": "aviles",
-      "clanId": "linus"
-    },
-    {
-      "id": "79",
-      "roleId": "3",
-      "userName": "quinteros",
-      "name": "roberto",
-      "lastName": "quinteros",
-      "password": "quinteros",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "80",
-      "roleId": "3",
-      "userName": "castillo",
-      "name": "isabella",
-      "lastName": "castillo",
-      "password": "castillo",
-      "clanId": "jobs"
-    },
-    {
-      "id": "81",
-      "roleId": "3",
-      "userName": "riquelme",
-      "name": "mauricio",
-      "lastName": "riquelme",
-      "password": "riquelme",
-      "clanId": "tesla"
-    },
-    {
-      "id": "82",
-      "roleId": "3",
-      "userName": "mendez",
-      "name": "lucia",
-      "lastName": "mendez",
-      "password": "mendez",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "83",
-      "roleId": "3",
-      "userName": "carcamo",
-      "name": "arturo",
-      "lastName": "carcamo",
-      "password": "carcamo",
-      "clanId": "gates"
-    },
-    {
-      "id": "84",
-      "roleId": "3",
-      "userName": "albornoz",
-      "name": "mariana",
-      "lastName": "albornoz",
-      "password": "albornoz",
-      "clanId": "jobs"
-    },
-    {
-      "id": "85",
-      "roleId": "3",
-      "userName": "pizarro",
-      "name": "juan jose",
-      "lastName": "pizarro",
-      "password": "pizarro",
-      "clanId": "meta"
-    },
-    {
-      "id": "86",
-      "roleId": "3",
-      "userName": "gajardo",
-      "name": "renata",
-      "lastName": "gajardo",
-      "password": "gajardo",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "87",
-      "roleId": "3",
-      "userName": "farias",
-      "name": "oscar",
-      "lastName": "farias",
-      "password": "farias",
-      "clanId": "linus"
-    },
-    {
-      "id": "88",
-      "roleId": "3",
-      "userName": "cifuentes",
-      "name": "valentina",
-      "lastName": "cifuentes",
-      "password": "cifuentes",
-      "clanId": "linus"
-    },
-    {
-      "id": "89",
-      "roleId": "3",
-      "userName": "hidalgo",
-      "name": "juan",
-      "lastName": "hidalgo",
-      "password": "hidalgo",
-      "clanId": "dell"
-    },
-    {
-      "id": "90",
-      "roleId": "3",
-      "userName": "aguilera",
-      "name": "emily",
-      "lastName": "aguilera",
-      "password": "aguilera",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "91",
-      "roleId": "3",
-      "userName": "vidal",
-      "name": "victor",
-      "lastName": "vidal",
-      "password": "vidal",
-      "clanId": "tesla"
-    },
-    {
-      "id": "92",
-      "roleId": "3",
-      "userName": "arancibia",
-      "name": "valeria",
-      "lastName": "arancibia",
-      "password": "arancibia",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "93",
-      "roleId": "3",
-      "userName": "saenz",
-      "name": "raul",
-      "lastName": "saenz",
-      "password": "saenz",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "94",
-      "roleId": "3",
-      "userName": "hormazabal",
-      "name": "elena",
-      "lastName": "hormazabal",
-      "password": "hormazabal",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "95",
-      "roleId": "3",
-      "userName": "navarrete",
-      "name": "cristian",
-      "lastName": "navarrete",
-      "password": "navarrete",
-      "clanId": "linus"
-    },
-    {
-      "id": "96",
-      "roleId": "3",
-      "userName": "carvajal",
-      "name": "maria jose",
-      "lastName": "carvajal",
-      "password": "carvajal",
-      "clanId": "gosling"
-    },
-    {
-      "id": "97",
-      "roleId": "3",
-      "userName": "jara",
-      "name": "ricardo",
-      "lastName": "jara",
-      "password": "jara",
-      "clanId": "jobs"
-    },
-    {
-      "id": "98",
-      "roleId": "3",
-      "userName": "leiva",
-      "name": "isidora",
-      "lastName": "leiva",
-      "password": "leiva",
-      "clanId": "dell"
-    },
-    {
-      "id": "99",
-      "roleId": "3",
-      "userName": "serrano",
-      "name": "cesar",
-      "lastName": "serrano",
-      "password": "serrano",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "100",
-      "roleId": "3",
-      "userName": "guerra",
-      "name": "nicole",
-      "lastName": "guerra",
-      "password": "guerra",
-      "clanId": "gosling"
-    },
-    {
-      "id": "101",
-      "roleId": "3",
-      "userName": "mardones",
-      "name": "alexis",
-      "lastName": "mardones",
-      "password": "mardones",
-      "clanId": "jobs"
-    },
-    {
-      "id": "102",
-      "roleId": "3",
-      "userName": "osorio",
-      "name": "olivia",
-      "lastName": "osorio",
-      "password": "osorio",
-      "clanId": "gates"
-    },
-    {
-      "id": "103",
-      "roleId": "3",
-      "userName": "cabrera",
-      "name": "abel",
-      "lastName": "cabrera",
-      "password": "cabrera",
-      "clanId": "meta"
-    },
-    {
-      "id": "104",
-      "roleId": "3",
-      "userName": "alvarado",
-      "name": "gabriela",
-      "lastName": "alvarado",
-      "password": "alvarado",
-      "clanId": "linus"
-    },
-    {
-      "id": "105",
-      "roleId": "3",
-      "userName": "cadiz",
-      "name": "mauricio",
-      "lastName": "cadiz",
-      "password": "cadiz",
-      "clanId": "gates"
-    },
-    {
-      "id": "106",
-      "roleId": "3",
-      "userName": "valdes",
-      "name": "mila",
-      "lastName": "valdes",
-      "password": "valdes",
-      "clanId": "gates"
-    },
-    {
-      "id": "107",
-      "roleId": "3",
-      "userName": "paredes",
-      "name": "alvaro",
-      "lastName": "paredes",
-      "password": "paredes",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "108",
-      "roleId": "3",
-      "userName": "astudillo",
-      "name": "laura",
-      "lastName": "astudillo",
-      "password": "astudillo",
-      "clanId": "gates"
-    },
-    {
-      "id": "109",
-      "roleId": "3",
-      "userName": "valdes",
-      "name": "salvador",
-      "lastName": "valdes",
-      "password": "valdes",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "110",
-      "roleId": "3",
-      "userName": "almendras",
-      "name": "carolina",
-      "lastName": "almendras",
-      "password": "almendras",
-      "clanId": "dell"
-    },
-    {
-      "id": "111",
-      "roleId": "3",
-      "userName": "naranjo",
-      "name": "ruben",
-      "lastName": "naranjo",
-      "password": "naranjo",
-      "clanId": "ritchie"
-    },
-    {
-      "id": "112",
-      "roleId": "3",
-      "userName": "fierro",
-      "name": "jimena",
-      "lastName": "fierro",
-      "password": "fierro",
-      "clanId": "tesla"
-    },
-    {
-      "id": "113",
-      "roleId": "3",
-      "userName": "melendez",
-      "name": "eric",
-      "lastName": "melendez",
-      "password": "melendez",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "114",
-      "roleId": "3",
-      "userName": "barrientos",
-      "name": "brisa",
-      "lastName": "barrientos",
-      "password": "barrientos",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "115",
-      "roleId": "3",
-      "userName": "salinas",
-      "name": "juan manuel",
-      "lastName": "salinas",
-      "password": "salinas",
-      "clanId": "gates"
-    },
-    {
-      "id": "116",
-      "roleId": "3",
-      "userName": "maturana",
-      "name": "regina",
-      "lastName": "maturana",
-      "password": "maturana",
-      "clanId": "meta"
-    },
-    {
-      "id": "117",
-      "roleId": "3",
-      "userName": "salgado",
-      "name": "german",
-      "lastName": "salgado",
-      "password": "salgado",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "118",
-      "roleId": "3",
-      "userName": "soto",
-      "name": "vanessa",
-      "lastName": "soto",
-      "password": "soto",
-      "clanId": "gosling"
-    },
-    {
-      "id": "119",
-      "roleId": "3",
-      "userName": "ossa",
-      "name": "rene",
-      "lastName": "ossa",
-      "password": "ossa",
-      "clanId": "gates"
-    },
-    {
-      "id": "120",
-      "roleId": "3",
-      "userName": "alvear",
-      "name": "pamela",
-      "lastName": "alvear",
-      "password": "alvear",
-      "clanId": "jobs"
-    },
-    {
-      "id": "121",
-      "roleId": "3",
-      "userName": "salinas",
-      "name": "leonel",
-      "lastName": "salinas",
-      "password": "salinas",
-      "clanId": "meta"
-    },
-    {
-      "id": "122",
-      "roleId": "3",
-      "userName": "sanmartin",
-      "name": "antonia",
-      "lastName": "san martín",
-      "password": "sanmartin",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "123",
-      "roleId": "3",
-      "userName": "alarcon",
-      "name": "nelson",
-      "lastName": "alarcon",
-      "password": "alarcon",
-      "clanId": "tesla"
-    },
-    {
-      "id": "124",
-      "roleId": "3",
-      "userName": "burgos",
-      "name": "ivanna",
-      "lastName": "burgos",
-      "password": "burgos",
-      "clanId": "meta"
-    },
-    {
-      "id": "125",
-      "roleId": "3",
-      "userName": "saavedra",
-      "name": "elias",
-      "lastName": "saavedra",
-      "password": "saavedra",
-      "clanId": "jobs"
-    },
-    {
-      "id": "126",
-      "roleId": "3",
-      "userName": "tello",
-      "name": "camila",
-      "lastName": "tello",
-      "password": "tello",
-      "clanId": "gates"
-    },
-    {
-      "id": "127",
-      "roleId": "3",
-      "userName": "valdivia",
-      "name": "federico",
-      "lastName": "valdivia",
-      "password": "valdivia",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "128",
-      "roleId": "3",
-      "userName": "oliva",
-      "name": "ximena",
-      "lastName": "oliva",
-      "password": "oliva",
-      "clanId": "meta"
-    },
-    {
-      "id": "129",
-      "roleId": "3",
-      "userName": "rios",
-      "name": "manuel",
-      "lastName": "rios",
-      "password": "rios",
-      "clanId": "gosling"
-    },
-    {
-      "id": "130",
-      "roleId": "3",
-      "userName": "fuentes",
-      "name": "paula",
-      "lastName": "fuentes",
-      "password": "fuentes",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "131",
-      "roleId": "3",
-      "userName": "acevedo",
-      "name": "alberto",
-      "lastName": "acevedo",
-      "password": "acevedo",
-      "clanId": "linus"
-    },
-    {
-      "id": "132",
-      "roleId": "3",
-      "userName": "montes",
-      "name": "alma",
-      "lastName": "montes",
-      "password": "montes",
-      "clanId": "jobs"
-    },
-    {
-      "id": "133",
-      "roleId": "3",
-      "userName": "sepulveda",
-      "name": "rodolfo",
-      "lastName": "sepulveda",
-      "password": "sepulveda",
-      "clanId": "tesla"
-    },
-    {
-      "id": "134",
-      "roleId": "3",
-      "userName": "calderon",
-      "name": "valentina",
-      "lastName": "calderon",
-      "password": "calderon",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "135",
-      "roleId": "3",
-      "userName": "carrasco",
-      "name": "enrique",
-      "lastName": "carrasco",
-      "password": "carrasco",
-      "clanId": "gosling"
-    },
-    {
-      "id": "136",
-      "roleId": "3",
-      "userName": "ramirez",
-      "name": "isabella",
-      "lastName": "ramirez",
-      "password": "ramirez",
-      "clanId": "van_rossum"
-    },
-    {
-      "id": "137",
-      "roleId": "3",
-      "userName": "pizarro",
-      "name": "javier",
-      "lastName": "pizarro",
-      "password": "pizarro",
-      "clanId": "jobs"
-    },
-    {
-      "id": "138",
-      "roleId": "3",
-      "userName": "aguayomartina",
-      "name": "aguayo",
-      "lastName": "martina",
-      "password": "aguayomartina",
-      "clanId": "dell"
-    },
-    {
-      "id": "139",
-      "roleId": "3",
-      "userName": "nunezernesto",
-      "name": "nunez",
-      "lastName": "ernesto",
-      "password": "nunezernesto",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "140",
-      "roleId": "3",
-      "userName": "munozpaloma",
-      "name": "munoz",
-      "lastName": "paloma",
-      "password": "munozpaloma",
-      "clanId": "gosling"
-    },
-    {
-      "id": "141",
-      "roleId": "3",
-      "userName": "caceresraul",
-      "name": "raul",
-      "lastName": "caceres",
-      "password": "caceresraul",
-      "clanId": "gosling"
-    },
-    {
-      "id": "142",
-      "roleId": "3",
-      "userName": "silvadaniela",
-      "name": "daniela",
-      "lastName": "silva",
-      "password": "silvadaniela",
-      "clanId": "meta"
-    },
-    {
-      "id": "143",
-      "roleId": "3",
-      "userName": "paredeshector",
-      "name": "hector",
-      "lastName": "paredes",
-      "password": "paredeshector",
-      "clanId": "dell"
-    },
-    {
-      "id": "144",
-      "roleId": "3",
-      "userName": "mendozaregina",
-      "name": "regina",
-      "lastName": "mendoza",
-      "password": "mendozaregina",
-      "clanId": "gosling"
-    },
-    {
-      "id": "145",
-      "roleId": "3",
-      "userName": "ortegaisaac",
-      "name": "isaac",
-      "lastName": "ortega",
-      "password": "ortegaisaac",
-      "clanId": "gates"
-    },
-    {
-      "id": "146",
-      "roleId": "3",
-      "userName": "espinozafernanda",
-      "name": "fernanda",
-      "lastName": "espinoza",
-      "password": "espinozafernanda",
-      "clanId": "meta"
-    },
-    {
-      "id": "147",
-      "roleId": "3",
-      "userName": "pobletegabriel",
-      "name": "gabriel",
-      "lastName": "poblete",
-      "password": "pobletegabriel",
-      "clanId": "linus"
-    },
-    {
-      "id": "148",
-      "roleId": "3",
-      "userName": "herreravictoria",
-      "name": "victoria",
-      "lastName": "herrera",
-      "password": "herreravictoria",
-      "clanId": "dell"
-    },
-    {
-      "id": "149",
-      "roleId": "3",
-      "userName": "valenzuelaalfonso",
-      "name": "alfonso",
-      "lastName": "valenzuela",
-      "password": "valenzuelaalfonso",
-      "clanId": "lovelace"
-    },
-    {
-      "id": "150",
-      "roleId": "3",
-      "userName": "castrogabriela",
-      "name": "gabriela",
-      "lastName": "castro",
-      "password": "castrogabriela",
-      "clanId": "van_rossum"
+      "userName": "gabrielgarcia",
+      "password": "gabrielgarcia",
+      "name": "Gabriel",
+      "lastName": "García Márquez",
+      "clanId": "van_rossum",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "-2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "-5",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "1",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "juantorres",
+      "password": "juantorres",
+      "name": "Juan Camilo",
+      "lastName": "Torres García",
+      "clanId": "jobs",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "2",
+        "4": "2",
+        "5": "2",
+        "8": "2",
+        "9": "-5",
+        "10": "-2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "-5",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "2",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "fernandobotero",
+      "password": "fernandobotero",
+      "name": "Fernando",
+      "lastName": "Botero Angulo",
+      "clanId": "tesla",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "-2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "-5",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "2",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "luiscarlos",
+      "password": "luiscarlos",
+      "name": "Luis Carlos",
+      "lastName": "Galán Sarmiento",
+      "clanId": "gates",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "2",
+        "4": "2",
+        "5": "2",
+        "8": "2",
+        "9": "2",
+        "10": "-2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "-5",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "1",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "shakira",
+      "password": "shakira",
+      "name": "Shakira Isabel",
+      "lastName": "Mebarak Ripoll",
+      "clanId": "lovelace",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "-5",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "1",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "carlosvives",
+      "password": "carlosvives",
+      "name": "Carlos Alberto",
+      "lastName": "Vives Restrepo",
+      "clanId": "gates",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "-2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "2",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "0",
+        "24": "0",
+        "25": "0",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "michaeljackson",
+      "password": "michaeljackson",
+      "name": "Michael Joseph",
+      "lastName": "Jackson",
+      "clanId": "tesla",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "-5",
+        "11": "-5",
+        "12": "-5",
+        "15": "2",
+        "16": "2",
+        "17": "-2",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "1",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "stevejobs",
+      "password": "stevejobs",
+      "name": "Steve Paul",
+      "lastName": "Jobs",
+      "clanId": "van_rossum",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "2",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "2",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "2",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "2",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "timbernerslee",
+      "password": "timbernerslee",
+      "name": "Timothy John",
+      "lastName": "Berners-Lee",
+      "clanId": "meta",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "-1",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "2",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "1",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
+    },
+    {
+      "roleId": "3",
+      "userName": "brendaneich",
+      "password": "brendaneich",
+      "name": "Brendan",
+      "lastName": "Eich",
+      "clanId": "dell",
+      "day_point": {
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "2",
+        "5": "2",
+        "8": "1",
+        "9": "2",
+        "10": "-1",
+        "11": "2",
+        "12": "2",
+        "15": "2",
+        "16": "2",
+        "17": "-2",
+        "18": "2",
+        "19": "2",
+        "22": "2",
+        "23": "2",
+        "24": "1",
+        "25": "2",
+        "26": "2"
+      },
+      "history": ""
     }
   ],
   "clansTrainers": [
