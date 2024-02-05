@@ -37,6 +37,14 @@
       "lastName": "Montaña",
       "password": "3",
       "userName": "3"
+    },
+    {
+      "id": "alfa",
+      "roleId": "1",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "password": "1096247379",
+      "userName": "1096247379"
     }
   ],
   "admin": [
@@ -44,7 +52,6 @@
       "id": 1,
       "idUSer": 1,
       "idRol": 1,
-
       "points": 50,
       "pointsAwarded": 0
     }
@@ -54,10 +61,12 @@
       "id": 2,
       "idUSer": 2,
       "idRol": 2,
-
       "points": 40,
       "pointsAwarded": 0,
-      "idsClans": [1, 2]
+      "idsClans": [
+        1,
+        2
+      ]
     }
   ],
   "coder": [
@@ -65,9 +74,7 @@
       "id": 3,
       "idUSer": 3,
       "idRol": 3,
-
       "scoreCoins": 1,
-
       "idClan": 1,
       "monthlyCoins": 50
     }
@@ -94,10 +101,8 @@
   "clanCoins": [
     {
       "id": 1,
-
       "idClan": 1,
       "date": "2023-10",
-
       "amount": 120
     }
   ]
