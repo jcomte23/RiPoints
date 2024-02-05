@@ -1,6 +1,6 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
-import { calcPoints, assignRealValue } from '../js/pointAssignment';
+import { calcPoints, assignRealValue, getFinalStructure } from '../js/pointAssignment';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -91,7 +91,6 @@ export const showFileAttachment = (element) => {
             document.querySelectorAll(".waiting").forEach(element => element.style.display = "none");
 
             let className = sheets[0].data[1][2];
-            let days = {};
             let aux = [];
 
             sheets.forEach(el => {
@@ -110,59 +109,8 @@ export const showFileAttachment = (element) => {
             daysPerClass[className] = aux;
 
             if (Object.keys(daysPerClass).length === 4) {
-                let sheets = Object.entries(daysPerClass);
-                sheets[0][1].forEach((el, sheetIndex) => {
-                    days[el.sheetName] = {};
-
-                    el.data.slice(5).filter(el => el.length !== 0).forEach((student, studentIndex) => {
-                        days[el.sheetName][student[3]] || (days[el.sheetName][student[3]] = { students: [], totalpoints: 0 });
-
-                        let studentClass2 = sheets[1][1][sheetIndex].data.slice(5).filter(el => el.length !== 0)[studentIndex];
-                        let studentClass3 = sheets[1][1][sheetIndex].data.slice(5).filter(el => el.length !== 0)[studentIndex];
-                        let studentClass4 = sheets[1][1][sheetIndex].data.slice(5).filter(el => el.length !== 0)[studentIndex];
-
-                        days[el.sheetName][student[3]].students.push(
-                            [
-                                student[1] + " " + student[2],
-                                calcPoints(
-                                    assignRealValue(...student.slice(4)),
-                                    assignRealValue(...studentClass2.slice(4)),
-                                    assignRealValue(...studentClass3.slice(4)),
-                                    assignRealValue(...studentClass4.slice(4))
-                                )
-                            ]
-                        );
-                    })
-                })
-                console.log(days);
+                console.log(getFinalStructure(daysPerClass));
             };
-
-
-            // THIS RETURNS ALL THE POINTS ASSIGNED PER DAY AND CLAN
-            // let clansAssists = getClansAssists(daysPerClass);
-            // let clansTotalPoints = defineTotalPoints(clansAssists);
-            // let result = getFinalStructure(clansTotalPoints);
-            // console.log({ clansAssists, clansTotalPoints });
-            
-            /*document.querySelectorAll(".waiting").forEach(element => element.style.display = "none");
-
-            let className = sheets[0].data[1][2];
-            let aux = [];
-
-            sheets.forEach(el => {
-                aux.push({ sheetName: el.sheetName, data: el.data.slice(5).filter(el => el.length !== 0) });
-            });
-
-            aux.forEach(el => {
-                if(!document.querySelector(`.${className[0].toLowerCase()}_${el.sheetName}`)){
-                    let div = document.createElement("div");
-                    div.textContent = el.sheetName;
-                    div.classList.add("days", `${className[0].toLowerCase()}_${el.sheetName}`);
-                    appendDay(className, div);
-                }
-            })
-
-            daysPerClass[className] = aux;*/
             
         });
     }

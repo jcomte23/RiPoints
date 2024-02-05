@@ -34,67 +34,43 @@ function assignRealValue(...assists){
 // ------------------------------------------
 
 
-function defineTotalPoints(data) {
-  let pointsPerDay = {};
-  let entries = Object.entries(data);
+function getClansAndStudents(codersData) {
+  let days = {};
+  let sheets = Object.entries(codersData);
+    sheets[0][1].forEach((el, sheetIndex) => {
+        days[el.sheetName] = {};
 
-  entries[0][1].forEach((element, outIndex) => {
-      pointsPerDay[element.day] = {};
+        el.data.slice(5).filter(el => el.length !== 0).forEach((student, studentIndex) => {
+            if (!student[1]) return;
 
-    Object.entries(element.clans).forEach((clan, clanIndex) => {
-        pointsPerDay[element.day][clan[0]] = { totalPoints: 0, students: [] };
-      clan[1].forEach(([student, assist], index) => {
+            days[el.sheetName][student[3]] || (days[el.sheetName][student[3]] = { students: [], totalpoints: 0 });
 
-            let pointSum = calcPoints(assist,
-            Object.entries(entries[1][1][outIndex].clans)[clanIndex][1][index][1],
-            Object.entries(entries[2][1][outIndex].clans)[clanIndex][1][index][1], 
-            Object.entries(entries[3][1][outIndex].clans)[clanIndex][1][index][1]);
+            let studentClass2 = sheets[1][1][sheetIndex].data.slice(5).filter(el => el.length !== 0)[studentIndex];
+            let studentClass3 = sheets[1][1][sheetIndex].data.slice(5).filter(el => el.length !== 0)[studentIndex];
+            let studentClass4 = sheets[1][1][sheetIndex].data.slice(5).filter(el => el.length !== 0)[studentIndex];
+            let finalPoints = calcPoints(
+                assignRealValue(...student.slice(4)),
+                assignRealValue(...studentClass2.slice(4)),
+                assignRealValue(...studentClass3.slice(4)),
+                assignRealValue(...studentClass4.slice(4))
+            );
 
-            pointsPerDay[element.day][clan[0]]["totalPoints"] += pointSum;
-            pointsPerDay[element.day][clan[0]]["students"].push([student, pointSum]);
-
+            days[el.sheetName][student[3]].totalpoints += finalPoints;
+            days[el.sheetName][student[3]].students.push(
+                [
+                    student[1] + " " + student[2],
+                    finalPoints
+                ]
+            );
         })
-      })
-  })
-
-  return pointsPerDay;
-}
-
-function getClansAssists(data) {
-  let areas = {};
-
-  for(let classObject of Object.entries(data)){
-      classObject[1].forEach(element => {
-          areas[classObject[0]] || (areas[classObject[0]] = []);
-
-          let aux = {
-              day: element.sheetName,
-              clans: {
-
-              }
-          };
-
-          element.data.forEach(el => {
-            if(!el[3]) return;
-            
-            let studentName = el[1] + " " + el[2];
-            let clan = el[3].toLowerCase().replaceAll(" ", "_");
-            if(aux.clans[clan]) aux.clans[clan].push([studentName, assignRealValue(...el.slice(4))]);
-            else aux.clans[clan] = [[studentName, assignRealValue(...el.slice(4))]];
-          })
-
-          areas[classObject[0]].push(aux);
-      })
-  }
-
-  return areas;
+    })
+  return days;
 }
 
 function getFinalStructure(clansObject) {
-  // clansTotalPoints[n_dia][nombre_clan][students][student_index]
   let result = [];
 
-  Object.entries(clansObject).forEach(([day, clans]) => {
+  Object.entries(getClansAndStudents(clansObject)).forEach(([day, clans]) => {
     Object.entries(clans).forEach(([clanName, clanInfo]) => {
 
       clanInfo.students.forEach(([student, point]) => {
@@ -122,7 +98,7 @@ function getFinalStructure(clansObject) {
     })
   });
 
-  //console.log("FINAL RES", result);
+  return result;
 
 }
 
@@ -140,7 +116,5 @@ export {
   assignRealValue, 
   saveClansPoints, 
   getSavedClansPoints,
-  defineTotalPoints,
-  getClansAssists,
   getFinalStructure
  };
