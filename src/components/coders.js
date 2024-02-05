@@ -94,7 +94,13 @@ export function showCoders(element) {
             <div class="container__points">
               <div class="total__points" id="totalPoints">12</div>
               <span id="plusSign">+</span>
-              <input class="asignador__points" type="number" id="numberInput" value="0" >
+              <div class="quantity">
+                <input class="quantity__input" type="text" value="0" readonly />
+                <div class="quantity__add">
+                  <div class="add">Ʌ</div>
+                  <div class="less">V</div>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -117,6 +123,31 @@ export function showCoders(element) {
         event.preventDefault();
         
     });
+    const inputNum = document.querySelector(".quantity__input");
+    const numadd = document.querySelector(".quantity__add .add");
+    const numless = document.querySelector(".quantity__add .less");
+
+    let realNum = 0;
+
+    function updateInput() {
+      inputNum.value = realNum;
+      inputNum.classList.add("pop");
+      setTimeout(() => {
+        inputNum.classList.remove("pop");
+      }, 200);
+    }
+
+    function plus(x) {
+      realNum += x;
+      realNum < 0 ? (inputNum.value = -realNum) : updateInput();
+    }
+
+    numadd.addEventListener("click", () => {
+      plus(1);
+    });
+    numless.addEventListener("click", () => {
+      plus(-1);
+    });
     
       
     const assigment = document.querySelector(".asignador__points");
@@ -138,7 +169,6 @@ export function showCoders(element) {
     });
 
 
-
-    
+  
   }
   
