@@ -121,7 +121,7 @@
       "userName": "trainer_jess"
     },
     {
-      "id": "t1",
+      "id": "t6",
       "roleId": "2",
       "name": "Alexandra",
       "lastName": "Johnson",
@@ -1482,15 +1482,62 @@
   "clansTrainers": [
     {
       "id": "1",
-      "userId": "3",
-      "clanId": "lovelace"
+      "userId": "t1",
+      "clanId": "dell"
     },
     {
       "id": "2",
-      "userId": "3",
+      "userId": "t2",
+      "clanId": "gates"
+    },
+    {
+      "id": "3",
+      "userId": "t3",
+      "clanId": "gosling"
+    },
+    {
+      "id": "4",
+      "userId": "t4",
+      "clanId": "jobs"
+    },
+    {
+      "id": "5",
+      "userId": "t5",
+      "clanId": "linus"
+    },
+    {
+      "id": "6",
+      "userId": "t6",
+      "clanId": "lovelace"
+    },
+    {
+      "id": "7",
+      "userId": "t1",
       "clanId": "meta"
+    },
+    {
+      "id": "8",
+      "userId": "t2",
+      "clanId": "ritchie"
+    },
+    {
+      "id": "8",
+      "userId": "t3",
+      "clanId": "tesla"
+    },
+    {
+      "id": "8",
+      "userId": "t4",
+      "clanId": "van_rossum"
     }
-  ],
+  ]
+  
+  
+  
+  
+  
+  
+  ,
   "scoreCoins": [
     {
       "id": 1,
