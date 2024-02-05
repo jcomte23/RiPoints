@@ -89,7 +89,7 @@ function getFinalStructure(clansObject) {
 
         finalObj.roleId = 3;
         finalObj.history = "";
-        finalObj.clanId = clanName;
+        finalObj.clanId = clanName.toLowerCase().replaceAll(" ", "_");
         finalObj.day_point[day] = point;
         result.push(finalObj);
         
