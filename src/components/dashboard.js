@@ -1,7 +1,9 @@
 import { pieChart, lineChart } from "./pieChart";
+import { updateContent } from "../js/translator";
+import { getAllClan } from '../js/services/getClan'
 import '../scss/dashboard.scss'
 
-export const showDashboard = (element) => {
+export const showDashboard = async (element) => {
   element.innerHTML = ` 
     <div class='dashboard' >
       <div class='dashboard__pie' >
@@ -13,8 +15,11 @@ export const showDashboard = (element) => {
       </div>
     </div>
     `;
-  let dataPie = [50,8,5,6]
-  pieChart(document.querySelector('.pieChart'), dataPie);
-  lineChart(document.querySelector('.dashboard__line'), dataPie);
 
+    let list = (await getAllClan()).map((clan) =>  {return clan.name})
+  
+  pieChart(document.querySelector('.pieChart'), list);
+  lineChart(document.querySelector('.dashboard__line'), list);
+  
+  updateContent()
 }

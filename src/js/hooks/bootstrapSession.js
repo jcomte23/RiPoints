@@ -1,14 +1,19 @@
 (() => {
-  const isAuthorized = localStorage.getItem("isAuthorized");
-  const path = window.location.pathname;
-  const routeActive = path.substring(path.at(-2)("/") + 1);
-
-
-  console.log(routeActive);
-  const privateRoutes = ["admin/index.html","coder/index.html","trainer/index.html"];
-  console.log(privateRoutes.includes(routeActive));
-
-  if (privateRoutes.includes(routeActive) && !isAuthorized) {
-    window.location.href = "../index.html";
+  let userOnline
+  const urlCompleta = window.location.href;
+  const user = localStorage.getItem("userStorage")
+  const authorized = JSON.parse(localStorage.getItem("isAutorizated"))
+  if (user && authorized===true) {
+    userOnline = JSON.parse(user)
+  } else {
+    window.location.href = "/";
   }
-})();
+
+  if (!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="admin") {
+    window.location.href = "/src/pages/admin/index.html"
+  } else if(!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="trainer"){
+    window.location.href = "/src/pages/trainer/index.html"
+  } else if(!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="coder"){
+    window.location.href = "/src/pages/coder/index.html"
+  }
+})()

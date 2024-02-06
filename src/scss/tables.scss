@@ -27,9 +27,15 @@
   border: dashed .2rem v.$secondary;
   border-radius: 1rem;
   width: 100%;
+  height: 30vh;
   &.active{
     border: dashed .2rem v.$mint;
     color: v.$mint;
+  }
+  figure img{
+    opacity: .3;
+    height: 6rem;
+    animation: waiting 1s .2s ease infinite;  
   }
 }
 
@@ -47,11 +53,11 @@
   justify-content: space-between;
 
   h1{
-    margin-top: 5rem;
+    margin-top: 1rem;
   }
 
   .fileInfo{
-    height: 30%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +70,7 @@
     justify-content: center;
     flex-direction: row;
     gap: 1rem;
-    flex-wrap: wrap;
+    overflow-x: scroll;
   }
 
   .fileInfo__row--item{
@@ -74,8 +80,9 @@
     background-color: white;
     color: v.$primary;
     font-weight: bolder;
-    padding: .5rem 1.3rem;
+    padding: 0rem 1.3rem;
     width: 15rem;
+    height: 3rem;
     border: .15rem solid v.$primary;
     border-radius: 5rem;
   }
@@ -87,7 +94,8 @@
   .waiting{
     display: flex;
     align-items: center;
-    padding: 1rem;
+    min-width: 4rem;
+    height: 3rem;
     font-style: italic;
     opacity: .3;
     animation: waiting 1s ease infinite;  

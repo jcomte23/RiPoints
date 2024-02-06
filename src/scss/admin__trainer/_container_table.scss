@@ -214,7 +214,9 @@ svg {
   font-size: 1.5rem; 
 }
 
-
+#cancel-modal{
+  font-size: 1.5rem;
+}
 button.btn__delete {
   background-color: #eae4e4; 
   border-color: #eae4e4; 
@@ -311,4 +313,8 @@ button.btn__succes:hover{
   justify-content: center;
   font-size: 1.1rem;
   user-select: none;
+}
+
+.img__arrows{
+  max-width: 3.1rem;
 }

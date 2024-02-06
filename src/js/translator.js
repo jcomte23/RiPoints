@@ -15,7 +15,7 @@ i18next
   .use(Backend)
   .init({
     lng: language,
-    debug: true,
+    debug: false,
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
@@ -24,7 +24,7 @@ i18next
   })
   .then(() => updateContent());
 
-function updateContent() {
+export function updateContent() {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((el) => {
     const key = el.getAttribute("data-i18n");
@@ -37,32 +37,27 @@ window.changeLanguage = function (lng) {
   localStorage.setItem("lang", lng);
 };
 
-
 export function changeLanguageOnClick() {
-  function handleLanguageChange(newLanguage) {
-    changeLanguage(newLanguage);
-
-    const langFlag = document.querySelector(".lang--flag");
-    const btnChangeLanguage = document.querySelector(".menu__header--lang");
-
-    btnChangeLanguage.querySelector("h4").innerText = newLanguage.toUpperCase();
-
-    if (newLanguage === "es") {
-      langFlag.classList.add("es");
-    } else {
-      langFlag.classList.remove("es");
+  const btnChangeLanguage = document.querySelector(".menu__header--lang");
+  const langFlag = document.querySelector(".lang--flag");
+  function upfateFlag(){
+    if(langFlag){
+      if (language === "es") {
+        langFlag.classList.add("es");
+      } else {
+        langFlag.classList.remove("es");
+      }
     }
-
-    language = newLanguage;
   }
+  upfateFlag()
 
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-
-  
-    if (target.classList.contains("menu__header--lang")) {
-      const newLanguage = language === "en" ? "es" : "en";
-      handleLanguageChange(newLanguage);
-    }
-  });
+  if (btnChangeLanguage) {
+    btnChangeLanguage.querySelector("h4").innerText = language.toUpperCase();
+    btnChangeLanguage.addEventListener("click", () => {
+      language == "en" ? language = "es" : language = "en";
+      i18next.changeLanguage(language, updateContent);
+      localStorage.setItem("lang", language );
+      upfateFlag()
+    });
+  }
 }

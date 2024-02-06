@@ -1,34 +1,36 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
+import { updateContent } from '../js/translator'
+import { defineTotalPoints, getClansAssists } from '../js/pointAssignment';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
     element.innerHTML = ` 
         <div class="file">
-            <h1 data-i18n="loadFile" class="fw-bold">Carga de puntos</h1>
+            <h1 data-i18n="loadFile" class="fw-bold"></h1>
             <div class='fileInfo' >
                 <div class="fileInfo__row" id="development">
-                    <div data-i18n="development" class='fileInfo__row--item'>Desarrollo de software</div>
+                    <div data-i18n="development" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
                 <div class="fileInfo__row" id="english">
-                    <div data-i18n="english" class='fileInfo__row--item'>Ingles</div>
+                    <div data-i18n="english" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
                 <div class="fileInfo__row" id="skills">
-                    <div data-i18n="humanity" class='fileInfo__row--item'>Habilidades</div>
+                    <div data-i18n="humanity" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
                 <div class="fileInfo__row" id="review">
-                    <div data-i18n="review" class='fileInfo__row--item'>Review</div>
+                    <div data-i18n="review" class='fileInfo__row--item'></div>
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
             </div>
-            <label for='formFile' class="d-flex flex-column gap-4 py-3 align-items-center file_input" id="labelFile">
+            <label for='formFile' class="d-flex flex-column py-2 align-items-center file_input" id="labelFile">
                 <figure>
                     <img src="/icons/file_upload.svg" width="100" alt="logo">
                 </figure>
-                <h3 data-i18n="developers" >Drop your file here!</h3>
-                <p data-i18n="developers" >Only .xlsx files are accepted.</p>
+                <h3 data-i18n="drop" >Drop your file here!</h3>
+                <p data-i18n="filesfilter" >Only .xlsx files are accepted.</p>
                 <input class="form-control" type="file" id="formFile">
             </label>
         </div>`;
@@ -91,7 +93,7 @@ export const showFileAttachment = (element) => {
             let aux = [];
 
             sheets.forEach(el => {
-                aux.push({ sheetName: el.sheetName, data: el.data.slice(4) });
+                aux.push({ sheetName: el.sheetName, data: el.data.slice(5).filter(el => el.length !== 0) });
             });
 
             aux.forEach(el => {
@@ -104,7 +106,12 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-            console.log(daysPerClass);
+            if(Object.keys(daysPerClass).length === 4) {
+                // THIS RETURNS ALL THE POINTS ASSIGNED PER DAY AND CLAN
+                let clansAssists = getClansAssists(daysPerClass);
+                let result = defineTotalPoints(clansAssists);
+                console.log({ clansAssists, clansTotalPoints: result });
+            };
         });
     }
 
@@ -113,4 +120,6 @@ export const showFileAttachment = (element) => {
     });
 
     labelFile.addEventListener('drop', handleDrop);
+
+    updateContent()
 };
