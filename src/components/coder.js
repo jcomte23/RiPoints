@@ -1,4 +1,6 @@
-import { changeLanguageOnClick,updateContent } from "../js/translator"; 
+import { changeLanguageOnClick, updateContent } from "../js/translator";
+import { historyWinCoinsByuserId } from "../js/usecases/winCoinsHistory";
+
 export const renderCoder = (element) => {
   const user = JSON.parse(localStorage.getItem("userStorage"));
   element.innerHTML = `
@@ -35,36 +37,31 @@ export const renderCoder = (element) => {
             <th scope="col">Fecha</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row" class="table-safe">5</th>
-            <td class="table-safe">Se porto bien en clase</td>
-            <td class="table-safe">Mark</td>
-            <td class="table-safe">31/02/2024</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td >Buena participacion</td>
-            <td>Jacob</td>
-            <td>31/02/2024</td>
-          </tr>
-          <tr>
-            <th scope="row" class="table-danger">-4</th>
-            <td class="table-danger">Mal comportamiento</td>
-            <td class="table-danger">Joseph</td>
-            <td class="table-danger">31/02/2024</td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td >Buen aporte</td>
-            <td>Salomon</td>
-            <td>31/02/2024</td>
-          </tr>
+        <tbody id="tbody_historial">
+        
         </tbody>
       </table>
     </div>
   </div>
   `;
-  updateContent()
+  updateContent();
+  historyCoderRender(user);
 };
 changeLanguageOnClick();
+
+const historyCoderRender = async (user) => {
+  const historyTbody = document.getElementById("tbody_historial");
+  const history = await historyWinCoinsByuserId(user.id);
+
+  history.forEach((winCoin) => {
+    const color = winCoin.coins>0? "safe":"danger"
+    historyTbody.innerHTML += `
+    <tr>
+      <th scope="row" class="table-${color}">${winCoin.coins}</th>
+      <td class="table-${color}">${winCoin.comment}</td>
+      <td class="table-${color}">${user.name}</td>
+      <td class="table-${color}">${winCoin.scoreCoin.date.fullDate}</td>
+    </tr>
+  `;
+  });
+};

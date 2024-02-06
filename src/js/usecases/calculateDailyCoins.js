@@ -2,11 +2,11 @@ import { getAllWinCoins } from "../services/getAllWinCoins";
 
 //Esta funcion se debe llamar diariamente, con preferencia cada que se suba el archivo de excel
 //user: esto provine del excel, el cual debe contener el id del usuario y la cantida de puntos
-export const calculateDailyCoins =  async (user) => {
-  const winCoins = await contWinCoins(user.id);
+export const calculateDailyCoins = async (user, date) => {
+  const winCoins = await contWinCoins(user.id, date);
   console.log(winCoins);
   const scoreCoins = {
-    date: calculateDate(),
+    date: calculateDate(date),
     userId: user.id,
     winCoinsTotal: winCoins,
     attendantCoins: user.attendantCoin,
@@ -19,10 +19,13 @@ const amountCoins = (winCoin, attendantCoin) => {
   return winCoin + attendantCoin;
 };
 
-const contWinCoins = async (userId) => {
+const contWinCoins = async (userId, date) => {
   const allWincoins = await getAllWinCoins();
   const filterWinCoins = allWincoins.filter((winCoin) => {
-    return winCoin.scoreCoin.userId == userId;
+    return (
+      winCoin.scoreCoin.userId == userId &&
+      winCoin.scoreCoin.date.fullDate == date
+    );
   });
   const totalCoins = filterWinCoins.reduce(
     (total, winCoin) => total + winCoin.coins,
@@ -30,8 +33,8 @@ const contWinCoins = async (userId) => {
   );
   return totalCoins;
 };
-
-const calculateDate = () => {
+//Esta funcion sirve para cuando el trainer asigne puntos, por eso el undefined
+const calculateDate = (fullDate = undefined) => {
   const date = new Date();
   const months = [
     "enero",
@@ -48,13 +51,13 @@ const calculateDate = () => {
     "diciembre",
   ];
   const days = [
-    "domingo",
-    "lunes",
-    "martes",
-    "miércoles",
-    "jueves",
-    "viernes",
-    "sábado",
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sabado",
   ];
 
   const day = days[date.getDay()];
@@ -63,5 +66,5 @@ const calculateDate = () => {
     date.getDay() + 1
   }`;
 
-  return { day: day, month: month, fullDate: year };
+  return { day: day, month: month, fullDate: date ? fullDate : year };
 };
