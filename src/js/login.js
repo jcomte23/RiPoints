@@ -48,15 +48,15 @@ form.addEventListener("submit", async (event) => {
     showValidation()
     localStorage.setItem("userStorage", JSON.stringify(userSearch));
     localStorage.setItem("isAutorizated", "true")
-    switch (userSearch.role.name) {
+    switch (userSearch.rol.name) {
       case "admin":
-        redirect(userSearch.role.name);
+        redirect(userSearch.rol.name);
         break;
       case "trainer":
-        redirect(userSearch.role.name);
+        redirect(userSearch.rol.name);
         break;
       case "coder":
-        redirect(userSearch.role.name);
+        redirect(userSearch.rol.name);
         break;
       default:
         break;
