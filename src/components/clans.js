@@ -1,5 +1,5 @@
 import { updateContent } from "../js/translator";
-
+import { ranking } from "./ranking"
 
 export const showClans = (element) => {
     element.innerHTML = `
@@ -17,61 +17,6 @@ export const showClans = (element) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
                     <tr>
                         <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
                         <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
