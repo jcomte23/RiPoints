@@ -1,13 +1,13 @@
 import Chart from "chart.js/auto";
+import { toCapitalize } from "../js/services/helpers";
 import { getLanguague } from './../js/translator';
 
 function readLanguageFile(){
     return fetch(`/locales/${getLanguague()}/translation.json`);
 }
 
-function toCapitalize(string){
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+
+
 export const lineChart = async (element, list) => {
   element.innerHTML = `<canvas id="myLineChart"></canvas>`;
 
@@ -19,7 +19,7 @@ export const lineChart = async (element, list) => {
     }),
     datasets: list.map((clan) => {
       return {
-        label: clan,
+        label: toCapitalize(clan),
         data: [10, 5, 14, 6, 8],
         borderColor: "#fe654f",
         backgroundColor: "#fe654f33",
@@ -88,7 +88,7 @@ export const pieChart = async (element,list,clanData=[45,34,23,53,76,54]) => {
     type: 'pie',
     responsive: true,
     data: {
-              labels: list.map((clan)=>{return clan}),
+              labels: list.map((clan)=>{return toCapitalize(clan)}),
               datasets: [{
                 backgroundColor:[
                    "#181e4b",

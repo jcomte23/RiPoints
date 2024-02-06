@@ -1,7 +1,7 @@
 {
     "lang": "ES",
     "clan_ranking": "clasificación de clanes",
-    "clans": "clanes",
+    "clans": "Clanes",
     "code": "código",
     "developers": "desarrolladores",
     "dashboard": "panel",
@@ -37,5 +37,10 @@
     "weeklychart":"Grafica Semanal",
     "Pp":"Asistencia",
     "drop":"Arrastra tus archivos aquí!",
-    "filesfilter":"Solo archivos .xlsx son permitidos."
+    "filesfilter":"Solo archivos .xlsx son permitidos.",
+    "name":"Nombre",
+    "last_name":"Apellido",
+    "points":"Puntos",
+    "actions":"Acciones",
+    "edit":"Editar"
 }

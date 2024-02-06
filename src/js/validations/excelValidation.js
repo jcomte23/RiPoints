@@ -1,6 +1,5 @@
 import * as ExcelJS from 'exceljs';
 
-let file;
 const allowedExtensions = ['xlsx'];
 
 export function handleFileSelect(fileInput = false, callback) {
