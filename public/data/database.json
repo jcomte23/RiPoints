@@ -51,7 +51,7 @@
       "points":109
     }
   ],
-  "roles": [
+  "rols": [
     {
       "id": "1",
       "name": "admin"
@@ -68,7 +68,7 @@
   "users": [
     {
       "id": "a1",
-      "roleId": "1",
+      "rolId": "1",
       "name": "jackeline",
       "lastName": "narvaez",
       "password": "jackeline",
@@ -76,7 +76,7 @@
     },
     {
       "id": "a2",
-      "roleId": "1",
+      "rolId": "1",
       "name": "mauricio",
       "lastName": "otalvaro",
       "password": "mauricio",
@@ -84,7 +84,7 @@
     },
     {
       "id": "a3",
-      "roleId": "1",
+      "rolId": "1",
       "name": "admin",
       "lastName": "example",
       "password": "1",
@@ -92,7 +92,7 @@
     },
     {
       "id": "t1",
-      "roleId": "2",
+      "rolId": "2",
       "name": "trainer",
       "lastName": "example",
       "password": "2",
@@ -100,7 +100,7 @@
     },
     {
       "id": "t2",
-      "roleId": "2",
+      "rolId": "2",
       "name": "Christopher",
       "lastName": "Smith",
       "password": "2",
@@ -108,7 +108,7 @@
     },
     {
       "id": "t3",
-      "roleId": "2",
+      "rolId": "2",
       "name": "Emily",
       "lastName": "Davis",
       "password": "2",
@@ -116,7 +116,7 @@
     },
     {
       "id": "t4",
-      "roleId": "2",
+      "rolId": "2",
       "name": "Brandon",
       "lastName": "Martinez",
       "password": "2",
@@ -124,7 +124,7 @@
     },
     {
       "id": "t5",
-      "roleId": "2",
+      "rolId": "2",
       "name": "Jessica",
       "lastName": "Taylor",
       "password": "2",
@@ -132,14 +132,15 @@
     },
     {
       "id": "t6",
-      "roleId": "2",
+      "rolId": "2",
       "name": "Alexandra",
       "lastName": "Johnson",
       "password": "2",
       "userName": "trainer_alex"
     },
     {
-      "roleId": "3",
+      "id":"1",
+      "rolId": "3",
       "userName": "gabrielgarcia",
       "password": "gabrielgarcia",
       "name": "Gabriel",
@@ -201,7 +202,8 @@
       "history": ""
     },
     {
-      "roleId": "3",
+      "id":"3",
+      "rolId": "3",
       "userName": "fernandobotero",
       "password": "fernandobotero",
       "name": "Fernando",
@@ -232,7 +234,8 @@
       "history": ""
     },
     {
-      "roleId": "3",
+      "id":"4",
+      "rolId": "3",
       "userName": "luiscarlos",
       "password": "luiscarlos",
       "name": "Luis Carlos",
@@ -524,11 +527,11 @@
         "fullDate":"2024-2-5"
       },
       "userId": "1",
-      "pointsaAllocator": "liliana",
+"pointsaAllocator": "liliana",
       "observation": "se porto bien clases",
       "regularCoins": 3,
       "attendantCoins": 0,
       "amount": 4
     }
-  ]
+    ]
 }
