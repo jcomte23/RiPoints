@@ -7,11 +7,11 @@ export const renderCoder = (element) => {
     <div class="coder__profile profile__mint">
       <div class="coder__profile__clanShiled"></div>
     </div>
-    <h4 class="coder__name">${user.name} ${user.lastName}</h4>
+    <h4 class="coder__name"></h4>
     <h5 class="coder__points--title" data-i18n="totalpoints" >Total Points</h5>
     <div class="coder__points">
       <div class="coder__points__coin"></div>
-      <span id="counter">580</span>
+      <span id="counter">570</span>
     </div>
   </div>
 
@@ -65,6 +65,11 @@ export const renderCoder = (element) => {
     </div>
   </div>
   `;
+
+  // set name
+  document.querySelectorAll('.coder__name').forEach((el)=>{
+    el.textContent = user.name + ' ' + user.lastName
+  })
   updateContent()
 };
 changeLanguageOnClick();
