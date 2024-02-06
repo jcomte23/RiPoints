@@ -1,6 +1,6 @@
 import { changeLanguageOnClick,updateContent } from "../js/translator"; 
 export const renderCoder = (element) => {
-  const user = { name: JSON.parse(localStorage.getItem('userStorage')).name , lastName: JSON.parse(localStorage.getItem('userStorage')).lastName };
+  const user = { name: "jose", lastName: "perez" };
   element.innerHTML = `
   <div class="coder">
     <h3 class="coder__header" data-i18n="yourscore" ></h3>
