@@ -1,0 +1,281 @@
+{
+  "clans": [
+    {
+      "id": "dell",
+      "name": "dell"
+    },
+    {
+      "id": "gates",
+      "name": "gates"
+    },
+    {
+      "id": "gosling",
+      "name": "gosling"
+    },
+    {
+      "id": "jobs",
+      "name": "jobs"
+    },
+    {
+      "id": "linus",
+      "name": "linus"
+    },
+    {
+      "id": "lovelace",
+      "name": "lovelace"
+    },
+    {
+      "id": "meta",
+      "name": "meta"
+    },
+    {
+      "id": "ritchie",
+      "name": "ritchie"
+    },
+    {
+      "id": "tesla",
+      "name": "tesla"
+    },
+    {
+      "id": "van_rossum",
+      "name": "van rossum"
+    }
+  ],
+  "rols": [
+    {
+      "id": "1",
+      "name": "admin"
+    },
+    {
+      "id": "2",
+      "name": "trainer"
+    },
+    {
+      "id": "3",
+      "name": "coder"
+    }
+  ],
+  "users": [
+    {
+      "id": "a1",
+      "rolId": "1",
+      "name": "jackeline",
+      "lastName": "narvaez",
+      "password": "jackeline",
+      "userName": "jackeline"
+    },
+    {
+      "id": "a2",
+      "rolId": "1",
+      "name": "mauricio",
+      "lastName": "otalvaro",
+      "password": "mauricio",
+      "userName": "mauricio"
+    },
+    {
+      "id": "a3",
+      "rolId": "1",
+      "name": "admin",
+      "lastName": "example",
+      "password": "1",
+      "userName": "1"
+    },
+    {
+      "id": "t1",
+      "rolId": "2",
+      "name": "trainer",
+      "lastName": "example",
+      "password": "2",
+      "userName": "2"
+    },
+    {
+      "id": "t2",
+      "rolId": "2",
+      "name": "Christopher",
+      "lastName": "Smith",
+      "password": "2",
+      "userName": "trainer_chris"
+    },
+    {
+      "id": "t3",
+      "rolId": "2",
+      "name": "Emily",
+      "lastName": "Davis",
+      "password": "2",
+      "userName": "trainer_emily"
+    },
+    {
+      "id": "t4",
+      "rolId": "2",
+      "name": "Brandon",
+      "lastName": "Martinez",
+      "password": "2",
+      "userName": "trainer_brandon"
+    },
+    {
+      "id": "t5",
+      "rolId": "2",
+      "name": "Jessica",
+      "lastName": "Taylor",
+      "password": "2",
+      "userName": "trainer_jess"
+    },
+    {
+      "id": "t6",
+      "rolId": "2",
+      "name": "Alexandra",
+      "lastName": "Johnson",
+      "password": "2",
+      "userName": "trainer_alex"
+    },
+    {
+      "id":"1",
+      "rolId": "3",
+      "userName": "gabrielgarcia",
+      "password": "gabrielgarcia",
+      "name": "Gabriel",
+      "lastName": "García Márquez",
+      "clanId": "van_rossum"
+    },
+    {
+      "id":"2",
+      "rolId": "3",
+      "userName": "juantorres",
+      "password": "juantorres",
+      "name": "Juan Camilo",
+      "lastName": "Torres García",
+      "clanId": "jobs"
+    },
+    {
+      "id":"3",
+      "rolId": "3",
+      "userName": "fernandobotero",
+      "password": "fernandobotero",
+      "name": "Fernando",
+      "lastName": "Botero Angulo",
+      "clanId": "tesla"
+    },
+    {
+      "id":"4",
+      "rolId": "3",
+      "userName": "luiscarlos",
+      "password": "luiscarlos",
+      "name": "Luis Carlos",
+      "lastName": "Galán Sarmiento",
+      "clanId": "gates"
+    }
+  ],
+  "clansTrainers": [
+    {
+      "id": "1",
+      "userId": "t1",
+      "clanId": "dell"
+    },
+    {
+      "id": "2",
+      "userId": "t2",
+      "clanId": "gates"
+    },
+    {
+      "id": "3",
+      "userId": "t3",
+      "clanId": "gosling"
+    },
+    {
+      "id": "4",
+      "userId": "t4",
+      "clanId": "jobs"
+    },
+    {
+      "id": "5",
+      "userId": "t5",
+      "clanId": "linus"
+    },
+    {
+      "id": "6",
+      "userId": "t6",
+      "clanId": "lovelace"
+    },
+    {
+      "id": "7",
+      "userId": "t1",
+      "clanId": "meta"
+    },
+    {
+      "id": "8",
+      "userId": "t2",
+      "clanId": "ritchie"
+    },
+    {
+      "id": "8",
+      "userId": "t3",
+      "clanId": "tesla"
+    },
+    {
+      "id": "8",
+      "userId": "t4",
+      "clanId": "van_rossum"
+    }
+  ],
+  "scoreCoins": [
+    {
+      "id": "1",
+      "date": {
+        "day": "monday",
+        "month": "april",
+        "fullDate": "2024-2-5"
+      },
+      "userId": "3",
+      "regularCoins": 2,
+      "attendantCoins": 2,
+      "amount": 4
+    },
+    {
+      "id": "2",
+      "date": {
+        "day": "monday",
+        "month": "april",
+        "fullDate": "2024-2-5"
+      },
+      "userId": "2",
+      "regularCoins": 3,
+      "attendantCoins": 0,
+      "amount": 4
+    },
+    {
+      "id": "3",
+      "date": {
+        "day": "monday",
+        "month": "april",
+        "fullDate": "2024-2-5"
+      },
+      "userId": "1",
+      "regularCoins": 3,
+      "attendantCoins": 0,
+      "amount": 4
+    }
+  ],
+  "winCoins": [
+    {
+      "id": "1",
+      "scoreCoinId": "1",
+      "comment": "Se porto bien en clases",
+      "pointsaAllocator": "liliana",
+      "coins": 2
+    },
+    {
+      "id": "2",
+      "scoreCoinId": "2",
+      "comment": "Se porto bien en clases",
+      "pointsaAllocator": "Alejandra",
+      "coins": 2
+    },
+    {
+      "id": "2",
+      "scoreCoinId": "2",
+      "comment": "Saco el celular en clase",
+      "pointsaAllocator": "liliana",
+      "coins": -2
+    }
+  ]
+}
