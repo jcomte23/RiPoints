@@ -44,8 +44,8 @@ export function modal(element) {
                   <div class="quantity">
                   <input class="quantity__input" type="text" value="0" readonly />
                   <div class="quantity__add">
-                  <div class="less"><img class="img__arrows" src="../../../public/img/img_globales/asigmentPointsDown.png" alt=""></div>
-                  <div class="add"><img class="img__arrows" src="../../../public/img/img_globales/asigmentPointUp.png" alt="" /></div>
+                  <div class="add"><img class="img__arrowsUp" src="../../../public/img/img_globales/asigmentPointsDown.png" alt=""></div>
+                  <div class="less"><img class="img__arrowsDown" src="../../../public/img/img_globales/asigmentPointUp.png" alt="" /></div>
                 
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export function modal(element) {
     if (realNum < -5) {
       realNum = -5;
     } else if (realNum > 5) {
-      realNum = 5;
+      realNum = realNum;
     }
     updateInput();
     updateSign();
