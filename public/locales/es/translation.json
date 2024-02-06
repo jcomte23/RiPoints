@@ -1,7 +1,7 @@
 {
     "lang": "ES",
     "clan_ranking": "clasificación de clanes",
-    "clans": "clanes",
+    "clans": "Clanes",
     "code": "código",
     "developers": "desarrolladores",
     "dashboard": "panel",
@@ -35,7 +35,13 @@
     "yourscore": "Tu Puntuación",
     "totalpoints":"Puntos Totales",
     "weeklychart":"Grafica Semanal",
+    "history":"Historial",
     "Pp":"Asistencia",
     "drop":"Arrastra tus archivos aquí!",
-    "filesfilter":"Solo archivos .xlsx son permitidos."
+    "filesfilter":"Solo archivos .xlsx son permitidos.",
+    "name":"Nombre",
+    "last_name":"Apellido",
+    "points":"Puntos",
+    "actions":"Acciones",
+    "edit":"Editar"
 }

@@ -1,22 +1,19 @@
-async function getCoders() {
-  const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users?roleId=3`);
-  const data = await response.json();
-  console.log(data);
-  return data;
-}
+import { get } from '../js/services/helpers'
+import { updateContent } from '../js/translator';
 
 export async function loadCodersTr(element) {
-  let list = await getCoders();
+  let list = await get('users?roleId=3');
 
   list.forEach((coder) => {
     element.innerHTML += `
-    <tr>
-      <td>${coder.name}</td>
-      <td>${coder.lastName}</td>
-      <td>${coder.clanId}</td>
-      <td>${Object.entries(coder.day_point).reduce((acc, curr) => Number(curr[1]) + acc, 0)}</td>
-      <td><button class="edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></td>
-    </tr>
+      <tr>
+        <td>${coder.name}</td>
+        <td>${coder.lastName}</td>
+        <td>${coder.clanId}</td>
+        <td>${Object.entries(coder.day_point).reduce((acc, curr) => Number(curr[1]) + acc, 0)}</td>
+        <td><button class="edit btn btn-primary text-capitalize" data-i18n="edit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button></td>
+      </tr>
     `;
   });
+  updateContent();
 }

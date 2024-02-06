@@ -2,43 +2,53 @@
   "clans": [
     {
       "id": "dell",
-      "name": "dell"
+      "name": "dell",
+      "points":123
     },
     {
       "id": "gates",
-      "name": "gates"
+      "name": "gates",
+      "points":130
     },
     {
       "id": "gosling",
-      "name": "gosling"
+      "name": "gosling",
+      "points":130
     },
     {
       "id": "jobs",
-      "name": "jobs"
+      "name": "jobs",
+      "points":112
     },
     {
       "id": "linus",
-      "name": "linus"
+      "name": "linus",
+      "points":108
     },
     {
       "id": "lovelace",
-      "name": "lovelace"
+      "name": "lovelace",
+      "points":131
     },
     {
       "id": "meta",
-      "name": "meta"
+      "name": "meta",
+      "points":122
     },
     {
       "id": "ritchie",
-      "name": "ritchie"
+      "name": "ritchie",
+      "points":113
     },
     {
       "id": "tesla",
-      "name": "tesla"
+      "name": "tesla",
+      "points":126
     },
     {
       "id": "van_rossum",
-      "name": "van rossum"
+      "name": "van rossum",
+      "points":109
     }
   ],
   "rols": [
@@ -137,26 +147,26 @@
       "lastName": "García Márquez",
       "clanId": "van_rossum",
       "day_point": {
-      "1": "2",
-        "2": "2",
-        "3": "1",
-        "4": "2",
-        "5": "2",
-        "8": "1",
-        "9": "2",
-        "10": "-2",
-        "11": "2",
-        "12": "2",
-        "15": "2",
-        "16": "2",
-        "17": "-5",
-        "18": "2",
-        "19": "2",
-        "22": "2",
-        "23": "2",
-        "24": "1",
-        "25": "2",
-        "26": "2"
+        "1": 2,
+        "2": 2,
+        "3": 1,
+        "4": 2,
+        "5": 2,
+        "8": 1,
+        "9": 2,
+        "10": -2,
+        "11": 2,
+        "12": 2,
+        "15": 2,
+        "16": 2,
+        "17": -5,
+        "18": 2,
+        "19": 2,
+        "22": 2,
+        "23": 2,
+        "24": 1,
+        "25": 2,
+        "26": 2
       },
       "history": ""
     },
