@@ -1,6 +1,6 @@
 export const getAllWinCoins = async () => {
   const response = await fetch(
-    `http://localhost:3000/winCoins?_embed=scoreCoin`
+    `${import.meta.env.VITE_BASE_URL}/winCoins?_embed=scoreCoin`
   );
   const data = await response.json();
 

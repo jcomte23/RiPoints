@@ -226,7 +226,7 @@
         "fullDate": "2024-2-5"
       },
       "userId": "3",
-      "regularCoins": 2,
+      "winCoinsTotal": 2,
       "attendantCoins": 2,
       "amount": 4
     },
@@ -238,7 +238,7 @@
         "fullDate": "2024-2-5"
       },
       "userId": "2",
-      "regularCoins": 3,
+      "winCoinsTotal": 3,
       "attendantCoins": 0,
       "amount": 4
     },
@@ -250,7 +250,7 @@
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "regularCoins": 3,
+      "winCoinsTotal": 3,
       "attendantCoins": 0,
       "amount": 4
     }
