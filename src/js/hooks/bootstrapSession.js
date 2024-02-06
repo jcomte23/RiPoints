@@ -9,11 +9,11 @@
     window.location.href = "/";
   }
 
-  if (!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="admin") {
+  if (!urlCompleta.includes(userOnline.rol.name) && userOnline.rol.name==="admin") {
     window.location.href = "/src/pages/admin/index.html"
-  } else if(!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="trainer"){
+  } else if(!urlCompleta.includes(userOnline.rol.name) && userOnline.rol.name==="trainer"){
     window.location.href = "/src/pages/trainer/index.html"
-  } else if(!urlCompleta.includes(userOnline.role.name) && userOnline.role.name==="coder"){
+  } else if(!urlCompleta.includes(userOnline.rol.name) && userOnline.rol.name==="coder"){
     window.location.href = "/src/pages/coder/index.html"
   }
 })()
