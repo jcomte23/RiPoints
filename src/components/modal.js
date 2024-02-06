@@ -39,9 +39,16 @@ export function modal(element) {
                 </div>
                 
                 <div class="container__points">
-                  <div class="total__points" id="totalPoints">12</div>
+                  <div class="total__points" id="totalPoints">0</div>
                   <span id="plusSign">+</span>
-                  <input class="asignador__points" type="number" id="numberInput" value="0" >
+                  <div class="quantity">
+                  <input class="quantity__input" type="text" value="0" readonly />
+                  <div class="quantity__add">
+                  <div class="add"><img class="img__arrowsUp" src="../../../public/img/img_globales/asigmentPointsDown.png" alt=""></div>
+                  <div class="less"><img class="img__arrowsDown" src="../../../public/img/img_globales/asigmentPointUp.png" alt="" /></div>
+                
+                  </div>
+                </div>
                 </div>
               </div>
               
@@ -50,7 +57,7 @@ export function modal(element) {
                         </div>
               
               <div class="btn_actions m-5 ">
-                <button class="btn__delete btn btn-danger btn-lg col-md-5 m-1" id="save-modal">Cancelar</button>
+                <button class="btn__delete btn btn-danger btn-lg col-md-5 m-1" id="cancel-modal">Cancelar</button>
                 <button class="btn__succes btn btn-success btn-lg col-md-5 m-1" id="save-modal">Guardar</button>
               </div>
             </div>
@@ -59,19 +66,67 @@ export function modal(element) {
       </div>
   `;
 
-  const assigment = document.querySelector(".asignador__points");
+
+  const inputNum = document.querySelector(".quantity__input");
+  const numadd = document.querySelector(".quantity__add .add");
+  const numless = document.querySelector(".quantity__add .less");
   const plusSign = document.getElementById("plusSign");
+  const btnSaveModal = document.getElementById("save-modal");
+  const btnCancelModal = document.getElementById("cancel-modal");
 
-  let isFirstTime = true;
+  let realNum = 0;
 
-  assigment.addEventListener("input", (event) => {
-    if (assigment.value.startsWith("-") && isFirstTime) {
-      plusSign.textContent = "-";
-      assigment.value = assigment.value.slice(1);
-      isFirstTime = false;
-    } else if (!assigment.value.startsWith("-")) {
-      plusSign.textContent = "+";
-      isFirstTime = true;
+  function updateInput() {
+    inputNum.value = Math.abs(realNum);
+    inputNum.classList.add("pop");
+    setTimeout(() => {
+      inputNum.classList.remove("pop");
+    }, 200);
+  }
+
+  function plus(x) {
+    realNum += x;
+    if (realNum < -5) {
+      realNum = -5;
+    } else if (realNum > 5) {
+      realNum = realNum;
     }
+    updateInput();
+    updateSign();
+  }
+
+  function updateSign() {
+    plusSign.textContent = realNum < 0 ? "-" : "+";
+  }
+
+  numadd.addEventListener("click", () => {
+    plus(1);
   });
+
+  numless.addEventListener("click", () => {
+    plus(-1);
+  });
+
+  btnSaveModal.addEventListener("click", () => {
+    const totalPointsElement = document.getElementById("totalPoints");
+    const totalPoints = parseInt(totalPointsElement.textContent);
+    totalPointsElement.textContent = totalPoints + realNum;
+
+    const quantityInput = document.querySelector(".quantity__input");
+    quantityInput.value = parseInt(quantityInput.value) + realNum;
+
+    realNum = 0;
+    updateInput();
+    updateSign();
+
+   
+    const closeButton = document.querySelector(".btn-close");
+    closeButton.click();
+  });
+
+  const closed = document.querySelector("#cancel-modal");
+  closed.addEventListener("click",(event)=>{
+    const closeButton = document.querySelector(".btn-close");
+    closeButton.click();
+  })
 }
