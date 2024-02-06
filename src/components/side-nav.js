@@ -9,7 +9,8 @@ import "../scss/tables.scss";
 const sideNav = () => {
   const nav = document.querySelector(".side-nav");
   const session = localStorage.getItem("userStorage");
-  const role = JSON.parse(session).roleId;
+  const role = JSON.parse(session).rolId;
+
   switch (role) {
     case "1":
       nav.innerHTML = `
