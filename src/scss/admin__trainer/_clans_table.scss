@@ -1,0 +1,128 @@
+@use "../variables" as v;
+
+.ranking{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: v.$white ;
+    overflow-y: scroll;
+    display: flex;
+    padding: .5rem;
+    justify-content: start;
+    flex-direction: column;
+    text-transform: capitalize;
+    
+    h1{
+        box-sizing: border-box;
+        background-color: v.$primary;
+        color: v.$white;
+        width: 100%;
+        padding: .5rem;
+        text-align: center;
+        border-radius: 1rem;
+    }
+    .ranking__containerTable{
+        width: 100%;
+        display: flex;
+    }
+    .ranking__table{
+        display: table;
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem;
+        width: 100%;
+    }
+    .ranking__table tr:first-child td:first-child {
+        border-top-left-radius: 1rem;
+    }
+    .ranking__table tr:first-child td:first-child {
+        border-bottom-left-radius: 1rem;
+    }
+    .ranking__table tr:first-child td:last-child{
+        border-top-right-radius: 1rem;
+    }
+    .ranking__table tr:first-child td:last-child {
+        border-bottom-right-radius: 1rem;
+    }
+    .ranking__table tr:first-child td{
+        background-color: v.$primary;
+        color: white;
+        font-weight: bolder;
+        padding: 1rem;
+    }
+    .ranking__table tbody{
+        width: 100%;
+    }
+    .ranking__table tr{
+        width: 100%;
+    }
+    .ranking__table tr:not(:first-child){
+        margin: 2rem 0;
+    }
+    .ranking__table tr td{
+        font-size: 1.2rem;
+        width:20%;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .clan__image{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 3rem;
+    }
+    .clan__image div:last-child{
+        width: 50%;
+        text-align: left;
+    }
+    
+    .clan__image--item{
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        aspect-ratio: 1/1;
+        background-color: v.$primary;
+        margin: .5rem 1rem .5rem auto;
+        border-radius: 3rem;
+    }
+    .fancyLetter{
+        color: v.$primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        border: .2rem solid v.$primary ;
+        font-weight: bolder;
+        transform: rotate(-15deg);
+        background-color: transparent;
+    }
+
+    .ranking__table--color tr:not(:first-child):nth-child(-n+4){        
+        td:first-child{
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+        td:last-child{
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+    }
+    .ranking__table--color tr:nth-child(2){
+        td{
+            background-color: v.$gold;
+        }
+    }
+    .ranking__table--color tr:nth-child(3){
+        td{
+            background-color: v.$silver;
+        }
+    }
+    .ranking__table--color tr:nth-child(4){
+        td{
+            background-color: v.$bronze;
+        }
+    }
+}
