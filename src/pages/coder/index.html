@@ -22,7 +22,7 @@
   <title>Coder</title>
 </head>
 
-<body class="coder__body">
+<body class="coder__body" id="coderView">
   <nav class="navbar fixed-top">
     <!-- Bootstrap settings: don't touch -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -45,86 +45,13 @@
   <section class="sectionCoder">
     <div class="containerCoder">
       <h3 data-i18n="yourscore" class="coder__header">Your score</h3>
-      <div class="coder__profile profile__danger">
-        <div class="coder__profile__clanShiled profile__danger"></div>
+      <div class="coder__profile profile__mint">
+        <div class="coder__profile__clanShiled"></div>
       </div>
       <h4 class="coder__name">Jackeline Narvaez</h4>
     </div>
   </section>
   <div class="floatingBackground">
-    <div class="coder">
-      <h3  data-i18n="yourscore" class="coder__header">Your score</h3>
-      <div class="coder__profile profile__danger">
-        <div class="coder__profile__clanShiled profile__danger"></div>
-      </div>
-      <h4 class="coder__name">Jackeline Narvaez</h4>
-      <h5  data-i18n="totalpoints" class="coder__points--title">Puntos Totales</h5>
-      <div class="coder__points">
-        <div class="coder__points__coin">
-
-        </div>
-
-        <span id="counter">580</span>
-      </div>
-    </div>
-    <!-- Floating background -->
-    <div class="container-graphics">
-      
-      <div class="container-graphic">
-        <span >Grafica Semanal</span>
-        <canvas id="graphic__week" class="graphic"></canvas>
-      </div>
-
-      <div class="container-graphic">
-        <span>Grafica Mensual</span>
-        <canvas id="graphic__moth" class="graphic"></canvas>
-      </div>
-
-      <div class="container-history">
-        <span>Historial</span>
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">Puntos</th>
-              <th scope="col">Descripcion</th>
-              <th scope="col">Profesor</th>
-              <th scope="col">Fecha</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" class="table-safe">5</th>
-              <td class="table-safe">Se porto bien en clase</td>
-              <td class="table-safe">Mark</td>
-              <td class="table-safe">31/02/2024</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td >Buena participacion</td>
-              <td>Jacob</td>
-              <td>31/02/2024</td>
-            </tr>
-            <tr>
-              <th scope="row" class="table-danger">-4</th>
-              <td class="table-danger">Mal comportamiento</td>
-              <td class="table-danger">Joseph</td>
-              <td class="table-danger">31/02/2024</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td >Buen aporte</td>
-              <td>Salomon</td>
-              <td>31/02/2024</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-<!-- 
-    <canvas id="graphic__week" class="graphic"></canvas>
-    <canvas id="graphic__moth" class="graphic"></canvas> -->
-
   </div>
 
   <script type="module" src="../../js/main.js"></script>
