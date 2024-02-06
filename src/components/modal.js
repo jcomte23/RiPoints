@@ -108,24 +108,18 @@ export function modal(element) {
   });
 
   btnSaveModal.addEventListener("click", () => {
-    // Perform any additional actions you need before updating the points
-    // For example, you can save the observations from the textarea
-
-    // Update the total points based on the realNum value
     const totalPointsElement = document.getElementById("totalPoints");
     const totalPoints = parseInt(totalPointsElement.textContent);
     totalPointsElement.textContent = totalPoints + realNum;
 
-    // Update the input field next to the quantity control
     const quantityInput = document.querySelector(".quantity__input");
     quantityInput.value = parseInt(quantityInput.value) + realNum;
 
-    // Reset realNum to 0 and update the input and sign
     realNum = 0;
     updateInput();
     updateSign();
 
-    // Manually close the modal
+   
     const closeButton = document.querySelector(".btn-close");
     closeButton.click();
   });
