@@ -1,19 +1,25 @@
 import { get, toCapitalize, updateClanPoints } from '../js/services/helpers'
+import { setImageMultiple } from '../js/services/helpers';
 
-export async function ranking(about){
+export async function ranking(about,element){
     // about what is the ranking
-    let response = '';
     const rank = await get(about)
-    console.log(rank)
+    let clanNames = [];
     Object.entries(rank).forEach((el,index)=>{
-        response +=
+        clanNames.push(toCapitalize(el[1].name))
+        element.innerHTML +=
          `
              <tr>
-                 <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">${index}</button></td>
-                 <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">${toCapitalize(el[1].name)}</button></td>
-                 <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">${el[1].points}</button></td>
+                <td><div  class="">${index+1}</div></td>
+                <td>
+                    <div class="clan__image">
+                        <div class="clan__image--item"></div>
+                        <div class="">${toCapitalize(el[1].name)}</div>
+                    </div>
+                </td>
+                <td><div  class="">${el[1].points}</div></td>
              </tr>
-         `
+         `;
     })
-    return response
+    setImageMultiple('.clan__image--item',clanNames)
 }

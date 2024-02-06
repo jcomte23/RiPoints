@@ -43,5 +43,6 @@
     "last_name":"Apellido",
     "points":"Puntos",
     "actions":"Acciones",
-    "edit":"Editar"
+    "edit":"Editar",
+    "position":"posición"
 }
