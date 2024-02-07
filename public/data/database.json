@@ -163,6 +163,15 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "gates"
+    },
+    {
+      "id": "4",
+      "rolId": "3",
+      "userName": "jcomte23",
+      "password": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "clanId": "lovelace"
     }
   ],
   "clansTrainers": [
@@ -226,10 +235,8 @@
         "week": 3,
         "fullDate": "2024-2-5"
       },
-      "userId": "3",
-      "winCoinsTotal": 2,
-      "attendantCoins": 2,
-      "amount": 4
+      "userId": "1",
+      "attendantCoins": 1
     },
     {
       "id": "2",
@@ -240,9 +247,7 @@
         "fullDate": "2024-2-5"
       },
       "userId": "2",
-      "winCoinsTotal": 3,
-      "attendantCoins": 0,
-      "amount": 4
+      "attendantCoins": 3
     },
     {
       "id": "3",
@@ -253,32 +258,30 @@
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "winCoinsTotal": 3,
-      "attendantCoins": 0,
-      "amount": 4
+      "attendantCoins": 4
     }
   ],
   "winCoins": [
     {
       "id": "1",
-      "scoreCoinId": "1",
+      "userId": "1",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2
     },
     {
       "id": "2",
-      "scoreCoinId": "2",
+      "userId": "2",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
       "coins": 2
     },
     {
       "id": "2",
-      "scoreCoinId": "2",
+      "userId": "2",
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
-      "coins": -2
+      "coins": -4
     }
   ]
 }
