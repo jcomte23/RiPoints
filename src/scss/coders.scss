@@ -1,9 +1,22 @@
-.form-coders{
+@use "variables" as v;
+
+.listCoders{
     padding: 1rem;
-    border: none;
-    outline: none;
+    margin: 1rem;
+    box-shadow: 0 0 1rem v.$antiflash;
+    border-radius: 1rem;
 }
 
-.form-coders h2{
-    text-transform: capitalize;
+.listCoders__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    
+    .search{
+        outline: none;
+        border: none;
+        background-color: v.$antiflash;
+    }
 }
