@@ -28,8 +28,11 @@
       Settings
     </button>
     <ul class="dropdown-menu text-center">
-      <li class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
-          class="bi bi-translate fs-5"></i><span>Español</span></li>
+      <li  id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
+          class="bi bi-translate fs-5"></i>
+          <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
+          <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
+        </li>
       <li><a class="dropdown-item" href="https://moodle.riwi.io" target="_blank" href="#">Ir a moodle</a></li>
       <li>
         <hr class="dropdown-divider">
