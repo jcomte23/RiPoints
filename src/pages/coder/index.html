@@ -23,21 +23,20 @@
 </head>
 
 <body class="coder__body" id="coderView">
-  <div class="btn-group dropdown position-absolute top-0 z-3 end-0 my-4 mx-3">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
-      Settings
+  <div class="btn-group dropdown position-absolute top-0 z-3 end-0 my-2 mx-3">
+    <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
     </button>
     <ul class="dropdown-menu text-center">
-      <li  id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
+      <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
           class="bi bi-translate fs-5"></i>
           <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
           <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
         </li>
-      <li><a class="dropdown-item" href="https://moodle.riwi.io" target="_blank" href="#">Ir a moodle</a></li>
+      <li><a class="dropdown-item text-capitalize" href="https://moodle.riwi.io" target="_blank" data-i18n="gotomoodle"></a></li>
       <li>
         <hr class="dropdown-divider">
       </li>
-      <li><button type="button" data-i18n="logout" class="btn btn-secondary" id="btn-logout"></button></li>
+      <li><button type="button" data-i18n="logout" class="btn btn-secondary text-capitalize" id="btn-logout"></button></li>
     </ul>
   </div>
 

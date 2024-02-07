@@ -44,5 +44,6 @@
     "points":"Points",
     "actions":"Actions",
     "edit":"Edit",
-    "position":"position"
+    "position":"position",
+    "settings":"settings"
 }
