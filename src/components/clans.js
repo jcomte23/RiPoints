@@ -1,86 +1,26 @@
 import { updateContent } from "../js/translator";
+import { ranking } from "./ranking"
+import '../scss/admin__trainer/_clans_table.scss'
 
-
-export const showClans = (element) => {
+export const showClans = async (element) => {
     element.innerHTML = `
-        <section class="p-1 clans-table">
-        <article class="bg-secondary rankings-clanes text-center text-white px-4">
-            <h1 data-i18n="clan_ranking" class="text-capitalize">clasificación de clanes</h1>
-        </article>
-        <article class="table-responsive">
-            <table class="table table-borderless">
-                <thead>
-                    <tr>
-                        <th class="text-center col-3"><button type="button" class="btn btn-primary rounded-pill w-100">Posicion</button></th>
-                        <th class="text-center col-7"><button type="button" class="btn btn-primary rounded-pill w-100">Clan</button></th>
-                        <th class="text-center col-3"><button type="button" class="btn btn-primary rounded-pill w-100">Puntos</button></th>
-                    </tr>
-                </thead>
+        <section class="ranking">
+            <article class="ranking__title">
+                <h1 data-i18n="clan_ranking" class=""></h1>
+            </article>
+            <table class="ranking__table ">
                 <tbody>
                     <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
+                        <td ><div data-i18n="position" class=""></div></td>
+                        <td ><div data-i18n="clan" class=""></div></td>
+                        <td ><div data-i18n="points" class=""></div></td>
                     </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">1</button></td>
-                        <td class="text-center col-7"><button type="button" class="btn btn-secondary rounded-pill w-100">meta</button></td>
-                        <td class="text-center col-3"><button type="button" class="btn btn-secondary rounded-pill w-100">100</button></td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </section>
-    `
- updateContent()
+    `;
+    await ranking('clans?_sort=-points',document.querySelector('.ranking__table tbody'));
+    updateContent()
 }
 

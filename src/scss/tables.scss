@@ -1,24 +1,5 @@
 @use "variables" as v;
 
-.search{
-  height: 3rem;
-  padding: 0 1rem;
-  border: .13rem solid v.$secondary;
-  border-radius: 5rem;
-  caret-color: v.$primary;
-}
-
-.search:focus{
-  outline: none;
-}
-
-.dates input{
-  border: .1rem solid v.$secondary;
-  border-radius: 0.3rem;
-  padding: .2rem .4rem;
-  color: v.$secondary;
-}
-
 .form-control{
   border: none !important;
 }

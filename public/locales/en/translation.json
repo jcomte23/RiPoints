@@ -1,7 +1,7 @@
 {
     "lang": "EN",
     "clan_ranking": "clan ranking",
-    "clans": "clans",
+    "clans": "Clan",
     "code": "code",
     "developers": "coders",
     "dashboard": "dashboard",
@@ -35,7 +35,14 @@
     "yourscore": "Your Score",
     "totalpoints":"Total Points",
     "weeklychart":"Weekly Chart",
+    "history":"History",
     "Pp":"Attendance",
     "drop":"Drop your file here!",
-    "filesfilter":"Only .xlsx files are accepted."
+    "filesfilter":"Only .xlsx files are accepted.",
+    "name":"Name",
+    "last_name":"Last Name",
+    "points":"Points",
+    "actions":"Actions",
+    "edit":"Edit",
+    "position":"position"
 }

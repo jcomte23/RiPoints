@@ -1,146 +1,46 @@
+import { filter } from "../js/coder/coders";
 import { updateContent } from "../js/translator";
+import { modal } from "./modal";
+import { loadCodersTr } from "./listTr";
+import '../scss/coders.scss'
 
 export function showCoders(element) {
-  const user =  localStorage.getItem("userStorage");
-    while (element.firstChild) {
-        element.removeChild(element.firstChild);
-    }
-    element.innerHTML = `
-    <form class="d-flex form-control flex-column form-coders">
-       <h2 data-i18n="developers" ></h2>
-       <input class="my-2 search" type="text" name="" id="searchKeywords" placeholder="Search" />
-       <div class="dates d-flex flex-row gap-4 py-3 w-75 align-items-center">
-           <label for="dateStart">Desde:</label>
-           <input type="date" name="" id="dateStart" />
-           <label for="dateEnd">Hasta:</label>
-           <input type="date" name="" id="dateEnd" />
-       </div>
-
-    <table id="myTable" class="table mt-3">
-        <thead>
-            <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Clan</th>
-            <th>Puntos</th>
-            <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>John Clarsk</td>
-            <td>Doe Danilton</td>
-            <td>Lovelace</td>
-            <td>100</td>
-            <td><button class="edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></td>
-            </tr>
-            <tr>
-            <td>Jane Janie</td>
-            <td>Smith Perfonson</td>
-            <td>Meta</td>
-            <td>75</td>
-            <td><button class="edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></td>
-            </tr>
-            <tr>
-            <td>Bob Jainc</td>
-            <td>Johnson Tomson</td>
-            <td>Meta</td>
-            <td>120</td>
-            <td><button class="edit btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></td>
-            </tr>
-        </tbody>
-    </table>
-
-    </form> 
-
-    
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-          <div class="title__text">
-            <h2 id="codeR">Codigo </h2><img src="/img/img_desktop/r-logo.svg" alt="">
-          </div>
-          
-          <div class="information__coder">
-            <div class="name">
-              <h4>Nombre:</h4>
-              <div class="center__text">
-                <h4 class="center__text">pepito maximilano</h4>
-              </div>
-            </div>
-            <div class="last__name">
-              <h4 for="lastname">Apellido:</h4>
-              <div class="center__text">
-                <h4 class="center__text">contreras ramirez</h4>
-              </div>
-            </div>
-            <div class="clan">
-              <h4 for="clan">Clan:</h4>
-              <div class="center__text">
-                <h4>Meta</h4>
-              </div>
-            </div>
-          </div>
-          
-          <div class="container__profile">
-            <div class="profile__imgs">
-              <div class="coder__profile__table ">
-                <div class="coder__profile__clan__table "></div>
-              </div>
-            </div>
-            
-            <div class="container__points">
-              <div class="total__points" id="totalPoints">12</div>
-              <span id="plusSign">+</span>
-              <input class="asignador__points" type="number" id="numberInput" value="0" >
-            </div>
-          </div>
-          
-          <div class="container__area">
-            <textarea placeholder="observaciones" id="observations" name="observations"></textarea>
-                    </div>
-          
-          <div class="btn_actions m-5 ">
-            <button class="btn__delete btn btn-danger btn-lg col-md-5 m-1" id="save-modal">Cancelar</button>
-            <button class="btn__succes btn btn-success btn-lg col-md-5 m-1" id="save-modal">Guardar</button>
-          </div>
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+  element.innerHTML = `
+    <div class="listCoders">
+      <div class="listCoders__header" >
+        <h2 data-i18n="developers" ></h2>
+        <div class="search" >
+          <input class="my-2" type="text" name="" id="searchKeywords" i18n-placeholder="developers" />
+          <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
         </div>
       </div>
-    </div>
-  </div>
+       
+      <table id="myTable" class="listCoders__table">
+        <thead>
+          <tr>
+            <th data-i18n="name" ></th>
+            <th data-i18n="last_name" ></th>
+            <th data-i18n="clans" ></th>
+            <th data-i18n="points" ></th>
+            <th data-i18n="actions" ></th>
+          </tr>
+        </thead>
+        <tbody id="codersList" >
+        </tbody>
+      </table>
+    </div> 
+
     `;
 
-    const form = document.querySelector("form");
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        
-    });
-    
-      
-    const assigment = document.querySelector(".asignador__points");
-    const plusSign = document.getElementById("plusSign");
+  modal(element);
 
-    let isFirstTime = true;
-
-    assigment.addEventListener("input", (event) => {
-      if (assigment.value.startsWith("-") && isFirstTime) {
-        plusSign.textContent = "-";
-        assigment.value = assigment.value.slice(1); 
-        isFirstTime = false; 
-      } else if (!assigment.value.startsWith("-")) {
-        plusSign.textContent = "+";
-        isFirstTime = true; 
-      }
-
-      console.log(assigment.value);
-    });
-
-
-
-    updateContent()
-  }
-  
+  loadCodersTr(document.getElementById("codersList")).then(() => {
+    filter();
+  });
+  updateContent();
+}
