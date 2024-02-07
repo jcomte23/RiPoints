@@ -1,6 +1,5 @@
 import { filter } from "../js/coder/coders";
 import { updateContent } from "../js/translator";
-import { modal } from "./modal";
 import { loadCodersTr } from "./listTr";
 
 export function showCoders(element) {
@@ -29,8 +28,6 @@ export function showCoders(element) {
        </form> 
 
     `;
-
-  modal(element);
 
   loadCodersTr(document.getElementById("codersList")).then(() => {
     filter();
