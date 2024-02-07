@@ -97,4 +97,4 @@ sideNavSelector.addEventListener("click", (event) => {
 changeLanguageOnClick();
 //default
 
-showClans(showView);
+showCoders(showView);

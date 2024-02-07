@@ -1,5 +1,5 @@
 export const filter = () => {
-  const form = document.querySelector("form");
+  const form = document.querySelector(".listCoders");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
   });
