@@ -1,7 +1,7 @@
 {
     "lang": "ES",
     "clan_ranking": "clasificación de clanes",
-    "clans": "Clanes",
+    "clans": "Clan",
     "code": "código",
     "developers": "desarrolladores",
     "dashboard": "panel",
@@ -44,5 +44,6 @@
     "points":"Puntos",
     "actions":"Acciones",
     "edit":"Editar",
-    "position":"posición"
+    "position":"posición",
+    "settings":"ajustes"
 }

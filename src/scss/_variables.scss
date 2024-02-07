@@ -7,6 +7,10 @@ $white: #ffffff;
 $gold: #ffd700;
 $silver: #c0c0c0;
 $bronze: #cd7f32;
+$antiflash: #ededed;
+$gray: #666666;
+$darkgray: #27272A;
+$mauve: #eaa2fc;
 
 $theme-colors: (
   "primary": $primary,
@@ -20,16 +24,4 @@ $theme-colors: (
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.uno {
-  border: 1px solid red;
-}
-
-.dos {
-  border: 1px solid blue;
-}
-
-.tres {
-  border: 1px solid yellow;
 }

@@ -3,7 +3,7 @@ import { showClans } from "./clans";
 import { showCoders } from "./coders";
 import { showDashboard } from "./dashboard";
 import { showFileAttachment } from "./FileAttachment";
-import { changeLanguageOnClick } from "../js/translator";
+import { getLanguague } from "../js/translator";
 import "../scss/tables.scss";
 
 const sideNav = () => {
@@ -35,11 +35,22 @@ const sideNav = () => {
             <span data-i18n="load_docs" class="text-capitalize"></span>
           </li>
         </ul>
-        <a class="menu__header--lang btn btn-primary">
-          <div class="lang--flag"></div>
-          <h4 data-i18n="lang"></h4>
-        </a>
-        <button type="button" data-i18n="logout" class="btn btn-primary-coder btn-block bi bi-arrow-left" id="btn-logout"></button>
+        <div class="btn-group dropup-center dropup z-3 my-2 mx-3">
+          <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
+          </button>
+          <ul class="dropdown-menu text-center">
+            <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
+                class="bi bi-translate fs-5"></i>
+                <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
+                <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
+              </li>
+            <li><a class="dropdown-item text-capitalize" href="https://moodle.riwi.io" target="_blank" data-i18n="gotomoodle"></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><button type="button" data-i18n="logout" class="btn btn-secondary text-capitalize" id="btn-logout"></button></li>
+          </ul>
+        </div>
       `;
       break;
     case "2":
@@ -57,11 +68,22 @@ const sideNav = () => {
             <span data-i18n="developers" class="text-capitalize"></span>
           </li>
         </ul>
-        <a class="menu__header--lang btn btn-primary">
-          <div class="lang--flag"></div>
-          <h4 data-i18n="lang"></h4>
-        </a>
-        <button type="button" data-i18n="logout" class="btn btn-primary-coder btn-block bi bi-arrow-left" id="btn-logout"></button>
+        <div class="btn-group dropup-center dropup z-3 my-2 mx-3">
+          <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
+          </button>
+          <ul class="dropdown-menu text-center">
+            <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
+                class="bi bi-translate fs-5"></i>
+                <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
+                <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
+              </li>
+            <li><a class="dropdown-item text-capitalize" href="https://moodle.riwi.io" target="_blank" data-i18n="gotomoodle"></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><button type="button" data-i18n="logout" class="btn btn-secondary text-capitalize" id="btn-logout"></button></li>
+          </ul>
+        </div>
       `;
       break;
 
@@ -93,8 +115,33 @@ sideNavSelector.addEventListener("click", (event) => {
       showCoders(showView);
       break;
   }
-});
-changeLanguageOnClick();
-//default
+})
 
-showClans(showView);
+const btnLang = document.getElementById("btn-lang")
+const span_es = document.getElementById("span_es")
+const span_en = document.getElementById("span_en")
+
+let lang = getLanguague()
+if (lang === "es") {
+  span_es.classList.add("d-none")
+  span_en.classList.remove("d-none")
+} else {
+  span_es.classList.remove("d-none")
+  span_en.classList.add("d-none")
+}
+
+btnLang.addEventListener('click', () => {
+  let lang = getLanguague()
+  if (lang === "es") {
+    span_es.classList.add("d-none")
+    span_en.classList.remove("d-none")
+  } else {
+    span_es.classList.remove("d-none")
+    span_en.classList.add("d-none")
+  }
+})
+
+// changeLanguageOnClick();
+// //default
+
+showCoders(showView);
