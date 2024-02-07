@@ -3,52 +3,52 @@
     {
       "id": "dell",
       "name": "dell",
-      "points":123
+      "points": 123
     },
     {
       "id": "gates",
       "name": "gates",
-      "points":130
+      "points": 130
     },
     {
       "id": "gosling",
       "name": "gosling",
-      "points":130
+      "points": 130
     },
     {
       "id": "jobs",
       "name": "jobs",
-      "points":112
+      "points": 112
     },
     {
       "id": "linus",
       "name": "linus",
-      "points":108
+      "points": 108
     },
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points":131
+      "points": 131
     },
     {
       "id": "meta",
       "name": "meta",
-      "points":122
+      "points": 122
     },
     {
       "id": "ritchie",
       "name": "ritchie",
-      "points":113
+      "points": 113
     },
     {
       "id": "tesla",
       "name": "tesla",
-      "points":126
+      "points": 126
     },
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points":109
+      "points": 109
     }
   ],
   "rols": [
@@ -139,7 +139,7 @@
       "userName": "trainer_alex"
     },
     {
-      "id":"1",
+      "id": "1",
       "rolId": "3",
       "userName": "gabrielgarcia",
       "password": "gabrielgarcia",
@@ -202,7 +202,7 @@
       "history": ""
     },
     {
-      "id":"3",
+      "id": "3",
       "rolId": "3",
       "userName": "fernandobotero",
       "password": "fernandobotero",
@@ -234,7 +234,7 @@
       "history": ""
     },
     {
-      "id":"4",
+      "id": "4",
       "rolId": "3",
       "userName": "luiscarlos",
       "password": "luiscarlos",
@@ -508,9 +508,9 @@
     {
       "id": "1",
       "date": {
-        "day":"monday",
-        "month":"april",
-        "fullDate":"2024-2-5"
+        "day": "monday",
+        "month": "april",
+        "fullDate": "2024-2-5"
       },
       "userId": "1",
       "pointsaAllocator": "angela",
@@ -522,16 +522,16 @@
     {
       "id": "1",
       "date": {
-        "day":"monday",
-        "month":"april",
-        "fullDate":"2024-2-5"
+        "day": "monday",
+        "month": "april",
+        "fullDate": "2024-2-5"
       },
       "userId": "1",
-"pointsaAllocator": "liliana",
+      "pointsaAllocator": "liliana",
       "observation": "se porto bien clases",
       "regularCoins": 3,
       "attendantCoins": 0,
       "amount": 4
     }
-    ]
+  ]
 }
