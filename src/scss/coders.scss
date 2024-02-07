@@ -13,10 +13,47 @@
     justify-content: start;
     align-items: center;
     gap: 1rem;
-    
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+    border-bottom: .15rem solid v.$mauve;
     .search{
+        position: relative;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .search input{
+        width: 100%;
         outline: none;
         border: none;
         background-color: v.$antiflash;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+    }
+    .search__icon{
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        fill: v.$mauve;
+    }
+}
+
+.listCoders__table{
+    width: 100%;
+    margin-top: 1rem;
+    thead tr{
+        color: v.$gray;
+        padding: .5rem 0;
+    }
+    tbody tr:not(:last-child){
+        border-bottom: .1rem solid v.$antiflash;
+    }
+    tbody tr td{
+        color: v.$darkgray;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: .5rem 0;
     }
 }
