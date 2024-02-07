@@ -235,10 +235,8 @@
         "week": 3,
         "fullDate": "2024-2-5"
       },
-      "userId": "3",
-      "winCoinsTotal": 2,
-      "attendantCoins": 2,
-      "amount": 4
+      "userId": "1",
+      "attendantCoins": 1
     },
     {
       "id": "2",
@@ -249,9 +247,7 @@
         "fullDate": "2024-2-5"
       },
       "userId": "2",
-      "winCoinsTotal": 3,
-      "attendantCoins": 0,
-      "amount": 4
+      "attendantCoins": 3
     },
     {
       "id": "3",
@@ -262,9 +258,7 @@
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "winCoinsTotal": 3,
-      "attendantCoins": 0,
-      "amount": 4
+      "attendantCoins": 4
     }
   ],
   "winCoins": [
