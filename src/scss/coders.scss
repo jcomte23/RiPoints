@@ -65,10 +65,21 @@
     content: attr(data-plus);
     color: v.$mint;
     margin-left: .2rem;
+    animation: intermitated 1.2s ease infinite;
 }
 
 .less::after{
     content: attr(data-plus);
     color: v.$tomato;
     margin-left: .3rem;
+    animation: intermitated 1.2s ease infinite;
+}
+
+@keyframes intermitated {
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
 }
