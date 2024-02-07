@@ -232,6 +232,20 @@
 //   margin-bottom: 1rem;
 // }
 
+.dropdown-item:hover{
+  background-color: v.$secondary;;
+  color: v.$white;
+}
+// .dropdown-menu li:hover{
+//   cursor: pointer;
+//   color: v.$white;
+// }
+
+.changeLang:hover{
+  cursor: pointer;
+  color: v.$white;
+}
+
 /* GRAPHICS */
 
 .container-graphics {
