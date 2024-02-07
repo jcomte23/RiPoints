@@ -77,61 +77,72 @@ export async function modal(element) {
       </div>
     `;
 
-    element.appendChild(modalContainer);
+  element.appendChild(modalContainer);
 
-  // const modalElement = document.querySelector(`#exampleModal-${coder.id}`);
-  
-  // // Selecciona el input dentro del modal
-  // const quantityInput = modalElement.querySelector(".quantity__input");
-  // const numadd = modalElement.querySelector(".quantity__add .add");
-  // const numless = modalElement.querySelector(".quantity__add .less");
-  // //const plusSign = modalElement.getElementById("plusSign");
-  // const btnSaveModal = modalElement.getElementById("save-modal");
-  // //const btnCancelModal = modalElement.getElementById("cancel-modal");
-  
-  // let realNum = 0;
-  
-  // function updateInput() {
-  //   quantityInput.value = Math.abs(realNum);
-  //   quantityInput.classList.add("pop");
-  //   setTimeout(() => {
-  //     quantityInput.classList.remove("pop");
-  //   }, 200);
-  // }
-  
-  
-  
-  // numadd.addEventListener("click", () => {
-  //   plus(1);
-  // });
-  
-  // numless.addEventListener("click", () => {
-  //   plus(-1);
-  // });
-    
-  //   btnSaveModal.addEventListener("click", () => {
-  //     const totalPointsElement = document.getElementById("totalPoints");
-  //     const totalPoints = parseInt(totalPointsElement.textContent);
-  //     totalPointsElement.textContent = totalPoints + realNum;
-  
-  //     const quantityInput = document.querySelector(".quantity__input");
-  //     quantityInput.value = parseInt(quantityInput.value) + realNum;
-  
-  //     realNum = 0;
-  //     updateInput();
-  //     updateSign();
-  
-  //     const closeButton = document.querySelector(".btn-close");
-  //     closeButton.click();
-  //   });
-    
-  //   const closed = document.querySelector("#cancel-modal");
-  //   closed.addEventListener("click", (event) => {
-  //     const closeButton = document.querySelector(".btn-close");
-  //     closeButton.click();
-  //   });
-    
-    // Obtención de información de la API y mostrarla en pantalla
+  // Selecciona el input dentro del modal
+  const quantityInput = document.querySelector("#exampleModal .quantity__input");
+  const numadd = document.querySelector("#exampleModal .quantity__add .add");
+  const numless = document.querySelector("#exampleModal .quantity__add .less");
+  const plusSign = document.querySelector("#exampleModal #plusSign");
+  const btnSaveModal = document.querySelector("#exampleModal #save-modal");
+  const btnCancelModal = document.querySelector("#exampleModal #cancel-modal");
+
+  let realNum = 0;
+
+  function updateInput() {
+    quantityInput.value = Math.abs(realNum);
+    quantityInput.classList.add("pop");
+    setTimeout(() => {
+      quantityInput.classList.remove("pop");
+    }, 200);
+  }
+
+  function plus(x) {
+    realNum += x;
+    if (realNum < -5) {
+      realNum = -5;
+    } else if (realNum > 5) {
+      realNum = 5;
+    }
+    console.log(realNum);
+    updateInput();
+    updateSign();
+  }
+
+
+  function updateSign() {
+    plusSign.textContent = realNum < 0 ? "-" : "+";
+  }
+
+  numadd.addEventListener("click", () => {
+    plus(1);
+  });
+
+  numless.addEventListener("click", () => {
+    plus(-1);
+  });
+
+  btnSaveModal.addEventListener("click", () => {
+    const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
+    const totalPoints = parseInt(totalPointsElement.textContent);
+    totalPointsElement.textContent = totalPoints + realNum;
+
+    const quantityInput = document.querySelector("#exampleModal .quantity__input");
+    quantityInput.value = parseInt(quantityInput.value) + realNum;
+
+    realNum = 0;
+    updateInput();
+    updateSign();
+
+    const closeButton = document.querySelector("#exampleModal .btn-close");
+    closeButton.click();
+  });
+
+  const closed = document.querySelector("#exampleModal #cancel-modal");
+  closed.addEventListener("click", (event) => {
+    const closeButton = document.querySelector("#exampleModal .btn-close");
+    closeButton.click();
+  });
 
 
 }
