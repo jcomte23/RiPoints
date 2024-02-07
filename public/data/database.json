@@ -130,7 +130,6 @@
     },
     {
       "id": "1",
-      "id": "1",
       "rolId": "3",
       "userName": "gabrielgarcia",
       "password": "gabrielgarcia",
@@ -149,7 +148,6 @@
     },
     {
       "id": "3",
-      "id": "3",
       "rolId": "3",
       "userName": "fernandobotero",
       "password": "fernandobotero",
@@ -158,7 +156,6 @@
       "clanId": "tesla"
     },
     {
-      "id": "4",
       "id": "4",
       "rolId": "3",
       "userName": "luiscarlos",
