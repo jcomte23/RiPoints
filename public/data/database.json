@@ -163,6 +163,15 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "gates"
+    },
+    {
+      "id": "4",
+      "rolId": "3",
+      "userName": "jcomte23",
+      "password": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "clanId": "lovelace"
     }
   ],
   "clansTrainers": [

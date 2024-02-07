@@ -40,8 +40,8 @@ window.changeLanguage = function (lng) {
 export function changeLanguageOnClick() {
   const btnChangeLanguage = document.querySelector(".menu__header--lang");
   const langFlag = document.querySelector(".lang--flag");
-  function upfateFlag(){
-    if(langFlag){
+  function upfateFlag() {
+    if (langFlag) {
       if (language === "es") {
         langFlag.classList.add("es");
       } else {
@@ -56,7 +56,7 @@ export function changeLanguageOnClick() {
     btnChangeLanguage.addEventListener("click", () => {
       language == "en" ? language = "es" : language = "en";
       i18next.changeLanguage(language, updateContent);
-      localStorage.setItem("lang", language );
+      localStorage.setItem("lang", language);
       upfateFlag()
     });
   }
