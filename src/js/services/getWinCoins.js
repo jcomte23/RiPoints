@@ -10,6 +10,18 @@ export const calcScoreCoins = (arr) =>{
   }
 }
 
+export const calcWinCoins = (arr) =>{
+  if(arr.length){
+    let acc = 0;
+    arr.forEach(coins => {
+      acc += coins.coins
+    });
+    return acc
+  }else{
+    return 0
+  }
+}
+
 
 export const getAllWinCoins = async () => {
   const response = await fetch(
