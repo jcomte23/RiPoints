@@ -3,6 +3,7 @@ import * as bootstrap from "bootstrap";
 import Chart from "chart.js/auto";
 import { renderCoder } from "../../components/coder";
 import { getLanguague } from "../../js/translator";
+import { getWeekCoins } from "../services/getWinCoins";
 
 Chart.defaults.color = "#fff";
 
@@ -11,7 +12,7 @@ renderCoder(floatingBackground);
 
 
 const renderweekChart = async () => {
-  // let dictionary = await (await readLanguageFile()).json();
+  // const weekCoins = getWeekCoins(user.id,week)
   const datos = {
     labels: ["Lunes", "Martes", "Miercoles", "Jueves", "viernes"],
     datasets: [
@@ -21,7 +22,7 @@ const renderweekChart = async () => {
         borderColor: "#000",
         borderWidth: 1,
         borderRadius: 5,
-        data: [50, 30, 80, 60, 20],
+        data: [5, 3, 8, 6, 0],
       },
     ],
   };
@@ -45,48 +46,3 @@ const renderweekChart = async () => {
   return weekchart;
 };
 renderweekChart();
-
-// const rendermothChart = () => {
-//   const datos = {
-//     labels: [
-//       "Octubre",
-//       "Noviembre",
-//       "Diciembre",
-//       "Enero",
-//       "Febrero",
-//       "Marzo",
-//       "Abril",
-//       "Mayo",
-//     ],
-//     datasets: [
-//       {
-//         label: "Points",
-//         backgroundColor: "#fff",
-//         borderColor: "#000",
-//         borderWidth: 1,
-//         color: "#fff",
-//         borderRadius: 5,
-//         data: [50, 30, 80, 60, 20, 20, 100, 200],
-//       },
-//     ],
-//   };
-
-//   // Opciones del gráfico
-//   const opciones = {
-//     scales: {
-//       y: {
-//         beginAtZero: true,
-//       },
-//     },
-//   };
-
-//   // Crea el gráfico de barras
-//   const mothChart = document.querySelector("#graphic__moth");
-//   const createMothChart = new Chart(mothChart, {
-//     type: "bar",
-//     data: datos,
-//     options: opciones,
-//   });
-
-//   return createMothChart;
-//};

@@ -1,5 +1,5 @@
 import { changeLanguageOnClick, updateContent } from "../js/translator";
-import { historyWinCoinsByuserId } from "../js/usecases/winCoinsHistory";
+import { historyWinCoinsByUserId } from "../js/usecases/winCoinsHistory";
 
 export const renderCoder = (element) => {
   const user = JSON.parse(localStorage.getItem("userStorage"));
@@ -56,7 +56,7 @@ changeLanguageOnClick();
 
 const historyCoderRender = async (user) => {
   const historyTbody = document.getElementById("tbody_historial");
-  const history = await historyWinCoinsByuserId(user.id);
+  const history = await historyWinCoinsByUserId(user.id);
 
   history.forEach((winCoin) => {
     const color = winCoin.coins>0? "safe":"danger"
