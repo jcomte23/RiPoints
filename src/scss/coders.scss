@@ -57,3 +57,18 @@
         padding: .5rem 0;
     }
 }
+
+
+/* PLUS */
+
+.plus::after{
+    content: attr(data-plus);
+    color: v.$mint;
+    margin-left: .2rem;
+}
+
+.less::after{
+    content: attr(data-plus);
+    color: v.$tomato;
+    margin-left: .3rem;
+}
