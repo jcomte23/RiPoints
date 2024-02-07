@@ -1,6 +1,6 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
-import { calcPoints, assignRealValue, getFinalStructure } from '../js/pointAssignment';
+import { getFinalStructure } from '../js/pointAssignment';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -109,6 +109,7 @@ export const showFileAttachment = (element) => {
             daysPerClass[className] = aux;
 
             if (Object.keys(daysPerClass).length === 4) {
+                // getFinalStructure retorna los estudiantes y sus puntos
                 console.log(getFinalStructure(daysPerClass));
             };
             

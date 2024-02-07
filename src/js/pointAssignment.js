@@ -2,6 +2,9 @@ let points = [4,3.1,2.2,1.3,0.4,3,2,1,0,3.01,2.02,1.03,0.04,0.3,0.2,0.1,0.31,0.2
 
 let point_result = [2,2,2,2,0,-5,-5,-5,-2,1,1,1,1,0,0,0,1,1,1,-5,-5,-5,2,2,2,1,1,1,0,0,0,1];
 
+let year = "2024";
+let month = "02";
+
 let toFix = {
   "1.3000000000000003": 1.3,
   "2.0199999999999996": 2.02,
@@ -83,14 +86,14 @@ function getFinalStructure(clansObject) {
         
         let existent = result.find(studentObject => studentObject.name === name && studentObject.lastName === lastName);
         if (existent) {
-          existent.day_point[day] = point;
+          existent.day_point[`${year}-${month}-${day}`] = point;
           return
         }
 
         finalObj.roleId = 3;
         finalObj.history = "";
         finalObj.clanId = clanName.toLowerCase().replaceAll(" ", "_");
-        finalObj.day_point[day] = point;
+        finalObj.day_point[`${year}-${month}-${day}`] = point;
         result.push(finalObj);
         
       })
