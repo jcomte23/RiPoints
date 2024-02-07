@@ -1,6 +1,6 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
-import { defineTotalPoints, getClansAssists } from '../js/pointAssignment';
+import { getFinalStructure } from '../js/pointAssignment';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -87,6 +87,7 @@ export const showFileAttachment = (element) => {
         e.preventDefault();
         const dt = e.dataTransfer;
         handleFileSelect(dt, (sheets) => {
+
             document.querySelectorAll(".waiting").forEach(element => element.style.display = "none");
 
             let className = sheets[0].data[1][2];
@@ -106,12 +107,12 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-            if(Object.keys(daysPerClass).length === 4) {
-                // THIS RETURNS ALL THE POINTS ASSIGNED PER DAY AND CLAN
-                let clansAssists = getClansAssists(daysPerClass);
-                let result = defineTotalPoints(clansAssists);
-                console.log({ clansAssists, clansTotalPoints: result });
+
+            if (Object.keys(daysPerClass).length === 4) {
+                // getFinalStructure retorna los estudiantes y sus puntos
+                console.log(getFinalStructure(daysPerClass));
             };
+            
         });
     }
 
