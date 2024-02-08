@@ -66,4 +66,5 @@ const renderweekChart = async () => {
 
   return weekchart;
 };
+
 renderweekChart();
