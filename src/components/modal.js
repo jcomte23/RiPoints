@@ -1,7 +1,7 @@
-import {get} from "../js/services/helpers";
-
-let info = await get('users?rolId=3');
-console.log(info);
+// import {get} from "../js/services/helpers";
+import {getCurrentDate} from "../js/usecases/calculateDailyCoins"
+// let info = await get('users?rolId=3');
+// console.log(info);
 export async function modal(element) {
 
   let modalContainer = document.createElement('div');
@@ -78,7 +78,6 @@ export async function modal(element) {
     `;
 
   element.appendChild(modalContainer);
-
   // Selecciona el input dentro del modal
   const quantityInput = document.querySelector("#exampleModal .quantity__input");
   const numadd = document.querySelector("#exampleModal .quantity__add .add");
@@ -109,7 +108,6 @@ export async function modal(element) {
     updateSign();
   }
 
-
   function updateSign() {
     plusSign.textContent = realNum < 0 ? "-" : "+";
   }
@@ -123,6 +121,7 @@ export async function modal(element) {
   });
 
   btnSaveModal.addEventListener("click", () => {
+    modalData()
     const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
     const totalPoints = parseInt(totalPointsElement.textContent);
     totalPointsElement.textContent = totalPoints + realNum;
@@ -135,14 +134,34 @@ export async function modal(element) {
     updateSign();
 
     const closeButton = document.querySelector("#exampleModal .btn-close");
-    closeButton.click();
+    closeButton.click(quantityInput.value = 0);
+    
   });
 
   const closed = document.querySelector("#exampleModal #cancel-modal");
   closed.addEventListener("click", (event) => {
     const closeButton = document.querySelector("#exampleModal .btn-close");
     closeButton.click();
-  });
+    quantityInput.value = 0;
+  }); 
+  // Crea el objeto modalData con la información obtenida
+  function modalData(){
+    const coderNameElement = document.querySelector("#coder__name").textContent;
+    const coderLastNameElement = document.querySelector("#coder__lastname").textContent;
+    const coderClanIdElement = document.querySelector("#coder__clanid").textContent;
+    const totalPointsElement = document.querySelector("#totalPoints").textContent;
+
+    
+   const modalData = {
+     currentDate: getCurrentDate(),
+     coderName : coderNameElement,
+     codeLastName : coderLastNameElement,
+     coderClanId : coderClanIdElement,
+     coderPoints : totalPointsElement
+   };
+   
+   console.log('Datos del modal:', modalData); 
+}
 
 
 }
