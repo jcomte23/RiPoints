@@ -2,7 +2,8 @@ import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
 import { getFinalStructure } from '../js/pointAssignment';
 import { createScoreCoins } from '../js/services/saveScoreCoins';
-import { calculateDate } from '../js/usecases/calculateDailyCoins';
+import { calculateDate } from '../js/usecases/calculateCoins';
+import { smallAlertError } from '../js/alerts';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -129,14 +130,14 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-
-            if(!validateDays(daysPerClass)){
-                alert("Los dias no concuerdan");
-                return;
-            }
             
             if (Object.keys(daysPerClass).length === 4) {
-                // getFinalStructure retorna los estudiantes y sus puntos
+
+                if(!validateDays(daysPerClass)){
+                    smallAlertError("Los dias no concuerdan, no se realizara ninguna operacion");
+                    return;
+                }
+
                 let usersAndCoins = getFinalStructure(daysPerClass);
 
                 console.log(usersAndCoins);
@@ -149,7 +150,7 @@ export const showFileAttachment = (element) => {
                 usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
                     let firstDayPoint = Object.values(day_point)[0];
                     let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
-                    createScoreCoins(template);
+                    //createScoreCoins(template);
                 })
             };
             
