@@ -136,7 +136,8 @@
       "password": "gabrielgarcia",
       "name": "Gabriel",
       "lastName": "García Márquez",
-      "clanId": "van_rossum"
+      "clanId": "van_rossum",
+      "amount":5
     },
     {
       "id": "2",
@@ -145,7 +146,8 @@
       "password": "juantorres",
       "name": "Juan Camilo",
       "lastName": "Torres García",
-      "clanId": "jobs"
+      "clanId": "jobs",
+      "amount":5
     },
     {
       "id": "3",
@@ -154,7 +156,8 @@
       "password": "fernandobotero",
       "name": "Fernando",
       "lastName": "Botero Angulo",
-      "clanId": "gates"
+      "clanId": "tesla",
+      "amount": 5
     },
     {
       "id": "4",
@@ -163,7 +166,8 @@
       "password": "luiscarlos",
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
-      "clanId": "gates"
+      "clanId": "gates",
+      "amount": 5
     },
     {
       "id": "4",
@@ -172,7 +176,8 @@
       "password": "jcomte23",
       "name": "Javier",
       "lastName": "Cómbita Téllez",
-      "clanId": "lovelace"
+      "clanId": "lovelace",
+      "amount": 5
     }
   ],
   "clansTrainers": [
@@ -231,35 +236,41 @@
     {
       "id": "1",
       "date": {
-        "day": "monday",
+        "day": "Monday",
         "month": "april",
-        "week": 3,
+        "week": 5,
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "attendantCoins": 1
+      "attendantCoins": 1,
+      "ExtraCoins": 2,
+      "amountDay": 3
     },
     {
       "id": "2",
       "date": {
-        "day": "monday",
+        "day": "Friday",
         "month": "april",
-        "week": 2,
-        "fullDate": "2024-2-5"
+        "week": 5,
+        "fullDate": "2024-2-9"
       },
       "userId": "2",
-      "attendantCoins": 3
+      "attendantCoins": 3,
+      "ExtraCoins": 2,
+      "amountDay": 5
     },
     {
       "id": "3",
       "date": {
-        "day": "monday",
+        "day": "Wednesday",
         "month": "april",
-        "week": 2,
-        "fullDate": "2024-2-5"
+        "week": 5,
+        "fullDate": "2024-2-7"
       },
       "userId": "1",
-      "attendantCoins": 4
+      "attendantCoins": 2,
+      "ExtraCoins": 2,
+      "amountDay": 4
     }
   ],
   "winCoins": [

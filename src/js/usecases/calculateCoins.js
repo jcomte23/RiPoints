@@ -1,4 +1,4 @@
-import { getAllWinCoins } from "../services/getWinCoins";
+import { getAllWinCoins, getWeekCoins } from "../services/getWinCoins";
 
 //Esta funcion se debe llamar diariamente, con preferencia cada que se suba el archivo de excel
 //user: esto provine del excel, el cual debe contener el id del usuario y la cantida de puntos
@@ -10,7 +10,7 @@ export const calculateDailyCoins = async (user, date) => {
     userId: user.id,
     winCoinsTotal: winCoins,
     attendantCoins: user.attendantCoin,
-    amount: amountCoins(winCoins, user.attendantCoin),
+    amountDay: amountCoins(winCoins, user.attendantCoin),
   };
   return scoreCoins;
 };
@@ -37,27 +37,27 @@ const contWinCoins = async (userId, date) => {
 export const calculateDate = (fullDate = undefined) => {
   const date = new Date();
   const months = [
-    "enero",
-    "febrero",
-    "marzo",
-    "abril",
-    "mayo",
-    "junio",
-    "julio",
-    "agosto",
-    "septiembre",
-    "octubre",
-    "noviembre",
-    "diciembre",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   const days = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sabado",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
 
   const day = days[date.getDay()];
@@ -67,23 +67,23 @@ export const calculateDate = (fullDate = undefined) => {
   return {
     day: day,
     month: month,
-    week: date ? fullDate : calculateWeek(year),
-    fullDate: date ? fullDate : year,
+    week: fullDate ? calculateWeek(fullDate) : calculateWeek(year),
+    fullDate: fullDate ? fullDate : year,
   };
 };
 
 //Esta funcion calcula la semana en la cual se encuentra el registro
-export const calculateWeek = (date) => {
+export const calculateWeek = (dateString) => {
+  const date = new Date(dateString);
   const startYear = new Date(date.getFullYear(), 0, 1);
-  var firstDay = startYear.getDay();
-
+  const firstDay = startYear.getDay();
   if (firstDay > 0) {
     startYear.setDate(startYear.getDate() + (7 - firstDay));
   }
   const differenceInDays = Math.round(
     (date - startYear) / (24 * 60 * 60 * 1000)
   );
-  var weekYear = Math.ceil((differenceInDays + 1) / 7);
+  const weekYear = Math.ceil((differenceInDays + 1) / 7);
 
   return weekYear;
 };
@@ -94,4 +94,21 @@ export const getCurrentDate = () => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   return year + "-" + month + "-" + day;
+};
+
+export const getCoinByWeek = async () => {
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  const user = JSON.parse(localStorage.getItem("userStorage"));
+  const date = calculateDate();
+  const weekCoins = await getWeekCoins(user.id, date.week);
+  const accountWeekCoins = [0, 0, 0, 0, 0];
+
+  for (const weekCoin of weekCoins) {
+    const dayIndex = days.indexOf(weekCoin.date.day);
+    if (dayIndex !== -1) {
+      accountWeekCoins[dayIndex] += weekCoin.amountDay;
+    }
+  }
+
+  return accountWeekCoins;
 };
