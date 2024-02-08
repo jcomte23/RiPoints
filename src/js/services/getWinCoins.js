@@ -23,14 +23,14 @@ export const calcWinCoins = (arr) =>{
 }
 
 
-// export const getAllWinCoins = async (userId) => {
-//   const response = await fetch(
-//     `${import.meta.env.VITE_BASE_URL}/users?id=1&_embed=winCoins&_embed=scoreCoins`
-//   );
-//   const data = await response.json();
+export const getAllWinCoins = async (userId) => {
+  const response = await fetch(
+    `${import.meta.env.VITE_BASE_URL}/users?id=1&_embed=winCoins&_embed=scoreCoins`
+  );
+  const data = await response.json();
 
-//   return data;
-// };
+  return data;
+};
 
 export const getWeekCoins = async (userId, week) => {
   const allCoins = await getAllWinCoins();
