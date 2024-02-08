@@ -8,7 +8,7 @@ function readLanguageFile(){
 
 
 
-export const lineChart = async (element, list) => {
+export const lineChart = async (element, labelData, listData) => {
   element.innerHTML = `<canvas id="myLineChart"></canvas>`;
 
   let dictionary = await (await readLanguageFile()).json();
@@ -17,15 +17,15 @@ export const lineChart = async (element, list) => {
     labels: dictionary.days.map((day) => {
       return toCapitalize(day);
     }),
-    datasets: list.map((clan) => {
-      return {
-        label: toCapitalize(clan),
-        data: [10, 5, 14, 6, 8],
-        borderColor: "#fe654f",
-        backgroundColor: "#fe654f33",
-        fill: false,
-      };
-    }),
+    datasets: [
+      {
+        label: 'Dataset 1',
+        data: [40,40,30,20],
+        borderColor: "#ffffff",
+        backgroundColor: "#ff0f0f",
+        fill: false
+      }
+    ]
   };
 
   const config = {
@@ -80,7 +80,7 @@ export const lineChart = async (element, list) => {
 
 
 
-export const pieChart = async (element,list,clanData=[45,34,23,53,76,54]) => {
+export const pieChart = async (element, labelData, listData) => {
     element.innerHTML = ` <canvas id="myChart"></canvas>`;
     
   const ctx = document.getElementById('myChart');
@@ -88,21 +88,25 @@ export const pieChart = async (element,list,clanData=[45,34,23,53,76,54]) => {
     type: 'pie',
     responsive: true,
     data: {
-              labels: list.map((clan)=>{return toCapitalize(clan)}),
+              labels: labelData.map((clan)=>{return toCapitalize(clan)}),
               datasets: [{
                 backgroundColor:[
-                   "#181e4b",
                    "#6b5cff",
+                   "#181e4b",
                    "#5acca4",
-                   "#2D9596",
                    "#e6ca52",
                    "#fe654f",
-                   "#40A2E3",
-                   "#DCFFB7",
                    "#ffffff",
+                   "#ffd700",
+                   "#c0c0c0",
+                   "#cd7f32",
+                   "#ededed",
+                   "#666666",
+                   "#27272a",
+                   "#eaa2fc"
                 ],
                 label: 'Rankig: ',
-                data: clanData.map((data)=>{return data}),
+                data: listData.map((data)=>{return data}),
                 borderWidth: 1
               }]
             },

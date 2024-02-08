@@ -2,43 +2,53 @@
   "clans": [
     {
       "id": "dell",
-      "name": "dell"
+      "name": "dell",
+      "points":160
     },
     {
       "id": "gates",
-      "name": "gates"
+      "name": "gates",
+      "points":165
     },
     {
       "id": "gosling",
-      "name": "gosling"
+      "name": "gosling",
+      "points":140
     },
     {
       "id": "jobs",
-      "name": "jobs"
+      "name": "jobs",
+      "points":130
     },
     {
       "id": "linus",
-      "name": "linus"
+      "name": "linus",
+      "points":133
     },
     {
       "id": "lovelace",
-      "name": "lovelace"
+      "name": "lovelace",
+      "points":178
     },
     {
       "id": "meta",
-      "name": "meta"
+      "name": "meta",
+      "points":177
     },
     {
       "id": "ritchie",
-      "name": "ritchie"
+      "name": "ritchie",
+      "points":173
     },
     {
       "id": "tesla",
-      "name": "tesla"
+      "name": "tesla",
+      "points":123
     },
     {
       "id": "van_rossum",
-      "name": "van rossum"
+      "name": "van rossum",
+      "points":120
     }
   ],
   "rols": [

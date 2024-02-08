@@ -118,7 +118,7 @@ btnLang.addEventListener("click", () => {
 // changeLanguageOnClick();
 // //default
 
-showCoders(showView)
+showDashboard(showView)
 
 const btnLogout = document.getElementById("btn-logout");
 btnLogout ? btnLogout.addEventListener("click", logout) : "";

@@ -14,12 +14,13 @@ export const showDashboard = async (element) => {
           
       </div>
     </div>
-    `;
+  `;
 
-    let list = (await getAllClan()).map((clan) =>  {return clan.name})
-  
-  pieChart(document.querySelector('.pieChart'), list);
-  lineChart(document.querySelector('.dashboard__line'), list);
+  let listClan = await getAllClan()
+  let labelClan = listClan.map((clan) =>  {return clan.name})
+  let pointClan = listClan.map((clan) =>  {return clan.points})
+  pieChart(document.querySelector('.pieChart'), labelClan,pointClan);
+  lineChart(document.querySelector('.dashboard__line'), labelClan);
   
   updateContent()
 }
