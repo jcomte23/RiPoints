@@ -80,7 +80,8 @@
       "name": "mauricio",
       "lastName": "otalvaro",
       "password": "mauricio",
-      "userName": "mauricio"
+      "userName": "mauricio",
+      "photo":"mauricio.webp"
     },
     {
       "id": "a3",
