@@ -1,17 +1,15 @@
 // import {get} from "../js/services/helpers";
-import {getCurrentDate} from "../js/usecases/calculateDailyCoins"
+import { getCurrentDate } from "../js/usecases/calculateDailyCoins";
 // let info = await get('users?rolId=3');
 // console.log(info);
 export async function modal(element) {
-
-  let modalContainer = document.createElement('div');
-  modalContainer.classList.add('modal', 'fade');
+  let modalContainer = document.createElement("div");
+  modalContainer.classList.add("modal", "fade");
   modalContainer.id = "exampleModal";
   modalContainer.tabIndex = "-1";
-  modalContainer.setAttribute('aria-labelledby', 'exampleModalLabel');
-  modalContainer.setAttribute('aria-hidden', 'true');
+  modalContainer.setAttribute("aria-labelledby", "exampleModalLabel");
+  modalContainer.setAttribute("aria-hidden", "true");
 
- 
   modalContainer.innerHTML += `
       <div class="modal-dialog">
         <div class="modal-content">
@@ -64,8 +62,9 @@ export async function modal(element) {
               </div>
             </div>
 
-            <div class="inputDate">
-            <input>Esto es de prueba</input>
+            <div class="containerInputDate">
+            <label>Fecha:</label>
+            <input class="inputDate" type="date" id="fecha" name="fecha">
             
             </div>
             
@@ -84,7 +83,9 @@ export async function modal(element) {
 
   element.appendChild(modalContainer);
   // Selecciona el input dentro del modal
-  const quantityInput = document.querySelector("#exampleModal .quantity__input");
+  const quantityInput = document.querySelector(
+    "#exampleModal .quantity__input"
+  );
   const numadd = document.querySelector("#exampleModal .quantity__add .add");
   const numless = document.querySelector("#exampleModal .quantity__add .less");
   const plusSign = document.querySelector("#exampleModal #plusSign");
@@ -126,12 +127,16 @@ export async function modal(element) {
   });
 
   btnSaveModal.addEventListener("click", () => {
-    modalData()
-    const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
+    modalData();
+    const totalPointsElement = document.querySelector(
+      "#exampleModal #totalPoints"
+    );
     const totalPoints = parseInt(totalPointsElement.textContent);
     totalPointsElement.textContent = totalPoints + realNum;
 
-    const quantityInput = document.querySelector("#exampleModal .quantity__input");
+    const quantityInput = document.querySelector(
+      "#exampleModal .quantity__input"
+    );
     quantityInput.value = parseInt(quantityInput.value) + realNum;
 
     realNum = 0;
@@ -139,8 +144,7 @@ export async function modal(element) {
     updateSign();
 
     const closeButton = document.querySelector("#exampleModal .btn-close");
-    closeButton.click(quantityInput.value = 0);
-    
+    closeButton.click((quantityInput.value = 0));
   });
 
   const closed = document.querySelector("#exampleModal #cancel-modal");
@@ -148,25 +152,25 @@ export async function modal(element) {
     const closeButton = document.querySelector("#exampleModal .btn-close");
     closeButton.click();
     quantityInput.value = 0;
-  }); 
+  });
+
+
   // Crea el objeto modalData con la información obtenida
-  function modalData(){
+  function modalData() {
     const coderNameElement = document.querySelector("#coder__name").textContent;
-    const coderLastNameElement = document.querySelector("#coder__lastname").textContent;
+    const coderLastNameElement =document.querySelector("#coder__lastname").textContent;
     const coderClanIdElement = document.querySelector("#coder__clanid").textContent;
     const totalPointsElement = document.querySelector("#totalPoints").textContent;
+    const coderDateElement = document.querySelector("#fecha").value;
+    const modalData = {
+      currentDate: getCurrentDate(),
+      coderName: coderNameElement,
+      codeLastName: coderLastNameElement,
+      coderClanId: coderClanIdElement,
+      coderPoints: totalPointsElement,
+      coderDate : coderDateElement
+    };
 
-    
-   const modalData = {
-     currentDate: getCurrentDate(),
-     coderName : coderNameElement,
-     codeLastName : coderLastNameElement,
-     coderClanId : coderClanIdElement,
-     coderPoints : totalPointsElement
-   };
-   
-   console.log('Datos del modal:', modalData); 
-}
-
-
+    console.log("Datos del modal:", modalData);
+  }
 }
