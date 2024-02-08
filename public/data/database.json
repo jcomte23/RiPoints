@@ -240,6 +240,7 @@
   "scoreCoins": [
     {
       "id": "1",
+      "clanId":"gates",
       "date": {
         "day": "monday",
         "month": "april",
@@ -277,10 +278,21 @@
       "id": "1",
       "scoreCoinId": "1",
       "userId":"1",
+      "clanId":"gates",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
       "date":"2024-02-02"
+    },
+    {
+      "id": "1",
+      "scoreCoinId": "1",
+      "userId":"1",
+      "clanId":"gates",
+      "comment": "Se porto bien en clases",
+      "pointsaAllocator": "liliana",
+      "coins": 2,
+      "date":"2024-02-03"
     },
     {
       "id": "2",

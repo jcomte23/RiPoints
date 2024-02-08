@@ -110,6 +110,8 @@ export const showFileAttachment = (element) => {
 
             if (Object.keys(daysPerClass).length === 4) {
                 // getFinalStructure retorna los estudiantes y sus puntos
+                console.log(daysPerClass);
+
                 console.log(getFinalStructure(daysPerClass));
             };
             
