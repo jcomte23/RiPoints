@@ -6,11 +6,12 @@ import { getLanguague } from "../js/translator";
 import "../scss/tables.scss";
 
 const renderSideNav = (session) => {
-  const { name, lastName, rol } = session;
+  const { name, photo, lastName, rol } = session;
+  console.log(photo);
   return `
     <div class="profile-container" >
       <figure class="profile__pic">
-        <img src="../../../img/persons/mauricio.webp" alt="photo user" width="183" height="183"/>
+        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" alt="photo user" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2" >
         <h2 class="text-capitalize">${name} ${lastName}</h2>

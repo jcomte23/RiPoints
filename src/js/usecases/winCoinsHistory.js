@@ -1,6 +1,11 @@
+import { getAllWinCoins } from "../services/getWinCoins";
+
 export const historyWinCoinsByUserId = async (userId) => {
-  const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users?id=${userId}&_embed=winCoins`);
-  const data = await response.json();
-  return data[0].winCoins;
+  const allWinCoins = await getAllWinCoins();
+  const filterWinCoinByUserId = allWinCoins.filter((winCoin) => {
+    return winCoin.scoreCoin.userId == userId;
+  });
+
+  return filterWinCoinByUserId;
 };
 
