@@ -1,6 +1,8 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
 import { getFinalStructure } from '../js/pointAssignment';
+import { createScoreCoins } from '../js/services/saveScoreCoins';
+import { calculateDate } from '../js/usecases/calculateDailyCoins';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -110,7 +112,17 @@ export const showFileAttachment = (element) => {
 
             if (Object.keys(daysPerClass).length === 4) {
                 // getFinalStructure retorna los estudiantes y sus puntos
-                console.log(getFinalStructure(daysPerClass));
+                let usersAndCoins = getFinalStructure(daysPerClass);
+                console.log(usersAndCoins);
+
+                usersAndCoins.forEach(({ name, lastName, day_point }) => {
+                    let firstDayPoint = Object.values(day_point)[0];
+                    let template = { userId: `${name} ${lastName}`, date: calculateDate(), attendantCoins: firstDayPoint };
+                    console.log(template);
+                    //createScoreCoins();
+                })
+
+                createScoreCoins()
             };
             
         });

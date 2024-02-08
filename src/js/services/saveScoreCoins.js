@@ -1,4 +1,4 @@
-//! scoreCoin: userId,date,regularCoins,attendantCoins,amount
+//! scoreCoin: userId,date,attendantCoins
 export const createScoreCoins = async (scoreCoin) => {
   await fetch(`${import.meta.env.VITE_BASE_URL}/scoreCoins`, {
     method: "POST",
