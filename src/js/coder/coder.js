@@ -35,8 +35,9 @@ renderCoder(floatingBackground);
 const renderweekChart = async () => {
   const user = JSON.parse(localStorage.getItem("userStorage"));
 
-  const weekCoins = await getWeekCoins(user.id, 3);
-  console.log(weekCoins);
+  // const weekCoins = await getWeekCoins(user.id, 3);
+  // console.log(weekCoins);
+  
   const datos = {
     labels: ["Lunes", "Martes", "Miercoles", "Jueves", "viernes"],
     datasets: [
@@ -69,4 +70,5 @@ const renderweekChart = async () => {
 
   return weekchart;
 };
+
 renderweekChart();
