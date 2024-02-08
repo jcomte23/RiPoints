@@ -74,21 +74,19 @@ sideNav();
 const showView = document.getElementById("containerTable");
 const sideNavSelector = document.getElementsByTagName("ul")[0];
 sideNavSelector.addEventListener("click", (event) => {
-  let selected = event.target;
-  let ulList = Array.from(selected.parentElement.children);
-  let position = ulList.indexOf(selected);
-
+  const position = event.target.children[1].textContent.toLowerCase()
+  console.log(position)
   switch (position) {
-    case 0:
+    case "coders":
       showCoders(showView);
       break;
-    case 1:
+    case "clan":
       showClans(showView);
       break;
-    case 2:
+    case "dashboard":
       showDashboard(showView);
       break;
-    case 3:
+    case "load docs":
       showFileAttachment(showView);
       break;
   }
