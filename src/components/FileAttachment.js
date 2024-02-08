@@ -1,6 +1,9 @@
 import { handleFileSelect } from '../js/validations/excelValidation'
 import { updateContent } from '../js/translator'
 import { getFinalStructure } from '../js/pointAssignment';
+import { createScoreCoins } from '../js/services/saveScoreCoins';
+import { calculateDate } from '../js/usecases/calculateCoins';
+import { smallAlertError } from '../js/alerts';
 
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
@@ -83,6 +86,26 @@ export const showFileAttachment = (element) => {
         }
     }
 
+    function validateDays(sheets){
+        let entries = Object.entries(sheets);
+        let daysOfReference = entries[0][1];
+        
+        for(let i = 0; i < daysOfReference.length; i++){
+            if(!entries[1][1][i] || !entries[2][1][i] || !entries[3][1][i]){
+                return false;
+            }
+            else if(
+                daysOfReference[i].sheetName !== entries[1][1][i].sheetName ||
+                daysOfReference[i].sheetName !== entries[2][1][i].sheetName ||
+                daysOfReference[i].sheetName !== entries[3][1][i].sheetName
+            ){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     function handleDrop(e) {
         e.preventDefault();
         const dt = e.dataTransfer;
@@ -107,12 +130,28 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-
+            
             if (Object.keys(daysPerClass).length === 4) {
-                // getFinalStructure retorna los estudiantes y sus puntos
+
+                if(!validateDays(daysPerClass)){
+                    smallAlertError("Los dias no concuerdan, no se realizara ninguna operacion");
+                    return;
+                }
+
+                let usersAndCoins = getFinalStructure(daysPerClass);
+
+                console.log(usersAndCoins);
                 console.log(daysPerClass);
 
-                console.log(getFinalStructure(daysPerClass));
+                const formatString = (str) => {
+                    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[ ]+/g, "_").toLowerCase();
+                } 
+
+                usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
+                    let firstDayPoint = Object.values(day_point)[0];
+                    let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
+                    //createScoreCoins(template);
+                })
             };
             
         });

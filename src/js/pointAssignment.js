@@ -70,6 +70,7 @@ function getClansAndStudents(codersData) {
   return days;
 }
 
+// retorna los estudiantes y sus puntos
 function getFinalStructure(clansObject) {
   let result = [];
 
