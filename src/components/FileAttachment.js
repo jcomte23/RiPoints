@@ -45,7 +45,7 @@ export const showFileAttachment = (element) => {
     const skillsContainer = document.getElementById("skills");
     const reviewContainer = document.getElementById("review");
 
-    inputElement.addEventListener('change', handleFileSelect);
+    inputElement.addEventListener('change', handleDrop);
 
     const active = () => {
         labelFile.classList.add('active')
