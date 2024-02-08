@@ -265,6 +265,7 @@
     {
       "id": "1",
       "userId": "1",
+      "clanId":"lovelace",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
@@ -272,8 +273,8 @@
     },
     {
       "id": "2",
-      "scoreCoinId":"1",
       "userId": "2",
+      "clanId":"gates",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
       "coins": 2,
@@ -282,6 +283,7 @@
     {
       "id": "2",
       "userId": "2",
+      "clanId":"gates",
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
       "coins": -4,
