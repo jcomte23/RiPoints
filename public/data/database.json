@@ -259,32 +259,17 @@
       },
       "userId": "1",
       "attendantCoins": 4
-    },
-    {
-      "id": "1309"
-    },
-    {
-      "id": "75eb"
-    },
-    {
-      "id": "3938"
-    },
-    {
-      "id": "4671"
-    },
-    {
-      "id": "69c4"
     }
   ],
   "winCoins": [
     {
       "id": "1",
       "scoreCoinId": "1",
-      "userId":"1",
+      "userId": "1",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date":"2024-02-02"
+      "date": "2024-02-02"
     },
     {
       "id": "2",
@@ -292,7 +277,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
       "coins": 2,
-      "date":"2024-02-01"
+      "date": "2024-02-01"
     },
     {
       "id": "2",
@@ -300,7 +285,7 @@
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
       "coins": -4,
-      "date":"2024-01-30"
+      "date": "2024-01-30"
     }
   ]
 }

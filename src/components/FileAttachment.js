@@ -85,6 +85,14 @@ export const showFileAttachment = (element) => {
         }
     }
 
+    function validateDays(sheets){
+        let entries = Object.entries(daysPerClass);
+        
+        for(let entry of entries){
+
+        }
+    }
+
     function handleDrop(e) {
         e.preventDefault();
         const dt = e.dataTransfer;
@@ -109,20 +117,23 @@ export const showFileAttachment = (element) => {
             })
 
             daysPerClass[className] = aux;
-
+            
             if (Object.keys(daysPerClass).length === 4) {
                 // getFinalStructure retorna los estudiantes y sus puntos
                 let usersAndCoins = getFinalStructure(daysPerClass);
+
                 console.log(usersAndCoins);
+                console.log(daysPerClass);
 
-                usersAndCoins.forEach(({ name, lastName, day_point }) => {
+                const formatString = (str) => {
+                    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[ ]+/g, "_").toLowerCase();
+                } 
+
+                usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
                     let firstDayPoint = Object.values(day_point)[0];
-                    let template = { userId: `${name} ${lastName}`, date: calculateDate(), attendantCoins: firstDayPoint };
-                    console.log(template);
-                    //createScoreCoins();
+                    let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
+                    //createScoreCoins(template);
                 })
-
-                createScoreCoins()
             };
             
         });
