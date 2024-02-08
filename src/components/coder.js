@@ -51,7 +51,7 @@ changeLanguageOnClick();
 const historyCoderRender = async (user) => {
   const historyTbody = document.getElementById("tbody_historial")
   const history = await historyWinCoinsByUserId(user.id);
-
+  console.log(history)
   history.forEach((winCoin) => {
     const color = winCoin.coins > 0 ? "safe" : "danger"
     historyTbody.innerHTML += `
@@ -59,7 +59,7 @@ const historyCoderRender = async (user) => {
       <th scope="row" class="table-${color}">${winCoin.coins}</th>
       <td class="table-${color}">${winCoin.comment}</td>
       <td class="table-${color}">${user.name}</td>
-      <td class="table-${color}">${winCoin.scoreCoin.date.fullDate}</td>
+      <td class="table-${color}">${winCoin.date}</td>
     </tr>
   `
   })
