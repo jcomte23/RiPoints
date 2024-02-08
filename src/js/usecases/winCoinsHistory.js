@@ -5,7 +5,7 @@ export const historyWinCoinsByUserId = async (userId) => {
   const filterWinCoinByUserId = allWinCoins.filter((winCoin) => {
     return winCoin.scoreCoin.userId == userId;
   });
-  //localStorage.setItem("historyCoins",filterWinCoinByUserId);
+
   return filterWinCoinByUserId;
 };
 
