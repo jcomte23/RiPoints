@@ -10,15 +10,27 @@ const renderSideNav = (session) => {
   return `
     <div class="profile-container" >
       <figure class="profile__pic">
-        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo riwi R" width="183" height="183"/>
+        <img src="../../../img/persons/mauricio.webp" alt="photo user" width="183" height="183"/>
       </figure>
-      <div class="profile_info" >
-        <h2>${name} ${lastName}</h2>
-        <span>${rol.name}</span>
+      <div class="profile_info pb-2" >
+        <h2 class="text-capitalize">${name} ${lastName}</h2>
+        <span class="text-capitalize">${rol.name}</span>
       </div>
     </div>
 
-    <ul class="container__links">
+    <ul class="container__links">    
+      ${rol.name === "admin" ?
+      `  
+        <li>
+          <img src="/svgs/dashboard_icon.svg" alt="dashboard-icon" width="24" height="23" />
+          <span data-i18n="dashboard" class="text-capitalize"></span>
+        </li>
+        <li>
+          <img src="/icons/file_upload_white.svg" alt="file" width="25" height="25" id="abc"/>
+          <span data-i18n="load_docs" class="text-capitalize"></span>
+        </li>
+        `
+      : ""}
       <li>
         <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
         <span data-i18n="developers" class="text-capitalize"></span>
@@ -26,19 +38,7 @@ const renderSideNav = (session) => {
       <li>
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
         <span data-i18n="clans" class="text-capitalize"></span>
-      </li>      
-      ${rol.name === "admin" ?
-    `  
-      <li>
-        <img src="/svgs/dashboard_icon.svg" alt="dashboard-icon" width="24" height="23" />
-        <span data-i18n="dashboard" class="text-capitalize"></span>
-      </li>
-      <li>
-        <img src="/icons/file_upload_white.svg" alt="file" width="25" height="25" id="abc"/>
-        <span data-i18n="load_docs" class="text-capitalize"></span>
-      </li>
-      `
-    : ""}
+      </li>  
     </ul>
 
     <div class='settings-container'>
