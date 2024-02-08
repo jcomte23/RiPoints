@@ -10,7 +10,7 @@ const renderSideNav = (session) => {
   return `
     <div class="profile-container" >
       <figure class="profile__pic">
-        <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo riwi R" width="183" height="183"/>
+        <img src="../../../img/persons/mauricio.webp" alt="photo user" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2" >
         <h2 class="text-capitalize">${name} ${lastName}</h2>
