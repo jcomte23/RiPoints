@@ -51,7 +51,6 @@ changeLanguageOnClick();
 const historyCoderRender = async (user) => {
   const historyTbody = document.getElementById("tbody_historial")
   const history = await historyWinCoinsByUserId(user.id);
-  console.log(history)
   history.forEach((winCoin) => {
     const color = winCoin.coins > 0 ? "safe" : "danger"
     historyTbody.innerHTML += `
