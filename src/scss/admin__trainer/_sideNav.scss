@@ -1,7 +1,7 @@
 @use "../variables" as v;
 
 .side-nav {
-    background-color: v.$secondary;
+    // background-color: v.$secondary;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@
         display: flex;
         padding-bottom: 10px;
         flex-direction: column;
-
+        width: 100%;
         align-items: center;
         border-bottom: 1px solid #ffffff51;
 
@@ -55,9 +55,7 @@
         gap: 0.8rem;
         list-style: none;
         padding: 0;
-
         height: 70%;
-
         li {
             border-radius: 10px;
             cursor: pointer;
