@@ -8,7 +8,7 @@ export function showCoders(element) {
     element.removeChild(element.firstChild);
   }
   element.innerHTML = `
-    <div class="listCoders">
+    <div class="listCoders shadow-lg">
       <div class="listCoders__header" >
         <h2 data-i18n="developers" ></h2>
         <div class="search" >
