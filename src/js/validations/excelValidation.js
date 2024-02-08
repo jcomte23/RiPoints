@@ -20,8 +20,9 @@ export function handleFileSelect(fileInput = false, callback) {
         
     } else {
         // If a DataTransfer object is not provided, get the file from the INPUT
-        const files = document.getElementById('formFile').files;
-        processFiles(files,callback)
+        const files = this.files;
+        console.log('Processing file:', files);
+        processFiles(files, callback);
         
     }
 }

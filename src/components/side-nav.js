@@ -78,16 +78,19 @@ sideNavSelector.addEventListener("click", (event) => {
   console.log(position)
   switch (position) {
     case "coders":
+    case "desarrolladores":
       showCoders(showView);
       break;
-    case "clan":
-      showClans(showView);
-      break;
+    case "panel":
     case "dashboard":
       showDashboard(showView);
       break;
+    case "carga docs":
     case "load docs":
       showFileAttachment(showView);
+      break;
+    case "clan":
+      showClans(showView);
       break;
   }
 });
