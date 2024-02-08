@@ -13,8 +13,8 @@ const renderSideNav = (session) => {
         <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo riwi R" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2" >
-        <h2>${name} ${lastName}</h2>
-        <span>${rol.name}</span>
+        <h2 class="text-capitalize">${name} ${lastName}</h2>
+        <span class="text-capitalize">${rol.name}</span>
       </div>
     </div>
 
