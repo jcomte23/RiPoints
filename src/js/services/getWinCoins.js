@@ -31,6 +31,7 @@ export const getAllWinCoins = async (userId) => {
   return data;
 };
 
+
 export const getAmountByUserId = async (userId) => {
   const response = await fetch(
     `${import.meta.env.VITE_BASE_URL}/scoreCoins?userId=${userId}`
