@@ -86,14 +86,18 @@
   position: absolute;
   width: calc(9vh + 1vw);
   height: calc(9vh + 1vw);
-  background-color: v.$primary;
-  background-image: url(/img/img_globales/eagle-esport-gaming-team-logo_343694-1252_1.webp);
-  background-size: contain;
-  object-position: center;
+  background-color: v.$white;
   bottom: -1rem;
   right: -1rem;
   border-radius: 50%;
   border: 0.5rem solid white;
+  color: v.$primary;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  transform: rotate(-15deg);
 }
 
 .coder {
