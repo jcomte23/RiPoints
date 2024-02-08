@@ -72,7 +72,6 @@ const renderSideNav = (session) => {
 const sideNav = () => {
     const nav = document.querySelector(".side-nav");
     const session = JSON.parse(localStorage.getItem("userStorage"));
-
     nav.innerHTML = renderSideNav(session);
 };
 
@@ -88,7 +87,6 @@ sideNavSelector.addEventListener("click", (event) => {
     switch (position) {
         case 0:
             showCoders(showView);
-
             break;
         case 1:
             showClans(showView);
@@ -129,4 +127,13 @@ btnLang.addEventListener("click", () => {
 // changeLanguageOnClick();
 // //default
 
-showCoders(showView);
+showCoders(showView)
+
+const btnLogout = document.getElementById("btn-logout");
+btnLogout ? btnLogout.addEventListener("click", logout) : "";
+
+function logout() {
+  localStorage.setItem("userStorage", "");
+  localStorage.setItem("isAutorizated", "false");
+  window.location.href = "/";
+}

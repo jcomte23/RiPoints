@@ -5,6 +5,7 @@ const btnLogout = document.getElementById("btn-logout");
 btnLogout ? btnLogout.addEventListener("click", logout) : "";
 
 function logout() {
+  alert("hola mundo")
   localStorage.setItem("userStorage", "");
   localStorage.setItem("isAutorizated", "false");
   window.location.href = "/";
