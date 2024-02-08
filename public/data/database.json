@@ -70,7 +70,8 @@
       "name": "mauricio",
       "lastName": "otalvaro",
       "password": "mauricio",
-      "userName": "mauricio"
+      "userName": "mauricio",
+      "photo":"mauricio.webp"
     },
     {
       "id": "a3",
@@ -153,7 +154,7 @@
       "password": "fernandobotero",
       "name": "Fernando",
       "lastName": "Botero Angulo",
-      "clanId": "tesla"
+      "clanId": "gates"
     },
     {
       "id": "4",
@@ -243,7 +244,7 @@
       "date": {
         "day": "monday",
         "month": "april",
-        "week": 3,
+        "week": 2,
         "fullDate": "2024-2-5"
       },
       "userId": "2",
@@ -254,7 +255,7 @@
       "date": {
         "day": "monday",
         "month": "april",
-        "week": 3,
+        "week": 2,
         "fullDate": "2024-2-5"
       },
       "userId": "1",
@@ -265,23 +266,27 @@
     {
       "id": "1",
       "scoreCoinId": "1",
+      "userId":"1",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
-      "coins": 2
+      "coins": 2,
+      "date":"2024-02-02"
     },
     {
       "id": "2",
       "scoreCoinId": "2",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
-      "coins": 2
+      "coins": 2,
+      "date":"2024-02-01"
     },
     {
       "id": "2",
       "scoreCoinId": "2",
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
-      "coins": -4
+      "coins": -4,
+      "date":"2024-01-30"
     }
   ]
 }
