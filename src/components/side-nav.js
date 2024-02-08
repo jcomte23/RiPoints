@@ -14,7 +14,7 @@ const renderSideNav = (session) => {
       </figure>
       <div class="profile_info" >
         <h2>${name} ${lastName}</h2>
-        <span>Desarrollo</span>
+        <span>${rol.name}</span>
       </div>
     </div>
 
@@ -26,15 +26,7 @@ const renderSideNav = (session) => {
       <li>
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
         <span data-i18n="clans" class="text-capitalize"></span>
-      </li>
-      <li>
-        <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
-        <span data-i18n="developers" class="text-capitalize"></span>
-      </li>
-      <li>
-        <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
-        <span data-i18n="clans" class="text-capitalize"></span>
-      </li>
+      </li>      
       ${rol.name === "admin" ?
     `  
       <li>
