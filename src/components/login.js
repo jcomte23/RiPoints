@@ -14,15 +14,15 @@ export const showLogin = (element) => {
     id="form" novalidate>
         <div class='d-flex flex-column col-xxl-11 align-items-start gap-3 '>
             <div class="col-12">
-            <label for="user" class="form-label text-capitalize" data-i18n="user"></label>
+            <label for="user" class="form-label text-capitalize" data-i18n="user">user</label>
             <input name="userName" type="text" class="form-control " id="user" required placeholder="" />
             </div>
             <div class="col-12">
-            <label for="password" class="form-label text-capitalize" data-i18n="password"></label>
+            <label for="password" class="form-label text-capitalize" data-i18n="password">password</label>
             <input name="password" type="password" class="form-control" id="password" required placeholder="" />
             </div>
             <button id="btn-login" type="submit" class="btn btn-primary h-50 mt-4 w-100  text-capitalize"
-            data-i18n="login"></button>
+            data-i18n="login">login</button>
         </div>
     </form>
   `;
