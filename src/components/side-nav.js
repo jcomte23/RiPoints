@@ -8,8 +8,7 @@ import "../scss/tables.scss";
 const renderSideNav = (session) => {
   const { name, photo, lastName, rol } = session;
   return `
-   
-    <div class="profile-container d-flex flex-column align-items-center w-100 border-bottom " >
+    <div class="d-flex flex-column align-items-center w-100 border-bottom" >
       <figure class="profile__pic border border-5 rounded-circle d-flex justify-content-center align-items-center"> 
         <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
       </figure>
@@ -19,7 +18,7 @@ const renderSideNav = (session) => {
       </div>
     </div>
 
-    <ul class="container__links">    
+    <ul class="container__links d-flex flex-column justify-content-start list-unstyled mt-3 p-0 h-75 w-100 align-items-center">    
       ${rol.name === "admin" ?
       `  
         <li>
@@ -39,7 +38,7 @@ const renderSideNav = (session) => {
       <li>
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
         <span data-i18n="clans" class="text-capitalize"></span>
-      </li>  
+      </li>
     </ul>
 
     <div class='settings-container'>
