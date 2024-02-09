@@ -1,5 +1,9 @@
 @use "../variables" as v;
 
+body{
+    background-color: black !important;
+}
+
 .side-nav {
     height: 100dvh;
     padding: 2dvh 1rem 2dvh;
@@ -12,11 +16,6 @@
     }
 
     .profile-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        border-bottom: 1px solid #ffffff51;
 
         .profile__pic {
             display: flex;
