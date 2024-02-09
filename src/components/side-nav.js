@@ -10,12 +10,12 @@ const renderSideNav = (session) => {
   return `
    
     <div class="profile-container d-flex flex-column align-items-center w-100 border-bottom " >
-      <figure class="profile__pic"> 
-        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" alt="photo user" width="183" height="183"/>
+      <figure class="profile__pic border border-5 rounded-circle d-flex justify-content-center align-items-center"> 
+        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
       </figure>
-      <div class="profile_info pb-2" >
-        <h2 class="text-capitalize">${name} ${lastName}</h2>
-        <span class="text-capitalize">${rol.name}</span>
+      <div class="profile_info pb-2 d-flex flex-column align-items-center text-center" >
+        <h2 class="text-capitalize fs-5">${name} ${lastName}</h2>
+        <span class="text-capitalize text-white-50">${rol.name}</span>
       </div>
     </div>
 
