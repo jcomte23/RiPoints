@@ -4,6 +4,13 @@
     height: 100dvh;
     padding: 2dvh 1rem 2dvh;
     width: 15rem;
+
+    .icon-menu{
+        cursor: pointer;
+        font-size: 50px;
+        margin-left: 190px;
+    }
+
     .profile-container {
         display: flex;
         flex-direction: column;
@@ -109,6 +116,8 @@
         padding-top: 10px;
     }
 }
+
+
 
 // lang
 

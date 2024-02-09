@@ -9,8 +9,9 @@ const renderSideNav = (session) => {
   const { name, photo, lastName, rol } = session;
   console.log(photo);
   return `
+    <i class="icon-menu bi bi-list position-absolute top-0"></i>
     <div class="profile-container" >
-      <figure class="profile__pic">
+      <figure class="profile__pic"> 
         <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" alt="photo user" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2" >
@@ -67,7 +68,7 @@ const sideNav = () => {
   const nav = document.querySelector(".side-nav");
   const session = JSON.parse(localStorage.getItem("userStorage"));
   nav.innerHTML = renderSideNav(session);
-};
+}
 
 sideNav();
 
@@ -95,6 +96,9 @@ sideNavSelector.addEventListener("click", (event) => {
   }
 });
 
+showDashboard(showView)
+
+// FUNCION PARA CAMBIAR DE IDIOMA
 const btnLang = document.getElementById("btn-lang");
 const span_es = document.getElementById("span_es");
 const span_en = document.getElementById("span_en");
@@ -119,11 +123,7 @@ btnLang.addEventListener("click", () => {
   }
 });
 
-// changeLanguageOnClick();
-// //default
-
-showDashboard(showView)
-
+// FUNCION PARA CERRAR SESION
 const btnLogout = document.getElementById("btn-logout");
 btnLogout ? btnLogout.addEventListener("click", logout) : "";
 
@@ -132,3 +132,25 @@ function logout() {
   localStorage.setItem("isAutorizated", "false");
   window.location.href = "/";
 }
+
+
+//FUNCION PARA LA BARRA DE NAVEGACION
+const iconMenu = document.querySelector(".icon-menu")
+iconMenu.addEventListener("click", () => {
+  const nav = document.querySelector(".side-nav")
+  if (nav.style.width === "4rem") {
+    nav.style.width = "15rem"
+    nav.firstElementChild.style.marginLeft = "190px"
+    nav.firstElementChild.nextElementSibling.classList.remove("d-none")
+    nav.firstElementChild.nextElementSibling.nextElementSibling.classList.remove("d-none")
+    nav.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("d-none")
+  } else {
+    nav.style.width = "4rem"
+    nav.firstElementChild.style.marginLeft = "0"
+    nav.firstElementChild.nextElementSibling.classList.add("d-none")
+    nav.firstElementChild.nextElementSibling.nextElementSibling.classList.add("d-none")
+    nav.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.classList.add("d-none")
+  }
+})
+
+
