@@ -7,7 +7,6 @@ import "../scss/tables.scss";
 
 const renderSideNav = (session) => {
   const { name, photo, lastName, rol } = session;
-  console.log(photo);
   return `
     <i class="icon-menu bi bi-list position-absolute top-0"></i>
     <div class="profile-container" >
@@ -138,15 +137,18 @@ function logout() {
 const iconMenu = document.querySelector(".icon-menu")
 iconMenu.addEventListener("click", () => {
   const nav = document.querySelector(".side-nav")
+
   if (nav.style.width === "4rem") {
     nav.style.width = "15rem"
     nav.firstElementChild.style.marginLeft = "190px"
+    nav.firstElementChild.style.borderBottom = "none"
     nav.firstElementChild.nextElementSibling.classList.remove("d-none")
     nav.firstElementChild.nextElementSibling.nextElementSibling.classList.remove("d-none")
     nav.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("d-none")
   } else {
     nav.style.width = "4rem"
     nav.firstElementChild.style.marginLeft = "0"
+    nav.firstElementChild.style.borderBottom = "1px solid #ffffff51"
     nav.firstElementChild.nextElementSibling.classList.add("d-none")
     nav.firstElementChild.nextElementSibling.nextElementSibling.classList.add("d-none")
     nav.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.classList.add("d-none")
