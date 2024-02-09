@@ -1,47 +1,27 @@
 @use "../variables" as v;
 
+// body{
+//     background-color: black !important;
+// }
+
 .side-nav {
     height: 100dvh;
     padding: 2dvh 1rem 2dvh;
     width: 15rem;
-    .profile-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        border-bottom: 1px solid #ffffff51;
 
-        .profile__pic {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            
-            height: 160px;
+    .icon-menu{
+        cursor: pointer;
+        font-size: 50px;
+        margin-left: 190px;
+    }
 
-            width: 160px;
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: inherit;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
-        .profile_info {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            h2 {
-                font-size: 20px;
-            }
-
-            span {
-                color: #ffffff66;
-            }
+    .profile__pic {
+        height: 160px;
+        width: 160px;
+        img {
+            border-radius: inherit;
+            object-fit: cover;
+            object-position: center;
         }
     }
 
@@ -78,7 +58,6 @@
             height: 100%;
             border-radius: 10px;
             z-index: 1;
-
             opacity: 0;
             transition: all 0.3s ease;
         }
@@ -109,6 +88,8 @@
         padding-top: 10px;
     }
 }
+
+
 
 // lang
 
