@@ -120,18 +120,20 @@
     {
       "id": "t3",
       "rolId": "2",
-      "name": "Emily",
-      "lastName": "Davis",
-      "password": "2",
-      "userName": "trainer_emily"
+      "name": "javier",
+      "lastName": "cuenca meliá",
+      "password": "javier",
+      "userName": "javier",
+      "photo":"javier.webp"
     },
     {
       "id": "t4",
       "rolId": "2",
-      "name": "Brandon",
-      "lastName": "Martinez",
-      "password": "2",
-      "userName": "trainer_brandon"
+      "name": "maría alejandra",
+      "lastName": "manosalva clavijo",
+      "password": "maría",
+      "userName": "maría",
+      "photo":"maria.webp"
     },
     {
       "id": "t5",
@@ -197,7 +199,8 @@
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 5
+      "amount": 5,
+      "photo":"jcomte23.webp"
     }
   ],
   "clansTrainers": [
