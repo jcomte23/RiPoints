@@ -44,8 +44,8 @@ const renderSideNav = (session) => {
     <div class='border-top w-100 d-flex justify-content-center pt-2 align-items-center'>
       
       <div class="btn-group dropup-center dropend dropup z-3 my-2 mx-3">
-        <i class="bi bi-gear-fill fs-1" data-bs-toggle="dropdown" aria-expanded="true"></i>
-        <button type="button" class="d-none btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
+        <i class="bi bi-gear-fill fs-1 d-flex d-sm-none" data-bs-toggle="dropdown" aria-expanded="true"></i>
+        <button type="button" class="d-none d-sm-flex justify-content-sm-center align-items-sm-center btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
         </button>
         <ul class="dropdown-menu text-center">
           <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i

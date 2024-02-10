@@ -12,8 +12,8 @@
     }
 
     .profile__pic {
-        height: 50px !important;
-        width: 50px !important;
+        height: 100% !important;
+        width: 100% !important;
         img {
             border-radius: inherit;
             object-fit: cover;
@@ -45,12 +45,14 @@
 
 //sm
 @media screen and (min-width: 576px) and (max-width: 768px){
+    
+
     .side-nav {
-        width: 12rem;
+        width: 13rem;
 
         .profile__pic {
-            height: 130px !important;
-            width: 130px !important;
+            height: 80% !important;
+            width: 80% !important;
         }
     }
 }
@@ -58,65 +60,51 @@
 //md
 @media screen and (min-width: 768px) and (max-width: 992px){
     .side-nav {
-        width: 12rem;
+        width: 13rem;
 
         .profile__pic {
-            height: 130px !important;
-            width: 130px !important;
+            height: 80% !important;
+            width: 80% !important;
         }
     }
 }
 
 // lg
-@media screen and (min-width: 992px) and (max-width: 1200px){     
+@media screen and (min-width: 992px) and (max-width: 1200px){    
     .side-nav {
         width: 12rem;
 
         .profile__pic {
-            height: 100px !important;
-            width: 100px !important;
+            height: 80% !important;
+            width: 80% !important;
         }
     }
 }
 
 // xl
-@media screen and (min-width: 1200px) and (max-width: 1400px){   
+@media screen and (min-width: 1200px) and (max-width: 1400px){  
     .side-nav {
         width: 12rem;
 
         .profile__pic {
-            height: 100px !important;
-            width: 100px !important;
+            height: 80% !important;
+            width: 80% !important;
         }
     }
 }
 
 // xxl
 @media screen and (min-width: 1400px){
-    body{
-        background-color: red !important;
-    }
-
     .side-nav {
         width: 15rem;
 
         .profile__pic {
-            height: 160px !important;
-            width: 160px !important;
+            height: 80% !important;
+            width: 80% !important;
         }
     }
 }
 
-// xl
-// @media screen and (min-width: 1200px) and (max-width: 1400px){   
-//     .side-nav {
-//         width: 13rem;
-//     }
 
-//     .profile__pic {
-//         height: 120px !important;
-//         width: 120px !important;
-//     }
-// }
 
 
