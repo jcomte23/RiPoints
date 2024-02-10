@@ -1,9 +1,5 @@
 @use "../variables" as v;
 
-// body{
-//     background-color: black !important;
-// }
-
 .side-nav {
     height: 100dvh;
     padding: 2dvh 1rem 2dvh;
@@ -46,3 +42,17 @@
         }
     }
 }
+
+// xl
+@media screen and (min-width: 1200px) and (max-width: 1400px){   
+    .side-nav {
+        width: 13rem;
+    }
+
+    .profile__pic {
+        height: 120px !important;
+        width: 120px !important;
+    }
+}
+
+

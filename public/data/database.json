@@ -69,16 +69,16 @@
     {
       "id": "a1",
       "rolId": "1",
-      "name": "jackeline",
-      "lastName": "narvaez",
-      "password": "jackeline",
-      "userName": "jackeline"
+      "name": "admin",
+      "lastName": "example",
+      "password": "1",
+      "userName": "1"
     },
     {
       "id": "a2",
       "rolId": "1",
       "name": "mauricio",
-      "lastName": "otalvaro",
+      "lastName": "vélez espinosa",
       "password": "mauricio",
       "userName": "mauricio",
       "photo":"mauricio.webp"
@@ -86,10 +86,19 @@
     {
       "id": "a3",
       "rolId": "1",
-      "name": "admin",
-      "lastName": "example",
-      "password": "1",
-      "userName": "1"
+      "name": "jackeline",
+      "lastName": "narvaez",
+      "password": "jackeline",
+      "userName": "jackeline"
+    },
+    {
+      "id": "a4",
+      "rolId": "1",
+      "name": "vermen rainer",
+      "lastName": "ayala vargas",
+      "password": "vermen",
+      "userName": "vermen",
+      "photo":"vermen.webp"
     },
     {
       "id": "t1",
@@ -102,10 +111,11 @@
     {
       "id": "t2",
       "rolId": "2",
-      "name": "Christopher",
-      "lastName": "Smith",
-      "password": "2",
-      "userName": "trainer_chris"
+      "name": "kevin wifred",
+      "lastName": "mejía torres",
+      "password": "kevin",
+      "userName": "kevin",
+      "photo":"kevin.webp"
     },
     {
       "id": "t3",
