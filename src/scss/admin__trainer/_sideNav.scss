@@ -3,7 +3,7 @@
 .side-nav {
     height: 100dvh;
     padding: 2dvh 1rem 2dvh;
-    width: 15rem;
+    width: 5rem;
 
     .icon-menu{
         cursor: pointer;
@@ -12,8 +12,8 @@
     }
 
     .profile__pic {
-        height: 160px;
-        width: 160px;
+        height: 100% !important;
+        width: 100% !important;
         img {
             border-radius: inherit;
             object-fit: cover;
@@ -43,16 +43,68 @@
     }
 }
 
-// xl
-@media screen and (min-width: 1200px) and (max-width: 1400px){   
+//sm
+@media screen and (min-width: 576px) and (max-width: 768px){
+    
+
     .side-nav {
         width: 13rem;
-    }
 
-    .profile__pic {
-        height: 120px !important;
-        width: 120px !important;
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
     }
 }
+
+//md
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .side-nav {
+        width: 13rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+// lg
+@media screen and (min-width: 992px) and (max-width: 1200px){    
+    .side-nav {
+        width: 12rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+// xl
+@media screen and (min-width: 1200px) and (max-width: 1400px){  
+    .side-nav {
+        width: 12rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+// xxl
+@media screen and (min-width: 1400px){
+    .side-nav {
+        width: 15rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+
 
 

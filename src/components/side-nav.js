@@ -12,7 +12,7 @@ const renderSideNav = (session) => {
       <figure class="profile__pic border border-5 rounded-circle d-flex justify-content-center align-items-center"> 
         <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
       </figure>
-      <div class="profile_info pb-2 d-flex flex-column align-items-center text-center" >
+      <div class="profile_info pb-2 d-flex flex-column align-items-center d-none d-sm-flex text-center" >
         <h2 class="text-capitalize fs-5">${name} ${lastName}</h2>
         <span class="text-capitalize text-white-50">${rol.name}</span>
       </div>
@@ -23,27 +23,29 @@ const renderSideNav = (session) => {
       `  
         <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
           <img src="/svgs/dashboard_icon.svg" alt="dashboard-icon" width="24" height="23" />
-          <span data-i18n="dashboard" class="text-capitalize"></span>
+          <span data-i18n="dashboard" class="text-capitalize d-none d-sm-flex"></span>
         </li>
         <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
           <img src="/icons/file_upload_white.svg" alt="file" width="25" height="25" id="abc"/>
-          <span data-i18n="load_docs" class="text-capitalize"></span>
+          <span data-i18n="load_docs" class="text-capitalize d-none d-sm-flex"></span>
         </li>
         `
       : ""}
       <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
         <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
-        <span data-i18n="developers" class="text-capitalize"></span>
+        <span data-i18n="developers" class="text-capitalize d-none d-sm-flex"></span>
       </li>
       <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
-        <span data-i18n="clans" class="text-capitalize"></span>
+        <span data-i18n="clans" class="text-capitalize d-none d-sm-flex"></span>
       </li>
     </ul>
 
     <div class='border-top w-100 d-flex justify-content-center pt-2 align-items-center'>
-      <div class="btn-group dropup-center dropup z-3 my-2 mx-3">
-        <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
+      
+      <div class="btn-group dropup-center dropend dropup z-3 my-2 mx-3">
+        <i class="bi bi-gear-fill fs-1 d-flex d-sm-none" data-bs-toggle="dropdown" aria-expanded="true"></i>
+        <button type="button" class="d-none d-sm-flex justify-content-sm-center align-items-sm-center btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
         </button>
         <ul class="dropdown-menu text-center">
           <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
