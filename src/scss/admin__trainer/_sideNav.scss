@@ -1,9 +1,5 @@
 @use "../variables" as v;
 
-// body{
-//     background-color: black !important;
-// }
-
 .side-nav {
     height: 100dvh;
     padding: 2dvh 1rem 2dvh;
@@ -43,16 +39,20 @@
         li span {
             pointer-events: none;
             font-size: 1.1rem;
-            z-index: 10;
         }
     }
+}
 
-    .settings-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        border-top: 1px solid #ffffff51;
-        padding-top: 10px;
+// xl
+@media screen and (min-width: 1200px) and (max-width: 1400px){   
+    .side-nav {
+        width: 13rem;
+    }
+
+    .profile__pic {
+        height: 120px !important;
+        width: 120px !important;
     }
 }
+
+

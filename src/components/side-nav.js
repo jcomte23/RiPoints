@@ -41,7 +41,7 @@ const renderSideNav = (session) => {
       </li>
     </ul>
 
-    <div class='settings-container'>
+    <div class='border-top w-100 d-flex justify-content-center pt-2 align-items-center'>
       <div class="btn-group dropup-center dropup z-3 my-2 mx-3">
         <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
         </button>
