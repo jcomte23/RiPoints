@@ -18,24 +18,24 @@ const renderSideNav = (session) => {
       </div>
     </div>
 
-    <ul class="container__links d-flex flex-column justify-content-start list-unstyled mt-3 p-0 h-75 w-100 align-items-center">    
+    <ul class="container__links d-flex flex-column justify-content-start align-items-center gap-3 list-unstyled mt-3 p-0 h-75 w-100 ">    
       ${rol.name === "admin" ?
       `  
-        <li>
+        <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
           <img src="/svgs/dashboard_icon.svg" alt="dashboard-icon" width="24" height="23" />
           <span data-i18n="dashboard" class="text-capitalize"></span>
         </li>
-        <li>
+        <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
           <img src="/icons/file_upload_white.svg" alt="file" width="25" height="25" id="abc"/>
           <span data-i18n="load_docs" class="text-capitalize"></span>
         </li>
         `
       : ""}
-      <li>
+      <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
         <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
         <span data-i18n="developers" class="text-capitalize"></span>
       </li>
-      <li>
+      <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
         <span data-i18n="clans" class="text-capitalize"></span>
       </li>
