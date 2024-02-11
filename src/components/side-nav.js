@@ -90,7 +90,8 @@ sideNavSelector.addEventListener("click", (event) => {
     case "load docs":
       showFileAttachment(showView);
       break;
-    case "clan":
+    case "clanes":
+    case "clans":
       showClans(showView);
       break;
   }
