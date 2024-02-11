@@ -72,6 +72,9 @@ function getClansAndStudents(codersData) {
 
 // retorna los estudiantes y sus puntos
 function getFinalStructure(clansObject) {
+
+  // get year and month
+
   let result = [];
 
   Object.entries(getClansAndStudents(clansObject)).forEach(([day, clans]) => {

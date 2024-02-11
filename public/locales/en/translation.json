@@ -45,5 +45,6 @@
     "actions":"Actions",
     "edit":"Edit",
     "position":"position",
-    "settings":"settings"
+    "settings":"settings",
+    "sendInfo":"load data"
 }

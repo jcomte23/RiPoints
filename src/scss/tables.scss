@@ -5,10 +5,15 @@
 }
 
 .file_input{
-  border: dashed .2rem v.$secondary;
-  border-radius: 1rem;
+  border: dashed .2rem v.$silver;
+  border-radius: .3rem;
   width: 100%;
   height: 30vh;
+  display: flex;
+  font-size: calc(1dvw + 2dvh);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   &.active{
     border: dashed .2rem v.$mint;
     color: v.$mint;
@@ -32,6 +37,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   h1{
     margin-top: 1rem;
@@ -39,6 +45,7 @@
 
   .fileInfo{
     height: 50vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +58,6 @@
     justify-content: center;
     flex-direction: row;
     gap: 1rem;
-    overflow-x: scroll;
   }
 
   .fileInfo__row--item{
@@ -65,7 +71,7 @@
     width: 15rem;
     height: 3rem;
     border: .15rem solid v.$primary;
-    border-radius: 5rem;
+    border-radius: .3rem;
   }
   .loaded{
     border: unset;
@@ -93,8 +99,55 @@
     color: white;
     border-radius: 3rem;
   }
-
 }
+
+.container__setDate{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFFAA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .setDate{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .setDate--button{
+    background-color: red;
+  }
+}
+
+.loadData{
+  display: flex;
+  justify-content: center;
+  height: 4dvh;
+  width: 100%;
+  .loadData__buton{
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    background-color: v.$primary;
+    border: none;
+    color: v.$seasalt;
+    font-weight: bold;
+    border-radius: .3rem;
+    padding: 0 5rem;
+    font-size: 1.2rem;
+  }
+  .loadData__buton:disabled,
+  .loadData__buton[disabled]{
+    border: .17rem solid v.$silver;
+    background-color: v.$seasalt;
+    color: v.$silver;
+  }
+}
+
 @keyframes waiting {
   0%,100%{
     opacity: .1;

@@ -28,7 +28,12 @@ export const showFileAttachment = (element) => {
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
             </div>
-            <label for='formFile' class="d-flex flex-column py-2 align-items-center file_input" id="labelFile">
+
+            <div class="loadData" >
+                <button data-i18n="sendInfo" disabled class="loadData__buton" ></button>
+            </div>
+
+            <label for='formFile' class="file_input" id="labelFile">
                 <figure>
                     <img src="/icons/file_upload.svg" width="100" alt="logo">
                 </figure>
@@ -132,6 +137,9 @@ export const showFileAttachment = (element) => {
             daysPerClass[className] = aux;
             
             if (Object.keys(daysPerClass).length === 4) {
+
+                document.querySelector('.loadData button').disabled = false
+                
 
                 if(!validateDays(daysPerClass)){
                     smallAlertError("Los dias no concuerdan, no se realizara ninguna operacion");
