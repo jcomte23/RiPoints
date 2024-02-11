@@ -69,16 +69,16 @@
     {
       "id": "a1",
       "rolId": "1",
-      "name": "jackeline",
-      "lastName": "narvaez",
-      "password": "jackeline",
-      "userName": "jackeline"
+      "name": "admin",
+      "lastName": "example",
+      "password": "1",
+      "userName": "1"
     },
     {
       "id": "a2",
       "rolId": "1",
       "name": "mauricio",
-      "lastName": "otalvaro",
+      "lastName": "vélez espinosa",
       "password": "mauricio",
       "userName": "mauricio",
       "photo":"mauricio.webp"
@@ -86,10 +86,19 @@
     {
       "id": "a3",
       "rolId": "1",
-      "name": "admin",
-      "lastName": "example",
-      "password": "1",
-      "userName": "1"
+      "name": "jackeline",
+      "lastName": "narvaez",
+      "password": "jackeline",
+      "userName": "jackeline"
+    },
+    {
+      "id": "a4",
+      "rolId": "1",
+      "name": "vermen rainer",
+      "lastName": "ayala vargas",
+      "password": "vermen",
+      "userName": "vermen",
+      "photo":"vermen.webp"
     },
     {
       "id": "t1",
@@ -102,26 +111,29 @@
     {
       "id": "t2",
       "rolId": "2",
-      "name": "Christopher",
-      "lastName": "Smith",
-      "password": "2",
-      "userName": "trainer_chris"
+      "name": "kevin wifred",
+      "lastName": "mejía torres",
+      "password": "kevin",
+      "userName": "kevin",
+      "photo":"kevin.webp"
     },
     {
       "id": "t3",
       "rolId": "2",
-      "name": "Emily",
-      "lastName": "Davis",
-      "password": "2",
-      "userName": "trainer_emily"
+      "name": "javier",
+      "lastName": "cuenca meliá",
+      "password": "javier",
+      "userName": "javier",
+      "photo":"javier.webp"
     },
     {
       "id": "t4",
       "rolId": "2",
-      "name": "Brandon",
-      "lastName": "Martinez",
-      "password": "2",
-      "userName": "trainer_brandon"
+      "name": "maría alejandra",
+      "lastName": "manosalva clavijo",
+      "password": "maría",
+      "userName": "maría",
+      "photo":"maria.webp"
     },
     {
       "id": "t5",
@@ -181,13 +193,14 @@
     },
     {
       "id": "4",
-      "rolId": "3",
+      "rolId": "1",
       "userName": "jcomte23",
       "password": "jcomte23",
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 5
+      "amount": 5,
+      "photo":"jcomte23.webp"
     }
   ],
   "clansTrainers": [
@@ -310,7 +323,6 @@
       "scoreCoinId": "1",
       "userId":"1",
       "clanId":"gates",
-      "userId": "1",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
