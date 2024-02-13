@@ -10,17 +10,20 @@
   width: 100%;
   height: 30vh;
   display: flex;
-  font-size: calc(1dvw + 2dvh);
-  justify-content: center;
-  align-items: center;
+  font-size: calc(1dvw + 1dvh);
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   &.active{
     border: dashed .2rem v.$mint;
     color: v.$mint;
   }
+  h3{
+    font-size: calc(1dvw + 1dvh);
+  }
   figure img{
     opacity: .3;
-    height: 6rem;
+    height: 10dvh;
     animation: waiting 1s .2s ease infinite;  
   }
 }
@@ -40,20 +43,23 @@
   align-items: center;
 
   h1{
-    margin-top: 1rem;
+    margin: 0rem;
+    padding: 0;
   }
 
   .fileInfo{
-    height: 50vh;
+    height: 35dvh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 1rem;
+    gap: .5rem;
   }
 
   .fileInfo__row{
+    height: 20%;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -66,10 +72,11 @@
     text-transform: capitalize;
     background-color: white;
     color: v.$primary;
+    font-size: 1rem;
+    line-height: 1rem;
     font-weight: bolder;
     padding: 0rem 1.3rem;
     width: 15rem;
-    height: 3rem;
     border: .15rem solid v.$primary;
     border-radius: .3rem;
   }
@@ -126,25 +133,25 @@
 .loadData{
   display: flex;
   justify-content: center;
-  height: 4dvh;
+  height: 8dvh;
   width: 100%;
   .loadData__buton{
     text-transform: capitalize;
     cursor: pointer;
-    border: none;
     background-color: v.$primary;
     border: none;
     color: v.$seasalt;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: .3rem;
     padding: 0 5rem;
     font-size: 1.2rem;
   }
   .loadData__buton:disabled,
   .loadData__buton[disabled]{
-    border: .17rem solid v.$silver;
+    border: .15rem solid v.$silver;
     background-color: v.$seasalt;
     color: v.$silver;
+    cursor: not-allowed;
   }
   .loadData__buton:enabled:focus,
   .loadData__buton[enabled]:focus{
@@ -160,8 +167,10 @@
   align-items: center;
   gap: 2rem;
   width: max-content;
+  height: 2rem;
   text-transform: capitalize;
   input[type="month"] {
+    height: 2rem;
     color-scheme: dark;
     border: none;
     background-color: v.$primary;
