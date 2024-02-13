@@ -1,3 +1,4 @@
+import { getUserById } from "../js/services/getUser";
 import { changeLanguageOnClick, updateContent } from "../js/translator";
 import { historyWinCoinsByUserId } from "../js/usecases/winCoinsHistory";
 
@@ -13,7 +14,7 @@ export const renderCoder = (element) => {
     <h5 class="coder__points--title" data-i18n="totalpoints">Total Points</h5>
     <div class="coder__points">
       <div class="coder__points__coin"></div>
-      <span id="counter">770</span>
+      <span id="counter"></span>
     </div>
   </div>
 
@@ -38,21 +39,22 @@ export const renderCoder = (element) => {
       </table>
     </div>
   </div>
-  `
+  `;
 
-  document.querySelectorAll('.coder__name').forEach((el) => {
-    el.textContent = user.name + ' ' + user.lastName 
-  })
+  document.querySelectorAll(".coder__name").forEach((el) => {
+    el.textContent = user.name + " " + user.lastName;
+  });
   updateContent();
   historyCoderRender(user);
-}
+  amountByUserId(user.id)
+};
 changeLanguageOnClick();
 
 const historyCoderRender = async (user) => {
-  const historyTbody = document.getElementById("tbody_historial")
+  const historyTbody = document.getElementById("tbody_historial");
   const history = await historyWinCoinsByUserId(user.id);
   history.forEach((winCoin) => {
-    const color = winCoin.coins > 0 ? "safe" : "danger"
+    const color = winCoin.coins > 0 ? "safe" : "danger";
     historyTbody.innerHTML += `
     <tr>
       <th scope="row" class="table-${color}">${winCoin.coins}</th>
@@ -60,6 +62,13 @@ const historyCoderRender = async (user) => {
       <td class="table-${color}">${user.name}</td>
       <td class="table-${color}">${winCoin.date}</td>
     </tr>
-  `
-  })
-}
+  `;
+  });
+};
+
+const amountByUserId = async (userId) => {
+  const user = await getUserById(userId);
+  const counter = document.getElementById("counter");
+  console.log(counter);
+  counter.innerHTML = user.amount;
+};
