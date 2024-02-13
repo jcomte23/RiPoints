@@ -46,5 +46,7 @@
     "edit":"Editar",
     "position":"posición",
     "settings":"ajustes",
-    "sendInfo":"enviar datos"
+    "sendInfo":"enviar datos",
+    "setdate":"establecer fecha"
+
 }

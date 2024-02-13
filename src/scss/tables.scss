@@ -146,6 +146,49 @@
     background-color: v.$seasalt;
     color: v.$silver;
   }
+  .loadData__buton:enabled:focus,
+  .loadData__buton[enabled]:focus{
+    background-color: v.$primary;
+    animation: waiting .4s ease;
+  }
+}
+
+.setDate{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  text-transform: capitalize;
+  input[type="month"] {
+    color-scheme: dark;
+    border: none;
+    background-color: v.$primary;
+    border: 3px solid v.$primary;
+    color: v.$seasalt;
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+  }
+  input[type="month"]:focus{
+    outline: none;
+    border: 3px solid v.$primary;
+    background-color: v.$seasalt;
+    color: v.$primary;
+  }
+  input[type="month"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+
 }
 
 @keyframes waiting {

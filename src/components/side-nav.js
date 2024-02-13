@@ -48,8 +48,8 @@ const renderSideNav = (session) => {
         <button type="button" class="d-none d-sm-flex justify-content-sm-center align-items-sm-center btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
         </button>
         <ul class="dropdown-menu text-center">
-          <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
-              class="bi bi-translate fs-5"></i>
+          <li id="btn-lang" class="changeLang dropdown-item ">
+              <i class="bi bi-translate fs-5"></i>
               <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
               <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
             </li>
@@ -97,7 +97,7 @@ sideNavSelector.addEventListener("click", (event) => {
   }
 });
 
-showDashboard(showView)
+showFileAttachment(showView)
 
 // FUNCION PARA CAMBIAR DE IDIOMA
 const btnLang = document.getElementById("btn-lang");
