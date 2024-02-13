@@ -1,12 +1,14 @@
 import { handleFileSelect } from "../js/validations/excelValidation";
 import { updateContent } from "../js/translator";
 import { getFinalStructure } from "../js/pointAssignment";
-import { createScoreCoins } from "../js/services/saveScoreCoins";
+import { createScoreCoins, addCoder } from "../js/services/pushData";
 import { calculateDate } from "../js/usecases/calculateCoins";
 import { smallAlertError } from "../js/alerts";
+import { formatString } from "../js/services/helpers";
 
 export let year = null;
 export let month = null;
+let listNoRepeatCoder = [];
 
 export const showFileAttachment = (element) => {
   let daysPerClass = {};
@@ -179,20 +181,29 @@ export const showFileAttachment = (element) => {
         //console.log(daysPerClass);
         //console.log(usersAndCoins);
 
-        const formatString = (str) => {
-          return str
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[ ]+/g, "_")
-            .toLowerCase();
-        };
+        function validateCoder(named, lastName, clanId) {
+          let name = formatString(named);
+          if (listNoRepeatCoder.indexOf(name) == -1) {
+            let coder = {
+              rolId: "3",
+              userName: name,
+              password: name,
+              name: name,
+              lastName: formatString(lastName),
+              clanId: clanId.replace("clan_", "").replace('clan ',''),
+              amount: 0,
+            };
+            addCoder(coder);
+          }
+        }
 
         btnLoadData.addEventListener("click", () => {
-          let allCoders = [];
           usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
             //let firstDayPoint = Object.values(day_point)[0];
             //let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
             let firstDayPoint = Object.entries(day_point);
+            validateCoder(name, lastName, clanId);
+
             firstDayPoint.forEach(([day, point]) => {
               let actualDate = calculateDate();
               actualDate.day = day;
@@ -202,12 +213,10 @@ export const showFileAttachment = (element) => {
                 attendantCoins: point,
                 clanId,
               };
-              allCoders.push(template);
+              createScoreCoins(template);
             });
-            //createScoreCoins(template);
             btnLoadData.disabled = true;
           });
-          console.log(allCoders);
         });
       }
     });
@@ -221,3 +230,4 @@ export const showFileAttachment = (element) => {
 
   updateContent();
 };
+

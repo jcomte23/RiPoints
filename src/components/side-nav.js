@@ -10,7 +10,9 @@ const renderSideNav = (session) => {
   return `
     <div class="d-flex flex-column align-items-center w-100 border-bottom" >
       <figure class="profile__pic border border-5 rounded-circle d-flex justify-content-center align-items-center"> 
-        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
+        <img src="../../../img/persons/${
+          photo !== undefined ? photo : "default.webp"
+        }" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2 d-flex flex-column align-items-center d-none d-sm-flex text-center" >
         <h2 class="text-capitalize fs-5">${name} ${lastName}</h2>
@@ -19,8 +21,9 @@ const renderSideNav = (session) => {
     </div>
 
     <ul class="container__links d-flex flex-column justify-content-start align-items-center gap-3 list-unstyled mt-3 p-0 h-75 w-100 ">    
-      ${rol.name === "admin" ?
-      `  
+      ${
+        rol.name === "admin"
+          ? `  
         <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
           <img src="/svgs/dashboard_icon.svg" alt="dashboard-icon" width="24" height="23" />
           <span data-i18n="dashboard" class="text-capitalize d-none d-sm-flex"></span>
@@ -30,7 +33,8 @@ const renderSideNav = (session) => {
           <span data-i18n="load_docs" class="text-capitalize d-none d-sm-flex"></span>
         </li>
         `
-      : ""}
+          : ""
+      }
       <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
         <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
         <span data-i18n="developers" class="text-capitalize d-none d-sm-flex"></span>
@@ -61,22 +65,22 @@ const renderSideNav = (session) => {
         </ul>
       </div>
     </div>  
-  `
-}
+  `;
+};
 
 const sideNav = () => {
   const nav = document.querySelector(".side-nav");
   const session = JSON.parse(localStorage.getItem("userStorage"));
   nav.innerHTML = renderSideNav(session);
-}
+};
 
 sideNav();
 
 const showView = document.getElementById("containerTable");
 const sideNavSelector = document.getElementsByTagName("ul")[0];
 sideNavSelector.addEventListener("click", (event) => {
-  const position = event.target.children[1].textContent.toLowerCase()
-  console.log(position)
+  let position = event.target.children[1].textContent.toLowerCase();
+  console.log(position);
   switch (position) {
     case "coders":
     case "desarrolladores":
@@ -97,7 +101,7 @@ sideNavSelector.addEventListener("click", (event) => {
   }
 });
 
-showFileAttachment(showView)
+showFileAttachment(showView);
 
 // FUNCION PARA CAMBIAR DE IDIOMA
 const btnLang = document.getElementById("btn-lang");
@@ -134,7 +138,6 @@ function logout() {
   window.location.href = "/";
 }
 
-
 //FUNCION PARA LA BARRA DE NAVEGACION
 // const iconMenu = document.querySelector(".icon-menu")
 // iconMenu.addEventListener("click", () => {
@@ -156,5 +159,3 @@ function logout() {
 //     nav.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.classList.add("d-none")
 //   }
 // })
-
-

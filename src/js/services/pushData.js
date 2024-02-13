@@ -7,11 +7,11 @@ export const createScoreCoins = async (scoreCoin) => {
   });
 };
 
-//! scoreCoin contiene los campos actulizar con el id de donde se actualiza
-export const updateScoreCoins = async (scoreCoin) => {
-  await fetch(`${import.meta.env.VITE_BASE_URL}/scoreCoins/${scoreCoin.id}`, {
-    method: "PATCH",
-    body: JSON.stringify(scoreCoin),
+//! addCoder:
+export const addCoder = async (data) => {
+  await fetch(`${import.meta.env.VITE_BASE_URL}/users`, {
+    method: "POST",
     headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
   });
 };
