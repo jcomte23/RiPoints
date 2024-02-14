@@ -1,17 +1,13 @@
-import {get} from "../js/services/helpers";
+import { setCoinsByUser } from "../js/usecases/setCoins";
 
-let info = await get('users?rolId=3');
-console.log(info);
 export async function modal(element) {
-
-  let modalContainer = document.createElement('div');
-  modalContainer.classList.add('modal', 'fade');
+  let modalContainer = document.createElement("div");
+  modalContainer.classList.add("modal", "fade");
   modalContainer.id = "exampleModal";
   modalContainer.tabIndex = "-1";
-  modalContainer.setAttribute('aria-labelledby', 'exampleModalLabel');
-  modalContainer.setAttribute('aria-hidden', 'true');
+  modalContainer.setAttribute("aria-labelledby", "exampleModalLabel");
+  modalContainer.setAttribute("aria-hidden", "true");
 
- 
   modalContainer.innerHTML += `
       <div class="modal-dialog">
         <div class="modal-content">
@@ -58,7 +54,6 @@ export async function modal(element) {
                 <div class="quantity__add">
                 <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.png" alt=""></div>
                 <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.png" alt="" /></div>
-              
                 </div>
               </div>
               </div>
@@ -80,7 +75,9 @@ export async function modal(element) {
   element.appendChild(modalContainer);
 
   // Selecciona el input dentro del modal
-  const quantityInput = document.querySelector("#exampleModal .quantity__input");
+  const quantityInput = document.querySelector(
+    "#exampleModal .quantity__input"
+  );
   const numadd = document.querySelector("#exampleModal .quantity__add .add");
   const numless = document.querySelector("#exampleModal .quantity__add .less");
   const plusSign = document.querySelector("#exampleModal #plusSign");
@@ -104,11 +101,10 @@ export async function modal(element) {
     } else if (realNum > 5) {
       realNum = 5;
     }
-    console.log(realNum);
+
     updateInput();
     updateSign();
   }
-
 
   function updateSign() {
     plusSign.textContent = realNum < 0 ? "-" : "+";
@@ -122,15 +118,21 @@ export async function modal(element) {
     plus(-1);
   });
 
+  //No entiendo la finalidad de esto, la dat ase debe cragar desde el json, no desde lo que le popngamos manual
   btnSaveModal.addEventListener("click", () => {
-    const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
+    const totalPointsElement = document.querySelector(
+      "#exampleModal #totalPoints"
+    );
     const totalPoints = parseInt(totalPointsElement.textContent);
     totalPointsElement.textContent = totalPoints + realNum;
-
-    const quantityInput = document.querySelector("#exampleModal .quantity__input");
+    const quantityInput = document.querySelector(
+      "#exampleModal .quantity__input"
+    );
     quantityInput.value = parseInt(quantityInput.value) + realNum;
-
+    //Esto no es buena practica pero no encuentro otra manera de hacerlo sin alteral la logica que ya esta hecha
+    setCoinsByUser(realNum);
     realNum = 0;
+    document.getElementById("observations").value = "";
     updateInput();
     updateSign();
 
@@ -143,6 +145,4 @@ export async function modal(element) {
     const closeButton = document.querySelector("#exampleModal .btn-close");
     closeButton.click();
   });
-
-
 }

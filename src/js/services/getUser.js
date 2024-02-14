@@ -15,3 +15,12 @@ export const getUser = async (user) => {
     }
   }
 };
+
+export const getUserById = async (userId) => {
+  const response = await fetch(
+    `${import.meta.env.VITE_BASE_URL}/users?id=${userId}`
+  );
+  const data = await response.json();
+
+  return data;
+};

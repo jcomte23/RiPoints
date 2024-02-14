@@ -14,7 +14,7 @@ export async function loadCodersTr(element) {
         <td>${coder.lastName}</td>
         <td>${coder.clan.name}</td>
         <td data-plus=${add == 0 ? '' :add > 0 ? `"+${add}" class="plus"`:`"${add}" class="less"` } >${calcScoreCoins(coder.scoreCoins) + add}</td>
-        <td><button class="edit-btn btn btn-primary text-capitalize" data-i18n="edit" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="onEdit(event)" data-id="${coder.id}">Edit</button></td>
+        <td><button class="edit-btn btn btn-primary text-capitalize" data-i18n="edit" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="onEdit(event,${coder.id})" data-id="${coder.id}">Edit</button></td>
       </tr>
     `;
   });

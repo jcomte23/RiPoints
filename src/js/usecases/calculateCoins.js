@@ -5,10 +5,11 @@ import { getAllWinCoins, getWeekCoins } from "../services/getWinCoins";
 export const calculateDailyCoins = async (user, date) => {
   const winCoins = await contWinCoins(user.id, date);
   console.log(winCoins);
+  //! Mirar el formato final del json, porque aqui faltan algunos campos para que sea igual
   const scoreCoins = {
     date: calculateDate(date),
     userId: user.id,
-    winCoinsTotal: winCoins,
+    ExtraCoins: winCoins,
     attendantCoins: user.attendantCoin,
     amountDay: amountCoins(winCoins, user.attendantCoin),
   };
@@ -109,6 +110,8 @@ export const getCoinByWeek = async () => {
       accountWeekCoins[dayIndex] += weekCoin.amountDay;
     }
   }
-  console.log(accountWeekCoins)
   return accountWeekCoins;
 };
+
+//? Esta funcion es la que debe trar todos los scoreCoins y comparar cada id, para luego modificarlo (Hacerle un pacth)
+export const calculateAmountCoinsByUser = (userId) => {};
