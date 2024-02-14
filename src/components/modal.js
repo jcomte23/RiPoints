@@ -52,14 +52,18 @@ export async function modal(element) {
                 <div class="quantity">
                 <input class="quantity__input" type="text" value="0" readonly />
                 <div class="quantity__add">
-                <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.png" alt=""></div>
-                <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.png" alt="" /></div>
-              
+                <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.webp" alt=""></div>
+                <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.webp" alt="" /></div>
                 </div>
               </div>
               </div>
             </div>
             
+            <div class="containerInputDate">
+            <label>Fecha:</label>
+            <input class="inputDate" type="date" id="fecha" name="fecha">
+            </div>
+
             <div class="container__area">
               <textarea placeholder="observaciones" id="observations" name="observations"></textarea>
                       </div>
@@ -74,6 +78,7 @@ export async function modal(element) {
     `;
 
   element.appendChild(modalContainer);
+
   // Selecciona el input dentro del modal
   const quantityInput = document.querySelector(
     "#exampleModal .quantity__input"
@@ -120,11 +125,14 @@ export async function modal(element) {
 
   //No entiendo la finalidad de esto, la dat ase debe cragar desde el json, no desde lo que le popngamos manual
   btnSaveModal.addEventListener("click", () => {
-    const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
+    const totalPointsElement = document.querySelector(
+      "#exampleModal #totalPoints"
+    );
     const totalPoints = parseInt(totalPointsElement.textContent);
     totalPointsElement.textContent = totalPoints + realNum;
-
-    const quantityInput = document.querySelector("#exampleModal .quantity__input");
+    const quantityInput = document.querySelector(
+      "#exampleModal .quantity__input"
+    );
     quantityInput.value = parseInt(quantityInput.value) + realNum;
     //Esto no es buena practica pero no encuentro otra manera de hacerlo sin alteral la logica que ya esta hecha
     setCoinsByUser(realNum);
@@ -134,15 +142,12 @@ export async function modal(element) {
     updateSign();
 
     const closeButton = document.querySelector("#exampleModal .btn-close");
-    closeButton.click((quantityInput.value = 0));
+    closeButton.click();
   });
 
   const closed = document.querySelector("#exampleModal #cancel-modal");
   closed.addEventListener("click", (event) => {
     const closeButton = document.querySelector("#exampleModal .btn-close");
     closeButton.click();
-    quantityInput.value = 0;
   });
-
-
 }
