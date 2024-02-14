@@ -47,5 +47,8 @@
     "position":"position",
     "settings":"settings",
     "sendInfo":"load data",
-    "setdate":"set date"
+    "setdate":"set date",
+    "description":"description",
+    "teacher":"teacher",
+    "date":"date"
 }

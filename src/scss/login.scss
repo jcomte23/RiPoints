@@ -1,7 +1,5 @@
 @use "variables" as v;
 
-
-
 .login__body {
     font-family: "Ubuntu", sans-serif !important;
 }
@@ -24,11 +22,8 @@ main{
 #welcome {
     font-size: 55px;
     margin-top: 20px;
-    // font-size: clamp(1.5rem, -1rem + 8vw, 3rem);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
-
-
 
 .span_lang{
     margin-top: 2%;
@@ -73,9 +68,9 @@ main{
 }
 
 // lg
-@media screen and (min-width: 992px) and (max-width: 1200px){     
+@media screen and (min-width: 992px) and (max-width: 1200px){   
     main{
-        height: 93vh !important;
+        height: 89vh !important;
         margin-bottom: 0 !important;
     }
 
@@ -84,7 +79,7 @@ main{
 // xl
 @media screen and (min-width: 1200px) and (max-width: 1400px){   
     main{
-        height: 93vh !important;
+        height: 89vh !important;
         margin-bottom: 0 !important;
     }
 
