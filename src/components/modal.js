@@ -52,8 +52,8 @@ export async function modal(element) {
                 <div class="quantity">
                 <input class="quantity__input" type="text" value="0" readonly />
                 <div class="quantity__add">
-                <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.png" alt=""></div>
-                <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.png" alt="" /></div>
+                <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.webp" alt=""></div>
+                <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.webp" alt="" /></div>
                 </div>
               </div>
               </div>
@@ -63,7 +63,7 @@ export async function modal(element) {
             <label>Fecha:</label>
             <input class="inputDate" type="date" id="fecha" name="fecha">
             </div>
-            
+
             <div class="container__area">
               <textarea placeholder="observaciones" id="observations" name="observations"></textarea>
                       </div>

@@ -359,6 +359,24 @@
       "pointsaAllocator": "trainer example",
       "coins": -1,
       "date": "2024-2-14"
+    },
+    {
+      "id": "c27d",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "465b",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": -1,
+      "date": "2024-2-14"
     }
   ]
 }
