@@ -9,14 +9,12 @@ import { getUserById } from "./getUser";
 export const saveExtraCoins = async (data) => {
   const user = await getUserById(data.coderId);
   const scoreCoin = await getScoreCoinsByDateAndUserId(getCurrentDate(),data.coderId);
-  console.log(scoreCoin);
-  console.log(typeof getCurrentDate(), getCurrentDate());
   await fetch(`${import.meta.env.VITE_BASE_URL}/winCoins`, {
     method: "POST",
 
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      scoreCoinId: scoreCoin.id,
+      scoreCoinId: scoreCoin[0].id,
       userId: data.coderId,
       clanId: user.clanId,
       comment: data.comment,
