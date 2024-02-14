@@ -1,7 +1,5 @@
-// import {get} from "../js/services/helpers";
-import { getCurrentDate } from "../js/usecases/calculateDailyCoins";
-// let info = await get('users?rolId=3');
-// console.log(info);
+import { setCoinsByUser } from "../js/usecases/setCoins";
+
 export async function modal(element) {
   let modalContainer = document.createElement("div");
   modalContainer.classList.add("modal", "fade");
@@ -54,18 +52,12 @@ export async function modal(element) {
                 <div class="quantity">
                 <input class="quantity__input" type="text" value="0" readonly />
                 <div class="quantity__add">
-                <div class="add"><img class="img__arrowsUp" src="../../../public/img/img_globales/asigmentPointsDown.webp" alt=""></div>
-                <div class="less"><img class="img__arrowsDown" src="../../../public/img/img_globales/asigmentPointUp.webp" alt="" /></div>
+                <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.png" alt=""></div>
+                <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.png" alt="" /></div>
               
                 </div>
               </div>
               </div>
-            </div>
-
-            <div class="containerInputDate">
-            <label>Fecha:</label>
-            <input class="inputDate" type="date" id="fecha" name="fecha">
-            
             </div>
             
             <div class="container__area">
@@ -109,7 +101,7 @@ export async function modal(element) {
     } else if (realNum > 5) {
       realNum = 5;
     }
-    console.log(realNum);
+
     updateInput();
     updateSign();
   }
@@ -126,20 +118,18 @@ export async function modal(element) {
     plus(-1);
   });
 
+  //No entiendo la finalidad de esto, la dat ase debe cragar desde el json, no desde lo que le popngamos manual
   btnSaveModal.addEventListener("click", () => {
-    modalData();
-    const totalPointsElement = document.querySelector(
-      "#exampleModal #totalPoints"
-    );
+    const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
     const totalPoints = parseInt(totalPointsElement.textContent);
     totalPointsElement.textContent = totalPoints + realNum;
 
-    const quantityInput = document.querySelector(
-      "#exampleModal .quantity__input"
-    );
+    const quantityInput = document.querySelector("#exampleModal .quantity__input");
     quantityInput.value = parseInt(quantityInput.value) + realNum;
-
+    //Esto no es buena practica pero no encuentro otra manera de hacerlo sin alteral la logica que ya esta hecha
+    setCoinsByUser(realNum);
     realNum = 0;
+    document.getElementById("observations").value = "";
     updateInput();
     updateSign();
 
@@ -155,22 +145,4 @@ export async function modal(element) {
   });
 
 
-  // Crea el objeto modalData con la información obtenida
-  function modalData() {
-    const coderNameElement = document.querySelector("#coder__name").textContent;
-    const coderLastNameElement =document.querySelector("#coder__lastname").textContent;
-    const coderClanIdElement = document.querySelector("#coder__clanid").textContent;
-    const totalPointsElement = document.querySelector("#totalPoints").textContent;
-    const coderDateElement = document.querySelector("#fecha").value;
-    const modalData = {
-      currentDate: getCurrentDate(),
-      coderName: coderNameElement,
-      codeLastName: coderLastNameElement,
-      coderClanId: coderClanIdElement,
-      coderPoints: totalPointsElement,
-      coderDate : coderDateElement
-    };
-
-    console.log("Datos del modal:", modalData);
-  }
 }

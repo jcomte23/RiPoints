@@ -5,9 +5,9 @@ export const getAllClan = async () => {
   return data;
 };
 
-export const getAllClanCoins = async () => {
-  const response = await fetch(`${import.meta.env.VITE_BASE_URL}/clanCoins`);
-  const data = await response.json();
+// export const getAllClanCoins = async () => {
+//   const response = await fetch(`${import.meta.env.VITE_BASE_URL}/clanCoins`);
+//   const data = await response.json();
 
-  return data;
-};
+//   return data;
+// };

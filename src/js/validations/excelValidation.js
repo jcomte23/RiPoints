@@ -4,6 +4,7 @@ const allowedExtensions = ['xlsx'];
 
 export function handleFileSelect(fileInput = false, callback) {
 
+    console.log(fileInput)
 
     function processFiles(files, callback) {
         // Iterate over each file in the list
@@ -14,14 +15,15 @@ export function handleFileSelect(fileInput = false, callback) {
     }
 
     // If a DataTransfer object is provided, take the file from the object
-    if (fileInput instanceof DataTransfer) {
-        const files = fileInput.files;
+    if (fileInput.dataTransfer) {
+        const files = fileInput.dataTransfer.files;
         processFiles(files,callback)
         
     } else {
         // If a DataTransfer object is not provided, get the file from the INPUT
-        const files = document.getElementById('formFile').files;
-        processFiles(files,callback)
+        const files = fileInput.target.files;
+        console.log('Processing file:', files);
+        processFiles(files, callback);
         
     }
 }

@@ -1,14 +1,14 @@
 {
     "lang": "ES",
     "clan_ranking": "clasificación de clanes",
-    "clans": "Clan",
+    "clans": "Clanes",
     "code": "código",
     "developers": "desarrolladores",
     "dashboard": "panel",
     "load_docs": "carga docs",
     "login": "iniciar sesión",
     "login_title": "Accede",
-    "name_project": "Ripoints",
+    "name_project": "Código R",
     "password": "contraseña",
     "user": "usuario",
     "welcome_to": "bienvenido a",
@@ -45,5 +45,10 @@
     "actions":"Acciones",
     "edit":"Editar",
     "position":"posición",
-    "settings":"ajustes"
+    "settings":"ajustes",
+    "sendInfo":"enviar datos",
+    "setdate":"establecer fecha",
+    "description":"descripción",
+    "teacher":"profesor",
+    "date":"fecha"
 }

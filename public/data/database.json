@@ -1,44 +1,29 @@
 {
   "clans": [
     {
+      "id": "meta",
+      "name": "meta",
+      "points": 177
+    },
+    {
       "id": "dell",
-      "name": "dell"
-    },
-    {
-      "id": "gates",
-      "name": "gates"
-    },
-    {
-      "id": "gosling",
-      "name": "gosling"
-    },
-    {
-      "id": "jobs",
-      "name": "jobs"
+      "name": "dell",
+      "points": 160
     },
     {
       "id": "linus",
-      "name": "linus"
+      "name": "linus",
+      "points": 133
     },
     {
       "id": "lovelace",
-      "name": "lovelace"
-    },
-    {
-      "id": "meta",
-      "name": "meta"
-    },
-    {
-      "id": "ritchie",
-      "name": "ritchie"
-    },
-    {
-      "id": "tesla",
-      "name": "tesla"
+      "name": "lovelace",
+      "points": 178
     },
     {
       "id": "van_rossum",
-      "name": "van rossum"
+      "name": "van rossum",
+      "points": 120
     }
   ],
   "rols": [
@@ -59,27 +44,36 @@
     {
       "id": "a1",
       "rolId": "1",
+      "name": "admin",
+      "lastName": "example",
+      "password": "1",
+      "userName": "1"
+    },
+    {
+      "id": "a2",
+      "rolId": "1",
+      "name": "mauricio",
+      "lastName": "vélez espinosa",
+      "password": "mauricio",
+      "userName": "mauricio",
+      "photo": "mauricio.webp"
+    },
+    {
+      "id": "a3",
+      "rolId": "1",
       "name": "jackeline",
       "lastName": "narvaez",
       "password": "jackeline",
       "userName": "jackeline"
     },
     {
-      "id": "a2",
+      "id": "a4",
       "rolId": "1",
-      "name": "mauricio",
-      "lastName": "otalvaro",
-      "password": "mauricio",
-      "userName": "mauricio",
-      "photo":"mauricio.webp"
-    },
-    {
-      "id": "a3",
-      "rolId": "1",
-      "name": "admin",
-      "lastName": "example",
-      "password": "1",
-      "userName": "1"
+      "name": "vermen rainer",
+      "lastName": "ayala vargas",
+      "password": "vermen",
+      "userName": "vermen",
+      "photo": "vermen.webp"
     },
     {
       "id": "t1",
@@ -92,26 +86,29 @@
     {
       "id": "t2",
       "rolId": "2",
-      "name": "Christopher",
-      "lastName": "Smith",
-      "password": "2",
-      "userName": "trainer_chris"
+      "name": "kevin wifred",
+      "lastName": "mejía torres",
+      "password": "kevin",
+      "userName": "kevin",
+      "photo": "kevin.webp"
     },
     {
       "id": "t3",
       "rolId": "2",
-      "name": "Emily",
-      "lastName": "Davis",
-      "password": "2",
-      "userName": "trainer_emily"
+      "name": "javier",
+      "lastName": "cuenca meliá",
+      "password": "javier",
+      "userName": "javier",
+      "photo": "javier.webp"
     },
     {
       "id": "t4",
       "rolId": "2",
-      "name": "Brandon",
-      "lastName": "Martinez",
-      "password": "2",
-      "userName": "trainer_brandon"
+      "name": "maría alejandra",
+      "lastName": "manosalva clavijo",
+      "password": "maría",
+      "userName": "maría",
+      "photo": "maria.webp"
     },
     {
       "id": "t5",
@@ -136,7 +133,8 @@
       "password": "gabrielgarcia",
       "name": "Gabriel",
       "lastName": "García Márquez",
-      "clanId": "van_rossum"
+      "clanId": "van_rossum",
+      "amount": 10
     },
     {
       "id": "2",
@@ -145,7 +143,8 @@
       "password": "juantorres",
       "name": "Juan Camilo",
       "lastName": "Torres García",
-      "clanId": "jobs"
+      "clanId": "van_rossum",
+      "amount": 5
     },
     {
       "id": "3",
@@ -154,7 +153,8 @@
       "password": "fernandobotero",
       "name": "Fernando",
       "lastName": "Botero Angulo",
-      "clanId": "gates"
+      "clanId": "lovelace",
+      "amount": 20
     },
     {
       "id": "4",
@@ -163,16 +163,19 @@
       "password": "luiscarlos",
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
-      "clanId": "gates"
+      "clanId": "dell",
+      "amount": 1
     },
     {
       "id": "4",
-      "rolId": "3",
+      "rolId": "1",
       "userName": "jcomte23",
       "password": "jcomte23",
       "name": "Javier",
       "lastName": "Cómbita Téllez",
-      "clanId": "lovelace"
+      "clanId": "lovelace",
+      "amount": 5,
+      "photo": "jcomte23.webp"
     }
   ],
   "clansTrainers": [
@@ -230,10 +233,11 @@
   "scoreCoins": [
     {
       "id": "1",
+      "clanId": "gates",
       "date": {
-        "day": "monday",
+        "day": "Monday",
         "month": "april",
-        "week": 3,
+        "week": 5,
         "fullDate": "2024-2-5"
       },
       "userId": "1",
@@ -241,36 +245,95 @@
     },
     {
       "id": "2",
+      "clanId": "meta",
       "date": {
-        "day": "monday",
+        "day": "Friday",
         "month": "april",
-        "week": 2,
-        "fullDate": "2024-2-5"
+        "week": 5,
+        "fullDate": "2024-2-9"
       },
       "userId": "2",
       "attendantCoins": 3
     },
     {
       "id": "3",
+      "clanId": "gates",
       "date": {
-        "day": "monday",
+        "day": "Wednesday",
         "month": "april",
-        "week": 2,
-        "fullDate": "2024-2-5"
+        "week": 7,
+        "fullDate": "2024-2-21"
       },
       "userId": "1",
-      "attendantCoins": 4
+      "attendantCoins": 2
+    },
+    {
+      "id": "4",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "april",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "1",
+      "attendantCoins": 1
+    },
+    {
+      "id": "5",
+      "clanId": "meta",
+      "date": {
+        "day": "Friday",
+        "month": "april",
+        "week": 6,
+        "fullDate": "2024-2-14"
+      },
+      "userId": "1",
+      "attendantCoins": 3
+    },
+    {
+      "id": "6",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "febrary",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "2",
+      "attendantCoins": 2
     }
   ],
   "winCoins": [
     {
       "id": "1",
       "scoreCoinId": "1",
-      "userId":"1",
+      "userId": "1",
+      "clanId": "gates",
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date":"2024-02-02"
+      "date": "2024-02-02"
+    },
+    {
+      "id": "1",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "gates",
+      "comment": "Se porto bien en clases",
+      "pointsaAllocator": "liliana",
+      "coins": 2,
+      "date": "2024-02-03"
+    },
+    {
+      "id": "1",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "gates",
+      "comment": "Se porto bien en clases",
+      "pointsaAllocator": "liliana",
+      "coins": 2,
+      "date": "2024-02-03"
     },
     {
       "id": "2",
@@ -278,7 +341,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
       "coins": 2,
-      "date":"2024-02-01"
+      "date": "2024-02-01"
     },
     {
       "id": "2",
@@ -286,7 +349,34 @@
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
       "coins": -4,
-      "date":"2024-01-30"
+      "date": "2024-01-30"
+    },
+    {
+      "id": "26a8",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "k",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "c27d",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "465b",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": -1,
+      "date": "2024-2-14"
     }
   ]
 }

@@ -38,3 +38,19 @@ $theme-colors: (
 .tres {
     border: 1px solid yellow;
 }
+
+// for correct work of translator on every page
+
+.changeLang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        height: 100%;
+        padding: .5rem;
+    }
+}
+
+.dropdown-item:last-child {
+    padding: .5rem;
+}

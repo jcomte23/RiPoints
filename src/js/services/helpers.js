@@ -9,6 +9,14 @@ export function toCapitalize(string){
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+export const formatString = (str) => {
+    return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[ ]+/g, "_")
+    .toLowerCase();
+};
+
 // to update clan points
 export async function updateClanPoints(){
     const clans = await get('clans')

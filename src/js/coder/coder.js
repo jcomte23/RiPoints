@@ -2,7 +2,7 @@ import * as bootstrap from "bootstrap";
 import Chart from "chart.js/auto";
 import { renderCoder } from "../../components/coder";
 import { getLanguague } from "../../js/translator";
-import { getWeekCoins } from "../services/getWinCoins";
+import { getCoinByWeek } from "../usecases/calculateCoins";
 
 const btnLang = document.getElementById("btn-lang");
 const span_es = document.getElementById("span_es");
@@ -33,13 +33,10 @@ const floatingBackground = document.querySelector(".floatingBackground");
 renderCoder(floatingBackground);
 
 const renderweekChart = async () => {
-  const user = JSON.parse(localStorage.getItem("userStorage"));
-
-  // const weekCoins = await getWeekCoins(user.id, 3);
-  // console.log(weekCoins);
-  
+  const data = await getCoinByWeek();
+  console.log(data);
   const datos = {
-    labels: ["Lunes", "Martes", "Miercoles", "Jueves", "viernes"],
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     datasets: [
       {
         label: "Points",
@@ -47,7 +44,7 @@ const renderweekChart = async () => {
         borderColor: "#000",
         borderWidth: 1,
         borderRadius: 5,
-        data: [5, 3, 8, 6, 0],
+        data: data,
       },
     ],
   };
