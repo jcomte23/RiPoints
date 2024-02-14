@@ -35,7 +35,11 @@ const renderSideNav = (session) => {
         <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
         <span data-i18n="developers" class="text-capitalize d-none d-sm-flex"></span>
       </li>
+      ${rol.name === "trainer"? `
+      <li class="p-2 d-none justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
+      ` :`
       <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
+      `}
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
         <span data-i18n="clans" class="text-capitalize d-none d-sm-flex"></span>
       </li>
