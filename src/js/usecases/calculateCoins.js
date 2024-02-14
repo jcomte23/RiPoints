@@ -105,6 +105,7 @@ export const getCoinByWeek = async () => {
   const accountWeekCoins = [0, 0, 0, 0, 0];
 
   for (const weekCoin of weekCoins) {
+    console.log(weekCoin);
     const dayIndex = days.indexOf(weekCoin.date.day);
     if (dayIndex !== -1) {
       accountWeekCoins[dayIndex] += weekCoin.amountDay;
