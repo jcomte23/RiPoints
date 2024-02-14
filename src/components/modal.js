@@ -59,6 +59,11 @@ export async function modal(element) {
               </div>
             </div>
             
+            <div class="containerInputDate">
+            <label>Fecha:</label>
+            <input class="inputDate" type="date" id="fecha" name="fecha">
+            </div>
+            
             <div class="container__area">
               <textarea placeholder="observaciones" id="observations" name="observations"></textarea>
                       </div>
