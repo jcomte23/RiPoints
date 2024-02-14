@@ -7,27 +7,27 @@ import '../scss/dashboard.scss'
 export const showDashboard = async (element) => {
   element.innerHTML = ` 
     <div class='dashboard' >
-      <div class='dashboard__pie' >
-          <div class='pieChart' ></div>
-      </div>
 
-      <div class='dashboard__line' >
+    <div class='dashboard__line quarter'></div>
+    <div class='dashboard__line--clan quarter'></div>
+    
+    <div class='dashboard__pie quarter' ></div>
+    <div class="dashboard__ranking" ></div>
           
-      </div>
     </div>
   `;
 
   let listClan = await getAllClan()
   let labelClan = listClan.map((clan) =>  {return clan.name})
   let pointClan = listClan.map((clan) =>  {return clan.points})
-  pieChart(document.querySelector('.pieChart'), labelClan,pointClan);
+  pieChart(document.querySelector('.dashboard__pie'), labelClan,pointClan);
 
 // THe compexety of the world
 
   let completeList = await get('users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins');
   // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02
-  console.log(completeList)
-  lineChart(document.querySelector('.dashboard__line'), labelClan);
+  lineChart(document.querySelector('.dashboard__line'),'line1');
+  lineChart(document.querySelector('.dashboard__line--clan','line2'));
   
   updateContent()
 }
