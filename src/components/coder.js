@@ -28,10 +28,10 @@ export const renderCoder = (element) => {
       <table class="table table-dark">
         <thead>
           <tr>
-            <th scope="col">Puntos</th>
-            <th scope="col">Descripcion</th>
-            <th scope="col">Profesor</th>
-            <th scope="col">Fecha</th>
+            <th class="text-capitalize" scope="col" data-i18n="points">Puntos</th>
+            <th class="text-capitalize" scope="col" data-i18n="description">Descripcion</th>
+            <th class="text-capitalize" scope="col" data-i18n="teacher">Profesor</th>
+            <th class="text-capitalize" scope="col" data-i18n="date">Fecha</th>
           </tr>
         </thead>
         <tbody id="tbody_historial">
