@@ -233,12 +233,15 @@ export const showFileAttachment = (element) => {
                 let validTemplate=validateNullValueInObject(template);
                 if(validTemplate){
                   allCoders.push(template);
-                  createScoreCoins(template);
+                  //createScoreCoins(template);
+                  console.log(template);
                 }
               })
               btnLoadData.disabled = true
           })
           console.log(allCoders);
+          console.log(listNoRepeatCoder);
+
     
       })
        

@@ -101,7 +101,7 @@ sideNavSelector.addEventListener("click", (event) => {
   }
 });
 
-showFileAttachment(showView);
+showDashboard(showView);
 
 // FUNCION PARA CAMBIAR DE IDIOMA
 const btnLang = document.getElementById("btn-lang");
