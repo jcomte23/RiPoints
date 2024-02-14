@@ -9,7 +9,7 @@ export const calculateDailyCoins = async (user, date) => {
   const scoreCoins = {
     date: calculateDate(date),
     userId: user.id,
-    winCoinsTotal: winCoins,
+    ExtraCoins: winCoins,
     attendantCoins: user.attendantCoin,
     amountDay: amountCoins(winCoins, user.attendantCoin),
   };
