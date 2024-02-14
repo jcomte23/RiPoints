@@ -6,26 +6,95 @@ function readLanguageFile(){
     return fetch(`/locales/${getLanguague()}/translation.json`);
 }
 
+Chart.defaults.color = "#000000";
 
 
-export const lineChart = async (element, labelData, listData) => {
-  element.innerHTML = `<canvas id="myLineChart"></canvas>`;
+export const lineChart = async (element, id) => {
+  element.innerHTML = `<canvas id="${id}"></canvas>`;
 
   let dictionary = await (await readLanguageFile()).json();
+
+  let dataSet = undefined
+  if (id == 'line1'){
+    dataSet = [
+      {
+        label: 'Meta',
+        data: [40,45,43,45,50],
+        borderColor: "#6b5cff",
+        backgroundColor: "#6b5cff",
+        fill: false
+      },
+      {
+        label: 'Dell',
+        data: [38,41,45,35,35],
+        borderColor: "#181e4b",
+        backgroundColor: "#181e4b",
+        fill: false
+      },
+      {
+        label: 'Linus',
+        data: [36,40,40,35,40],
+        borderColor: "#5acca4",
+        backgroundColor: "#5acca4",
+        fill: false
+      },
+      {
+        label: 'Lovelace',
+        data: [36,40,41,40,41],
+        borderColor: "#e6ca52",
+        backgroundColor: "#e6ca52",
+        fill: false
+      },
+      {
+        label: 'Van Rossum',
+        data: [35,35,33,40,37],
+        borderColor: "#fe654f",
+        backgroundColor: "#fe654f",
+        fill: false
+      }
+    ]
+  }else{
+
+    // "P": "Attendance",
+    // "R": "Late",
+    // "FJ": "Excused Absence",
+    // "FI": "Unexcused Absence",
+    dataSet =   [    {
+        label: dictionary.P,
+        data: [32,35,32,40,38],
+        borderColor: "#181e4b",
+        backgroundColor: "#181e4b",
+        fill: false
+      },
+      {
+        label: dictionary.R,
+        data: [2,5,1,4,5],
+        borderColor: "#5acca4",
+        backgroundColor: "#5acca4",
+        fill: false
+      },
+      {
+        label: dictionary.FJ,
+        data: [3,3,2,4,4],
+        borderColor: "#e6ca52",
+        backgroundColor: "#e6ca52",
+        fill: false
+      },
+      {
+        label: dictionary.FI,
+        data: [2,0,3,2,4],
+        borderColor: "#fe654f",
+        backgroundColor: "#fe654f",
+        fill: false
+      }
+    ]
+  }
 
   const data = {
     labels: dictionary.days.map((day) => {
       return toCapitalize(day);
     }),
-    datasets: [
-      {
-        label: 'Dataset 1',
-        data: [40,40,30,20],
-        borderColor: "#ffffff",
-        backgroundColor: "#ff0f0f",
-        fill: false
-      }
-    ]
+    datasets: dataSet
   };
 
   const config = {
@@ -36,7 +105,7 @@ export const lineChart = async (element, labelData, listData) => {
       plugins: {
         title: {
           display: true,
-          text: (ctx) => dictionary.Pp,
+          text: (ctx) => dictionary.weeklychart,
         },
         tooltip: {
           mode: "index",
@@ -58,10 +127,10 @@ export const lineChart = async (element, labelData, listData) => {
           },
         },
         y: {
-          stacked: true,
+          stacked: false,
           title: {
             display: true,
-            text: dictionary.Pp,
+            text: id == 'line1' ? dictionary.points : dictionary.developers,
           },
           grid: {
             display: false,
@@ -71,8 +140,7 @@ export const lineChart = async (element, labelData, listData) => {
     },
   };
 
-  const ctx = document.getElementById("myLineChart");
-  Chart.defaults.color = "#FFFFFF";
+  const ctx = document.getElementById(`${id}`);
 
   new Chart(ctx, config);
   
@@ -95,19 +163,12 @@ export const pieChart = async (element, labelData, listData) => {
                    "#181e4b",
                    "#5acca4",
                    "#e6ca52",
-                   "#fe654f",
-                   "#ffffff",
-                   "#ffd700",
-                   "#c0c0c0",
-                   "#cd7f32",
-                   "#ededed",
-                   "#666666",
-                   "#27272a",
-                   "#eaa2fc"
+                   "#fe654f"
                 ],
                 label: 'Rankig: ',
                 data: listData.map((data)=>{return data}),
-                borderWidth: 1
+                borderWidth: 1,
+                color: "#000"
               }]
             },
   });

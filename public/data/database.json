@@ -1,24 +1,14 @@
 {
   "clans": [
     {
+      "id": "meta",
+      "name": "meta",
+      "points":177
+    },
+    {
       "id": "dell",
       "name": "dell",
       "points":160
-    },
-    {
-      "id": "gates",
-      "name": "gates",
-      "points":165
-    },
-    {
-      "id": "gosling",
-      "name": "gosling",
-      "points":140
-    },
-    {
-      "id": "jobs",
-      "name": "jobs",
-      "points":130
     },
     {
       "id": "linus",
@@ -29,21 +19,6 @@
       "id": "lovelace",
       "name": "lovelace",
       "points":178
-    },
-    {
-      "id": "meta",
-      "name": "meta",
-      "points":177
-    },
-    {
-      "id": "ritchie",
-      "name": "ritchie",
-      "points":173
-    },
-    {
-      "id": "tesla",
-      "name": "tesla",
-      "points":123
     },
     {
       "id": "van_rossum",
@@ -266,12 +241,11 @@
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "attendantCoins": 1,
-      "ExtraCoins": 2,
-      "amountDay": 3
+      "attendantCoins": 1
     },
     {
       "id": "2",
+      "clanId": "meta",
       "date": {
         "day": "Friday",
         "month": "april",
@@ -279,12 +253,11 @@
         "fullDate": "2024-2-9"
       },
       "userId": "2",
-      "attendantCoins": 3,
-      "ExtraCoins": 2,
-      "amountDay": 5
+      "attendantCoins": 3
     },
     {
       "id": "3",
+      "clanId": "gates",
       "date": {
         "day": "Wednesday",
         "month": "april",
@@ -292,9 +265,7 @@
         "fullDate": "2024-2-7"
       },
       "userId": "1",
-      "attendantCoins": 2,
-      "ExtraCoins": 2,
-      "amountDay": 4
+      "attendantCoins": 2
     }
   ],
   "winCoins": [
