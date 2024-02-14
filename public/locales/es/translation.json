@@ -47,6 +47,8 @@
     "position":"posición",
     "settings":"ajustes",
     "sendInfo":"enviar datos",
-    "setdate":"establecer fecha"
-
+    "setdate":"establecer fecha",
+    "description":"descripción",
+    "teacher":"profesor",
+    "date":"fecha"
 }

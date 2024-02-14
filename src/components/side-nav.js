@@ -5,12 +5,16 @@ import { showFileAttachment } from "./FileAttachment";
 import { getLanguague } from "../js/translator";
 import "../scss/tables.scss";
 
+const session = JSON.parse(localStorage.getItem("userStorage"));
+
 const renderSideNav = (session) => {
-  const { name, photo, lastName, rol } = session;
-  return `
+    const { name, photo, lastName, rol } = session;
+    return `
     <div class="d-flex flex-column align-items-center w-100 border-bottom" >
       <figure class="profile__pic border border-5 rounded-circle d-flex justify-content-center align-items-center"> 
-        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
+        <img src="../../../img/persons/${
+            photo !== undefined ? photo : "default.webp"
+        }" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2 d-flex flex-column align-items-center d-none d-sm-flex text-center" >
         <h2 class="text-capitalize fs-5">${name} ${lastName}</h2>
@@ -19,8 +23,9 @@ const renderSideNav = (session) => {
     </div>
 
     <ul class="container__links d-flex flex-column justify-content-start align-items-center gap-3 list-unstyled mt-3 p-0 h-75 w-100 ">    
-      ${rol.name === "admin" ?
-      `  
+      ${
+          rol.name === "admin"
+              ? `  
         <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
           <img src="/svgs/dashboard_icon.svg" alt="dashboard-icon" width="24" height="23" />
           <span data-i18n="dashboard" class="text-capitalize d-none d-sm-flex"></span>
@@ -30,16 +35,21 @@ const renderSideNav = (session) => {
           <span data-i18n="load_docs" class="text-capitalize d-none d-sm-flex"></span>
         </li>
         `
-      : ""}
+              : ""
+      }
       <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
         <img src="/icons/coder-icon.svg" alt="coders" width="25" height="25" />
         <span data-i18n="developers" class="text-capitalize d-none d-sm-flex"></span>
       </li>
-      ${rol.name === "trainer"? `
+      ${
+          rol.name === "trainer"
+              ? `
       <li class="p-2 d-none justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
-      ` :`
+      `
+              : `
       <li class="p-2 d-flex justify-content-start align-items-center gap-2 rounded-start rounded-end w-100">
-      `}
+      `
+      }
         <img src="/svgs/clanes_icon.svg" alt="clanes" width="25" height="25" />
         <span data-i18n="clans" class="text-capitalize d-none d-sm-flex"></span>
       </li>
@@ -65,43 +75,42 @@ const renderSideNav = (session) => {
         </ul>
       </div>
     </div>  
-  `
-}
+  `;
+};
 
 const sideNav = () => {
-  const nav = document.querySelector(".side-nav");
-  const session = JSON.parse(localStorage.getItem("userStorage"));
-  nav.innerHTML = renderSideNav(session);
-}
+    const nav = document.querySelector(".side-nav");
+
+    nav.innerHTML = renderSideNav(session);
+};
 
 sideNav();
 
 const showView = document.getElementById("containerTable");
 const sideNavSelector = document.getElementsByTagName("ul")[0];
 sideNavSelector.addEventListener("click", (event) => {
-  const position = event.target.children[1].textContent.toLowerCase()
-  console.log(position)
-  switch (position) {
-    case "coders":
-    case "desarrolladores":
-      showCoders(showView);
-      break;
-    case "panel":
-    case "dashboard":
-      showDashboard(showView);
-      break;
-    case "carga docs":
-    case "load docs":
-      showFileAttachment(showView);
-      break;
-    case "clanes":
-    case "clans":
-      showClans(showView);
-      break;
-  }
+    let position = event.target.children[1].textContent.toLowerCase();
+
+    switch (position) {
+        case "coders":
+        case "desarrolladores":
+            showCoders(showView);
+            break;
+        case "panel":
+        case "dashboard":
+            showDashboard(showView);
+            break;
+        case "carga docs":
+        case "load docs":
+            showFileAttachment(showView);
+            break;
+        case "clanes":
+        case "clans":
+            showClans(showView);
+    }
 });
 
-showFileAttachment(showView)
+session.rol.name === "trainer" ? showCoders(showView) : showDashboard(showView);
 
 // FUNCION PARA CAMBIAR DE IDIOMA
 const btnLang = document.getElementById("btn-lang");
@@ -110,22 +119,22 @@ const span_en = document.getElementById("span_en");
 
 let lang = getLanguague();
 if (lang === "es") {
-  span_es.classList.add("d-none");
-  span_en.classList.remove("d-none");
+    span_es.classList.add("d-none");
+    span_en.classList.remove("d-none");
 } else {
-  span_es.classList.remove("d-none");
-  span_en.classList.add("d-none");
+    span_es.classList.remove("d-none");
+    span_en.classList.add("d-none");
 }
 
 btnLang.addEventListener("click", () => {
-  let lang = getLanguague();
-  if (lang === "es") {
-    span_es.classList.add("d-none");
-    span_en.classList.remove("d-none");
-  } else {
-    span_es.classList.remove("d-none");
-    span_en.classList.add("d-none");
-  }
+    let lang = getLanguague();
+    if (lang === "es") {
+        span_es.classList.add("d-none");
+        span_en.classList.remove("d-none");
+    } else {
+        span_es.classList.remove("d-none");
+        span_en.classList.add("d-none");
+    }
 });
 
 // FUNCION PARA CERRAR SESION
@@ -133,11 +142,10 @@ const btnLogout = document.getElementById("btn-logout");
 btnLogout ? btnLogout.addEventListener("click", logout) : "";
 
 function logout() {
-  localStorage.setItem("userStorage", "");
-  localStorage.setItem("isAutorizated", "false");
-  window.location.href = "/";
+    localStorage.setItem("userStorage", "");
+    localStorage.setItem("isAutorizated", "false");
+    window.location.href = "/";
 }
-
 
 //FUNCION PARA LA BARRA DE NAVEGACION
 // const iconMenu = document.querySelector(".icon-menu")
@@ -160,5 +168,3 @@ function logout() {
 //     nav.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.classList.add("d-none")
 //   }
 // })
-
-
