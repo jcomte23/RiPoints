@@ -47,7 +47,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev2": "concurrently \"vite\" \"json-server json-server.json\" \"json-server ./public/data/database.json --port 3000\"",
+    "dev2": "concurrently \"vite\" \"json-server --watch ./public/data/database.json --port 3000\"",
     "build": "vite build",
     "preview": "vite preview"
   },

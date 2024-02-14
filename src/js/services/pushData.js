@@ -1,11 +1,12 @@
-//! scoreCoin: userId,date,attendantCoins
-export const createScoreCoins = async (scoreCoin) => {
+//! addCoder:
+export const createScoreCoins = async (data) => {
   await fetch(`${import.meta.env.VITE_BASE_URL}/scoreCoins`, {
-    method: "POST",
-    body: JSON.stringify(scoreCoin),
+    method: "PUT",
     headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
   });
 };
+
 
 //! addCoder:
 export const addCoder = async (data) => {

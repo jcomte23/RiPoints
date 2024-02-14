@@ -186,38 +186,62 @@ export const showFileAttachment = (element) => {
           if (listNoRepeatCoder.indexOf(name) == -1) {
             let coder = {
               rolId: "3",
-              userName: name,
-              password: name,
+              userName: formatString(`${name+lastName}`),
+              password: formatString(`${name+lastName}`),
               name: name,
               lastName: formatString(lastName),
               clanId: clanId.replace("clan_", "").replace('clan ',''),
               amount: 0,
             };
-            addCoder(coder);
+            listNoRepeatCoder.push(name)
+            //addCoder(coder);
           }
         }
 
-        btnLoadData.addEventListener("click", () => {
-          usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
-            //let firstDayPoint = Object.values(day_point)[0];
-            //let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
-            let firstDayPoint = Object.entries(day_point);
-            validateCoder(name, lastName, clanId);
+        const formatString = (str) => {
+          return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[ ]+/g, "_").toLowerCase();
+      } 
 
-            firstDayPoint.forEach(([day, point]) => {
-              let actualDate = calculateDate();
-              actualDate.day = day;
-              let template = {
-                date: actualDate,
-                userId: formatString(`${name} ${lastName}`),
-                attendantCoins: point,
-                clanId,
-              };
-              createScoreCoins(template);
-            });
-            btnLoadData.disabled = true;
-          });
-        });
+      function validateNullValueInObject(template){
+        if (
+          typeof template !== "object" ||
+          !template.date ||
+          !template.userId ||
+          !template.attendantCoins ||
+          !template.clanId
+        ) {
+          return false;
+        }
+        return true;
+      }
+
+      btnLoadData.addEventListener('click',()=>{
+          let allCoders = [];
+          usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
+              //let firstDayPoint = Object.values(day_point)[0];
+              //let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
+              let firstDayPoint = Object.entries(day_point);
+              firstDayPoint.forEach(([day, point]) => {
+                  let actualDate = calculateDate();
+                  actualDate.day = day;
+                  let template = { 
+                    userId: formatString(`${name} ${lastName}`), 
+                    clanId: clanId.replace("clan_", "").replace('clan ',''),
+                    date: actualDate, 
+                    attendantCoins: point
+                  }
+                let validTemplate=validateNullValueInObject(template);
+                if(validTemplate){
+                  allCoders.push(template);
+                  createScoreCoins(template);
+                }
+              })
+              btnLoadData.disabled = true
+          })
+          console.log(allCoders);
+    
+      })
+       
       }
     });
   }
