@@ -73,9 +73,10 @@
   box-shadow: 0 0 0.2rem black;
   margin-bottom: 1rem;
 
-  &.profile__mint{
+  &.profile__mint {
     animation: safe 1s infinite ease;
-    .coder__profile__clanShiled{
+
+    .coder__profile__clanShiled {
       animation: safe 1s infinite ease;
     }
   }
@@ -86,14 +87,18 @@
   position: absolute;
   width: calc(9vh + 1vw);
   height: calc(9vh + 1vw);
-  background-color: v.$primary;
-  background-image: url(/img/img_globales/eagle-esport-gaming-team-logo_343694-1252_1.webp);
-  background-size: contain;
-  object-position: center;
+  background-color: v.$white;
   bottom: -1rem;
   right: -1rem;
   border-radius: 50%;
   border: 0.5rem solid white;
+  color: v.$primary;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  transform: rotate(-15deg);
 }
 
 .coder {
@@ -162,86 +167,19 @@
   display: none;
 }
 
-/* NAVBAR */
 
-// .offcanvas-body {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-// .menu__header {
-//   width: 100%;
-//   display: flex;
-//   gap: 1rem;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-
-// }
-
-// .offcanvas-body .btn{
-//   min-height: 3rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .menu__header--lang {
-//   align-self: flex-end;
-//   display: flex;
-//   justify-content: space-between !important;
-//   align-items: center;
-//   height: 5vh;
-//   width: 100%;
-//   padding: 0 1rem;
-//   color: white;
-//   background-color: v.$secondary;
-//   border-radius: var(--bs-border-radius);
-//   cursor: pointer;
-// }
-
-// .menu__header--lang h4 {
-//   font-size: 1rem;
-//   margin: 0;
-// }
-
-// .lang--flag {
-//   width: 3rem;
-//   height: 2rem;
-//   background-image: url(/img/img_globales/EN.webp);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-// }
-
-// .lang--flag.es {
-//   background-image: url(/img/img_globales/ES.webp);
-// }
-
-// .btn-primary-coder {
-//   outline: none;
-//   border: none;
-//   color: white;
-//   width: 100%;
-//   background-color: #181e4b;
-// }
-
-// .offcanvas-body button {
-//   margin-bottom: 1rem;
-// }
-
-.dropdown-item:hover{
-  background-color: v.$secondary;;
+.dropdown-item:hover {
+  background-color: v.$secondary;
+  ;
   color: v.$white;
 }
+
 // .dropdown-menu li:hover{
 //   cursor: pointer;
 //   color: v.$white;
 // }
 
-.changeLang:hover{
+.changeLang:hover {
   cursor: pointer;
   color: v.$white;
 }
@@ -255,63 +193,66 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-    gap: 20px;
+  gap: 20px;
 
- 
-  
-      .container-graphic {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
 
-        justify-content: center;
-        color: white;
-        text-align: left;
-  
-        span {
-          font-size: 24px;
-        }
-  
-        .graphic {
-          width: 100% !important;
-          height: 100% !important;
-        }
-      }
 
-      .container-history {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-  
-        justify-content: center;
-        color: white;
-        text-align: left;
+  .container-graphic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
-        span {
-          font-size: 24px;
-          margin-bottom: 20px;
-        }
+    justify-content: center;
+    color: white;
+    text-align: left;
 
-        table, tr, td, th{
-          background-color: transparent;
-          border: none;
-        }
-  
-      }
-  
-  
-    
+    span {
+      font-size: 24px;
+    }
+
+    .graphic {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
-  .table-safe{
-    color: v.$mint !important;
+  .container-history {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    color: white;
+    text-align: left;
+
+    span {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    table,
+    tr,
+    td,
+    th {
+      background-color: transparent;
+      border: none;
+    }
+
   }
 
-  .table-danger{
-    color: v.$tomato !important;
-  }
+
+
+}
+
+.table-safe {
+  color: v.$mint !important;
+}
+
+.table-danger {
+  color: v.$tomato !important;
+}
 
 // .graphic__container .graphic {
 //   height: 30vh !important;
@@ -375,21 +316,23 @@
   }
 }
 
-@media (max-width: 910px){
-  body, html{
+@media (max-width: 910px) {
+
+  body,
+  html {
     height: auto;
   }
 
-  .floatingBackground{
+  .floatingBackground {
     height: auto;
   }
 
-  .container-graphics{
+  .container-graphics {
     overflow-y: unset;
     height: auto;
   }
 
-  .container-history{
+  .container-history {
     overflow-x: scroll;
   }
 }
@@ -458,11 +401,13 @@
 
   .container-graphics {
     flex-direction: column;
-    overflow-y:auto;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: v.$secondary #f4f4f4;
     gap: 50px;
     padding: 10px;
 
-    
+
     .container-graphic {
       width: 100%;
       height: 100%;
@@ -473,17 +418,17 @@
       color: white;
       text-align: left;
 
-   
+
       span {
         font-size: 24px;
       }
 
-      .graphic{
+      .graphic {
         width: 100% !important;
         height: 100% !important;
       }
-    
-     
+
+
     }
 
 
@@ -491,4 +436,3 @@
 }
 
 // coder table
-

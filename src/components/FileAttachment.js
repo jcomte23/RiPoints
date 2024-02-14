@@ -5,11 +5,21 @@ import { createScoreCoins } from '../js/services/saveScoreCoins';
 import { calculateDate } from '../js/usecases/calculateCoins';
 import { smallAlertError } from '../js/alerts';
 
+export let year = null;
+export let month = null;
+
 export const showFileAttachment = (element) => {
     let daysPerClass = {};
     element.innerHTML = ` 
         <div class="file">
             <h1 data-i18n="loadFile" class="fw-bold"></h1>
+            
+            <div class="setDate" >
+                <label data-i18n="setdate" for="start"></label>
+                <input type="month" id="setDate" name="start" min="2023-01" />
+            </div>
+
+
             <div class='fileInfo' >
                 <div class="fileInfo__row" id="development">
                     <div data-i18n="development" class='fileInfo__row--item'></div>
@@ -28,15 +38,27 @@ export const showFileAttachment = (element) => {
                     <div data-i18n="waiting" class='waiting'></div>
                 </div>
             </div>
-            <label for='formFile' class="d-flex flex-column py-2 align-items-center file_input" id="labelFile">
+
+            <div class="loadData" >
+                <button data-i18n="sendInfo" disabled class="loadData__buton" ></button>
+            </div>
+
+            <label for='formFile' class="file_input" id="labelFile">
                 <figure>
                     <img src="/icons/file_upload.svg" width="100" alt="logo">
                 </figure>
                 <h3 data-i18n="drop" >Drop your file here!</h3>
                 <p data-i18n="filesfilter" >Only .xlsx files are accepted.</p>
-                <input class="form-control" type="file" id="formFile">
+                <input multiple class="form-control" type="file" id="formFile">
             </label>
         </div>`;
+
+    // SET DATE
+    let date = document.getElementById('setDate')
+    // get actual date
+    date.value = new Date().toISOString().split('T')[0].slice(0,7)
+    year = date.value.slice(0, 4)
+    month = date.value.slice(5,7)
 
     // DRAG AND DROP EVENT ---->
 
@@ -108,8 +130,8 @@ export const showFileAttachment = (element) => {
 
     function handleDrop(e) {
         e.preventDefault();
-        const dt = e.dataTransfer;
-        handleFileSelect(dt, (sheets) => {
+        const dt = e;
+        handleFileSelect(dt, function (sheets) {
 
             document.querySelectorAll(".waiting").forEach(element => element.style.display = "none");
 
@@ -133,6 +155,9 @@ export const showFileAttachment = (element) => {
             
             if (Object.keys(daysPerClass).length === 4) {
 
+                let btnLoadData = document.querySelector('.loadData__buton')
+                btnLoadData.disabled = false
+
                 if(!validateDays(daysPerClass)){
                     smallAlertError("Los dias no concuerdan, no se realizara ninguna operacion");
                     return;
@@ -140,17 +165,29 @@ export const showFileAttachment = (element) => {
 
                 let usersAndCoins = getFinalStructure(daysPerClass);
 
-                console.log(usersAndCoins);
-                console.log(daysPerClass);
+                //console.log(daysPerClass);
+                //console.log(usersAndCoins);
 
                 const formatString = (str) => {
                     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[ ]+/g, "_").toLowerCase();
                 } 
 
-                usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
-                    let firstDayPoint = Object.values(day_point)[0];
-                    let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
-                    //createScoreCoins(template);
+                btnLoadData.addEventListener('click',()=>{
+                    let allCoders = [];
+                    usersAndCoins.forEach(({ name, lastName, day_point, clanId }) => {
+                        //let firstDayPoint = Object.values(day_point)[0];
+                        //let template = { date: calculateDate(), userId: formatString(`${name} ${lastName}`), attendantCoins: firstDayPoint, clanId };
+                        let firstDayPoint = Object.entries(day_point);
+                        firstDayPoint.forEach(([day, point]) => {
+                            let actualDate = calculateDate();
+                            actualDate.day = day;
+                            let template = { date: actualDate, userId: formatString(`${name} ${lastName}`), attendantCoins: point, clanId };
+                            allCoders.push(template);
+                        })
+                        //createScoreCoins(template);
+                        btnLoadData.disabled = true
+                    })
+                    console.log(allCoders);
                 })
             };
             

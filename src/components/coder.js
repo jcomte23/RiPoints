@@ -1,4 +1,5 @@
 import { getUserById } from "../js/services/getUser";
+import { setImageMultiple } from "../js/services/helpers";
 import { changeLanguageOnClick, updateContent } from "../js/translator";
 import { historyWinCoinsByUserId } from "../js/usecases/winCoinsHistory";
 
@@ -41,6 +42,10 @@ export const renderCoder = (element) => {
   </div>
   `;
 
+  document.querySelectorAll('.coder__name').forEach((el) => {
+    el.textContent = user.name + ' ' + user.lastName 
+  })
+  setImageMultiple('.coder__profile__clanShiled',[user.clanId,user.clanId])
   document.querySelectorAll(".coder__name").forEach((el) => {
     el.textContent = user.name + " " + user.lastName;
   });
