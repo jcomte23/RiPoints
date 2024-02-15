@@ -1,18 +1,23 @@
-import { getScoreCoinsByDate } from "../services/getScoreCoins";
+import {
+  getScoreCoinsByDate,
+  getScoreCoinsByDateAndUserId,
+} from "../services/getScoreCoins";
 import {
   getAllWinCoinsByUserIdAndDate,
   getWeekCoins,
 } from "../services/getWinCoins";
+import { updateCoinsCoder } from "../services/updateCoinsCoder";
 import { updateDailycoins } from "../services/updateDailyCoins";
 
 //Esta funcion se debe llamar diariamente, con preferencia cada que se suba el archivo de excel
 //user: esto provine del excel, el cual debe contener el id del usuario y la cantida de puntos
 export const calculateDailyCoins = async (user, date) => {
   const winCoins = await contWinCoins(user[0].id, date);
-  const scoreScoinId = await getScoreCoinsByDate(date);
+  const scoreScoinId = await getScoreCoinsByDateAndUserId(date, user[0].id);
   //! De momento es cero, pero ahi va el valor ganado por asistencia
   const extraCoins = amountCoins(winCoins, 0);
-  updateDailycoins(extraCoins, scoreScoinId[0].id);
+  await updateDailycoins(extraCoins, scoreScoinId[0].id);
+  await calculateAmountCoinsByUser(user[0].id);
 };
 
 const amountCoins = (winCoin, attendantCoin) => {
@@ -25,7 +30,7 @@ const contWinCoins = async (userId, date) => {
   extraCoins.forEach((item) => {
     totalCoins += item.coins;
   });
-  console.log(totalCoins);
+
   return totalCoins;
 };
 //Esta funcion sirve para cuando el trainer asigne puntos, por eso el undefined
@@ -108,6 +113,19 @@ export const getCoinByWeek = async () => {
 };
 
 //? Esta funcion es la que debe trar todos los scoreCoins y comparar cada id, para luego modificarlo (Hacerle un pacth)
-export const calculateAmountCoinsByUser = (userId) => {
-  
+export const calculateAmountCoinsByUser = async (userId) => {
+  const month = calculateDate().month;
+  const monthlyScoreCoin = await getScoreCoinsByDate(month);
+  console.log(monthlyScoreCoin);
+  const coins = amountCoinsCoder(monthlyScoreCoin);
+  updateCoinsCoder(userId,coins);
+};
+
+const amountCoinsCoder = (monthlyScoreCoin) => {
+  let totalCoins = 0;
+  monthlyScoreCoin.forEach((coinsDay) => {
+    totalCoins += coinsDay.amountDay;
+  });
+  console.log(totalCoins);
+  return totalCoins;
 };

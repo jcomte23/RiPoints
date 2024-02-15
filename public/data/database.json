@@ -134,7 +134,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 10
+      "amount": 22
     },
     {
       "id": "2",
@@ -236,7 +236,7 @@
       "clanId": "gates",
       "date": {
         "day": "Monday",
-        "month": "Febrary",
+        "month": "February",
         "week": 5,
         "fullDate": "2024-2-5"
       },
@@ -249,7 +249,7 @@
       "clanId": "meta",
       "date": {
         "day": "Friday",
-        "month": "Febrary",
+        "month": "February",
         "week": 5,
         "fullDate": "2024-2-9"
       },
@@ -262,7 +262,7 @@
       "clanId": "gates",
       "date": {
         "day": "Wednesday",
-        "month": "Febrary",
+        "month": "February",
         "week": 7,
         "fullDate": "2024-2-21"
       },
@@ -275,7 +275,7 @@
       "clanId": "gates",
       "date": {
         "day": "Tuesday",
-        "month": "Febrary",
+        "month": "February",
         "week": 7,
         "fullDate": "2024-2-20"
       },
@@ -288,20 +288,20 @@
       "clanId": "meta",
       "date": {
         "day": "Wednesday",
-        "month": "Febrary",
+        "month": "February",
         "week": 6,
         "fullDate": "2024-2-14"
       },
       "userId": "1",
       "attendantCoins": 3,
-      "amountDay": 1
+      "amountDay": -3
     },
     {
       "id": "6",
       "clanId": "gates",
       "date": {
         "day": "Monday",
-        "month": "Febrary",
+        "month": "February",
         "week": 7,
         "fullDate": "2024-2-19"
       },
@@ -375,6 +375,42 @@
       "comment": "funciona?",
       "pointsaAllocator": "trainer example",
       "coins": 2,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "9f54",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "aaa",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "13c9",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "a",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "9ba5",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "a",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "dfc9",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "a",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
       "date": "2024-2-14"
     }
   ]
