@@ -1,19 +1,18 @@
-import { getAllWinCoins, getWeekCoins } from "../services/getWinCoins";
+import { getScoreCoinsByDate } from "../services/getScoreCoins";
+import {
+  getAllWinCoinsByUserIdAndDate,
+  getWeekCoins,
+} from "../services/getWinCoins";
+import { updateDailycoins } from "../services/updateDailyCoins";
 
 //Esta funcion se debe llamar diariamente, con preferencia cada que se suba el archivo de excel
 //user: esto provine del excel, el cual debe contener el id del usuario y la cantida de puntos
 export const calculateDailyCoins = async (user, date) => {
-  const winCoins = await contWinCoins(user.id, date);
-  console.log(winCoins);
-  //! Mirar el formato final del json, porque aqui faltan algunos campos para que sea igual
-  const scoreCoins = {
-    date: calculateDate(date),
-    userId: user.id,
-    ExtraCoins: winCoins,
-    attendantCoins: user.attendantCoin,
-    amountDay: amountCoins(winCoins, user.attendantCoin),
-  };
-  return scoreCoins;
+  const winCoins = await contWinCoins(user[0].id, date);
+  const scoreScoinId = await getScoreCoinsByDate(date);
+  //! De momento es cero, pero ahi va el valor ganado por asistencia
+  const extraCoins = amountCoins(winCoins, 0);
+  updateDailycoins(extraCoins, scoreScoinId[0].id);
 };
 
 const amountCoins = (winCoin, attendantCoin) => {
@@ -21,17 +20,12 @@ const amountCoins = (winCoin, attendantCoin) => {
 };
 
 const contWinCoins = async (userId, date) => {
-  const allWinCoins = await getAllWinCoins();
-  const filterWinCoins = allWinCoins.filter((winCoin) => {
-    return (
-      winCoin.scoreCoin.userId == userId &&
-      winCoin.scoreCoin.date.fullDate == date
-    );
+  const extraCoins = await getAllWinCoinsByUserIdAndDate(userId, date);
+  let totalCoins = 0;
+  extraCoins.forEach((item) => {
+    totalCoins += item.coins;
   });
-  const totalCoins = filterWinCoins.reduce(
-    (total, winCoin) => total + winCoin.coins,
-    0
-  );
+  console.log(totalCoins);
   return totalCoins;
 };
 //Esta funcion sirve para cuando el trainer asigne puntos, por eso el undefined
@@ -105,7 +99,6 @@ export const getCoinByWeek = async () => {
   const accountWeekCoins = [0, 0, 0, 0, 0];
 
   for (const weekCoin of weekCoins) {
-    console.log(weekCoin);
     const dayIndex = days.indexOf(weekCoin.date.day);
     if (dayIndex !== -1) {
       accountWeekCoins[dayIndex] += weekCoin.amountDay;

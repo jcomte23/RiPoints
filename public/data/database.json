@@ -242,7 +242,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay":5
+      "amountDay": 5
     },
     {
       "id": "2",
@@ -255,7 +255,7 @@
       },
       "userId": "2",
       "attendantCoins": 3,
-      "amountDay":5
+      "amountDay": 5
     },
     {
       "id": "3",
@@ -268,7 +268,7 @@
       },
       "userId": "1",
       "attendantCoins": 2,
-      "amountDay":5
+      "amountDay": 5
     },
     {
       "id": "4",
@@ -281,7 +281,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay":5
+      "amountDay": 5
     },
     {
       "id": "5",
@@ -294,7 +294,7 @@
       },
       "userId": "1",
       "attendantCoins": 3,
-      "amountDay":5
+      "amountDay": 1
     },
     {
       "id": "6",
@@ -307,7 +307,7 @@
       },
       "userId": "2",
       "attendantCoins": 2,
-      "amountDay":5
+      "amountDay": 5
     }
   ],
   "winCoins": [
@@ -366,6 +366,15 @@
       "comment": "k",
       "pointsaAllocator": "trainer example",
       "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "f7e6",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "funciona?",
+      "pointsaAllocator": "trainer example",
+      "coins": 2,
       "date": "2024-2-14"
     }
   ]
