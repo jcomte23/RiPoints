@@ -9,7 +9,6 @@ export const showClans = async (element) => {
                 <h1 data-i18n="clan_ranking"></h1>
             </article>
             <table class="ranking__table">
-                
                 <tbody>
                     <tr>
                         <td><div data-i18n="position"></div></td>
