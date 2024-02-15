@@ -69,9 +69,8 @@ export function showCoders(element) {
         </thead>
         <tbody id="codersList" >
         </tbody>
-      </table>
+        </table>
     </div> 
-
     `;
 
   loadCodersTr(document.getElementById("codersList")).then(() => {

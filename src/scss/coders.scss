@@ -47,7 +47,7 @@
         color: v.$gray;
         padding: .5rem 0;
     }
-    tbody tr:not(:last-child){
+    tbody tr:not(:last-of-type){
         border-bottom: .1rem solid v.$antiflash;
     }
     tbody tr td{
@@ -144,8 +144,8 @@
     padding:  0 0 .2rem 0;
     width: 100%;
     border-bottom: .15rem solid v.$mauve;
-
 }
+
 
 @keyframes intermitated {
     0%,100%{
