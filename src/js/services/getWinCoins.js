@@ -22,7 +22,7 @@ export const calcWinCoins = (arr) => {
   }
 };
 
-export const getAllWinCoins = async (userId) => {
+export const getAllWinCoins = async () => {
   const response = await fetch(
     `${import.meta.env.VITE_BASE_URL}/winCoins?_embed=scoreCoin`
   );
@@ -31,6 +31,14 @@ export const getAllWinCoins = async (userId) => {
   return data;
 };
 
+export const getAllWinCoinsByUserIdAndDate = async (userId,date) => {
+  const response = await fetch(
+    `${import.meta.env.VITE_BASE_URL}/winCoins?userId=${userId}&date=${date}`
+  );
+  const data = await response.json();
+
+  return data;
+};
 
 export const getAmountByUserId = async (userId) => {
   const response = await fetch(

@@ -74,6 +74,5 @@ const historyCoderRender = async (user) => {
 const amountByUserId = async (userId) => {
   const user = await getUserById(userId);
   const counter = document.getElementById("counter");
-  console.log(counter);
-  counter.innerHTML = user.amount;
+  counter.innerHTML = user[0].amount;
 };

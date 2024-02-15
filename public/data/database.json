@@ -241,7 +241,8 @@
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "attendantCoins": 1
+      "attendantCoins": 1,
+      "amountDay": 5
     },
     {
       "id": "2",
@@ -253,7 +254,8 @@
         "fullDate": "2024-2-9"
       },
       "userId": "2",
-      "attendantCoins": 3
+      "attendantCoins": 3,
+      "amountDay": 5
     },
     {
       "id": "3",
@@ -265,7 +267,8 @@
         "fullDate": "2024-2-21"
       },
       "userId": "1",
-      "attendantCoins": 2
+      "attendantCoins": 2,
+      "amountDay": 5
     },
     {
       "id": "4",
@@ -277,7 +280,8 @@
         "fullDate": "2024-2-20"
       },
       "userId": "1",
-      "attendantCoins": 1
+      "attendantCoins": 1,
+      "amountDay": 5
     },
     {
       "id": "5",
@@ -289,7 +293,8 @@
         "fullDate": "2024-2-14"
       },
       "userId": "1",
-      "attendantCoins": 3
+      "attendantCoins": 3,
+      "amountDay": 1
     },
     {
       "id": "6",
@@ -301,7 +306,8 @@
         "fullDate": "2024-2-19"
       },
       "userId": "2",
-      "attendantCoins": 2
+      "attendantCoins": 2,
+      "amountDay": 5
     }
   ],
   "winCoins": [
@@ -341,6 +347,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
       "coins": 2,
+      "userId": "2",
       "date": "2024-02-01"
     },
     {
@@ -349,6 +356,7 @@
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
       "coins": -4,
+      "userId": "3",
       "date": "2024-01-30"
     },
     {
@@ -361,21 +369,12 @@
       "date": "2024-2-14"
     },
     {
-      "id": "c27d",
+      "id": "f7e6",
       "scoreCoinId": "5",
       "userId": "1",
-      "comment": "",
-      "pointsaAllocator": "admin example",
-      "coins": 1,
-      "date": "2024-2-14"
-    },
-    {
-      "id": "465b",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "",
-      "pointsaAllocator": "admin example",
-      "coins": -1,
+      "comment": "funciona?",
+      "pointsaAllocator": "trainer example",
+      "coins": 2,
       "date": "2024-2-14"
     }
   ]
