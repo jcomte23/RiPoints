@@ -5,7 +5,7 @@ import { showFileAttachment } from "./FileAttachment";
 import { getLanguague } from "../js/translator";
 import "../scss/tables.scss";
 
-export const session = JSON.parse(localStorage.getItem("userStorage"));
+const session = JSON.parse(localStorage.getItem("userStorage"));
 
 const renderSideNav = (session) => {
     const { name, photo, lastName, rol } = session;
