@@ -1,6 +1,7 @@
 import { filter } from "../js/coder/coders";
 import { updateContent } from "../js/translator";
 import { loadCodersTr } from "./listTr";
+import { session } from  "./side-nav"
 import '../scss/coders.scss'
 
 export function showCoders(element) {
@@ -8,6 +9,10 @@ export function showCoders(element) {
     element.removeChild(element.firstChild);
   }
   element.innerHTML = `
+
+  ${
+    console.log(session.rol.name)
+  }
     <div class="listCoders shadow-lg">
       <div class="listCoders__header" >
         <h2 data-i18n="developers" ></h2>

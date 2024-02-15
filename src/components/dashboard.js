@@ -14,8 +14,6 @@ export const showDashboard = async (element) => {
 
     <div class='dashboard__ranking__coders  quarter'></div>
     </div>
-    
-    
   
     <div class='dashboard__line'></div>
           
