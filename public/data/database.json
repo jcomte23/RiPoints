@@ -236,7 +236,7 @@
       "clanId": "gates",
       "date": {
         "day": "Monday",
-        "month": "april",
+        "month": "Febrary",
         "week": 5,
         "fullDate": "2024-2-5"
       },
@@ -249,7 +249,7 @@
       "clanId": "meta",
       "date": {
         "day": "Friday",
-        "month": "april",
+        "month": "Febrary",
         "week": 5,
         "fullDate": "2024-2-9"
       },
@@ -262,7 +262,7 @@
       "clanId": "gates",
       "date": {
         "day": "Wednesday",
-        "month": "april",
+        "month": "Febrary",
         "week": 7,
         "fullDate": "2024-2-21"
       },
@@ -274,8 +274,8 @@
       "id": "4",
       "clanId": "gates",
       "date": {
-        "day": "Monday",
-        "month": "april",
+        "day": "Tuesday",
+        "month": "Febrary",
         "week": 7,
         "fullDate": "2024-2-20"
       },
@@ -287,8 +287,8 @@
       "id": "5",
       "clanId": "meta",
       "date": {
-        "day": "Friday",
-        "month": "april",
+        "day": "Wednesday",
+        "month": "Febrary",
         "week": 6,
         "fullDate": "2024-2-14"
       },
@@ -301,7 +301,7 @@
       "clanId": "gates",
       "date": {
         "day": "Monday",
-        "month": "febrary",
+        "month": "Febrary",
         "week": 7,
         "fullDate": "2024-2-19"
       },
@@ -319,7 +319,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date": "2024-02-02"
+      "date": "2024-2-2"
     },
     {
       "id": "1",
@@ -329,7 +329,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date": "2024-02-03"
+      "date": "2024-2-3"
     },
     {
       "id": "1",
@@ -339,7 +339,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date": "2024-02-03"
+      "date": "2024-02-3"
     },
     {
       "id": "2",
@@ -348,7 +348,7 @@
       "pointsaAllocator": "Alejandra",
       "coins": 2,
       "userId": "2",
-      "date": "2024-02-01"
+      "date": "2024-02-1"
     },
     {
       "id": "2",

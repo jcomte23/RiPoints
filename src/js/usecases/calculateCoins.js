@@ -108,4 +108,6 @@ export const getCoinByWeek = async () => {
 };
 
 //? Esta funcion es la que debe trar todos los scoreCoins y comparar cada id, para luego modificarlo (Hacerle un pacth)
-export const calculateAmountCoinsByUser = (userId) => {};
+export const calculateAmountCoinsByUser = (userId) => {
+  
+};
