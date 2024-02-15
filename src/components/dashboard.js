@@ -1,6 +1,6 @@
 import { pieChart, lineChart } from "./pieChart";
 import { updateContent } from "../js/translator";
-import { get } from "../js/services/helpers";
+import { getDataFromDifferentEndpoints } from "../js/services/helpers";
 import { getAllClan } from "../js/services/getClan";
 import "../scss/dashboard.scss";
 import { topCodersChars } from "./topCodersChart";
@@ -32,7 +32,7 @@ export const showDashboard = async (element) => {
     );
     // THe compexety of the world
 
-    let completeList = await get(
+    let completeList = await getDataFromDifferentEndpoints(
         "users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins"
     );
     // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02

@@ -1,10 +1,10 @@
-import { get } from '../js/services/helpers';
+import { getDataFromDifferentEndpoints } from '../js/services/helpers';
 import { updateContent } from '../js/translator';
 import { calcScoreCoins, calcWinCoins } from '../js/services/getWinCoins';
 import { modal } from "./modal";
 
 export async function loadCodersTr(element) {
-  let list = await get('users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins');
+  let list = await getDataFromDifferentEndpoints('users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins');
 
   list.forEach((coder) => {
     let add = calcWinCoins(coder.winCoins);
