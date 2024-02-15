@@ -1,7 +1,6 @@
-export async function get(str) {
-    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/${str}`);
+export async function getDataFromDifferentEndpoints(endpoint) {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/${endpoint}`);
     const data = await response.json();
-
     return data;
 }
 
