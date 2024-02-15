@@ -8,14 +8,12 @@ import { topCodersChars } from "./topCodersChart";
 export const showDashboard = async (element) => {
     element.innerHTML = ` 
     <div class='dashboard w-100 h-100' >
+        <div class="dashboard__row" >
+            <div class='dashboard__pie'></div>
+            <div class='dashboard__ranking__coders '></div>
+        </div>
 
-    <div class="d-flex  dashboard__line_clans  justify-content-around ">
-    <div class='dashboard__pie quarter'></div>
-
-    <div class='dashboard__ranking__coders  quarter'></div>
-    </div>
-  
-    <div class='dashboard__line'></div>
+        <div class='dashboard__line' ></div>
           
     </div>
   `;
