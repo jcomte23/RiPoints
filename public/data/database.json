@@ -119,6 +119,17 @@
       "userName": "trainer_jess"
     },
     {
+      "id": "4",
+      "rolId": "1",
+      "userName": "jcomte23",
+      "password": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "clanId": "lovelace",
+      "amount": 5,
+      "photo": "jcomte23.webp"
+    },
+    {
       "id": "t6",
       "rolId": "2",
       "name": "Alexandra",
@@ -167,15 +178,14 @@
       "amount": 1
     },
     {
-      "id": "4",
-      "rolId": "1",
-      "userName": "jcomte23",
-      "password": "jcomte23",
-      "name": "Javier",
-      "lastName": "Cómbita Téllez",
-      "clanId": "lovelace",
-      "amount": 5,
-      "photo": "jcomte23.webp"
+      "id": "5",
+      "rolId": "3",
+      "userName": "juan",
+      "password": "juan",
+      "name": "juan camilo",
+      "lastName": "martinez narvaez",
+      "clanId": "dell",
+      "amount": 2
     }
   ],
   "clansTrainers": [
@@ -242,6 +252,32 @@
       },
       "userId": "1",
       "attendantCoins": 1,
+      "amountDay": 5
+    },
+    {
+      "id": "7",
+      "clanId": "meta",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 5,
+        "fullDate": "2024-2-5"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 5
+    },
+    {
+      "id": "8",
+      "clanId": "meta",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 5,
+        "fullDate": "2024-2-6"
+      },
+      "userId": "5",
+      "attendantCoins": 4,
       "amountDay": 5
     },
     {
@@ -319,6 +355,16 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
+      "date": "2024-2-2"
+    },
+    {
+      "id": "1",
+      "scoreCoinId": "5",
+      "userId": "5",
+      "clanId": "meta",
+      "comment": "participacion",
+      "pointsaAllocator": "alejandro",
+      "coins": 4,
       "date": "2024-2-2"
     },
     {

@@ -41,7 +41,6 @@ export const showDashboard = async (element) => {
     );
     // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02
     lineChart(document.querySelector(".dashboard__line"), "line1");
-    lineChart(document.querySelector(".dashboard__line--clan", "line2"));
 
     topCodersChars(topCodersChart, "top coders", "codersRanking");
 
