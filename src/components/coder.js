@@ -4,7 +4,8 @@ import { changeLanguageOnClick, updateContent } from "../js/translator";
 import { historyWinCoinsByUserId } from "../js/usecases/winCoinsHistory";
 
 export const renderCoder = (element) => {
-  const user = JSON.parse(localStorage.getItem("userStorage"));
+  const user = JSON.parse(localStorage.getItem("userStorage"))
+  console.log(user);
   element.innerHTML = `
   <div class="coder">
     <h3 class="coder__header" data-i18n="yourscore"></h3>
@@ -40,19 +41,21 @@ export const renderCoder = (element) => {
       </table>
     </div>
   </div>
-  `;
-
+  `
   document.querySelectorAll('.coder__name').forEach((el) => {
     el.textContent = user.name + ' ' + user.lastName 
   })
+
   setImageMultiple('.coder__profile__clanShiled',[user.clanId,user.clanId])
   document.querySelectorAll(".coder__name").forEach((el) => {
     el.textContent = user.name + " " + user.lastName;
-  });
+  })
+
   updateContent();
-  historyCoderRender(user);
+  historyCoderRender(user)
   amountByUserId(user.id)
-};
+}
+
 changeLanguageOnClick();
 
 const historyCoderRender = async (user) => {
@@ -64,7 +67,7 @@ const historyCoderRender = async (user) => {
     <tr>
       <th scope="row" class="table-${color}">${winCoin.coins}</th>
       <td class="table-${color}">${winCoin.comment}</td>
-      <td class="table-${color}">${user.name}</td>
+      <td class="table-${color}">${winCoin.pointsaAllocator}</td>
       <td class="table-${color}">${winCoin.date}</td>
     </tr>
   `;

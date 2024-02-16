@@ -4,34 +4,15 @@ import { renderCoder } from "../../components/coder";
 import { getLanguague } from "../../js/translator";
 import { getCoinByWeek } from "../usecases/calculateCoins";
 
-const btnLang = document.getElementById("btn-lang");
-const span_es = document.getElementById("span_es");
-const span_en = document.getElementById("span_en");
+document.addEventListener("DOMContentLoaded",async () => {
+  const floatingBackground = document.querySelector(".floatingBackground")
+  renderCoder(floatingBackground)
+  await renderweekChart()
+})
 
-let lang = getLanguague();
-if (lang === "es") {
-  span_es.classList.add("d-none");
-  span_en.classList.remove("d-none");
-} else {
-  span_es.classList.remove("d-none");
-  span_en.classList.add("d-none");
-}
 
-btnLang.addEventListener("click", () => {
-  let lang = getLanguague();
-  if (lang === "es") {
-    span_es.classList.add("d-none");
-    span_en.classList.remove("d-none");
-  } else {
-    span_es.classList.remove("d-none");
-    span_en.classList.add("d-none");
-  }
-});
-
+//Pintado de historial de graficas
 Chart.defaults.color = "#fff";
-const floatingBackground = document.querySelector(".floatingBackground");
-renderCoder(floatingBackground);
-
 const renderweekChart = async () => {
   const data = await getCoinByWeek();
 
@@ -66,6 +47,32 @@ const renderweekChart = async () => {
   });
 
   return weekchart;
-};
+}
 
-renderweekChart();
+
+
+
+// Sistema para cambio de icono en el traductor
+const btnLang = document.getElementById("btn-lang");
+const span_es = document.getElementById("span_es");
+const span_en = document.getElementById("span_en");
+
+let lang = getLanguague();
+if (lang === "es") {
+  span_es.classList.add("d-none");
+  span_en.classList.remove("d-none");
+} else {
+  span_es.classList.remove("d-none");
+  span_en.classList.add("d-none");
+}
+
+btnLang.addEventListener("click", () => {
+  let lang = getLanguague();
+  if (lang === "es") {
+    span_es.classList.add("d-none");
+    span_en.classList.remove("d-none");
+  } else {
+    span_es.classList.remove("d-none");
+    span_en.classList.add("d-none");
+  }
+})

@@ -8,7 +8,7 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": 3
+      "points": 503
     },
     {
       "id": "linus",
@@ -119,14 +119,14 @@
       "userName": "trainer_jess"
     },
     {
-      "id": "4",
-      "rolId": "1",
+      "id": "alfa1",
+      "rolId": "3",
       "userName": "jcomte23",
       "password": "jcomte23",
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 5,
+      "amount": 40,
       "photo": "jcomte23.webp"
     },
     {
@@ -175,7 +175,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": 1
+      "amount": 489
     },
     {
       "id": "5",
@@ -486,7 +486,7 @@
       },
       "userId": "4",
       "attendantCoins": 1,
-      "amountDay": 16
+      "amountDay": 7
     },
     {
       "id": "22",
@@ -593,7 +593,5 @@
       "amountDay": 20
     }
   ],
-  "winCoins": [
-
-  ]
+  "winCoins": []
 }
