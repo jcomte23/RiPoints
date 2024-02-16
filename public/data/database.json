@@ -8,7 +8,7 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": 82
+      "points": 88
     },
     {
       "id": "linus",
@@ -18,12 +18,12 @@
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 178
+      "points": 146
     },
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 48
+      "points": 105
     }
   ],
   "rols": [
@@ -145,7 +145,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 513
+      "amount": 105
     },
     {
       "id": "2",
@@ -165,7 +165,7 @@
       "name": "Fernando",
       "lastName": "Botero Angulo",
       "clanId": "lovelace",
-      "amount": 20
+      "amount": 106
     },
     {
       "id": "4",
@@ -185,7 +185,7 @@
       "name": "juan camilo",
       "lastName": "martinez narvaez",
       "clanId": "dell",
-      "amount": 42
+      "amount": 47
     },
     {
       "id": "6",
@@ -262,7 +262,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 1
+      "amountDay": 0
     },
     {
       "id": "4",
@@ -418,7 +418,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 16
+      "amountDay": 1
     },
     {
       "id": "16",
@@ -535,7 +535,7 @@
       },
       "userId": "5",
       "attendantCoins": 1,
-      "amountDay": 3
+      "amountDay": 8
     },
     {
       "id": "25",
@@ -643,6 +643,105 @@
     }
   ],
   "winCoins": [
-    
+    {
+      "id": "4147",
+      "scoreCoinId": "21",
+      "userId": "4",
+      "clanId": "dell",
+      "comment": "Se porto bien en clase",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 3,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "990b",
+      "scoreCoinId": "21",
+      "userId": "4",
+      "clanId": "dell",
+      "comment": "buen camello",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 1,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "b46a",
+      "scoreCoinId": "21",
+      "userId": "4",
+      "clanId": "dell",
+      "comment": "se porto mal",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": -2,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "4b11",
+      "scoreCoinId": "15",
+      "userId": "3",
+      "clanId": "lovelace",
+      "comment": "",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 2,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "37f5",
+      "scoreCoinId": "15",
+      "userId": "3",
+      "clanId": "lovelace",
+      "comment": "se porto mal",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": -1,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "862a",
+      "scoreCoinId": "24",
+      "userId": "5",
+      "clanId": "dell",
+      "comment": "Se porto muy bien",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 3,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "2eb8",
+      "scoreCoinId": "24",
+      "userId": "5",
+      "clanId": "dell",
+      "comment": "dsfasdf",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 5,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "6d52",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "gsdfgs",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 2,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "015a",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "sdafb",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 3,
+      "date": "2024-2-16"
+    },
+    {
+      "id": "30c6",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "Hola mdciasond",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": -5,
+      "date": "2024-2-16"
+    }
   ]
 }

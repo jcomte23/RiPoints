@@ -1,9 +1,10 @@
 import { getUserById } from "../../js/services/getUser";
 import { setImageMultiple } from "../../js/services/helpers";
 import { changeLanguageOnClick, updateContent } from "../../js/translator";
+import { calculateAmountCoinsByUser } from "../../js/usecases/calculateCoins";
 import { historyWinCoinsByUserId } from "../../js/usecases/winCoinsHistory";
 
-export const renderCoder = (element) => {
+export const renderCoder = async (element) => {
   const user = JSON.parse(localStorage.getItem("userStorage"))
   console.log(user);
   element.innerHTML = `
@@ -53,6 +54,7 @@ export const renderCoder = (element) => {
 
   updateContent();
   historyCoderRender(user)
+  await calculateAmountCoinsByUser(user.id)
   amountByUserId(user.id)
 }
 
