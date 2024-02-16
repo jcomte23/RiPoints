@@ -1,6 +1,6 @@
 import { pieChart, lineChart } from "./pieChart";
 import { updateContent } from "../js/translator";
-import { get } from "../js/services/helpers";
+import { getDataFromDifferentEndpoints } from "../js/services/helpers";
 import { getAllClan } from "../js/services/getClan";
 import "../scss/dashboard.scss";
 import { topCodersChars } from "./topCodersChart";
@@ -8,16 +8,12 @@ import { topCodersChars } from "./topCodersChart";
 export const showDashboard = async (element) => {
     element.innerHTML = ` 
     <div class='dashboard w-100 h-100' >
+        <div class="dashboard__row" >
+            <div class='dashboard__pie'></div>
+            <div class='dashboard__ranking__coders '></div>
+        </div>
 
-    <div class="d-flex  dashboard__line_clans  justify-content-around ">
-    <div class='dashboard__pie quarter'></div>
-
-    <div class='dashboard__ranking__coders  quarter'></div>
-    </div>
-    
-    
-  
-    <div class='dashboard__line'></div>
+        <div class='dashboard__line' ></div>
           
     </div>
   `;
@@ -36,12 +32,11 @@ export const showDashboard = async (element) => {
     );
     // THe compexety of the world
 
-    let completeList = await get(
+    let completeList = await getDataFromDifferentEndpoints(
         "users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins"
     );
     // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02
     lineChart(document.querySelector(".dashboard__line"), "line1");
-    lineChart(document.querySelector(".dashboard__line--clan", "line2"));
 
     topCodersChars(topCodersChart, "top coders", "codersRanking");
 

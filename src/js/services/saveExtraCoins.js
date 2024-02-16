@@ -1,4 +1,5 @@
 import {
+  calculateDailyCoins,
   getCurrentDate,
 } from "../usecases/calculateCoins";
 import { getScoreCoinsByDateAndUserId } from "./getScoreCoins";
@@ -23,6 +24,5 @@ export const saveExtraCoins = async (data) => {
       date: getCurrentDate(),
     }),
   });
-  // const scoreCoins = await calculateDailyCoins();
-  // console.log(scoreCoins);
+  calculateDailyCoins(user,getCurrentDate());
 };

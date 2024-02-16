@@ -119,6 +119,17 @@
       "userName": "trainer_jess"
     },
     {
+      "id": "4",
+      "rolId": "1",
+      "userName": "jcomte23",
+      "password": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "clanId": "lovelace",
+      "amount": 5,
+      "photo": "jcomte23.webp"
+    },
+    {
       "id": "t6",
       "rolId": "2",
       "name": "Alexandra",
@@ -134,7 +145,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 10
+      "amount": 22
     },
     {
       "id": "2",
@@ -167,15 +178,14 @@
       "amount": 1
     },
     {
-      "id": "4",
-      "rolId": "1",
-      "userName": "jcomte23",
-      "password": "jcomte23",
-      "name": "Javier",
-      "lastName": "Cómbita Téllez",
-      "clanId": "lovelace",
-      "amount": 5,
-      "photo": "jcomte23.webp"
+      "id": "5",
+      "rolId": "3",
+      "userName": "juan",
+      "password": "juan",
+      "name": "juan camilo",
+      "lastName": "martinez narvaez",
+      "clanId": "dell",
+      "amount": 2
     }
   ],
   "clansTrainers": [
@@ -236,72 +246,104 @@
       "clanId": "gates",
       "date": {
         "day": "Monday",
-        "month": "april",
+        "month": "February",
         "week": 5,
         "fullDate": "2024-2-5"
       },
       "userId": "1",
-      "attendantCoins": 1
+      "attendantCoins": 1,
+      "amountDay": 5
+    },
+    {
+      "id": "7",
+      "clanId": "meta",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 5,
+        "fullDate": "2024-2-5"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 5
+    },
+    {
+      "id": "8",
+      "clanId": "meta",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 5,
+        "fullDate": "2024-2-6"
+      },
+      "userId": "5",
+      "attendantCoins": 4,
+      "amountDay": 5
     },
     {
       "id": "2",
       "clanId": "meta",
       "date": {
         "day": "Friday",
-        "month": "april",
+        "month": "February",
         "week": 5,
         "fullDate": "2024-2-9"
       },
       "userId": "2",
-      "attendantCoins": 3
+      "attendantCoins": 3,
+      "amountDay": 5
     },
     {
       "id": "3",
       "clanId": "gates",
       "date": {
         "day": "Wednesday",
-        "month": "april",
+        "month": "February",
         "week": 7,
         "fullDate": "2024-2-21"
       },
       "userId": "1",
-      "attendantCoins": 2
+      "attendantCoins": 2,
+      "amountDay": 5
     },
     {
       "id": "4",
       "clanId": "gates",
       "date": {
-        "day": "Monday",
-        "month": "april",
+        "day": "Tuesday",
+        "month": "February",
         "week": 7,
         "fullDate": "2024-2-20"
       },
       "userId": "1",
-      "attendantCoins": 1
+      "attendantCoins": 1,
+      "amountDay": 5
     },
     {
       "id": "5",
       "clanId": "meta",
       "date": {
-        "day": "Friday",
-        "month": "april",
+        "day": "Wednesday",
+        "month": "February",
         "week": 6,
         "fullDate": "2024-2-14"
       },
       "userId": "1",
-      "attendantCoins": 3
+      "attendantCoins": 3,
+      "amountDay": -3
     },
     {
       "id": "6",
       "clanId": "gates",
       "date": {
         "day": "Monday",
-        "month": "febrary",
+        "month": "February",
         "week": 7,
         "fullDate": "2024-2-19"
       },
       "userId": "2",
-      "attendantCoins": 2
+      "attendantCoins": 2,
+      "amountDay": 5
     }
   ],
   "winCoins": [
@@ -313,7 +355,17 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date": "2024-02-02"
+      "date": "2024-2-2"
+    },
+    {
+      "id": "1",
+      "scoreCoinId": "5",
+      "userId": "5",
+      "clanId": "meta",
+      "comment": "participacion",
+      "pointsaAllocator": "alejandro",
+      "coins": 4,
+      "date": "2024-2-2"
     },
     {
       "id": "1",
@@ -323,7 +375,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date": "2024-02-03"
+      "date": "2024-2-3"
     },
     {
       "id": "1",
@@ -333,7 +385,7 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "liliana",
       "coins": 2,
-      "date": "2024-02-03"
+      "date": "2024-02-3"
     },
     {
       "id": "2",
@@ -341,7 +393,8 @@
       "comment": "Se porto bien en clases",
       "pointsaAllocator": "Alejandra",
       "coins": 2,
-      "date": "2024-02-01"
+      "userId": "2",
+      "date": "2024-02-1"
     },
     {
       "id": "2",
@@ -349,6 +402,7 @@
       "comment": "Saco el celular en clase",
       "pointsaAllocator": "liliana",
       "coins": -4,
+      "userId": "3",
       "date": "2024-01-30"
     },
     {
@@ -361,20 +415,47 @@
       "date": "2024-2-14"
     },
     {
-      "id": "c27d",
+      "id": "f7e6",
       "scoreCoinId": "5",
       "userId": "1",
-      "comment": "",
-      "pointsaAllocator": "admin example",
-      "coins": 1,
+      "comment": "funciona?",
+      "pointsaAllocator": "trainer example",
+      "coins": 2,
       "date": "2024-2-14"
     },
     {
-      "id": "465b",
+      "id": "9f54",
       "scoreCoinId": "5",
       "userId": "1",
-      "comment": "",
-      "pointsaAllocator": "admin example",
+      "comment": "aaa",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "13c9",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "a",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "9ba5",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "a",
+      "pointsaAllocator": "trainer example",
+      "coins": -1,
+      "date": "2024-2-14"
+    },
+    {
+      "id": "dfc9",
+      "scoreCoinId": "5",
+      "userId": "1",
+      "comment": "a",
+      "pointsaAllocator": "trainer example",
       "coins": -1,
       "date": "2024-2-14"
     }

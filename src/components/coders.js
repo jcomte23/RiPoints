@@ -3,11 +3,49 @@ import { updateContent } from "../js/translator";
 import { loadCodersTr } from "./listTr";
 import '../scss/coders.scss'
 
+const session = JSON.parse(localStorage.getItem("userStorage"));
+
 export function showCoders(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
   element.innerHTML = `
+
+  ${
+    session.rol.name == 'trainer' 
+    ?`
+      <div class="ownClanCoins" >
+        <div class="ownClanCoins__i shadow-lg" >
+          <h1 class="ownClanCoins__title" >Clanes Asignados</h1>
+          <div class="ownClanCoins__container" > 
+            <div class="owner__clan" >
+              <div class="imgClan" ></div>
+              <span>Meta</span>
+            </div>
+            <div class="owner__clan" >
+              <div class="imgClan" ></div>
+              <span>Van Ross</span>
+            </div>
+          </div>
+        </div>
+        <div class="ownClanCoins__i shadow-lg" >
+        <h1 class="ownClanCoins__title" >Coins</h1>
+        <div class="ownClanCoins__container" > 
+        <div class="owner__poinst" >
+          <span>Asignados</span>
+          <div class="assignedPoints" >40</div>
+        </div>
+        <div class="owner__poinst" >
+          <span>Restantes</span>
+          <div class="assignedPoints" >10</div>
+        </div>
+      </div>
+        <h1 class="ownClanCoins__title" >Coins totales: 50</h1>
+        </div>
+      </div>
+    `:''
+
+  }
     <div class="listCoders shadow-lg">
       <div class="listCoders__header" >
         <h2 data-i18n="developers" ></h2>
@@ -31,9 +69,8 @@ export function showCoders(element) {
         </thead>
         <tbody id="codersList" >
         </tbody>
-      </table>
+        </table>
     </div> 
-
     `;
 
   loadCodersTr(document.getElementById("codersList")).then(() => {

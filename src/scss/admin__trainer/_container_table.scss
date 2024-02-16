@@ -7,6 +7,7 @@
 }
 
 .container__table {
+    border: 1px solid red;
     background-color: v.$seasalt;
     overflow-y: auto;
     scrollbar-width: thin;

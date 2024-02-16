@@ -47,7 +47,7 @@
         color: v.$gray;
         padding: .5rem 0;
     }
-    tbody tr:not(:last-child){
+    tbody tr:not(:last-of-type){
         border-bottom: .1rem solid v.$antiflash;
     }
     tbody tr td{
@@ -74,6 +74,78 @@
     margin-left: .3rem;
     animation: intermitated 1.2s ease infinite;
 }
+
+.ownClanCoins{
+    display: flex;
+    background-color: v.$seasalt;
+    height: 20dvh;
+    width: 100%;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.ownClanCoins__i{
+    width: calc(50% - 1.5rem);
+    display: flex;
+    background-color: v.$white;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 1rem;
+}
+
+.ownClanCoins__container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+    width: 100%;
+    .owner__clan{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        width: 5rem;
+        gap: .5rem;
+        height: max-content;
+        .imgClan{
+            width: 80%;
+            height: 80%;
+            aspect-ratio: 1/1;
+            background-color: v.$primary;
+            border-radius: 100%;
+        }
+    }
+    .owner__poinst{
+        background-color: v.$mint;
+        border-radius: 1rem;
+        color: v.$secondary;
+        font-weight: bolder;
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        flex-grow: 1;
+    }
+    .owner__poinst:last-child{
+        background-color: v.$tomato;
+    }
+
+}
+
+
+.ownClanCoins__title{
+    font-size: 1.5rem;
+    padding:  0 0 .2rem 0;
+    width: 100%;
+    border-bottom: .15rem solid v.$mauve;
+}
+
 
 @keyframes intermitated {
     0%,100%{

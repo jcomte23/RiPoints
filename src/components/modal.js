@@ -87,7 +87,6 @@ export async function modal(element) {
   const numless = document.querySelector("#exampleModal .quantity__add .less");
   const plusSign = document.querySelector("#exampleModal #plusSign");
   const btnSaveModal = document.querySelector("#exampleModal #save-modal");
-  const btnCancelModal = document.querySelector("#exampleModal #cancel-modal");
 
   let realNum = 0;
 
@@ -114,40 +113,38 @@ export async function modal(element) {
   function updateSign() {
     plusSign.textContent = realNum < 0 ? "-" : "+";
   }
-
-  numadd.addEventListener("click", () => {
-    plus(1);
-  });
-
-  numless.addEventListener("click", () => {
-    plus(-1);
-  });
-
+  console.log(numless, numadd);
+  if(numadd !==  null && numless !== null){
+    numadd.addEventListener("click", () => { plus(1);})
+    numless.addEventListener("click", () => { plus(-1);});
+  }
   //No entiendo la finalidad de esto, la dat ase debe cragar desde el json, no desde lo que le popngamos manual
-  btnSaveModal.addEventListener("click", () => {
-    const totalPointsElement = document.querySelector(
-      "#exampleModal #totalPoints"
-    );
-    const totalPoints = parseInt(totalPointsElement.textContent);
-    totalPointsElement.textContent = totalPoints + realNum;
-    const quantityInput = document.querySelector(
-      "#exampleModal .quantity__input"
-    );
-    quantityInput.value = parseInt(quantityInput.value) + realNum;
-    //Esto no es buena practica pero no encuentro otra manera de hacerlo sin alteral la logica que ya esta hecha
-    setCoinsByUser(realNum);
-    realNum = 0;
-    document.getElementById("observations").value = "";
-    updateInput();
-    updateSign();
-
-    const closeButton = document.querySelector("#exampleModal .btn-close");
-    closeButton.click();
-  });
+  //! CORREGIR MODAL: ADIGNACION DE PUNTOS CODER!
+  console.log(btnSaveModal);
+  if(btnSaveModal != null ){
+    btnSaveModal.addEventListener("click", () => {
+      const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
+      totalPointsElement.textContent = totalPoints + realNum;
+      const totalPoints = parseInt(totalPointsElement.textContent);
+      const quantityInput = document.querySelector("#exampleModal .quantity__input");
+      quantityInput.value = parseInt(quantityInput.value) + realNum;
+      //Esto no es buena practica pero no encuentro otra manera de hacerlo sin alteral la logica que ya esta hecha
+      setCoinsByUser(realNum);
+      realNum = 0;
+      document.getElementById("observations").value = "";
+      updateInput();
+      updateSign();
+  
+      const closeButton = document.querySelector("#exampleModal .btn-close");
+      closeButton.click();
+    });
+  }
 
   const closed = document.querySelector("#exampleModal #cancel-modal");
-  closed.addEventListener("click", (event) => {
-    const closeButton = document.querySelector("#exampleModal .btn-close");
-    closeButton.click();
-  });
+  if( closed !== null ){
+    closed.addEventListener("click", (event) => {
+      const closeButton = document.querySelector("#exampleModal .btn-close");
+      closeButton.click();
+    });
+  }
 }

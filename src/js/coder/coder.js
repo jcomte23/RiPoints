@@ -34,7 +34,7 @@ renderCoder(floatingBackground);
 
 const renderweekChart = async () => {
   const data = await getCoinByWeek();
-  console.log(data);
+
   const datos = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     datasets: [
