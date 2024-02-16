@@ -24,3 +24,12 @@ export const getUserById = async (userId) => {
 
   return data;
 };
+
+export const getCodersByIdClan = async (clanId) => {
+  const response = await fetch(
+    `${import.meta.env.VITE_BASE_URL}/users?rolId=3&clanId=${clanId}`
+  );
+  const data = await response.json();
+
+  return data;
+}

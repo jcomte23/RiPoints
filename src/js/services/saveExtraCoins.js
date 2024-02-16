@@ -1,4 +1,5 @@
 import {
+  calculateAmountCoinsByClan,
   calculateDailyCoins,
   getCurrentDate,
 } from "../usecases/calculateCoins";
@@ -9,6 +10,7 @@ import { getUserById } from "./getUser";
 //scoreCoinId, mirar si es necesario, creo que ya con el id y la fecha basta
 export const saveExtraCoins = async (data) => {
   const user = await getUserById(data.coderId);
+  console.log(user);
   const scoreCoin = await getScoreCoinsByDateAndUserId(getCurrentDate(),data.coderId);
   await fetch(`${import.meta.env.VITE_BASE_URL}/winCoins`, {
     method: "POST",
@@ -17,12 +19,13 @@ export const saveExtraCoins = async (data) => {
     body: JSON.stringify({
       scoreCoinId: scoreCoin[0].id,
       userId: data.coderId,
-      clanId: user.clanId,
+      clanId: user[0].clanId,
       comment: data.comment,
       pointsaAllocator: data.user.name,
       coins: data.coins,
       date: getCurrentDate(),
     }),
   });
-  calculateDailyCoins(user,getCurrentDate());
+  calculateDailyCoins(user, getCurrentDate());
+  calculateAmountCoinsByClan(user[0].clanId);
 };
