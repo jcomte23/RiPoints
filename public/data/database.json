@@ -175,7 +175,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": 489
+      "amount": 484
     },
     {
       "id": "5",
@@ -486,7 +486,7 @@
       },
       "userId": "4",
       "attendantCoins": 1,
-      "amountDay": 7
+      "amountDay": 2
     },
     {
       "id": "22",
@@ -593,5 +593,16 @@
       "amountDay": 20
     }
   ],
-  "winCoins": []
+  "winCoins": [
+    {
+      "id": "f43e",
+      "scoreCoinId": "21",
+      "userId": "4",
+      "clanId": "dell",
+      "comment": "se porto bien en clase",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 2,
+      "date": "2024-2-16"
+    }
+  ]
 }
