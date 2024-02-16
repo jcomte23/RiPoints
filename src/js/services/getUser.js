@@ -13,13 +13,10 @@ export const getUser = async (user) => {
 }
 
 export const getUserById = async (userId) => {
-  const response = await fetch(
-    `${import.meta.env.VITE_BASE_URL}/users?id=${userId}`
-  );
-  const data = await response.json();
-
-  return data;
-};
+  const response = await fetch(`${import.meta.env.VITE_BASE_URL}/users?id=${userId}`)
+  const data = await response.json()
+  return data
+}
 
 export const getCodersByIdClan = async (clanId) => {
   const response = await fetch(

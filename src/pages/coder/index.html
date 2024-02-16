@@ -24,19 +24,22 @@
 
 <body class="coder__body" id="coderView">
   <div class="btn-group dropdown position-absolute top-0 z-3 end-0 my-2 mx-3">
-    <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown" aria-expanded="true" data-i18n="settings">
+    <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown"
+      aria-expanded="true" data-i18n="settings">
     </button>
     <ul class="dropdown-menu text-center">
       <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
           class="bi bi-translate fs-5"></i>
-          <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
-          <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
-        </li>
-      <li><a class="dropdown-item text-capitalize" href="https://moodle.riwi.io" target="_blank" data-i18n="gotomoodle"></a></li>
+        <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
+        <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
+      </li>
+      <li><a class="dropdown-item text-capitalize" href="https://moodle.riwi.io" target="_blank"
+          data-i18n="gotomoodle"></a></li>
       <li>
         <hr class="dropdown-divider">
       </li>
-      <li><button type="button" data-i18n="logout" class="btn btn-secondary text-capitalize" id="btn-logout"></button></li>
+      <li><button type="button" data-i18n="logout" class="btn btn-secondary text-capitalize" id="btn-logout"></button>
+      </li>
     </ul>
   </div>
 
@@ -49,8 +52,8 @@
       <h4 class="coder__name"></h4>
     </div>
   </section>
-  <div class="floatingBackground">
-  </div>
+  <section class="floatingBackground">
+  </section>
 
   <script type="module" src="../../js/main.js"></script>
   <script type="module" src="../../js/coder/coder.js"></script>
