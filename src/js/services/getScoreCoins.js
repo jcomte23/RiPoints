@@ -17,3 +17,15 @@ export const getScoreCoinsByDate = async (date) => {
 
   return data;
 };
+
+export const getScoreCoinsByUserIdAndMonth = async (userId, month) => {
+  const response = await fetch(
+    `${
+      import.meta.env.VITE_BASE_URL
+    }/scoreCoins?date.month=${month}&userId=${userId}`
+    
+  );
+  const data = await response.json();
+
+  return data;
+};

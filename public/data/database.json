@@ -8,12 +8,12 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": 503
+      "points": 82
     },
     {
       "id": "linus",
       "name": "linus",
-      "points": 133
+      "points": 41
     },
     {
       "id": "lovelace",
@@ -154,7 +154,7 @@
       "password": "juantorres",
       "name": "Juan Camilo",
       "lastName": "Torres García",
-      "clanId": "van_rossum",
+      "clanId": "meta",
       "amount": 26
     },
     {
@@ -175,7 +175,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": 484
+      "amount": 41
     },
     {
       "id": "5",
@@ -185,7 +185,17 @@
       "name": "juan camilo",
       "lastName": "martinez narvaez",
       "clanId": "dell",
-      "amount": 498
+      "amount": 42
+    },
+    {
+      "id": "6",
+      "rolId": "3",
+      "userName": "sebastian",
+      "password": "sebastian",
+      "name": "Sebastian ",
+      "lastName": "Flores Carmona",
+      "clanId": "linus",
+      "amount": 41
     }
   ],
   "clansTrainers": [
@@ -243,7 +253,7 @@
   "scoreCoins": [
     {
       "id": "1",
-      "clanId": "gates",
+      "clanId": "van_rossum",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -256,7 +266,7 @@
     },
     {
       "id": "4",
-      "clanId": "gates",
+      "clanId": "van_rossum",
       "date": {
         "day": "Monday",
         "month": "February",
@@ -269,7 +279,7 @@
     },
     {
       "id": "5",
-      "clanId": "gates",
+      "clanId": "van_rossum",
       "date": {
         "day": "Tuesday",
         "month": "February",
@@ -282,7 +292,7 @@
     },
     {
       "id": "6",
-      "clanId": "gates",
+      "clanId": "van_rossum",
       "date": {
         "day": "Wednesday",
         "month": "February",
@@ -295,7 +305,7 @@
     },
     {
       "id": "7",
-      "clanId": "gates",
+      "clanId": "van_rossum",
       "date": {
         "day": "Thursday",
         "month": "February",
@@ -308,7 +318,7 @@
     },
     {
       "id": "8",
-      "clanId": "gates",
+      "clanId": "van_rossum",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -321,7 +331,7 @@
     },
     {
       "id": "9",
-      "clanId": "gates",
+      "clanId": "meta",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -334,7 +344,7 @@
     },
     {
       "id": "10",
-      "clanId": "gates",
+      "clanId": "meta",
       "date": {
         "day": "Monday",
         "month": "February",
@@ -347,7 +357,7 @@
     },
     {
       "id": "11",
-      "clanId": "gates",
+      "clanId": "meta",
       "date": {
         "day": "Tuesday",
         "month": "February",
@@ -360,7 +370,7 @@
     },
     {
       "id": "12",
-      "clanId": "gates",
+      "clanId": "meta",
       "date": {
         "day": "Wednesday",
         "month": "February",
@@ -373,7 +383,7 @@
     },
     {
       "id": "13",
-      "clanId": "gates",
+      "clanId": "meta",
       "date": {
         "day": "Thursday",
         "month": "February",
@@ -386,7 +396,7 @@
     },
     {
       "id": "14",
-      "clanId": "gates",
+      "clanId": "meta",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -399,7 +409,7 @@
     },
     {
       "id": "15",
-      "clanId": "gates",
+      "clanId": "lovelace",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -412,7 +422,7 @@
     },
     {
       "id": "16",
-      "clanId": "gates",
+      "clanId": "lovelace",
       "date": {
         "day": "Monday",
         "month": "February",
@@ -425,7 +435,7 @@
     },
     {
       "id": "17",
-      "clanId": "gates",
+      "clanId": "lovelace",
       "date": {
         "day": "Tuesday",
         "month": "February",
@@ -438,7 +448,7 @@
     },
     {
       "id": "18",
-      "clanId": "gates",
+      "clanId": "lovelace",
       "date": {
         "day": "Wednesday",
         "month": "February",
@@ -451,7 +461,7 @@
     },
     {
       "id": "19",
-      "clanId": "gates",
+      "clanId": "lovelace",
       "date": {
         "day": "Thursday",
         "month": "February",
@@ -464,7 +474,7 @@
     },
     {
       "id": "20",
-      "clanId": "gates",
+      "clanId": "lovelace",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -477,7 +487,7 @@
     },
     {
       "id": "21",
-      "clanId": "gates",
+      "clanId": "dell",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -490,7 +500,7 @@
     },
     {
       "id": "22",
-      "clanId": "gates",
+      "clanId": "dell",
       "date": {
         "day": "Monday",
         "month": "February",
@@ -503,7 +513,7 @@
     },
     {
       "id": "23",
-      "clanId": "gates",
+      "clanId": "dell",
       "date": {
         "day": "Tuesday",
         "month": "February",
@@ -516,7 +526,7 @@
     },
     {
       "id": "24",
-      "clanId": "gates",
+      "clanId": "dell",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -525,11 +535,11 @@
       },
       "userId": "5",
       "attendantCoins": 1,
-      "amountDay": 1
+      "amountDay": 3
     },
     {
       "id": "25",
-      "clanId": "gates",
+      "clanId": "dell",
       "date": {
         "day": "Monday",
         "month": "February",
@@ -542,7 +552,7 @@
     },
     {
       "id": "26",
-      "clanId": "gates",
+      "clanId": "dell",
       "date": {
         "day": "Tuesday",
         "month": "February",
@@ -555,7 +565,7 @@
     },
     {
       "id": "27",
-      "clanId": "gates",
+      "clanId": "linus",
       "date": {
         "day": "Friday",
         "month": "February",
@@ -564,11 +574,11 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 16
+      "amountDay": 2
     },
     {
       "id": "28",
-      "clanId": "gates",
+      "clanId": "linus",
       "date": {
         "day": "Monday",
         "month": "February",
@@ -581,7 +591,7 @@
     },
     {
       "id": "29",
-      "clanId": "gates",
+      "clanId": "linus",
       "date": {
         "day": "Tuesday",
         "month": "February",
@@ -591,18 +601,48 @@
       "userId": "6",
       "attendantCoins": 1,
       "amountDay": 20
+    },
+    {
+      "id": "30",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "alfa1",
+      "attendantCoins": 1,
+      "amountDay": 16
+    },
+    {
+      "id": "31",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "alfa1",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "32",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "alfa1",
+      "attendantCoins": 1,
+      "amountDay": 20
     }
   ],
   "winCoins": [
-    {
-      "id": "f43e",
-      "scoreCoinId": "21",
-      "userId": "4",
-      "clanId": "dell",
-      "comment": "se porto bien en clase",
-      "pointsaAllocator": "mauricio vélez espinosa",
-      "coins": 2,
-      "date": "2024-2-16"
-    }
+    
   ]
 }

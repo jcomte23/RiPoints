@@ -113,14 +113,13 @@ export async function modal(element) {
   function updateSign() {
     plusSign.textContent = realNum < 0 ? "-" : "+";
   }
-  console.log(numless, numadd);
+  
   if(numadd !==  null && numless !== null){
     numadd.addEventListener("click", () => { plus(1);})
     numless.addEventListener("click", () => { plus(-1);});
   }
   //No entiendo la finalidad de esto, la dat ase debe cragar desde el json, no desde lo que le popngamos manual
   //! CORREGIR MODAL: ADIGNACION DE PUNTOS CODER!
-  console.log(btnSaveModal);
   if(btnSaveModal != null ){
     btnSaveModal.addEventListener("click", () => {
       const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
