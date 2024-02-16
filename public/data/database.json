@@ -8,7 +8,7 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": 160
+      "points": 3
     },
     {
       "id": "linus",
@@ -23,7 +23,7 @@
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 120
+      "points": 48
     }
   ],
   "rols": [
@@ -145,7 +145,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 22
+      "amount": 513
     },
     {
       "id": "2",
@@ -155,7 +155,7 @@
       "name": "Juan Camilo",
       "lastName": "Torres García",
       "clanId": "van_rossum",
-      "amount": 5
+      "amount": 26
     },
     {
       "id": "3",
@@ -185,7 +185,7 @@
       "name": "juan camilo",
       "lastName": "martinez narvaez",
       "clanId": "dell",
-      "amount": 2
+      "amount": 498
     }
   ],
   "clansTrainers": [
@@ -245,69 +245,30 @@
       "id": "1",
       "clanId": "gates",
       "date": {
-        "day": "Monday",
-        "month": "February",
-        "week": 5,
-        "fullDate": "2024-2-5"
-      },
-      "userId": "1",
-      "attendantCoins": 1,
-      "amountDay": 5
-    },
-    {
-      "id": "7",
-      "clanId": "meta",
-      "date": {
-        "day": "Monday",
-        "month": "February",
-        "week": 5,
-        "fullDate": "2024-2-5"
-      },
-      "userId": "5",
-      "attendantCoins": 1,
-      "amountDay": 5
-    },
-    {
-      "id": "8",
-      "clanId": "meta",
-      "date": {
-        "day": "Tuesday",
-        "month": "February",
-        "week": 5,
-        "fullDate": "2024-2-6"
-      },
-      "userId": "5",
-      "attendantCoins": 4,
-      "amountDay": 5
-    },
-    {
-      "id": "2",
-      "clanId": "meta",
-      "date": {
         "day": "Friday",
         "month": "February",
-        "week": 5,
-        "fullDate": "2024-2-9"
-      },
-      "userId": "2",
-      "attendantCoins": 3,
-      "amountDay": 5
-    },
-    {
-      "id": "3",
-      "clanId": "gates",
-      "date": {
-        "day": "Wednesday",
-        "month": "February",
-        "week": 7,
-        "fullDate": "2024-2-21"
+        "week": 6,
+        "fullDate": "2024-2-16"
       },
       "userId": "1",
-      "attendantCoins": 2,
-      "amountDay": 5
+      "attendantCoins": 1,
+      "amountDay": 1
     },
     {
       "id": "4",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "5",
       "clanId": "gates",
       "date": {
         "day": "Tuesday",
@@ -317,23 +278,62 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 5
-    },
-    {
-      "id": "5",
-      "clanId": "meta",
-      "date": {
-        "day": "Wednesday",
-        "month": "February",
-        "week": 6,
-        "fullDate": "2024-2-14"
-      },
-      "userId": "1",
-      "attendantCoins": 3,
-      "amountDay": -3
+      "amountDay": 20
     },
     {
       "id": "6",
+      "clanId": "gates",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-21"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 21
+    },
+    {
+      "id": "7",
+      "clanId": "gates",
+      "date": {
+        "day": "Thursday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-22"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 22
+    },
+    {
+      "id": "8",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-23"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 23
+    },
+    {
+      "id": "9",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 16
+    },
+    {
+      "id": "10",
       "clanId": "gates",
       "date": {
         "day": "Monday",
@@ -342,122 +342,258 @@
         "fullDate": "2024-2-19"
       },
       "userId": "2",
-      "attendantCoins": 2,
-      "amountDay": 5
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "11",
+      "clanId": "gates",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "12",
+      "clanId": "gates",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-21"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 21
+    },
+    {
+      "id": "13",
+      "clanId": "gates",
+      "date": {
+        "day": "Thursday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-22"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 22
+    },
+    {
+      "id": "14",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-23"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 23
+    },
+    {
+      "id": "15",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 16
+    },
+    {
+      "id": "16",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "17",
+      "clanId": "gates",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "18",
+      "clanId": "gates",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-21"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 21
+    },
+    {
+      "id": "19",
+      "clanId": "gates",
+      "date": {
+        "day": "Thursday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-22"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 22
+    },
+    {
+      "id": "20",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-23"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 23
+    },
+    {
+      "id": "21",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "4",
+      "attendantCoins": 1,
+      "amountDay": 16
+    },
+    {
+      "id": "22",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "4",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "23",
+      "clanId": "gates",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "4",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "24",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 1
+    },
+    {
+      "id": "25",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "26",
+      "clanId": "gates",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "27",
+      "clanId": "gates",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "6",
+      "attendantCoins": 1,
+      "amountDay": 16
+    },
+    {
+      "id": "28",
+      "clanId": "gates",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "6",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "29",
+      "clanId": "gates",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "6",
+      "attendantCoins": 1,
+      "amountDay": 20
     }
   ],
   "winCoins": [
-    {
-      "id": "1",
-      "scoreCoinId": "1",
-      "userId": "1",
-      "clanId": "gates",
-      "comment": "Se porto bien en clases",
-      "pointsaAllocator": "liliana",
-      "coins": 2,
-      "date": "2024-2-2"
-    },
-    {
-      "id": "1",
-      "scoreCoinId": "5",
-      "userId": "5",
-      "clanId": "meta",
-      "comment": "participacion",
-      "pointsaAllocator": "alejandro",
-      "coins": 4,
-      "date": "2024-2-2"
-    },
-    {
-      "id": "1",
-      "scoreCoinId": "1",
-      "userId": "1",
-      "clanId": "gates",
-      "comment": "Se porto bien en clases",
-      "pointsaAllocator": "liliana",
-      "coins": 2,
-      "date": "2024-2-3"
-    },
-    {
-      "id": "1",
-      "scoreCoinId": "1",
-      "userId": "1",
-      "clanId": "gates",
-      "comment": "Se porto bien en clases",
-      "pointsaAllocator": "liliana",
-      "coins": 2,
-      "date": "2024-02-3"
-    },
-    {
-      "id": "2",
-      "scoreCoinId": "2",
-      "comment": "Se porto bien en clases",
-      "pointsaAllocator": "Alejandra",
-      "coins": 2,
-      "userId": "2",
-      "date": "2024-02-1"
-    },
-    {
-      "id": "2",
-      "scoreCoinId": "2",
-      "comment": "Saco el celular en clase",
-      "pointsaAllocator": "liliana",
-      "coins": -4,
-      "userId": "3",
-      "date": "2024-01-30"
-    },
-    {
-      "id": "26a8",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "k",
-      "pointsaAllocator": "trainer example",
-      "coins": -1,
-      "date": "2024-2-14"
-    },
-    {
-      "id": "f7e6",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "funciona?",
-      "pointsaAllocator": "trainer example",
-      "coins": 2,
-      "date": "2024-2-14"
-    },
-    {
-      "id": "9f54",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "aaa",
-      "pointsaAllocator": "trainer example",
-      "coins": -1,
-      "date": "2024-2-14"
-    },
-    {
-      "id": "13c9",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "a",
-      "pointsaAllocator": "trainer example",
-      "coins": -1,
-      "date": "2024-2-14"
-    },
-    {
-      "id": "9ba5",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "a",
-      "pointsaAllocator": "trainer example",
-      "coins": -1,
-      "date": "2024-2-14"
-    },
-    {
-      "id": "dfc9",
-      "scoreCoinId": "5",
-      "userId": "1",
-      "comment": "a",
-      "pointsaAllocator": "trainer example",
-      "coins": -1,
-      "date": "2024-2-14"
-    }
+
   ]
 }

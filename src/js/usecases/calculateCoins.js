@@ -2,10 +2,12 @@ import {
   getScoreCoinsByDate,
   getScoreCoinsByDateAndUserId,
 } from "../services/getScoreCoins";
+import { getCodersByIdClan } from "../services/getUser";
 import {
   getAllWinCoinsByUserIdAndDate,
   getWeekCoins,
 } from "../services/getWinCoins";
+import { updateCoinsClan } from "../services/updateCoinsClan";
 import { updateCoinsCoder } from "../services/updateCoinsCoder";
 import { updateDailycoins } from "../services/updateDailyCoins";
 
@@ -116,7 +118,6 @@ export const getCoinByWeek = async () => {
 export const calculateAmountCoinsByUser = async (userId) => {
   const month = calculateDate().month;
   const monthlyScoreCoin = await getScoreCoinsByDate(month);
-  console.log(monthlyScoreCoin);
   const coins = amountCoinsCoder(monthlyScoreCoin);
   updateCoinsCoder(userId,coins);
 };
@@ -129,3 +130,18 @@ const amountCoinsCoder = (monthlyScoreCoin) => {
   console.log(totalCoins);
   return totalCoins;
 };
+
+export const calculateAmountCoinsByClan = async (clanId) => {
+  const codersByClan = await getCodersByIdClan(clanId);
+  const amountClan = amounCoinsClan(codersByClan);
+  updateCoinsClan(clanId,amountClan);
+}
+
+const amounCoinsClan = (coderCoins) => {
+  let totalCoins = 0;
+  coderCoins.forEach((coinsDay) => {
+    totalCoins += coinsDay.amount;
+  });
+  console.log(totalCoins);
+  return totalCoins;
+}

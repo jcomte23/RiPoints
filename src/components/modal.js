@@ -124,8 +124,8 @@ export async function modal(element) {
   if(btnSaveModal != null ){
     btnSaveModal.addEventListener("click", () => {
       const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
-      totalPointsElement.textContent = totalPoints + realNum;
       const totalPoints = parseInt(totalPointsElement.textContent);
+      totalPointsElement.textContent = totalPoints + realNum;
       const quantityInput = document.querySelector("#exampleModal .quantity__input");
       quantityInput.value = parseInt(quantityInput.value) + realNum;
       //Esto no es buena practica pero no encuentro otra manera de hacerlo sin alteral la logica que ya esta hecha
