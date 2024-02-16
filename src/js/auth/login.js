@@ -1,8 +1,8 @@
-import "../scss/login.scss"
-import { smallAlertError } from "./alerts"
-import { showLogin } from "../components/login"
-import { getUser } from "./services/getUser"
-import { showValidation } from "./validations/validationForm"
+import "../../scss/login.scss"
+import { smallAlertError } from "../validations/alerts"
+import { showLogin } from "../../components/login"
+import { getUser } from "../services/getUser"
+import { showValidation } from "../validations/validationForm"
 
 const sectionForm = document.getElementById("sectionForm")
 showLogin(sectionForm)
