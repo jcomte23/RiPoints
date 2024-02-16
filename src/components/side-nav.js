@@ -8,12 +8,13 @@ import "../scss/tables.scss";
 const session = JSON.parse(localStorage.getItem("userStorage"));
 
 const renderSideNav = (session) => {
+
   const { name, photo, lastName, rol } = session;
+
   return `
     <div class="d-flex flex-column align-items-center w-100 border-bottom" >
       <figure class="profile__pic border border-5 rounded-circle d-flex justify-content-center align-items-center"> 
-        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"
-    }" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
+        <img src="../../../img/persons/${photo !== undefined ? photo : "default.webp"}" class="m-0 w-100 h-100" alt="photo user" width="183" height="183"/>
       </figure>
       <div class="profile_info pb-2 d-flex flex-column align-items-center d-none d-sm-flex text-center" >
         <h2 class="text-capitalize fs-5">${name} ${lastName}</h2>
@@ -77,9 +78,8 @@ const renderSideNav = (session) => {
 
 const sideNav = () => {
   const nav = document.querySelector(".side-nav");
-
   nav.innerHTML = renderSideNav(session);
-};
+}
 
 sideNav();
 
@@ -89,13 +89,13 @@ sideNavSelector.addEventListener("click", (event) => {
   let position = event.target.children[1].textContent.toLowerCase();
 
   switch (position) {
-    case "coders":
-    case "desarrolladores":
-      showCoders(showView);
-      break;
     case "panel":
     case "dashboard":
       showDashboard(showView);
+      break;
+    case "coders":
+    case "desarrolladores":
+      showCoders(showView);
       break;
     case "carga docs":
     case "load docs":
@@ -105,7 +105,7 @@ sideNavSelector.addEventListener("click", (event) => {
     case "clans":
       showClans(showView);
   }
-});
+})
 
 session.rol.name === "trainer" ? showCoders(showView) : showDashboard(showView);
 
