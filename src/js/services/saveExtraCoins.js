@@ -1,5 +1,4 @@
 import {
-  calculateAmountCoinsByClan,
   calculateDailyCoins,
   getCurrentDate,
 } from "../usecases/calculateCoins";
@@ -9,9 +8,10 @@ import { getUserById } from "./getUser";
 //! Estoy partiedo del supuesto que la tabla scoreCoins ya esta creada para ese dia
 //scoreCoinId, mirar si es necesario, creo que ya con el id y la fecha basta
 export const saveExtraCoins = async (data) => {
+  console.log(data);
   const user = await getUserById(data.coderId);
-  console.log(user);
   const scoreCoin = await getScoreCoinsByDateAndUserId(getCurrentDate(),data.coderId);
+  console.log(scoreCoin);
   await fetch(`${import.meta.env.VITE_BASE_URL}/winCoins`, {
     method: "POST",
 
@@ -27,5 +27,4 @@ export const saveExtraCoins = async (data) => {
     }),
   });
   calculateDailyCoins(user, getCurrentDate());
-  calculateAmountCoinsByClan(user[0].clanId);
 };
