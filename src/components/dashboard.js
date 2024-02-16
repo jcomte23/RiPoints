@@ -31,22 +31,19 @@ export const showDashboard = async (element) => {
     pieChart(document.querySelector(".dashboard__pie"), labelClan, pointClan)
 
 
+    //Grafica de Top Coders
+    const topCodersChart = document.querySelector(".dashboard__ranking__coders")
+    topCodersChars(topCodersChart, "top coders", "codersRanking")
+    
 
-
-
-    const topCodersChart = document.querySelector(
-        ".dashboard__ranking__coders"
-    );
-    // THe compexety of the world
-
+    //Grafica lineal
     let completeList = await getDataFromDifferentEndpoints(
         "users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins"
     );
-
     // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02
-    lineChart(document.querySelector(".dashboard__line"), "line1");
+    lineChart(document.querySelector(".dashboard__line"), "line1")
 
-    topCodersChars(topCodersChart, "top coders", "codersRanking");
+    
 
-    updateContent();
-};
+    updateContent()
+}
