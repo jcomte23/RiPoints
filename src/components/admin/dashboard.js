@@ -1,8 +1,8 @@
-import "../scss/dashboard.scss";
+import "../../scss/dashboard.scss";
 import { pieChart, lineChart } from "./pieChart";
-import { updateContent } from "../js/translator";
-import { getDataFromDifferentEndpoints } from "../js/services/helpers";
-import { getAllClan } from "../js/services/getClan";
+import { updateContent } from "../../js/translator";
+import { getDataFromDifferentEndpoints } from "../../js/services/helpers";
+import { getAllClan } from "../../js/services/getClan";
 import { topCodersChars } from "./topCodersChart";
 
 export const showDashboard = async (element) => {

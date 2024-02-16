@@ -1,6 +1,6 @@
 import { showClans } from "./clans";
 import { showCoders } from "./coders";
-import { showDashboard } from "./dashboard";
+import { showDashboard } from "./admin/dashboard";
 import { showFileAttachment } from "./FileAttachment";
 import { getLanguague } from "../js/translator";
 import "../scss/tables.scss";

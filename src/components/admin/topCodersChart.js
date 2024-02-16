@@ -1,5 +1,5 @@
 import { Chart } from "chart.js";
-import { getTopCoders } from "../js/services/getTopCoders";
+import { getTopCoders } from "../../js/services/getTopCoders";
 
 export const topCodersChars = async (container, label, id) => {
     const coders = await getTopCoders();
