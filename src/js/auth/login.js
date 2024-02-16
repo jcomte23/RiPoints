@@ -1,6 +1,6 @@
 import "../../scss/login.scss"
 import { smallAlertError } from "../validations/alerts"
-import { showLogin } from "../../components/login"
+import { showLogin } from "../../components/auth/login"
 import { getUser } from "../services/getUser"
 import { showValidation } from "../validations/validationForm"
 

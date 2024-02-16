@@ -1,7 +1,7 @@
-import { getUserById } from "../js/services/getUser";
-import { setImageMultiple } from "../js/services/helpers";
-import { changeLanguageOnClick, updateContent } from "../js/translator";
-import { historyWinCoinsByUserId } from "../js/usecases/winCoinsHistory";
+import { getUserById } from "../../js/services/getUser";
+import { setImageMultiple } from "../../js/services/helpers";
+import { changeLanguageOnClick, updateContent } from "../../js/translator";
+import { historyWinCoinsByUserId } from "../../js/usecases/winCoinsHistory";
 
 export const renderCoder = (element) => {
   const user = JSON.parse(localStorage.getItem("userStorage"))

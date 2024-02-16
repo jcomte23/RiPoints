@@ -1,6 +1,6 @@
 import * as bootstrap from "bootstrap";
 import Chart from "chart.js/auto";
-import { renderCoder } from "../../components/coder";
+import { renderCoder } from "../../components/coder/coder";
 import { getLanguague } from "../../js/translator";
 import { getCoinByWeek } from "../usecases/calculateCoins";
 
