@@ -1,50 +1,64 @@
 import { filter } from "../js/coder/coders";
 import { updateContent } from "../js/translator";
 import { loadCodersTr } from "./listTr";
-import '../scss/coders.scss'
+import "../scss/coders.scss";
 
 const session = JSON.parse(localStorage.getItem("userStorage"));
 
 export function showCoders(element) {
-  while (element.firstChild) {
-    element.removeChild(element.firstChild);
-  }
-  element.innerHTML = `
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+    element.innerHTML = `
 
   ${
-    session.rol.name == 'trainer' 
-    ?`
+      session.rol.name == "trainer"
+          ? `
       <div class="ownClanCoins" >
-        <div class="ownClanCoins__i shadow-lg" >
-          <h1 class="ownClanCoins__title" >Clanes Asignados</h1>
-          <div class="ownClanCoins__container" > 
-            <div class="owner__clan" >
-              <div class="imgClan" ></div>
+
+        <div class="ownClanCoins__card shadow-lg" >
+          <h1 class="ownClanCoins__card-title" data-i18n="assigned_clans"></h1>
+          
+          <div class="ownClanCoins__card-body" > 
+
+            <div class="ownClanCoins__card-body-figure" >
+              <img  src="/img/img_clans/meta.png" />
               <span>Meta</span>
             </div>
-            <div class="owner__clan" >
-              <div class="imgClan" ></div>
-              <span>Van Ross</span>
+
+            <div class="ownClanCoins__card-body-figure" >
+              <img src="/img/img_clans/lovelace.png"/>
+              <span>Lovelace</span>
             </div>
+            
           </div>
         </div>
-        <div class="ownClanCoins__i shadow-lg" >
-        <h1 class="ownClanCoins__title" >Coins</h1>
-        <div class="ownClanCoins__container" > 
-        <div class="owner__poinst" >
-          <span>Asignados</span>
-          <div class="assignedPoints" >40</div>
-        </div>
-        <div class="owner__poinst" >
-          <span>Restantes</span>
-          <div class="assignedPoints" >10</div>
-        </div>
-      </div>
-        <h1 class="ownClanCoins__title" >Coins totales: 50</h1>
-        </div>
-      </div>
-    `:''
 
+
+        <div class="ownClanCoins__card shadow-lg" >
+          <h1 class="ownClanCoins__card-title" >Coins</h1>
+        
+        <div class="ownClanCoins__card-body border-extra" > 
+          <div class="ownClanCoins__card-body-coins" >
+            <h3 data-i18n="assigned" >Asignados</h3>
+            <span>40</span>
+          </div>
+
+          <div class="ownClanCoins__card-body-coins" >
+            <h3 data-i18n="remaining">Restantes</h3>
+            <span>10</span>
+          </div>
+        </div>
+
+        <div class="ownClanCoins__card-total">
+          <span data-i18n="total_coins">Coins totales:</span>
+          <span>50</span>
+        </div>
+          
+        </div>
+      </div>
+    `
+          : ""
   }
     <div class="listCoders shadow-lg">
       <div class="listCoders__header" >
@@ -73,8 +87,8 @@ export function showCoders(element) {
     </div> 
     `;
 
-  loadCodersTr(document.getElementById("codersList")).then(() => {
-    filter();
-  });
-  updateContent();
+    loadCodersTr(document.getElementById("codersList")).then(() => {
+        filter();
+    });
+    updateContent();
 }
