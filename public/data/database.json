@@ -119,17 +119,6 @@
       "userName": "trainer_jess"
     },
     {
-      "id": "alfa1",
-      "rolId": "3",
-      "userName": "jcomte23",
-      "password": "jcomte23",
-      "name": "Javier",
-      "lastName": "Cómbita Téllez",
-      "clanId": "lovelace",
-      "amount": 44,
-      "photo": "jcomte23.webp"
-    },
-    {
       "id": "1",
       "rolId": "3",
       "userName": "gabrielgarcia",
@@ -188,6 +177,17 @@
       "lastName": "Flores Carmona",
       "clanId": "linus",
       "amount": 4
+    },
+    {
+      "id": "7",
+      "rolId": "3",
+      "userName": "jcomte23",
+      "password": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "clanId": "lovelace",
+      "amount": 4,
+      "photo": "jcomte23.webp"
     }
   ],
   "clansTrainers": [
@@ -550,9 +550,9 @@
         "week": 6,
         "fullDate": "2024-2-16"
       },
-      "userId": "alfa1",
+      "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 5
+      "amountDay": 0
     },
     {
       "id": "31",
@@ -563,9 +563,9 @@
         "week": 7,
         "fullDate": "2024-2-19"
       },
-      "userId": "alfa1",
+      "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 19
+      "amountDay": 2
     },
     {
       "id": "32",
@@ -576,9 +576,9 @@
         "week": 7,
         "fullDate": "2024-2-20"
       },
-      "userId": "alfa1",
+      "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 20
+      "amountDay": 2
     }
   ],
   "winCoins": []
