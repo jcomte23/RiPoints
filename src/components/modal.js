@@ -137,7 +137,7 @@ export async function modal(element) {
 
       const closeButton = document.querySelector("#exampleModal .btn-close");
       closeButton.click();
-      smallAlertSuccess('Points added correctly')
+      smallAlertSuccess('Points added correctly',"Puntos agregados correctamente")
     });
   }
 
