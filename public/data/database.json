@@ -68,7 +68,7 @@
         },
         {
             "id": "a4",
-            "rolId": "1",
+            "rolId": "2",
             "name": "vermen rainer",
             "lastName": "ayala vargas",
             "password": "vermen",
@@ -201,53 +201,13 @@
     "clansTrainers": [
         {
             "id": "1",
-            "userId": "t1",
-            "clanId": "dell"
+            "userId": "t2",
+            "clanId": "meta"
         },
         {
             "id": "2",
             "userId": "t2",
-            "clanId": "gates"
-        },
-        {
-            "id": "3",
-            "userId": "t3",
-            "clanId": "gosling"
-        },
-        {
-            "id": "4",
-            "userId": "t4",
-            "clanId": "jobs"
-        },
-        {
-            "id": "5",
-            "userId": "t5",
-            "clanId": "linus"
-        },
-        {
-            "id": "6",
-            "userId": "t6",
             "clanId": "lovelace"
-        },
-        {
-            "id": "7",
-            "userId": "t1",
-            "clanId": "meta"
-        },
-        {
-            "id": "8",
-            "userId": "t2",
-            "clanId": "ritchie"
-        },
-        {
-            "id": "8",
-            "userId": "t3",
-            "clanId": "tesla"
-        },
-        {
-            "id": "9",
-            "userId": "t4",
-            "clanId": "van_rossum"
         }
     ],
     "scoreCoins": [
