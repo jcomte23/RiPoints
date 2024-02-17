@@ -157,7 +157,7 @@
       "name": "Fernando",
       "lastName": "Botero Angulo",
       "clanId": "lovelace",
-      "amount": 121
+      "amount": 10
     },
     {
       "id": "4",
@@ -370,7 +370,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 16
+      "amountDay": 0
     },
     {
       "id": "16",
@@ -383,7 +383,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 19
+      "amountDay": 2
     },
     {
       "id": "17",
@@ -396,7 +396,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 20
+      "amountDay": 2
     },
     {
       "id": "18",
@@ -409,7 +409,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 21
+      "amountDay": 2
     },
     {
       "id": "19",
@@ -422,7 +422,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 22
+      "amountDay": 2
     },
     {
       "id": "20",
@@ -435,7 +435,7 @@
       },
       "userId": "3",
       "attendantCoins": 1,
-      "amountDay": 23
+      "amountDay": 2
     },
     {
       "id": "21",
