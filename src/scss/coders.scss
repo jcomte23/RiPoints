@@ -1,13 +1,13 @@
 @use "variables" as v;
 
-.listCoders{
+.listCoders {
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0 0 1rem v.$antiflash;
     border-radius: 1rem;
 }
 
-.listCoders__header{
+.listCoders__header {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -15,23 +15,23 @@
     gap: 1rem;
     text-transform: capitalize;
     padding-bottom: 1rem;
-    border-bottom: .15rem solid v.$mauve;
-    .search{
+    border-bottom: 0.15rem solid v.$mauve;
+    .search {
         position: relative;
         width: max-content;
         display: flex;
         align-items: center;
         justify-content: flex-end;
     }
-    .search input{
+    .search input {
         width: 100%;
         outline: none;
         border: none;
         background-color: v.$antiflash;
-        padding: .5rem 1rem;
-        border-radius: .5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
     }
-    .search__icon{
+    .search__icon {
         position: absolute !important;
         width: 1.5rem !important;
         height: 1.5rem !important;
@@ -41,118 +41,145 @@
     }
 }
 
-.listCoders__table{
+.listCoders__table {
     width: 100%;
     margin-top: 1rem;
-    thead tr{
+    thead tr {
         color: v.$gray;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
     }
-    tbody tr:not(:last-of-type){
-        border-bottom: .1rem solid v.$antiflash;
+    tbody tr:not(:last-of-type) {
+        border-bottom: 0.1rem solid v.$antiflash;
     }
-    tbody tr td{
+    tbody tr td {
         color: v.$darkgray;
         font-weight: 600;
         text-transform: capitalize;
-        padding: .5rem 0;
+        padding: 0.5rem 0;
     }
 }
-
 
 /* PLUS */
 
-.plus::after{
+.plus::after {
     content: attr(data-plus);
     color: v.$mint;
-    margin-left: .2rem;
+    margin-left: 0.2rem;
     animation: intermitated 1.2s ease infinite;
 }
 
-.less::after{
+.less::after {
     content: attr(data-plus);
     color: v.$tomato;
-    margin-left: .3rem;
+    margin-left: 0.3rem;
     animation: intermitated 1.2s ease infinite;
 }
 
-.ownClanCoins{
+// cards styles
+.ownClanCoins {
     display: flex;
-    justify-content: center;
-    background-color: v.$seasalt;
-    height: 40dvh;
-    margin-top: 1rem;
-    gap: 1rem;
-}
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: space-between;
 
-.ownClanCoins__i{
-    width: calc(50% - 1.5rem);
-    display: flex;
-    background-color: v.$white;
-    border-radius: 1rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-    padding: 1rem;
-}
-
-.ownClanCoins__container{
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: start;
-    gap: 1rem;
-    width: 100%;
-    .owner__clan{
+    &__card {
+        width: 45%;
+        border-radius: 16px;
+        padding: 1rem;
         display: flex;
+        align-items: center;
         justify-content: start;
         flex-direction: column;
-        align-items: center;
-        width: 5rem;
-        gap: .5rem;
-        height: max-content;
-        .imgClan{
+        gap: 10px;
+        color: v.$secondary;
+
+        &-title {
+            text-align: center;
             width: 80%;
-            height: 80%;
-            aspect-ratio: 1/1;
-            background-color: v.$primary;
-            border-radius: 100%;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 !important;
+        }
+
+        .border-extra {
+            border-bottom: 1px solid v.$mauve;
+        }
+
+        &-body {
+            display: flex;
+            gap: 25px;
+            width: 80%;
+            padding: 1rem 0;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid v.$mauve;
+
+            &-figure {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                font-size: 24px;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+
+                img {
+                    margin: 0 !important;
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+
+            &-coins {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: bold;
+                padding: 0.5rem 1.5rem;
+                border-radius: 10px;
+
+                &:nth-child(1) {
+                    background-color: #fe664f4d;
+                    span {
+                        color: v.$tomato;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: #5acca449;
+                    span {
+                        color: v.$mint;
+                    }
+                }
+            }
+        }
+
+        &-total {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: v.$secondary;
+            justify-content: center;
+            gap: 10px;
+
+            & > * {
+                font-size: 24px;
+                font-weight: bold;
+            }
         }
     }
-    .owner__poinst{
-        background-color: v.$mint;
-        border-radius: 1rem;
-        color: v.$secondary;
-        font-weight: bolder;
-        padding: .5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 50%;
-        height: 100%;
-        flex-grow: 1;
-    }
-    .owner__poinst:last-child{
-        background-color: v.$tomato;
-    }
-
 }
-
-
-.ownClanCoins__title{
-    font-size: 1.5rem;
-    padding:  0 0 .2rem 0;
-    width: 100%;
-    border-bottom: .15rem solid v.$mauve;
-}
-
 
 @keyframes intermitated {
-    0%,100%{
+    0%,
+    100% {
         opacity: 1;
     }
-    50%{
+    50% {
         opacity: 0;
     }
 }
