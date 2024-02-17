@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded",async () => {
 Chart.defaults.color = "#fff";
 const renderweekChart = async () => {
   const data = await getCoinByWeek();
-
   const datos = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     datasets: [
@@ -48,8 +47,6 @@ const renderweekChart = async () => {
 
   return weekchart;
 }
-
-
 
 
 // Sistema para cambio de icono en el traductor

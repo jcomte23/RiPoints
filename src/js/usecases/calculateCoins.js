@@ -105,6 +105,7 @@ export const getCoinByWeek = async () => {
   const user = JSON.parse(localStorage.getItem("userStorage"));
   const date = calculateDate();
   const weekCoins = await getWeekCoins(user.id, date.week);
+  console.log(date.week);
   const accountWeekCoins = [0, 0, 0, 0, 0];
 
   for (const weekCoin of weekCoins) {

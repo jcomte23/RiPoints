@@ -8,7 +8,6 @@ import { getUserById } from "./getUser";
 //! Estoy partiedo del supuesto que la tabla scoreCoins ya esta creada para ese dia
 //scoreCoinId, mirar si es necesario, creo que ya con el id y la fecha basta
 export const saveExtraCoins = async (data) => {
-  console.log(data);
   const user = await getUserById(data.coderId);
   const scoreCoin = await getScoreCoinsByDateAndUserId(getCurrentDate(),data.coderId);
   console.log(scoreCoin);

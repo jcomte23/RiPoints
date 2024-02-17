@@ -1,606 +1,607 @@
 {
-    "clans": [
-        {
-            "id": "meta",
-            "name": "meta",
-            "points": 177
-        },
-        {
-            "id": "dell",
-            "name": "dell",
-            "points": 82
-        },
-        {
-            "id": "linus",
-            "name": "linus",
-            "points": 41
-        },
-        {
-            "id": "lovelace",
-            "name": "lovelace",
-            "points": 178
-        },
-        {
-            "id": "van_rossum",
-            "name": "van rossum",
-            "points": 48
-        }
-    ],
-    "rols": [
-        {
-            "id": "1",
-            "name": "admin"
-        },
-        {
-            "id": "2",
-            "name": "trainer"
-        },
-        {
-            "id": "3",
-            "name": "coder"
-        }
-    ],
-    "users": [
-        {
-            "id": "a1",
-            "rolId": "1",
-            "name": "admin",
-            "lastName": "example",
-            "password": "1",
-            "userName": "1"
-        },
-        {
-            "id": "a2",
-            "rolId": "1",
-            "name": "mauricio",
-            "lastName": "vélez espinosa",
-            "password": "mauricio",
-            "userName": "mauricio",
-            "photo": "mauricio.webp"
-        },
-        {
-            "id": "a3",
-            "rolId": "1",
-            "name": "jackeline",
-            "lastName": "narvaez",
-            "password": "jackeline",
-            "userName": "jackeline"
-        },
-        {
-            "id": "a4",
-            "rolId": "2",
-            "name": "vermen rainer",
-            "lastName": "ayala vargas",
-            "password": "vermen",
-            "userName": "vermen",
-            "photo": "vermen.webp"
-        },
-        {
-            "id": "t1",
-            "rolId": "2",
-            "name": "trainer",
-            "lastName": "example",
-            "password": "2",
-            "userName": "2"
-        },
-        {
-            "id": "t2",
-            "rolId": "2",
-            "name": "kevin wifred",
-            "lastName": "mejía torres",
-            "password": "kevin",
-            "userName": "kevin",
-            "photo": "kevin.webp"
-        },
-        {
-            "id": "t3",
-            "rolId": "2",
-            "name": "javier",
-            "lastName": "cuenca meliá",
-            "password": "javier",
-            "userName": "javier",
-            "photo": "javier.webp"
-        },
-        {
-            "id": "t4",
-            "rolId": "2",
-            "name": "maría alejandra",
-            "lastName": "manosalva clavijo",
-            "password": "maría",
-            "userName": "maría",
-            "photo": "maria.webp"
-        },
-        {
-            "id": "t5",
-            "rolId": "2",
-            "name": "Jessica",
-            "lastName": "Taylor",
-            "password": "2",
-            "userName": "trainer_jess"
-        },
-        {
-            "id": "alfa1",
-            "rolId": "3",
-            "userName": "jcomte23",
-            "password": "jcomte23",
-            "name": "Javier",
-            "lastName": "Cómbita Téllez",
-            "clanId": "lovelace",
-            "amount": 40,
-            "photo": "jcomte23.webp"
-        },
-        {
-            "id": "t6",
-            "rolId": "2",
-            "name": "Alexandra",
-            "lastName": "Johnson",
-            "password": "2",
-            "userName": "trainer_alex"
-        },
-        {
-            "id": "1",
-            "rolId": "3",
-            "userName": "gabrielgarcia",
-            "password": "gabrielgarcia",
-            "name": "Gabriel",
-            "lastName": "García Márquez",
-            "clanId": "van_rossum",
-            "amount": 53
-        },
-        {
-            "id": "2",
-            "rolId": "3",
-            "userName": "juantorres",
-            "password": "juantorres",
-            "name": "Juan Camilo",
-            "lastName": "Torres García",
-            "clanId": "meta",
-            "amount": 26
-        },
-        {
-            "id": "3",
-            "rolId": "3",
-            "userName": "fernandobotero",
-            "password": "fernandobotero",
-            "name": "Fernando",
-            "lastName": "Botero Angulo",
-            "clanId": "lovelace",
-            "amount": 20
-        },
-        {
-            "id": "4",
-            "rolId": "3",
-            "userName": "luiscarlos",
-            "password": "luiscarlos",
-            "name": "Luis Carlos",
-            "lastName": "Galán Sarmiento",
-            "clanId": "dell",
-            "amount": 41
-        },
-        {
-            "id": "5",
-            "rolId": "3",
-            "userName": "juan",
-            "password": "juan",
-            "name": "juan camilo",
-            "lastName": "martinez narvaez",
-            "clanId": "dell",
-            "amount": 42
-        },
-        {
-            "id": "6",
-            "rolId": "3",
-            "userName": "sebastian",
-            "password": "sebastian",
-            "name": "Sebastian ",
-            "lastName": "Flores Carmona",
-            "clanId": "linus",
-            "amount": 41
-        }
-    ],
-    "clansTrainers": [
-        {
-            "id": "1",
-            "userId": "t2",
-            "clanId": "meta"
-        },
-        {
-            "id": "2",
-            "userId": "t2",
-            "clanId": "lovelace"
-        }
-    ],
-    "scoreCoins": [
-        {
-            "id": "1",
-            "clanId": "van_rossum",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "1",
-            "attendantCoins": 1,
-            "amountDay": 1
-        },
-        {
-            "id": "4",
-            "clanId": "van_rossum",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "1",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "5",
-            "clanId": "van_rossum",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "1",
-            "attendantCoins": 1,
-            "amountDay": 20
-        },
-        {
-            "id": "6",
-            "clanId": "van_rossum",
-            "date": {
-                "day": "Wednesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-21"
-            },
-            "userId": "1",
-            "attendantCoins": 1,
-            "amountDay": 21
-        },
-        {
-            "id": "7",
-            "clanId": "van_rossum",
-            "date": {
-                "day": "Thursday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-22"
-            },
-            "userId": "1",
-            "attendantCoins": 1,
-            "amountDay": 22
-        },
-        {
-            "id": "8",
-            "clanId": "van_rossum",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-23"
-            },
-            "userId": "1",
-            "attendantCoins": 1,
-            "amountDay": 23
-        },
-        {
-            "id": "9",
-            "clanId": "meta",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "2",
-            "attendantCoins": 1,
-            "amountDay": 16
-        },
-        {
-            "id": "10",
-            "clanId": "meta",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "2",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "11",
-            "clanId": "meta",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "2",
-            "attendantCoins": 1,
-            "amountDay": 20
-        },
-        {
-            "id": "12",
-            "clanId": "meta",
-            "date": {
-                "day": "Wednesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-21"
-            },
-            "userId": "2",
-            "attendantCoins": 1,
-            "amountDay": 21
-        },
-        {
-            "id": "13",
-            "clanId": "meta",
-            "date": {
-                "day": "Thursday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-22"
-            },
-            "userId": "2",
-            "attendantCoins": 1,
-            "amountDay": 22
-        },
-        {
-            "id": "14",
-            "clanId": "meta",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-23"
-            },
-            "userId": "2",
-            "attendantCoins": 1,
-            "amountDay": 23
-        },
-        {
-            "id": "15",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "3",
-            "attendantCoins": 1,
-            "amountDay": 16
-        },
-        {
-            "id": "16",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "3",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "17",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "3",
-            "attendantCoins": 1,
-            "amountDay": 20
-        },
-        {
-            "id": "18",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Wednesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-21"
-            },
-            "userId": "3",
-            "attendantCoins": 1,
-            "amountDay": 21
-        },
-        {
-            "id": "19",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Thursday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-22"
-            },
-            "userId": "3",
-            "attendantCoins": 1,
-            "amountDay": 22
-        },
-        {
-            "id": "20",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-23"
-            },
-            "userId": "3",
-            "attendantCoins": 1,
-            "amountDay": 23
-        },
-        {
-            "id": "21",
-            "clanId": "dell",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "4",
-            "attendantCoins": 1,
-            "amountDay": 2
-        },
-        {
-            "id": "22",
-            "clanId": "dell",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "4",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "23",
-            "clanId": "dell",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "4",
-            "attendantCoins": 1,
-            "amountDay": 20
-        },
-        {
-            "id": "24",
-            "clanId": "dell",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "5",
-            "attendantCoins": 1,
-            "amountDay": 3
-        },
-        {
-            "id": "25",
-            "clanId": "dell",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "5",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "26",
-            "clanId": "dell",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "5",
-            "attendantCoins": 1,
-            "amountDay": 20
-        },
-        {
-            "id": "27",
-            "clanId": "linus",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "6",
-            "attendantCoins": 1,
-            "amountDay": 2
-        },
-        {
-            "id": "28",
-            "clanId": "linus",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "6",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "29",
-            "clanId": "linus",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "6",
-            "attendantCoins": 1,
-            "amountDay": 20
-        },
-        {
-            "id": "30",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Friday",
-                "month": "February",
-                "week": 6,
-                "fullDate": "2024-2-16"
-            },
-            "userId": "alfa1",
-            "attendantCoins": 1,
-            "amountDay": 16
-        },
-        {
-            "id": "31",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Monday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-19"
-            },
-            "userId": "alfa1",
-            "attendantCoins": 1,
-            "amountDay": 19
-        },
-        {
-            "id": "32",
-            "clanId": "lovelace",
-            "date": {
-                "day": "Tuesday",
-                "month": "February",
-                "week": 7,
-                "fullDate": "2024-2-20"
-            },
-            "userId": "alfa1",
-            "attendantCoins": 1,
-            "amountDay": 20
-        }
-    ],
-    "winCoins": []
+  "clans": [
+    {
+      "id": "meta",
+      "name": "meta",
+      "points": 105
+    },
+    {
+      "id": "dell",
+      "name": "dell",
+      "points": 82
+    },
+    {
+      "id": "linus",
+      "name": "linus",
+      "points": 84
+    },
+    {
+      "id": "lovelace",
+      "name": "lovelace",
+      "points": 64
+    },
+    {
+      "id": "van_rossum",
+      "name": "van rossum",
+      "points": 48
+    }
+  ],
+  "rols": [
+    {
+      "id": "1",
+      "name": "admin"
+    },
+    {
+      "id": "2",
+      "name": "trainer"
+    },
+    {
+      "id": "3",
+      "name": "coder"
+    }
+  ],
+  "users": [
+    {
+      "id": "a1",
+      "rolId": "1",
+      "name": "admin",
+      "lastName": "example",
+      "password": "1",
+      "userName": "1"
+    },
+    {
+      "id": "a2",
+      "rolId": "1",
+      "name": "mauricio",
+      "lastName": "vélez espinosa",
+      "password": "mauricio",
+      "userName": "mauricio",
+      "photo": "mauricio.webp"
+    },
+    {
+      "id": "a3",
+      "rolId": "1",
+      "name": "jackeline",
+      "lastName": "narvaez",
+      "password": "jackeline",
+      "userName": "jackeline"
+    },
+    {
+      "id": "a4",
+      "rolId": "2",
+      "name": "vermen rainer",
+      "lastName": "ayala vargas",
+      "password": "vermen",
+      "userName": "vermen",
+      "photo": "vermen.webp"
+    },
+    {
+      "id": "t1",
+      "rolId": "2",
+      "name": "trainer",
+      "lastName": "example",
+      "password": "2",
+      "userName": "2"
+    },
+    {
+      "id": "t2",
+      "rolId": "2",
+      "name": "kevin wifred",
+      "lastName": "mejía torres",
+      "password": "kevin",
+      "userName": "kevin",
+      "photo": "kevin.webp"
+    },
+    {
+      "id": "t3",
+      "rolId": "2",
+      "name": "javier",
+      "lastName": "cuenca meliá",
+      "password": "javier",
+      "userName": "javier",
+      "photo": "javier.webp"
+    },
+    {
+      "id": "t4",
+      "rolId": "2",
+      "name": "maría alejandra",
+      "lastName": "manosalva clavijo",
+      "password": "maría",
+      "userName": "maría",
+      "photo": "maria.webp"
+    },
+    {
+      "id": "t5",
+      "rolId": "2",
+      "name": "Jessica",
+      "lastName": "Taylor",
+      "password": "2",
+      "userName": "trainer_jess"
+    },
+    {
+      "id": "alfa1",
+      "rolId": "3",
+      "userName": "jcomte23",
+      "password": "jcomte23",
+      "name": "Javier",
+      "lastName": "Cómbita Téllez",
+      "clanId": "lovelace",
+      "amount": 44,
+      "photo": "jcomte23.webp"
+    },
+    {
+      "id": "t6",
+      "rolId": "2",
+      "name": "Alexandra",
+      "lastName": "Johnson",
+      "password": "2",
+      "userName": "trainer_alex"
+    },
+    {
+      "id": "1",
+      "rolId": "3",
+      "userName": "gabrielgarcia",
+      "password": "gabrielgarcia",
+      "name": "Gabriel",
+      "lastName": "García Márquez",
+      "clanId": "van_rossum",
+      "amount": 11
+    },
+    {
+      "id": "2",
+      "rolId": "3",
+      "userName": "juantorres",
+      "password": "juantorres",
+      "name": "Juan Camilo",
+      "lastName": "Torres García",
+      "clanId": "meta",
+      "amount": 105
+    },
+    {
+      "id": "3",
+      "rolId": "3",
+      "userName": "fernandobotero",
+      "password": "fernandobotero",
+      "name": "Fernando",
+      "lastName": "Botero Angulo",
+      "clanId": "lovelace",
+      "amount": 20
+    },
+    {
+      "id": "4",
+      "rolId": "3",
+      "userName": "luiscarlos",
+      "password": "luiscarlos",
+      "name": "Luis Carlos",
+      "lastName": "Galán Sarmiento",
+      "clanId": "dell",
+      "amount": 40
+    },
+    {
+      "id": "5",
+      "rolId": "3",
+      "userName": "juan",
+      "password": "juan",
+      "name": "juan camilo",
+      "lastName": "martinez narvaez",
+      "clanId": "dell",
+      "amount": 42
+    },
+    {
+      "id": "6",
+      "rolId": "3",
+      "userName": "sebastian",
+      "password": "sebastian",
+      "name": "Sebastian ",
+      "lastName": "Flores Carmona",
+      "clanId": "linus",
+      "amount": 84
+    }
+  ],
+  "clansTrainers": [
+    {
+      "id": "1",
+      "userId": "t2",
+      "clanId": "meta"
+    },
+    {
+      "id": "2",
+      "userId": "t2",
+      "clanId": "lovelace"
+    }
+  ],
+  "scoreCoins": [
+    {
+      "id": "1",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 2
+    },
+    {
+      "id": "4",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 2
+    },
+    {
+      "id": "5",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 2
+    },
+    {
+      "id": "6",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-21"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 4
+    },
+    {
+      "id": "7",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Thursday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-22"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": 2
+    },
+    {
+      "id": "8",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-23"
+      },
+      "userId": "1",
+      "attendantCoins": 1,
+      "amountDay": -1
+    },
+    {
+      "id": "9",
+      "clanId": "meta",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 0
+    },
+    {
+      "id": "10",
+      "clanId": "meta",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "11",
+      "clanId": "meta",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "12",
+      "clanId": "meta",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-21"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 21
+    },
+    {
+      "id": "13",
+      "clanId": "meta",
+      "date": {
+        "day": "Thursday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-22"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 22
+    },
+    {
+      "id": "14",
+      "clanId": "meta",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-23"
+      },
+      "userId": "2",
+      "attendantCoins": 1,
+      "amountDay": 23
+    },
+    {
+      "id": "15",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 16
+    },
+    {
+      "id": "16",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "17",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "18",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-21"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 21
+    },
+    {
+      "id": "19",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Thursday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-22"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 22
+    },
+    {
+      "id": "20",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-23"
+      },
+      "userId": "3",
+      "attendantCoins": 1,
+      "amountDay": 23
+    },
+    {
+      "id": "21",
+      "clanId": "dell",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "4",
+      "attendantCoins": 1,
+      "amountDay": 2
+    },
+    {
+      "id": "22",
+      "clanId": "dell",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "4",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "23",
+      "clanId": "dell",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "4",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "24",
+      "clanId": "dell",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 3
+    },
+    {
+      "id": "25",
+      "clanId": "dell",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "26",
+      "clanId": "dell",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "5",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "27",
+      "clanId": "linus",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "6",
+      "attendantCoins": 1,
+      "amountDay": 45
+    },
+    {
+      "id": "28",
+      "clanId": "linus",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "6",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "29",
+      "clanId": "linus",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "6",
+      "attendantCoins": 1,
+      "amountDay": 20
+    },
+    {
+      "id": "30",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Friday",
+        "month": "February",
+        "week": 6,
+        "fullDate": "2024-2-16"
+      },
+      "userId": "alfa1",
+      "attendantCoins": 1,
+      "amountDay": 5
+    },
+    {
+      "id": "31",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Monday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-19"
+      },
+      "userId": "alfa1",
+      "attendantCoins": 1,
+      "amountDay": 19
+    },
+    {
+      "id": "32",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Tuesday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-2-20"
+      },
+      "userId": "alfa1",
+      "attendantCoins": 1,
+      "amountDay": 20
+    }
+  ],
+  "winCoins": [
+  ]
 }

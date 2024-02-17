@@ -10,4 +10,5 @@ export const setCoinsByUser = async (coins) => {
     coderId: localStorage.getItem("coderEdit"),
   };
   await saveExtraCoins(data);
+  location.reload()
 };

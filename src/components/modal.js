@@ -1,5 +1,6 @@
 import { setCoinsByUser } from "../js/usecases/setCoins";
-
+import { smallAlertSuccess } from '../js/validations/alerts'
+ 
 export async function modal(element) {
   let modalContainer = document.createElement("div");
   modalContainer.classList.add("modal", "fade");
@@ -136,6 +137,7 @@ export async function modal(element) {
 
       const closeButton = document.querySelector("#exampleModal .btn-close");
       closeButton.click();
+      smallAlertSuccess('Points added correctly')
     });
   }
 

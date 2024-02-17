@@ -68,7 +68,7 @@ const historyCoderRender = async (user) => {
     historyTbody.innerHTML += `
     <tr>
       <th scope="row" class="table-${color}">${winCoin.coins}</th>
-      <td class="table-${color}">${winCoin.comment}</td>
+      <td class="table-${color}">${winCoin.comment !== ''? winCoin.comment : null  }</td>
       <td class="table-${color}">${winCoin.pointsaAllocator}</td>
       <td class="table-${color}">${winCoin.date}</td>
     </tr>
@@ -79,5 +79,5 @@ const historyCoderRender = async (user) => {
 const amountByUserId = async (userId) => {
   const user = await getUserById(userId);
   const counter = document.getElementById("counter");
-  counter.innerHTML = user[0].amount;
+  counter.textContent = user[0].amount;
 };

@@ -174,6 +174,8 @@ export const showFileAttachment = (element) => {
             "Los dias no concuerdan, no se realizara ninguna operacion"
           );
           return;
+        }else{
+          smallAlertSuccess('Data loaded correctly')
         }
 
         let usersAndCoins = getFinalStructure(daysPerClass);
