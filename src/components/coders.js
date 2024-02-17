@@ -7,36 +7,37 @@ const session = JSON.parse(localStorage.getItem("userStorage"));
 
 let trainerClans = [];
 
-document.addEventListener("DOMContentLoaded", async () => {});
+document.addEventListener("DOMContentLoaded", async () => { });
 
 export async function showCoders(element) {
-    while (element.firstChild) {
-        element.removeChild(element.firstChild);
-    }
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
 
-    // cargar los clanes asignados al trainer
-    if (session.rol.name == "trainer") {
-        trainerClans = await getTrainerClans(session.id);
-    }
+  // cargar los clanes asignados al trainer
+  if (session.rol.name == "trainer") {
+    trainerClans = await getTrainerClans(session.id);
+  }
 
-    element.innerHTML = `
-  ${
-      session.rol.name == "trainer"
-          ? `
-      <div class="ownClanCoins" >
+  console.log(trainerClans);
 
-        <div class="ownClanCoins__card shadow-lg" >
+  element.innerHTML = `
+  ${session.rol.name == "trainer"
+      ? `
+      <div class="ownClanCoins d-flex ${trainerClans !== undefined ? `justify-content-betwen` : `justify-content-center`} " >
+
+        <div class="ownClanCoins__card shadow-lg ${trainerClans !== undefined ? `` : `d-none`}" >
           <h1 class="ownClanCoins__card-title" data-i18n="assigned_clans"></h1>
           
           <div class="ownClanCoins__card-body" > 
 
             <div class="ownClanCoins__card-body-figure" >
-              <figure class="fancyLetter">${trainerClans[0].at(0)}</figure>
+              <figure class="fancyLetter">${trainerClans !== undefined ? trainerClans[0].at(0) : ""}</figure>
               <span>${trainerClans && trainerClans[0]}</span>
             </div>
 
             <div class="ownClanCoins__card-body-figure" >
-            <figure class="fancyLetter">${trainerClans[1].at(0)}</figure>
+            <figure class="fancyLetter">${trainerClans !== undefined ? trainerClans[1].at(0):""}</figure>
               <span>${trainerClans && trainerClans[1]}</span>
             </div>
           </div>
@@ -66,8 +67,8 @@ export async function showCoders(element) {
         </div>
       </div>
     `
-          : ""
-  }
+      : ""
+    }
     <div class="listCoders shadow-lg">
       <div class="listCoders__header" >
         <h2 data-i18n="developers" ></h2>
@@ -83,7 +84,7 @@ export async function showCoders(element) {
             <th data-i18n="name" ></th>
             <th data-i18n="last_name" ></th>
             <th data-i18n="clans" ></th>
-            <th ${session.rol.name == "trainer"?`class="d-none"`:``} data-i18n="points" ></th>
+            <th ${session.rol.name == "trainer" ? `class="d-none"` : ``} data-i18n="points" ></th>
             <th data-i18n="actions" ></th>
           </tr>
         </thead>
@@ -93,8 +94,8 @@ export async function showCoders(element) {
     </div>
     `;
 
-    loadCodersTr(document.getElementById("codersList")).then(() => {
-        filter();
-    });
-    updateContent();
+  loadCodersTr(document.getElementById("codersList")).then(() => {
+    filter();
+  });
+  updateContent();
 }
