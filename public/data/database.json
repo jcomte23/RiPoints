@@ -187,7 +187,7 @@
       "name": "Sebastian ",
       "lastName": "Flores Carmona",
       "clanId": "linus",
-      "amount": 84
+      "amount": 4
     }
   ],
   "clansTrainers": [
@@ -513,7 +513,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 45
+      "amountDay": 0
     },
     {
       "id": "28",
@@ -526,7 +526,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 19
+      "amountDay": 2
     },
     {
       "id": "29",
@@ -539,7 +539,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 20
+      "amountDay": 2
     },
     {
       "id": "30",
