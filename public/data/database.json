@@ -137,7 +137,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 11
+      "amount": 10
     },
     {
       "id": "2",
@@ -214,7 +214,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 0
     },
     {
       "id": "4",
@@ -253,7 +253,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 4
+      "amountDay": 2
     },
     {
       "id": "7",
@@ -279,7 +279,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": -1
+      "amountDay": 2
     },
     {
       "id": "9",
