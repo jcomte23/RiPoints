@@ -10,37 +10,36 @@ export function showCoders(element) {
     element.removeChild(element.firstChild);
   }
   element.innerHTML = `
-  ${session.rol.name == 'trainer'
-      ? `
-      <div class="ownClanCoins" >
-        <div class="ownClanCoins__i shadow-lg" >
-          <h1 class="ownClanCoins__title" >Clanes Asignados</h1>
-          <div class="ownClanCoins__container" >
-            <div class="owner__clan" >
-              <div class="imgClan" ></div>
-              <span>Meta</span>
-            </div>
-            <div class="owner__clan" >
-              <div class="imgClan" ></div>
-              <span>Van Ross</span>
-            </div>
+  ${session.rol.name == 'trainer' ? `
+    <div class="ownClanCoins" >
+      <div class="ownClanCoins__i shadow-lg">
+        <h1 class="ownClanCoins__title">Clanes Asignados</h1>
+        <div class="ownClanCoins__container">
+          <div class="owner__clan" >
+            <div class="imgClan" ></div>
+            <span>Meta</span>
+          </div>
+          <div class="owner__clan" >
+            <div class="imgClan" ></div>
+            <span>Van Ross</span>
           </div>
         </div>
-        <div class="ownClanCoins__i shadow-lg" >
+      </div>
+
+      <div class="ownClanCoins__i shadow-lg" >
         <h1 class="ownClanCoins__title" >Coins</h1>
         <div class="ownClanCoins__container" >
-        <div class="owner__poinst" >
-          <span>Asignados</span>
-          <div class="assignedPoints" >40</div>
-        </div>
-        <div class="owner__poinst" >
-          <span>Restantes</span>
-          <div class="assignedPoints" >10</div>
-        </div>
-      </div>
-        <h1 class="ownClanCoins__title" >Coins totales: 50</h1>
+          <div class="owner__poinst" >
+            <span>Asignados</span>
+            <div class="assignedPoints" >40</div>
+          </div>
+          <div class="owner__poinst" >
+            <span>Restantes</span>
+            <div class="assignedPoints" >10</div>
+          </div>
         </div>
       </div>
+    </div>
     `: ''
     }
     <div class="listCoders shadow-lg">
