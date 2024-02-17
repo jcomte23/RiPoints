@@ -167,7 +167,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": 41
+      "amount": -3
     },
     {
       "id": "5",
@@ -448,7 +448,7 @@
       },
       "userId": "4",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 0
     },
     {
       "id": "22",
@@ -461,7 +461,7 @@
       },
       "userId": "4",
       "attendantCoins": 1,
-      "amountDay": 19
+      "amountDay": 2
     },
     {
       "id": "23",
@@ -474,20 +474,7 @@
       },
       "userId": "4",
       "attendantCoins": 1,
-      "amountDay": 20
-    },
-    {
-      "id": "24",
-      "clanId": "dell",
-      "date": {
-        "day": "Friday",
-        "month": "February",
-        "week": 6,
-        "fullDate": "2024-2-16"
-      },
-      "userId": "5",
-      "attendantCoins": 1,
-      "amountDay": 3
+      "amountDay": -5
     },
     {
       "id": "25",
