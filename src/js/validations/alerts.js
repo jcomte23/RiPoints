@@ -34,14 +34,28 @@ export function smallAlertError(messageEN, messageES) {
 
 }
 
-export function smallAlertSuccess(message) {
-    Swal.fire({
-        toast: true,
-        position: "top-end",
-        icon: "success",
-        title: `${message}`,
-        showConfirmButton: false,
-        timer: 2000,
-        timerProgressBar: true,
-    });
+export function smallAlertSuccess(messageEN, messageES) {
+    const language = getLanguage()
+    if (language === "en") {
+        Swal.fire({
+            toast: true,
+            position: "top-end",
+            icon: "success",
+            title: `${messageEN}`,
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+        })
+    } else {
+        Swal.fire({
+            toast: true,
+            position: "top-end",
+            icon: "success",
+            title: `${messageES}`,
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+        })
+    }
+    
 }
