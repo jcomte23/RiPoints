@@ -147,7 +147,7 @@
       "name": "Juan Camilo",
       "lastName": "Torres García",
       "clanId": "meta",
-      "amount": 105
+      "amount": 4
     },
     {
       "id": "3",
@@ -305,7 +305,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 19
+      "amountDay": 2
     },
     {
       "id": "11",
@@ -318,7 +318,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 20
+      "amountDay": 0
     },
     {
       "id": "12",
@@ -331,7 +331,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 21
+      "amountDay": -2
     },
     {
       "id": "13",
@@ -344,7 +344,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 22
+      "amountDay": 2
     },
     {
       "id": "14",
@@ -357,7 +357,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 23
+      "amountDay": 2
     },
     {
       "id": "15",
