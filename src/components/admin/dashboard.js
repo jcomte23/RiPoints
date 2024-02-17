@@ -1,8 +1,8 @@
+import "../../scss/dashboard.scss";
 import { pieChart, lineChart } from "./pieChart";
-import { updateContent } from "../js/translator";
-import { getDataFromDifferentEndpoints } from "../js/services/helpers";
-import { getAllClan } from "../js/services/getClan";
-import "../scss/dashboard.scss";
+import { updateContent } from "../../js/translator";
+import { getDataFromDifferentEndpoints } from "../../js/services/helpers";
+import { getAllClan } from "../../js/services/getClan";
 import { topCodersChars } from "./topCodersChart";
 
 export const showDashboard = async (element) => {
@@ -18,30 +18,32 @@ export const showDashboard = async (element) => {
             <div class='dashboard__line' ></div>
         </div>
     </div>
-    
-  `;
+    `
 
+    //Grafica de puntaje de clanes
     let listClan = await getAllClan();
     let labelClan = listClan.map((clan) => {
-        return clan.name;
-    });
+        return clan.name
+    })
     let pointClan = listClan.map((clan) => {
-        return clan.points;
-    });
-    pieChart(document.querySelector(".dashboard__pie"), labelClan, pointClan);
+        return clan.points
+    })
+    pieChart(document.querySelector(".dashboard__pie"), labelClan, pointClan)
 
-    const topCodersChart = document.querySelector(
-        ".dashboard__ranking__coders"
-    );
-    // THe compexety of the world
 
+    //Grafica de Top Coders
+    const topCodersChart = document.querySelector(".dashboard__ranking__coders")
+    topCodersChars(topCodersChart, "top coders", "codersRanking")
+    
+
+    //Grafica lineal
     let completeList = await getDataFromDifferentEndpoints(
         "users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins"
     );
     // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02
-    lineChart(document.querySelector(".dashboard__line"), "line1");
+    lineChart(document.querySelector(".dashboard__line"), "line1")
 
-    topCodersChars(topCodersChart, "top coders", "codersRanking");
+    
 
-    updateContent();
-};
+    updateContent()
+}
