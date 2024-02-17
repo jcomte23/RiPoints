@@ -1,16 +1,25 @@
 import { filter } from "../js/coder/coders";
-import { updateContent } from "../js/translator";
+import { getTrainerClans } from "../js/services/getTrainerClans";
 import { loadCodersTr } from "./listTr";
-import "../scss/coders.scss";
+import { updateContent } from "../js/translator";
 
 const session = JSON.parse(localStorage.getItem("userStorage"));
 
-export function showCoders(element) {
+let trainerClans = [];
+
+document.addEventListener("DOMContentLoaded", async () => {});
+
+export async function showCoders(element) {
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
-    element.innerHTML = `
 
+    // cargar los clanes asignados al trainer
+    if (session.rol.name == "trainer") {
+        trainerClans = await getTrainerClans(session.id);
+    }
+
+    element.innerHTML = `
   ${
       session.rol.name == "trainer"
           ? `
@@ -22,15 +31,14 @@ export function showCoders(element) {
           <div class="ownClanCoins__card-body" > 
 
             <div class="ownClanCoins__card-body-figure" >
-              <img  src="/img/img_clans/meta.png" />
-              <span>Meta</span>
+              <figure class="fancyLetter">${trainerClans[0].at(0)}</figure>
+              <span>${trainerClans && trainerClans[0]}</span>
             </div>
 
             <div class="ownClanCoins__card-body-figure" >
-              <img src="/img/img_clans/lovelace.png"/>
-              <span>Lovelace</span>
+            <figure class="fancyLetter">${trainerClans[1].at(0)}</figure>
+              <span>${trainerClans && trainerClans[1]}</span>
             </div>
-            
           </div>
         </div>
 

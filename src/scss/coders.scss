@@ -125,10 +125,23 @@
                 align-items: center;
                 font-weight: bold;
 
-                img {
-                    margin: 0 !important;
-                    height: 100px;
-                    width: 100px;
+                .fancyLetter {
+                    color: v.$primary;
+                    display: grid;
+                    place-items: center;
+                    font-size: 2rem;
+                    border: 0.2rem solid v.$primary;
+                    font-weight: bolder;
+                    transform: rotate(-15deg);
+                    height: 80px;
+                    width: 80px;
+                    text-transform: uppercase;
+                    border-radius: 100%;
+                    margin: 0;
+                }
+
+                span {
+                    text-transform: capitalize;
                 }
             }
 
