@@ -130,14 +130,6 @@
       "photo": "jcomte23.webp"
     },
     {
-      "id": "t6",
-      "rolId": "2",
-      "name": "Alexandra",
-      "lastName": "Johnson",
-      "password": "2",
-      "userName": "trainer_alex"
-    },
-    {
       "id": "1",
       "rolId": "3",
       "userName": "gabrielgarcia",
@@ -165,7 +157,7 @@
       "name": "Fernando",
       "lastName": "Botero Angulo",
       "clanId": "lovelace",
-      "amount": 20
+      "amount": 121
     },
     {
       "id": "4",
@@ -175,7 +167,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": 40
+      "amount": 41
     },
     {
       "id": "5",
@@ -602,6 +594,5 @@
       "amountDay": 20
     }
   ],
-  "winCoins": [
-  ]
+  "winCoins": []
 }
