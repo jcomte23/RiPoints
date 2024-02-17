@@ -48,5 +48,7 @@
     "assigned_clans": "Assigned clans",
     "assigned": "assigned",
     "remaining": "remaining",
-    "total_coins": "Total coins:"
+    "total_coins": "Total coins:",
+    "cancel":"cancel",
+    "save":"save"
 }

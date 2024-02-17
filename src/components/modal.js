@@ -15,63 +15,63 @@ export async function modal(element) {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   
             <div class="title__text">
-              <h2 id="codeR">Codigo </h2><img src="/img/img_desktop/r-logo.svg" alt="">
+              <h2 id="codeR" class="text-capitalize" data-i18n="code">Codigo </h2><img src="/img/img_desktop/r-logo.svg" alt="logo r">
             </div>
             
             <div class="information__coder">
-            <div class="name">
-            <h4>Nombre:</h4>
-            <div class="center__text">
-            <h4 class="center__text" id="coder__name"></h4>
-            </div>
-              </div>
-              <div class="last__name">
-                <h4 for="lastname">Apellido:</h4>
+              <div class="name">
+                <h4><span data-i18n="name"></span>:</h4>
                 <div class="center__text">
-                  <h4 class="center__text" id="coder__lastname"></h4>
+                <h4 class="center__text" id="coder__name"></h4>
+              </div>
                 </div>
-              </div>
-              <div class="clan">
-                <h4 for="clan">Clan:</h4>
-                <div class="center__text">
-                  <h4 id="coder__clanid"></h4>
+                <div class="last__name">
+                  <h4><span data-i18n="last_name"></span>:</h4>
+                  <div class="center__text">
+                    <h4 class="center__text" id="coder__lastname"></h4>
                   </div>
-              </div>
-            </div>
-            
-            <div class="container__profile">
-              <div class="profile__imgs">
-                <div class="coder__profile__table ">
-                  <div class="coder__profile__clan__table "></div>
+                </div>
+                <div class="clan">
+                  <h4 for="clan">Clan:</h4>
+                  <div class="center__text">
+                    <h4 id="coder__clanid"></h4>
+                    </div>
                 </div>
               </div>
               
-              <div class="container__points">
-                <div class="total__points" id="totalPoints"></div>
-                <span id="plusSign">+</span>
-                <div class="quantity">
-                <input class="quantity__input" type="text" value="0" readonly />
-                <div class="quantity__add">
-                <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.webp" alt=""></div>
-                <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.webp" alt="" /></div>
+              <div class="container__profile">
+                <div class="profile__imgs">
+                  <div class="coder__profile__table ">
+                    <div class="coder__profile__clan__table "></div>
+                  </div>
+                </div>
+                
+                <div class="container__points">
+                  <div class="total__points" id="totalPoints"></div>
+                    <span id="plusSign">+</span>
+                  <div class="quantity">
+                  <input class="quantity__input" type="text" value="0" readonly />
+                  <div class="quantity__add">
+                  <div class="add"><img class="img__arrowsUp" src="../../../img/img_globales/asigmentPointsDown.webp" alt=""></div>
+                  <div class="less"><img class="img__arrowsDown" src="../../../img/img_globales/asigmentPointUp.webp" alt="" /></div>
+                  </div>
+                </div>
                 </div>
               </div>
+              
+              <div class="containerInputDate">
+                <label class="text-capitalize"><span data-i18n="date"></span>:</label>
+                <input class="inputDate" type="date" id="fecha" name="fecha">
               </div>
-            </div>
-            
-            <div class="containerInputDate">
-            <label>Fecha:</label>
-            <input class="inputDate" type="date" id="fecha" name="fecha">
-            </div>
 
-            <div class="container__area">
-              <textarea placeholder="observaciones" id="observations" name="observations"></textarea>
-                      </div>
-            
-            <div class="btn_actions m-5 ">
-              <button class="btn__delete btn btn-danger btn-lg col-md-5 m-1" id="cancel-modal">Cancelar</button>
-              <button class="btn__succes btn btn-success btn-lg col-md-5 m-1" id="save-modal">Guardar</button>
-            </div>
+              <div class="container__area">
+                <textarea  id="observations" name="observations"></textarea>
+              </div>
+              
+              <div class="btn_actions m-5 ">
+                <button class="btn__delete btn btn-danger text-capitalize btn-lg col-md-5 m-1" id="cancel-modal" data-i18n="cancel">Cancelar</button>
+                <button class="btn__succes btn btn-success text-capitalize btn-lg col-md-5 m-1" id="save-modal" data-i18n="save">Guardar</button>
+              </div>
           </div>
         </div>
       </div>
@@ -113,14 +113,14 @@ export async function modal(element) {
   function updateSign() {
     plusSign.textContent = realNum < 0 ? "-" : "+";
   }
-  
-  if(numadd !==  null && numless !== null){
-    numadd.addEventListener("click", () => { plus(1);})
-    numless.addEventListener("click", () => { plus(-1);});
+
+  if (numadd !== null && numless !== null) {
+    numadd.addEventListener("click", () => { plus(1); })
+    numless.addEventListener("click", () => { plus(-1); });
   }
   //No entiendo la finalidad de esto, la dat ase debe cragar desde el json, no desde lo que le popngamos manual
   //! CORREGIR MODAL: ADIGNACION DE PUNTOS CODER!
-  if(btnSaveModal != null ){
+  if (btnSaveModal != null) {
     btnSaveModal.addEventListener("click", () => {
       const totalPointsElement = document.querySelector("#exampleModal #totalPoints");
       const totalPoints = parseInt(totalPointsElement.textContent);
@@ -133,14 +133,14 @@ export async function modal(element) {
       document.getElementById("observations").value = "";
       updateInput();
       updateSign();
-  
+
       const closeButton = document.querySelector("#exampleModal .btn-close");
       closeButton.click();
     });
   }
 
   const closed = document.querySelector("#exampleModal #cancel-modal");
-  if( closed !== null ){
+  if (closed !== null) {
     closed.addEventListener("click", (event) => {
       const closeButton = document.querySelector("#exampleModal .btn-close");
       closeButton.click();
