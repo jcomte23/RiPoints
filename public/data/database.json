@@ -3,27 +3,27 @@
     {
       "id": "meta",
       "name": "meta",
-      "points": 105
+      "points": 4
     },
     {
       "id": "dell",
       "name": "dell",
-      "points": 82
+      "points": -3
     },
     {
       "id": "linus",
       "name": "linus",
-      "points": 84
+      "points": 4
     },
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 64
+      "points": 14
     },
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 48
+      "points": 10
     }
   ],
   "rols": [
