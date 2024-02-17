@@ -1,3 +1,4 @@
+import { updateClansPoints } from "../services/helpers";
 import { saveExtraCoins } from "../services/saveExtraCoins";
 
 export const setCoinsByUser = async (coins) => {
@@ -10,5 +11,8 @@ export const setCoinsByUser = async (coins) => {
     coderId: localStorage.getItem("coderEdit"),
   };
   await saveExtraCoins(data);
-  location.reload()
+  await updateClansPoints(user.clanId)
+  setTimeout(() => {
+    location.reload()
+  }, 2000);
 };

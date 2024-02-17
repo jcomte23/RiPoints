@@ -1,8 +1,5 @@
 import * as bootstrap from "bootstrap";
 import "../scss/style.scss";
-import { updateClansPoints } from "./services/helpers";
-
-updateClansPoints("van_rossum")
 
 const btnLogout = document.getElementById("btn-logout");
 btnLogout ? btnLogout.addEventListener("click", logout) : "";
