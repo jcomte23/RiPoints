@@ -7,16 +7,12 @@ import { topCodersChars } from "./topCodersChart";
 
 export const showDashboard = async (element) => {
     element.innerHTML = ` 
-    <div class='dashboard w-100 h-100' >
+    <div class='dashboard' >
         <div class="dashboard__row" >
             <div class='dashboard__pie'></div>
             <div class='dashboard__ranking__coders'></div>
         </div>
-    </div>
-    <div class='dashboard w-100 h-100' >
-        <div class="dashboard__row" >
-            <div class='dashboard__line' ></div>
-        </div>
+        <div class='dashboard__line' ></div>
     </div>
     `
 
@@ -36,10 +32,9 @@ export const showDashboard = async (element) => {
     topCodersChars(topCodersChart, "top coders", "codersRanking")
     
 
-    //Grafica lineal
-    let completeList = await getDataFromDifferentEndpoints(
-        "users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins"
-    );
+    // let completeList = await getDataFromDifferentEndpoints(
+    //     "users?rolId=3&_embed=clan&_embed=scoreCoins&_embed=winCoins"
+    // );
     // http://localhost:3000/winCoins?clanId=gates&date=2024-02-02
     lineChart(document.querySelector(".dashboard__line"), "line1")
 
