@@ -1,5 +1,5 @@
 import { Chart } from "chart.js";
-import { getTopCoders } from "../js/services/getTopCoders";
+import { getTopCoders } from "../../js/services/getTopCoders";
 
 export const topCodersChars = async (container, label, id) => {
     const coders = await getTopCoders();
@@ -31,7 +31,7 @@ export const topCodersChars = async (container, label, id) => {
 
             datasets: [
                 {
-                    label: "Top 3 coders",
+                    label: label,
                     data: [
                         coders.top1.amount,
                         coders.top2.amount,
