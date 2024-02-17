@@ -1,4 +1,4 @@
-import { showClans } from "./clans";
+import { showClans } from "./admin/clans";
 import { showCoders } from "./coders";
 import { showDashboard } from "./admin/dashboard";
 import { showFileAttachment } from "./FileAttachment";

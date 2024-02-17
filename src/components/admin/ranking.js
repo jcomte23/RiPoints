@@ -1,5 +1,5 @@
-import { getDataFromDifferentEndpoints, toCapitalize } from '../js/services/helpers'
-import { setImageMultiple } from '../js/services/helpers';
+import { getDataFromDifferentEndpoints, toCapitalize } from '../../js/services/helpers'
+import { setImageMultiple } from '../../js/services/helpers';
 
 export async function getRankingClans(about, element) {
     const rank = await getDataFromDifferentEndpoints(about)

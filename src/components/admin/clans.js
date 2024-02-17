@@ -1,6 +1,6 @@
-import { updateContent } from "../js/translator";
+import { updateContent } from "../../js/translator";
 import { getRankingClans } from "./ranking"
-import '../scss/admin__trainer/_clans_table.scss'
+import '../../scss/admin__trainer/_clans_table.scss'
 
 export const showClans = async (element) => {
     element.innerHTML = `
