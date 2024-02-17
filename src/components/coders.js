@@ -75,7 +75,7 @@ export function showCoders(element) {
             <th data-i18n="name" ></th>
             <th data-i18n="last_name" ></th>
             <th data-i18n="clans" ></th>
-            <th data-i18n="points" ></th>
+            <th ${session.rol.name == "trainer"?`class="d-none"`:``} data-i18n="points" ></th>
             <th data-i18n="actions" ></th>
           </tr>
         </thead>

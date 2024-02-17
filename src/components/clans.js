@@ -13,7 +13,7 @@ export const showClans = async (element) => {
                     <tr>
                         <td><div data-i18n="position"></div></td>
                         <td><div data-i18n="clan"></div></td>
-                        <td <div data-i18n="points"></div></td>
+                        <td><div data-i18n="points"></div></td>
                     </tr>
                 </tbody>
             </table>
