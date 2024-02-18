@@ -17,7 +17,7 @@ export const renderCoder = async (element) => {
     <h5 class="coder__points--title" data-i18n="totalpoints">Total Points</h5>
     <div class="coder__points">
       <div class="coder__points__coin"></div>
-      <span id="counter"></span>
+      <span id="counter">0</span>
     </div>
   </div>
 
@@ -80,4 +80,5 @@ const amountByUserId = async (userId) => {
   const user = await getUserById(userId);
   const counter = document.getElementById("counter");
   counter.textContent = user[0].amount;
+  startCounter(user[0]);
 };

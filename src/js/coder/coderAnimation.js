@@ -1,18 +1,3 @@
-document.addEventListener('DOMContentLoaded',()=>{
-  let upto = 0;
-  let limit = JSON.parse(localStorage.getItem("userStorage"));
-  let counts = setInterval(updated,50);
-  function updated() {
-    let count = document.getElementById("counter");
-    count.textContent = upto;
-    if (upto === limit.amount) {
-      clearInterval(counts);
-    } else {
-      (limit.amount < 0) ? upto-- : upto++;// Incrementa el valor de 'upto' en cada iteración
-    }
-  }
-})
-
 let browser,
   usrAg = navigator.userAgent;
 usrAg = usrAg.toLowerCase();
