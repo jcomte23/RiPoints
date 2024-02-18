@@ -3,7 +3,7 @@
     {
       "id": "meta",
       "name": "meta",
-      "points": 9
+      "points": 5
     },
     {
       "id": "dell",
@@ -23,7 +23,7 @@
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 10
+      "points": 13
     }
   ],
   "rols": [
@@ -126,7 +126,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 10
+      "amount": 13
     },
     {
       "id": "2",
@@ -136,7 +136,7 @@
       "name": "Juan Camilo",
       "lastName": "Torres García",
       "clanId": "meta",
-      "amount": 9
+      "amount": 5
     },
     {
       "id": "3",
@@ -214,7 +214,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 3
     },
     {
       "id": "4",
@@ -292,7 +292,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 5
+      "amountDay": 1
     },
     {
       "id": "10",
@@ -640,6 +640,176 @@
       "comment": "",
       "pointsaAllocator": "mauricio vélez espinosa",
       "coins": -5,
+      "date": ""
+    },
+    {
+      "id": "4e16",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "f787",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "f9c9",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": -5,
+      "date": ""
+    },
+    {
+      "id": "8a02",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "fa36",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "0fa7",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "72bf",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "154c",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "2bf1",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "980a",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "0e0c",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": ""
+    },
+    {
+      "id": "a1d2",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": -1,
+      "date": ""
+    },
+    {
+      "id": "2941",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": "2024-02-16"
+    },
+    {
+      "id": "b7dc",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "kevin wifred mejía torres",
+      "coins": 1,
+      "date": "2024-02-16"
+    },
+    {
+      "id": "58bc",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": -2,
+      "date": ""
+    },
+    {
+      "id": "d0f5",
+      "scoreCoinId": "1",
+      "userId": "1",
+      "clanId": "van_rossum",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": -1,
+      "date": ""
+    },
+    {
+      "id": "5d98",
+      "scoreCoinId": "9",
+      "userId": "2",
+      "clanId": "meta",
+      "comment": "",
+      "pointsaAllocator": "admin example",
+      "coins": 1,
       "date": ""
     }
   ]
