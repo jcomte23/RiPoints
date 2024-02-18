@@ -40,6 +40,7 @@ export function setImageMultiple(selector,imageList,imagesExist = false){
 
 // to update clan points
 export async function updateClansPoints(clan) {
+    console.log(clan);
     const coders = await getDataFromDifferentEndpoints(`users?clanId=${clan}`)
     let acumulado = 0
     coders.forEach(element => {

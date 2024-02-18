@@ -18,7 +18,7 @@
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 17
+      "points": 21
     },
     {
       "id": "van_rossum",
@@ -186,7 +186,7 @@
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 7,
+      "amount": 11,
       "photo": "jcomte23.webp"
     }
   ],
@@ -552,7 +552,7 @@
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 3
+      "amountDay": 4
     },
     {
       "id": "31",
@@ -578,59 +578,10 @@
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 5
     }
   ],
   "winCoins": [
-    {
-      "id": "d9db",
-      "scoreCoinId": "30",
-      "userId": "7",
-      "clanId": "lovelace",
-      "comment": "Se porto bien",
-      "pointsaAllocator": "trainer example",
-      "coins": 1,
-      "date": "2024-02-20"
-    },
-    {
-      "id": "d61c",
-      "scoreCoinId": "30",
-      "userId": "7",
-      "clanId": "lovelace",
-      "comment": "hola",
-      "pointsaAllocator": "trainer example",
-      "coins": 1,
-      "date": "2024-02-20"
-    },
-    {
-      "id": "8bd3",
-      "scoreCoinId": "30",
-      "userId": "7",
-      "clanId": "lovelace",
-      "comment": "asassa",
-      "pointsaAllocator": "trainer example",
-      "coins": -1,
-      "date": "2024-02-20"
-    },
-    {
-      "id": "24fe",
-      "scoreCoinId": "30",
-      "userId": "7",
-      "clanId": "lovelace",
-      "comment": "aaa",
-      "pointsaAllocator": "trainer example",
-      "coins": 1,
-      "date": "2024-02-20"
-    },
-    {
-      "id": "0bcf",
-      "scoreCoinId": "30",
-      "userId": "7",
-      "clanId": "lovelace",
-      "comment": "aaa",
-      "pointsaAllocator": "trainer example",
-      "coins": 1,
-      "date": "2024-02-20"
-    }
+    
   ]
 }

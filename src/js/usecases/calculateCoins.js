@@ -16,13 +16,13 @@ import { updateDailycoins } from "../services/updateDailyCoins";
 export const calculateDailyCoins = async (user, date) => {
   const winCoins = await contWinCoins(user[0].id, date);
   const scoreScoinId = await getScoreCoinsByDateAndUserId(date, user[0].id);
+  console.log(scoreScoinId);
   //! De momento es cero, pero ahi va el valor ganado por asistencia
   const extraCoins = amountCoins(winCoins, 0);
 
   await updateDailycoins(extraCoins, scoreScoinId[0].id);
   await calculateAmountCoinsByUser(user[0].id);
   await calculateAmountCoinsByClan(user[0].clanId);
-  alert("aaa")
 };
 
 const amountCoins = (winCoin, attendantCoin) => {
@@ -35,7 +35,6 @@ const contWinCoins = async (userId, date) => {
   extraCoins.forEach((item) => {
     totalCoins += item.coins;
   });
-
   return totalCoins;
 };
 //Esta funcion sirve para cuando el trainer asigne puntos, por eso el undefined
