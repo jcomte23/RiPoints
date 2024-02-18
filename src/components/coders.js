@@ -7,7 +7,6 @@ const session = JSON.parse(localStorage.getItem("userStorage"));
 
 let trainerClans = [];
 
-document.addEventListener("DOMContentLoaded", async () => { });
 
 export async function showCoders(element) {
   while (element.firstChild) {

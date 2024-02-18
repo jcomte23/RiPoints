@@ -8,22 +8,22 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": -5
+      "points": 9
     },
     {
       "id": "linus",
       "name": "linus",
-      "points": 9
+      "points": 3
     },
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 14
+      "points": -9
     },
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 9
+      "points": 6
     }
   ],
   "rols": [
@@ -126,7 +126,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 9
+      "amount": 6
     },
     {
       "id": "2",
@@ -146,7 +146,7 @@
       "name": "Fernando",
       "lastName": "Botero Angulo",
       "clanId": "lovelace",
-      "amount": 10
+      "amount": -12
     },
     {
       "id": "4",
@@ -156,7 +156,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": -9
+      "amount": 6
     },
     {
       "id": "5",
@@ -166,7 +166,7 @@
       "name": "juan camilo",
       "lastName": "martinez narvaez",
       "clanId": "dell",
-      "amount": 4
+      "amount": 3
     },
     {
       "id": "6",
@@ -176,7 +176,7 @@
       "name": "Sebastian ",
       "lastName": "Flores Carmona",
       "clanId": "linus",
-      "amount": 9
+      "amount": 3
     },
     {
       "id": "7",
@@ -214,7 +214,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 1
     },
     {
       "id": "4",
@@ -227,7 +227,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "5",
@@ -240,7 +240,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "6",
@@ -253,7 +253,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "7",
@@ -266,7 +266,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "8",
@@ -279,7 +279,7 @@
       },
       "userId": "1",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "9",
@@ -292,7 +292,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 5
+      "amountDay": 1
     },
     {
       "id": "10",
@@ -304,7 +304,7 @@
         "fullDate": "2024-02-19"
       },
       "userId": "2",
-      "attendantCoins": 1,
+      "attendantCoins": 2,
       "amountDay": 2
     },
     {
@@ -317,8 +317,8 @@
         "fullDate": "2024-02-20"
       },
       "userId": "2",
-      "attendantCoins": 1,
-      "amountDay": 0
+      "attendantCoins": 2,
+      "amountDay": 2
     },
     {
       "id": "12",
@@ -330,8 +330,8 @@
         "fullDate": "2024-02-21"
       },
       "userId": "2",
-      "attendantCoins": 1,
-      "amountDay": -2
+      "attendantCoins": 2,
+      "amountDay": 2
     },
     {
       "id": "13",
@@ -343,7 +343,7 @@
         "fullDate": "2024-02-22"
       },
       "userId": "2",
-      "attendantCoins": 1,
+      "attendantCoins": 2,
       "amountDay": 2
     },
     {
@@ -356,8 +356,8 @@
         "fullDate": "2024-02-23"
       },
       "userId": "2",
-      "attendantCoins": 1,
-      "amountDay": 2
+      "attendantCoins": 0,
+      "amountDay": 0
     },
     {
       "id": "15",
@@ -369,7 +369,7 @@
         "fullDate": "2024-02-16"
       },
       "userId": "3",
-      "attendantCoins": 1,
+      "attendantCoins": 0,
       "amountDay": 0
     },
     {
@@ -382,8 +382,8 @@
         "fullDate": "2024-02-19"
       },
       "userId": "3",
-      "attendantCoins": 1,
-      "amountDay": 2
+      "attendantCoins": -5,
+      "amountDay": -5
     },
     {
       "id": "17",
@@ -395,8 +395,8 @@
         "fullDate": "2024-02-20"
       },
       "userId": "3",
-      "attendantCoins": 1,
-      "amountDay": 2
+      "attendantCoins": -5,
+      "amountDay": -5
     },
     {
       "id": "18",
@@ -408,8 +408,8 @@
         "fullDate": "2024-02-21"
       },
       "userId": "3",
-      "attendantCoins": 1,
-      "amountDay": 2
+      "attendantCoins": -2,
+      "amountDay": -2
     },
     {
       "id": "19",
@@ -421,8 +421,8 @@
         "fullDate": "2024-02-22"
       },
       "userId": "3",
-      "attendantCoins": 1,
-      "amountDay": 2
+      "attendantCoins": -2,
+      "amountDay": -2
     },
     {
       "id": "20",
@@ -434,7 +434,7 @@
         "fullDate": "2024-02-23"
       },
       "userId": "3",
-      "attendantCoins": 1,
+      "attendantCoins": 2,
       "amountDay": 2
     },
     {
@@ -447,8 +447,8 @@
         "fullDate": "2024-02-16"
       },
       "userId": "4",
-      "attendantCoins": 1,
-      "amountDay": -7
+      "attendantCoins": 2,
+      "amountDay": 2
     },
     {
       "id": "22",
@@ -460,7 +460,7 @@
         "fullDate": "2024-02-19"
       },
       "userId": "4",
-      "attendantCoins": 1,
+      "attendantCoins": 2,
       "amountDay": 2
     },
     {
@@ -473,8 +473,8 @@
         "fullDate": "2024-02-20"
       },
       "userId": "4",
-      "attendantCoins": 1,
-      "amountDay": -5
+      "attendantCoins": 2,
+      "amountDay": 2
     },
     {
       "id": "25",
@@ -486,8 +486,8 @@
         "fullDate": "2024-02-19"
       },
       "userId": "5",
-      "attendantCoins": 1,
-      "amountDay": 1
+      "attendantCoins": 2,
+      "amountDay": 2
     },
     {
       "id": "26",
@@ -500,7 +500,7 @@
       },
       "userId": "5",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "27",
@@ -513,7 +513,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 5
+      "amountDay": 1
     },
     {
       "id": "28",
@@ -526,7 +526,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "29",
@@ -539,7 +539,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "30",
@@ -552,7 +552,7 @@
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 1
     },
     {
       "id": "31",
@@ -565,7 +565,7 @@
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     },
     {
       "id": "32",
@@ -591,7 +591,7 @@
       },
       "userId": "5",
       "attendantCoins": 0,
-      "amountDay": 1
+      "amountDay": 0
     },
     {
       "id": "2be9",
@@ -604,7 +604,7 @@
       },
       "userId": "1",
       "attendantCoins": 0,
-      "amountDay": -2
+      "amountDay": 0
     },
     {
       "id": "7e5a",
@@ -617,7 +617,7 @@
       },
       "userId": "2",
       "attendantCoins": 0,
-      "amountDay": 2
+      "amountDay": 0
     },
     {
       "id": "d2aa",
@@ -630,8 +630,10 @@
       },
       "userId": "1",
       "attendantCoins": 0,
-      "amountDay": 1
+      "amountDay": 0
     }
   ],
-  "winCoins": []
+  "winCoins": [
+    
+  ]
 }

@@ -1,5 +1,3 @@
-import { getUserById } from "../services/getUser";
-// import { updateClansPoints } from "../services/helpers";
 import { saveExtraCoins } from "../services/saveExtraCoins";
 
 export const setCoinsByUser = async (coins) => {
@@ -16,7 +14,6 @@ export const setCoinsByUser = async (coins) => {
     date:date
   };
   await saveExtraCoins(data);
-  // await updateClansPoints(coder[0].clanId);
   setTimeout(() => {
     location.reload()
   }, 2000);
