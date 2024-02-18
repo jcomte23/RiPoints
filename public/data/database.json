@@ -3,7 +3,7 @@
     {
       "id": "meta",
       "name": "meta",
-      "points": 4
+      "points": 9
     },
     {
       "id": "dell",
@@ -13,12 +13,12 @@
     {
       "id": "linus",
       "name": "linus",
-      "points": 4
+      "points": 9
     },
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 14
+      "points": 17
     },
     {
       "id": "van_rossum",
@@ -136,7 +136,7 @@
       "name": "Juan Camilo",
       "lastName": "Torres García",
       "clanId": "meta",
-      "amount": 4
+      "amount": 9
     },
     {
       "id": "3",
@@ -176,7 +176,7 @@
       "name": "Sebastian ",
       "lastName": "Flores Carmona",
       "clanId": "linus",
-      "amount": 4
+      "amount": 9
     },
     {
       "id": "7",
@@ -186,7 +186,7 @@
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 4,
+      "amount": 7,
       "photo": "jcomte23.webp"
     }
   ],
@@ -210,7 +210,7 @@
         "day": "Friday",
         "month": "February",
         "week": 6,
-        "fullDate": "2024-2-16"
+        "fullDate": "2024-02-16"
       },
       "userId": "1",
       "attendantCoins": 1,
@@ -223,7 +223,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "1",
       "attendantCoins": 1,
@@ -236,7 +236,7 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "1",
       "attendantCoins": 1,
@@ -249,7 +249,7 @@
         "day": "Wednesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-21"
+        "fullDate": "2024-02-21"
       },
       "userId": "1",
       "attendantCoins": 1,
@@ -262,7 +262,7 @@
         "day": "Thursday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-22"
+        "fullDate": "2024-02-22"
       },
       "userId": "1",
       "attendantCoins": 1,
@@ -275,7 +275,7 @@
         "day": "Friday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-23"
+        "fullDate": "2024-02-23"
       },
       "userId": "1",
       "attendantCoins": 1,
@@ -288,11 +288,11 @@
         "day": "Friday",
         "month": "February",
         "week": 6,
-        "fullDate": "2024-2-16"
+        "fullDate": "2024-02-16"
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 5
     },
     {
       "id": "10",
@@ -301,7 +301,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "2",
       "attendantCoins": 1,
@@ -314,7 +314,7 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "2",
       "attendantCoins": 1,
@@ -327,7 +327,7 @@
         "day": "Wednesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-21"
+        "fullDate": "2024-02-21"
       },
       "userId": "2",
       "attendantCoins": 1,
@@ -340,7 +340,7 @@
         "day": "Thursday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-22"
+        "fullDate": "2024-02-22"
       },
       "userId": "2",
       "attendantCoins": 1,
@@ -353,7 +353,7 @@
         "day": "Friday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-23"
+        "fullDate": "2024-02-23"
       },
       "userId": "2",
       "attendantCoins": 1,
@@ -366,7 +366,7 @@
         "day": "Friday",
         "month": "February",
         "week": 6,
-        "fullDate": "2024-2-16"
+        "fullDate": "2024-02-16"
       },
       "userId": "3",
       "attendantCoins": 1,
@@ -379,7 +379,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "3",
       "attendantCoins": 1,
@@ -392,7 +392,7 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "3",
       "attendantCoins": 1,
@@ -405,7 +405,7 @@
         "day": "Wednesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-21"
+        "fullDate": "2024-02-21"
       },
       "userId": "3",
       "attendantCoins": 1,
@@ -418,7 +418,7 @@
         "day": "Thursday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-22"
+        "fullDate": "2024-02-22"
       },
       "userId": "3",
       "attendantCoins": 1,
@@ -431,7 +431,7 @@
         "day": "Friday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-23"
+        "fullDate": "2024-02-23"
       },
       "userId": "3",
       "attendantCoins": 1,
@@ -444,7 +444,7 @@
         "day": "Friday",
         "month": "February",
         "week": 6,
-        "fullDate": "2024-2-16"
+        "fullDate": "2024-02-16"
       },
       "userId": "4",
       "attendantCoins": 1,
@@ -457,7 +457,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "4",
       "attendantCoins": 1,
@@ -470,7 +470,7 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "4",
       "attendantCoins": 1,
@@ -483,7 +483,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "5",
       "attendantCoins": 1,
@@ -496,7 +496,7 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "5",
       "attendantCoins": 1,
@@ -509,11 +509,11 @@
         "day": "Friday",
         "month": "February",
         "week": 6,
-        "fullDate": "2024-2-16"
+        "fullDate": "2024-02-16"
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 5
     },
     {
       "id": "28",
@@ -522,7 +522,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "6",
       "attendantCoins": 1,
@@ -535,7 +535,7 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "6",
       "attendantCoins": 1,
@@ -548,11 +548,11 @@
         "day": "Friday",
         "month": "February",
         "week": 6,
-        "fullDate": "2024-2-16"
+        "fullDate": "2024-02-16"
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 4
     },
     {
       "id": "31",
@@ -561,7 +561,7 @@
         "day": "Monday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-19"
+        "fullDate": "2024-02-19"
       },
       "userId": "7",
       "attendantCoins": 1,
@@ -574,12 +574,23 @@
         "day": "Tuesday",
         "month": "February",
         "week": 7,
-        "fullDate": "2024-2-20"
+        "fullDate": "2024-02-20"
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 2
+      "amountDay": 1
     }
   ],
-  "winCoins": []
+  "winCoins": [
+    {
+      "id": "fe89",
+      "scoreCoinId": "27",
+      "userId": "6",
+      "clanId": "linus",
+      "comment": "",
+      "pointsaAllocator": "trainer example",
+      "coins": 5,
+      "date": "2024-02-16"
+    }
+  ]
 }

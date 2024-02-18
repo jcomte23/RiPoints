@@ -16,6 +16,7 @@ import { updateDailycoins } from "../services/updateDailyCoins";
 export const calculateDailyCoins = async (user, date) => {
   const winCoins = await contWinCoins(user[0].id, date);
   const scoreScoinId = await getScoreCoinsByDateAndUserId(date, user[0].id);
+  console.log(scoreScoinId);
   //! De momento es cero, pero ahi va el valor ganado por asistencia
   const extraCoins = amountCoins(winCoins, 0);
 
@@ -34,7 +35,6 @@ const contWinCoins = async (userId, date) => {
   extraCoins.forEach((item) => {
     totalCoins += item.coins;
   });
-
   return totalCoins;
 };
 //Esta funcion sirve para cuando el trainer asigne puntos, por eso el undefined
@@ -95,8 +95,8 @@ export const calculateWeek = (dateString) => {
 export const getCurrentDate = () => {
   const date = new Date();
   const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
+  const month = ("0" + (date.getMonth() + 1)).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
   return year + "-" + month + "-" + day;
 };
 
@@ -120,10 +120,10 @@ export const getCoinByWeek = async () => {
 //? Esta funcion es la que debe trar todos los scoreCoins y comparar cada id, para luego modificarlo (Hacerle un pacth)
 export const calculateAmountCoinsByUser = async (userId) => {
   const month = calculateDate().month;
-  const monthlyScoreCoin = await getScoreCoinsByUserIdAndMonth(userId,month);
+  const monthlyScoreCoin = await getScoreCoinsByUserIdAndMonth(userId, month);
   const coins = amountCoinsCoder(monthlyScoreCoin);
   console.log(coins);
-  await updateCoinsCoder(userId,coins);
+  await updateCoinsCoder(userId, coins);
 };
 
 const amountCoinsCoder = (monthlyScoreCoin) => {
@@ -138,8 +138,8 @@ const amountCoinsCoder = (monthlyScoreCoin) => {
 export const calculateAmountCoinsByClan = async (clanId) => {
   const codersByClan = await getCodersByIdClan(clanId);
   const amountClan = amounCoinsClan(codersByClan);
-  await updateCoinsClan(clanId,amountClan);
-}
+  await updateCoinsClan(clanId, amountClan);
+};
 
 const amounCoinsClan = (coderCoins) => {
   let totalCoins = 0;
@@ -149,4 +149,4 @@ const amounCoinsClan = (coderCoins) => {
   });
   console.log(totalCoins);
   return totalCoins;
-}
+};

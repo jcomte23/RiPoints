@@ -9,8 +9,7 @@ import { getUserById } from "./getUser";
 //scoreCoinId, mirar si es necesario, creo que ya con el id y la fecha basta
 export const saveExtraCoins = async (data) => {
   const user = await getUserById(data.coderId);
-  const scoreCoin = await getScoreCoinsByDateAndUserId(getCurrentDate(),data.coderId);
-  console.log(scoreCoin);
+  const scoreCoin = await getScoreCoinsByDateAndUserId(data.date,data.coderId);
   await fetch(`${import.meta.env.VITE_BASE_URL}/winCoins`, {
     method: "POST",
 
@@ -22,8 +21,8 @@ export const saveExtraCoins = async (data) => {
       comment: data.comment,
       pointsaAllocator: data.user.name,
       coins: data.coins,
-      date: getCurrentDate(),
+      date: data.date
     }),
   });
-  calculateDailyCoins(user, getCurrentDate());
+  calculateDailyCoins(user, data.date);
 };
