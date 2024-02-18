@@ -2,7 +2,7 @@ import {
   getScoreCoinsByDateAndUserId,
   getScoreCoinsByUserIdAndMonth,
 } from "../services/getScoreCoins";
-import { getCodersByIdClan } from "../services/getUser";
+import { getCodersByIdClan, getUserById } from "../services/getUser";
 import {
   getAllWinCoinsByUserIdAndDate,
   getWeekCoins,
@@ -15,12 +15,12 @@ import { updateDailycoins } from "../services/updateDailyCoins";
 //user: esto provine del excel, el cual debe contener el id del usuario y la cantida de puntos
 export const calculateDailyCoins = async (user, date) => {
   const winCoins = await contWinCoins(user[0].id, date);
-  const scoreScoinId = await getScoreCoinsByDateAndUserId(date, user[0].id);
-  console.log(scoreScoinId);
+  const scoreScoin = await getScoreCoinsByDateAndUserId(date, user[0].id);
+  console.log(scoreScoin[0]);
   //! De momento es cero, pero ahi va el valor ganado por asistencia
-  const extraCoins = amountCoins(winCoins, 0);
+  const extraCoins = amountCoins(winCoins, scoreScoin[0].attendantCoins);
 
-  await updateDailycoins(extraCoins, scoreScoinId[0].id);
+  await updateDailycoins(extraCoins, scoreScoin[0].id);
   await calculateAmountCoinsByUser(user[0].id);
   await calculateAmountCoinsByClan(user[0].clanId);
 };
@@ -31,6 +31,7 @@ const amountCoins = (winCoin, attendantCoin) => {
 
 const contWinCoins = async (userId, date) => {
   const extraCoins = await getAllWinCoinsByUserIdAndDate(userId, date);
+  console.log(extraCoins);
   let totalCoins = 0;
   extraCoins.forEach((item) => {
     totalCoins += item.coins;
@@ -126,7 +127,6 @@ export const calculateAmountCoinsByUser = async (userId) => {
   const month = calculateDate().month;
   const monthlyScoreCoin = await getScoreCoinsByUserIdAndMonth(userId, month);
   const coins = amountCoinsCoder(monthlyScoreCoin);
-  console.log(coins);
   await updateCoinsCoder(userId, coins);
 };
 
