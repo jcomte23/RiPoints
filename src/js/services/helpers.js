@@ -50,7 +50,7 @@ export async function updateClansPoints(clan) {
 }
 
 async function changePointsClan(newPoints, clan) {
-    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/clans/${clan}`, {
+    await fetch(`${import.meta.env.VITE_BASE_URL}/clans/${clan}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"

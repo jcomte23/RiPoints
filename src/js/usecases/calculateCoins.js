@@ -22,6 +22,7 @@ export const calculateDailyCoins = async (user, date) => {
   await updateDailycoins(extraCoins, scoreScoinId[0].id);
   await calculateAmountCoinsByUser(user[0].id);
   await calculateAmountCoinsByClan(user[0].clanId);
+  alert("aaa")
 };
 
 const amountCoins = (winCoin, attendantCoin) => {
@@ -95,8 +96,8 @@ export const calculateWeek = (dateString) => {
 export const getCurrentDate = () => {
   const date = new Date();
   const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
+  const month = ("0" + (date.getMonth() + 1)).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
   return year + "-" + month + "-" + day;
 };
 
@@ -120,10 +121,10 @@ export const getCoinByWeek = async () => {
 //? Esta funcion es la que debe trar todos los scoreCoins y comparar cada id, para luego modificarlo (Hacerle un pacth)
 export const calculateAmountCoinsByUser = async (userId) => {
   const month = calculateDate().month;
-  const monthlyScoreCoin = await getScoreCoinsByUserIdAndMonth(userId,month);
+  const monthlyScoreCoin = await getScoreCoinsByUserIdAndMonth(userId, month);
   const coins = amountCoinsCoder(monthlyScoreCoin);
   console.log(coins);
-  await updateCoinsCoder(userId,coins);
+  await updateCoinsCoder(userId, coins);
 };
 
 const amountCoinsCoder = (monthlyScoreCoin) => {
@@ -138,8 +139,8 @@ const amountCoinsCoder = (monthlyScoreCoin) => {
 export const calculateAmountCoinsByClan = async (clanId) => {
   const codersByClan = await getCodersByIdClan(clanId);
   const amountClan = amounCoinsClan(codersByClan);
-  await updateCoinsClan(clanId,amountClan);
-}
+  await updateCoinsClan(clanId, amountClan);
+};
 
 const amounCoinsClan = (coderCoins) => {
   let totalCoins = 0;
@@ -149,4 +150,4 @@ const amounCoinsClan = (coderCoins) => {
   });
   console.log(totalCoins);
   return totalCoins;
-}
+};

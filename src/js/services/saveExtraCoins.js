@@ -10,7 +10,7 @@ import { getUserById } from "./getUser";
 export const saveExtraCoins = async (data) => {
   const user = await getUserById(data.coderId);
   const scoreCoin = await getScoreCoinsByDateAndUserId(getCurrentDate(),data.coderId);
-  console.log(scoreCoin);
+  
   await fetch(`${import.meta.env.VITE_BASE_URL}/winCoins`, {
     method: "POST",
 
@@ -22,8 +22,8 @@ export const saveExtraCoins = async (data) => {
       comment: data.comment,
       pointsaAllocator: data.user.name,
       coins: data.coins,
-      date: getCurrentDate(),
+      date: data.date
     }),
   });
-  calculateDailyCoins(user, getCurrentDate());
+  calculateDailyCoins(user, data.date);
 };
