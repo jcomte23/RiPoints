@@ -8,7 +8,7 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": -10
+      "points": -6
     },
     {
       "id": "linus",
@@ -23,7 +23,7 @@
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 10
+      "points": 8
     }
   ],
   "rols": [
@@ -126,7 +126,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 10
+      "amount": 8
     },
     {
       "id": "2",
@@ -166,7 +166,7 @@
       "name": "juan camilo",
       "lastName": "martinez narvaez",
       "clanId": "dell",
-      "amount": 0
+      "amount": 4
     },
     {
       "id": "6",
@@ -487,7 +487,7 @@
       },
       "userId": "5",
       "attendantCoins": 1,
-      "amountDay": -2
+      "amountDay": 1
     },
     {
       "id": "26",
@@ -579,68 +579,35 @@
       "userId": "7",
       "attendantCoins": 1,
       "amountDay": 1
+    },
+    {
+      "id": "bbf0",
+      "clanId": "dell",
+      "date": {
+        "day": "Sunday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-02-18"
+      },
+      "userId": "5",
+      "attendantCoins": 0,
+      "amountDay": 1
+    },
+    {
+      "id": "2be9",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Sunday",
+        "month": "February",
+        "week": 8,
+        "fullDate": "2024-02-27"
+      },
+      "userId": "1",
+      "attendantCoins": 0,
+      "amountDay": -2
     }
   ],
   "winCoins": [
-    {
-      "id": "fe89",
-      "scoreCoinId": "27",
-      "userId": "6",
-      "clanId": "linus",
-      "comment": "",
-      "pointsaAllocator": "trainer example",
-      "coins": 5,
-      "date": "2024-02-16"
-    },
-    {
-      "id": "6572",
-      "scoreCoinId": "21",
-      "userId": "4",
-      "clanId": "dell",
-      "comment": "",
-      "pointsaAllocator": "mauricio vélez espinosa",
-      "coins": 3,
-      "date": ""
-    },
-    {
-      "id": "8eae",
-      "scoreCoinId": "21",
-      "userId": "4",
-      "clanId": "dell",
-      "comment": "",
-      "pointsaAllocator": "mauricio vélez espinosa",
-      "coins": -5,
-      "date": ""
-    },
-    {
-      "id": "37a4",
-      "scoreCoinId": "21",
-      "userId": "4",
-      "clanId": "dell",
-      "comment": "",
-      "pointsaAllocator": "mauricio vélez espinosa",
-      "coins": 5,
-      "date": ""
-    },
-    {
-      "id": "7232",
-      "scoreCoinId": "21",
-      "userId": "4",
-      "clanId": "dell",
-      "comment": "",
-      "pointsaAllocator": "mauricio vélez espinosa",
-      "coins": -5,
-      "date": ""
-    },
-    {
-      "id": "907a",
-      "scoreCoinId": "21",
-      "userId": "4",
-      "clanId": "dell",
-      "comment": "",
-      "pointsaAllocator": "mauricio vélez espinosa",
-      "coins": -5,
-      "date": ""
-    }
+
   ]
 }
