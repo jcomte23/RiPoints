@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded',()=>{
   let upto = 0;
-  let limit = JSON.parse(localStorage.getItem("userStorage"))
+  let limit = JSON.parse(localStorage.getItem("userStorage"));
   let counts = setInterval(updated,50);
   function updated() {
     let count = document.getElementById("counter");
     count.textContent = upto;
-    if (upto == limit.amount) {
+    if (upto === limit.amount) {
       clearInterval(counts);
     } else {
-      upto++; // Incrementa el valor de 'upto' en cada iteración
+      (limit.amount < 0) ? upto-- : upto++;// Incrementa el valor de 'upto' en cada iteración
     }
   }
 })
