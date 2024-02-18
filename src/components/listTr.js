@@ -7,7 +7,7 @@ const session = JSON.parse(localStorage.getItem("userStorage"));
 
 export async function loadCodersTr(element) {
   let list = await getDataFromDifferentEndpoints('users?rolId=3&_sort=-amount&_embed=clan&_embed=scoreCoins&_embed=winCoins');
-  console.log(list);
+
   list.forEach((coder) => {
     let add = calcWinCoins(coder.winCoins);
     element.innerHTML += `

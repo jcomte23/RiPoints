@@ -3,7 +3,7 @@
     {
       "id": "meta",
       "name": "meta",
-      "points": 4
+      "points": 9
     },
     {
       "id": "dell",
@@ -13,12 +13,12 @@
     {
       "id": "linus",
       "name": "linus",
-      "points": 4
+      "points": 9
     },
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 21
+      "points": 17
     },
     {
       "id": "van_rossum",
@@ -136,7 +136,7 @@
       "name": "Juan Camilo",
       "lastName": "Torres García",
       "clanId": "meta",
-      "amount": 4
+      "amount": 9
     },
     {
       "id": "3",
@@ -176,7 +176,7 @@
       "name": "Sebastian ",
       "lastName": "Flores Carmona",
       "clanId": "linus",
-      "amount": 4
+      "amount": 9
     },
     {
       "id": "7",
@@ -186,7 +186,7 @@
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 11,
+      "amount": 7,
       "photo": "jcomte23.webp"
     }
   ],
@@ -292,7 +292,7 @@
       },
       "userId": "2",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 5
     },
     {
       "id": "10",
@@ -513,7 +513,7 @@
       },
       "userId": "6",
       "attendantCoins": 1,
-      "amountDay": 0
+      "amountDay": 5
     },
     {
       "id": "28",
@@ -578,10 +578,19 @@
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 5
+      "amountDay": 1
     }
   ],
   "winCoins": [
-    
+    {
+      "id": "fe89",
+      "scoreCoinId": "27",
+      "userId": "6",
+      "clanId": "linus",
+      "comment": "",
+      "pointsaAllocator": "trainer example",
+      "coins": 5,
+      "date": "2024-02-16"
+    }
   ]
 }

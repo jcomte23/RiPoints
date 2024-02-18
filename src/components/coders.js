@@ -19,7 +19,6 @@ export async function showCoders(element) {
     trainerClans = await getTrainerClans(session.id);
   }
 
-  console.log(trainerClans);
 
   element.innerHTML = `
   ${session.rol.name == "trainer"
