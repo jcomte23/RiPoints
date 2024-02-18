@@ -1,11 +1,13 @@
 import {
-  getScoreCoinsByDate,
   getScoreCoinsByDateAndUserId,
+  getScoreCoinsByUserIdAndMonth,
 } from "../services/getScoreCoins";
+import { getCodersByIdClan } from "../services/getUser";
 import {
   getAllWinCoinsByUserIdAndDate,
   getWeekCoins,
 } from "../services/getWinCoins";
+import { updateCoinsClan } from "../services/updateCoinsClan";
 import { updateCoinsCoder } from "../services/updateCoinsCoder";
 import { updateDailycoins } from "../services/updateDailyCoins";
 
@@ -16,8 +18,10 @@ export const calculateDailyCoins = async (user, date) => {
   const scoreScoinId = await getScoreCoinsByDateAndUserId(date, user[0].id);
   //! De momento es cero, pero ahi va el valor ganado por asistencia
   const extraCoins = amountCoins(winCoins, 0);
+
   await updateDailycoins(extraCoins, scoreScoinId[0].id);
   await calculateAmountCoinsByUser(user[0].id);
+  await calculateAmountCoinsByClan(user[0].clanId);
 };
 
 const amountCoins = (winCoin, attendantCoin) => {
@@ -100,7 +104,8 @@ export const getCoinByWeek = async () => {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   const user = JSON.parse(localStorage.getItem("userStorage"));
   const date = calculateDate();
-  const weekCoins = await getWeekCoins(user.id, date.week);
+  const weekCoins = await getWeekCoins(user.id, 7);
+  console.log(date.week);
   const accountWeekCoins = [0, 0, 0, 0, 0];
 
   for (const weekCoin of weekCoins) {
@@ -115,10 +120,10 @@ export const getCoinByWeek = async () => {
 //? Esta funcion es la que debe trar todos los scoreCoins y comparar cada id, para luego modificarlo (Hacerle un pacth)
 export const calculateAmountCoinsByUser = async (userId) => {
   const month = calculateDate().month;
-  const monthlyScoreCoin = await getScoreCoinsByDate(month);
-  console.log(monthlyScoreCoin);
+  const monthlyScoreCoin = await getScoreCoinsByUserIdAndMonth(userId,month);
   const coins = amountCoinsCoder(monthlyScoreCoin);
-  updateCoinsCoder(userId,coins);
+  console.log(coins);
+  await updateCoinsCoder(userId,coins);
 };
 
 const amountCoinsCoder = (monthlyScoreCoin) => {
@@ -129,3 +134,19 @@ const amountCoinsCoder = (monthlyScoreCoin) => {
   console.log(totalCoins);
   return totalCoins;
 };
+
+export const calculateAmountCoinsByClan = async (clanId) => {
+  const codersByClan = await getCodersByIdClan(clanId);
+  const amountClan = amounCoinsClan(codersByClan);
+  await updateCoinsClan(clanId,amountClan);
+}
+
+const amounCoinsClan = (coderCoins) => {
+  let totalCoins = 0;
+  console.log(coderCoins);
+  coderCoins.forEach((coinsDay) => {
+    totalCoins += coinsDay.amount;
+  });
+  console.log(totalCoins);
+  return totalCoins;
+}

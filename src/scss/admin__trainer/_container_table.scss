@@ -7,7 +7,6 @@
 }
 
 .container__table {
-    border: 1px solid red;
     background-color: v.$seasalt;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -138,7 +137,7 @@
 
     /* height: calc(11vh + 0vw); */
     background-color: white;
-    background-image: url(/public/img/img_globales/clanShield.webp);
+    background-image: url(/img/img_globales/clanShield.webp);
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center;

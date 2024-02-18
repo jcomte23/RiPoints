@@ -3,8 +3,8 @@ import { updateContent } from "../js/translator";
 import { getFinalStructure } from "../js/pointAssignment";
 import { createScoreCoins, addCoder } from "../js/services/pushData";
 import { calculateDate } from "../js/usecases/calculateCoins";
-import { smallAlertError } from "../js/alerts";
 import { formatString } from "../js/services/helpers";
+import { smallAlertError,smallAlertSuccess } from "../js/validations/alerts";
 
 export let year = null;
 export let month = null;
@@ -174,6 +174,8 @@ export const showFileAttachment = (element) => {
             "Los dias no concuerdan, no se realizara ninguna operacion"
           );
           return;
+        }else{
+          smallAlertSuccess('Data loaded correctly')
         }
 
         let usersAndCoins = getFinalStructure(daysPerClass);

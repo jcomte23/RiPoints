@@ -18,7 +18,8 @@ export const formatString = (str) => {
 
 // to update clan points
 export async function updateClanPoints(){
-    const clans = await get('clans')
+    const clans = await getDataFromDifferentEndpoints('clans')
+    console.log(clans);
     return 0
     // Sorting the ranking by points in descending order !!! IT'S BETTER TO SORT BY THE REQUEST, HOW?: this way: 'clans?_sort=-points'
     // const sortedClans = Object.values(clans).sort((a, b) => b.points - a.points);
@@ -36,3 +37,25 @@ export function setImageMultiple(selector,imageList,imagesExist = false){
         })
     }
 }
+
+// to update clan points
+export async function updateClansPoints(clan) {
+    const coders = await getDataFromDifferentEndpoints(`users?clanId=${clan}`)
+    let acumulado = 0
+    coders.forEach(element => {
+        acumulado = (acumulado + element.amount)
+    })
+    changePointsClan(acumulado, clan)
+
+}
+
+async function changePointsClan(newPoints, clan) {
+    const response = await fetch(`${import.meta.env.VITE_BASE_URL}/clans/${clan}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ points: newPoints })
+    })
+}
+

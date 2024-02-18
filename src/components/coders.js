@@ -1,62 +1,83 @@
 import { filter } from "../js/coder/coders";
-import { updateContent } from "../js/translator";
+import { getTrainerClans } from "../js/services/getTrainerClans";
 import { loadCodersTr } from "./listTr";
-import '../scss/coders.scss'
+import { updateContent } from "../js/translator";
 
 const session = JSON.parse(localStorage.getItem("userStorage"));
 
-export function showCoders(element) {
+let trainerClans = [];
+
+document.addEventListener("DOMContentLoaded", async () => { });
+
+export async function showCoders(element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
-  element.innerHTML = `
 
-  ${
-    session.rol.name == 'trainer' 
-    ?`
-      <div class="ownClanCoins" >
-        <div class="ownClanCoins__i shadow-lg" >
-          <h1 class="ownClanCoins__title" >Clanes Asignados</h1>
-          <div class="ownClanCoins__container" > 
-            <div class="owner__clan" >
-              <div class="imgClan" ></div>
-              <span>Meta</span>
+  // cargar los clanes asignados al trainer
+  if (session.rol.name == "trainer") {
+    trainerClans = await getTrainerClans(session.id);
+  }
+
+  console.log(trainerClans);
+
+  element.innerHTML = `
+  ${session.rol.name == "trainer"
+      ? `
+      <div class="ownClanCoins d-flex ${trainerClans !== undefined ? `justify-content-betwen` : `justify-content-center`} " >
+
+        <div class="ownClanCoins__card shadow-lg ${trainerClans !== undefined ? `` : `d-none`}" >
+          <h1 class="ownClanCoins__card-title" data-i18n="assigned_clans"></h1>
+          
+          <div class="ownClanCoins__card-body" > 
+
+            <div class="ownClanCoins__card-body-figure" >
+              <figure class="fancyLetter">${trainerClans !== undefined ? trainerClans[0].at(0) : ""}</figure>
+              <span>${trainerClans && trainerClans[0]}</span>
             </div>
-            <div class="owner__clan" >
-              <div class="imgClan" ></div>
-              <span>Van Ross</span>
+
+            <div class="ownClanCoins__card-body-figure" >
+            <figure class="fancyLetter">${trainerClans !== undefined ? trainerClans[1].at(0):""}</figure>
+              <span>${trainerClans && trainerClans[1]}</span>
             </div>
           </div>
         </div>
-        <div class="ownClanCoins__i shadow-lg" >
-        <h1 class="ownClanCoins__title" >Coins</h1>
-        <div class="ownClanCoins__container" > 
-        <div class="owner__poinst" >
-          <span>Asignados</span>
-          <div class="assignedPoints" >40</div>
-        </div>
-        <div class="owner__poinst" >
-          <span>Restantes</span>
-          <div class="assignedPoints" >10</div>
-        </div>
-      </div>
-        <h1 class="ownClanCoins__title" >Coins totales: 50</h1>
-        </div>
-      </div>
-    `:''
 
-  }
+
+        <div class="ownClanCoins__card shadow-lg" >
+          <h1 class="ownClanCoins__card-title" >Coins</h1>
+        
+        <div class="ownClanCoins__card-body border-extra" > 
+          <div class="ownClanCoins__card-body-coins" >
+            <h3 data-i18n="assigned" >Asignados</h3>
+            <span>40</span>
+          </div>
+
+          <div class="ownClanCoins__card-body-coins" >
+            <h3 data-i18n="remaining">Restantes</h3>
+            <span>10</span>
+          </div>
+        </div>
+
+        <div class="ownClanCoins__card-total">
+          <span data-i18n="total_coins">Coins totales:</span>
+          <span>50</span>
+        </div>
+          
+        </div>
+      </div>
+    `
+      : ""
+    }
     <div class="listCoders shadow-lg">
       <div class="listCoders__header" >
         <h2 data-i18n="developers" ></h2>
         <div class="search" >
           <input class="my-2" type="text" name="" id="searchKeywords" i18n-placeholder="developers" />
-          <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-          </svg>
+          <i class="bi bi-search search__icon fs-5 "></i>
         </div>
       </div>
-       
+
       <table id="myTable" class="listCoders__table">
         <thead>
           <tr>
@@ -69,8 +90,8 @@ export function showCoders(element) {
         </thead>
         <tbody id="codersList" >
         </tbody>
-        </table>
-    </div> 
+      </table>
+    </div>
     `;
 
   loadCodersTr(document.getElementById("codersList")).then(() => {

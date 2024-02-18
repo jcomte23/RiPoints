@@ -1,6 +1,6 @@
 import Chart from "chart.js/auto";
-import { toCapitalize } from "../js/services/helpers";
-import { getLanguague } from "./../js/translator";
+import { toCapitalize } from "../../js/services/helpers";
+import { getLanguague } from "../../js/translator";
 
 function readLanguageFile() {
     return fetch(`/locales/${getLanguague()}/translation.json`);

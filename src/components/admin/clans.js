@@ -1,6 +1,6 @@
-import { updateContent } from "../js/translator";
+import { updateContent } from "../../js/translator";
 import { getRankingClans } from "./ranking"
-import '../scss/admin__trainer/_clans_table.scss'
+import '../../scss/admin__trainer/_clans_table.scss'
 
 export const showClans = async (element) => {
     element.innerHTML = `
@@ -13,7 +13,7 @@ export const showClans = async (element) => {
                     <tr>
                         <td><div data-i18n="position"></div></td>
                         <td><div data-i18n="clan"></div></td>
-                        <td <div data-i18n="points"></div></td>
+                        <td><div data-i18n="points"></div></td>
                     </tr>
                 </tbody>
             </table>

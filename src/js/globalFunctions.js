@@ -14,6 +14,6 @@ function onEdit(event, coderId) {
   values.forEach(
     (val) => (document.getElementById(val[0]).textContent = val[1])
   );
-
-  localStorage.setItem("coderEdit", coderId);
+  console.log(coderId);
+    localStorage.setItem("coderEdit", coderId);
 }

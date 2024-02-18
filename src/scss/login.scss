@@ -1,4 +1,5 @@
 @use "variables" as v;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 .login__body {
     font-family: "Ubuntu", sans-serif !important;
@@ -79,7 +80,7 @@ main{
 // xl
 @media screen and (min-width: 1200px) and (max-width: 1400px){   
     main{
-        height: 89vh !important;
+        height: 88vh !important;
         margin-bottom: 0 !important;
     }
 
@@ -97,7 +98,7 @@ main{
 // xxl
 @media screen and (min-width: 1400px){
     main{
-        height: 93vh !important;
+        height: 90vh !important;
         margin-bottom: 0 !important;
     }
 
