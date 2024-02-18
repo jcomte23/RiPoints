@@ -39,7 +39,10 @@ const contWinCoins = async (userId, date) => {
 };
 //Esta funcion sirve para cuando el trainer asigne puntos, por eso el undefined
 export const calculateDate = (fullDate = undefined) => {
-  const date = new Date();
+  let date;
+  if (fullDate) date = new Date(fullDate);
+  else date = new Date();
+  console.log(date);
   const months = [
     "January",
     "February",
@@ -64,7 +67,8 @@ export const calculateDate = (fullDate = undefined) => {
     "Saturday",
   ];
 
-  const day = days[date.getDay()];
+  const day = days[fullDate ? date.getDay() + 1 : date.getDay()];
+  console.log(day, date.getDay());
   const month = months[date.getMonth()];
   const year = getCurrentDate();
 

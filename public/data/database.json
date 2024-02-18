@@ -8,7 +8,7 @@
     {
       "id": "dell",
       "name": "dell",
-      "points": -6
+      "points": -5
     },
     {
       "id": "linus",
@@ -23,7 +23,7 @@
     {
       "id": "van_rossum",
       "name": "van rossum",
-      "points": 8
+      "points": 9
     }
   ],
   "rols": [
@@ -126,7 +126,7 @@
       "name": "Gabriel",
       "lastName": "García Márquez",
       "clanId": "van_rossum",
-      "amount": 8
+      "amount": 9
     },
     {
       "id": "2",
@@ -156,7 +156,7 @@
       "name": "Luis Carlos",
       "lastName": "Galán Sarmiento",
       "clanId": "dell",
-      "amount": -10
+      "amount": -9
     },
     {
       "id": "5",
@@ -605,6 +605,32 @@
       "userId": "1",
       "attendantCoins": 0,
       "amountDay": -2
+    },
+    {
+      "id": "7e5a",
+      "clanId": "meta",
+      "date": {
+        "day": "Wednesday",
+        "month": "March",
+        "week": 9,
+        "fullDate": "2024-03-07"
+      },
+      "userId": "2",
+      "attendantCoins": 0,
+      "amountDay": 2
+    },
+    {
+      "id": "d2aa",
+      "clanId": "van_rossum",
+      "date": {
+        "day": "Wednesday",
+        "month": "February",
+        "week": 8,
+        "fullDate": "2024-02-28"
+      },
+      "userId": "1",
+      "attendantCoins": 0,
+      "amountDay": 1
     }
   ],
   "winCoins": []
