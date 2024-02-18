@@ -107,7 +107,7 @@ sideNavSelector.addEventListener("click", (event) => {
   }
 })
 
-session.rol.name === "trainer" ? showCoders(showView) : showCoders(showView);
+session.rol.name === "trainer" ? showDashboard(showView) : showDashboard(showView);
 
 // FUNCION PARA CAMBIAR DE IDIOMA
 const btnLang = document.getElementById("btn-lang")
