@@ -18,7 +18,7 @@
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 17
+      "points": 14
     },
     {
       "id": "van_rossum",
@@ -186,7 +186,7 @@
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 3,
+      "amount": 4,
       "photo": "jcomte23.webp"
     }
   ],
@@ -605,7 +605,31 @@
       "userId": "1",
       "attendantCoins": 0,
       "amountDay": -2
+    },
+    {
+      "id": "f4d1",
+      "clanId": "lovelace",
+      "date": {
+        "day": "Sunday",
+        "month": "February",
+        "week": 7,
+        "fullDate": "2024-02-21"
+      },
+      "userId": "7",
+      "attendantCoins": 0,
+      "amountDay": 1
     }
   ],
-  "winCoins": []
+  "winCoins": [
+    {
+      "id": "9e2c",
+      "scoreCoinId": "f4d1",
+      "userId": "7",
+      "clanId": "lovelace",
+      "comment": "me porte bien",
+      "pointsaAllocator": "mauricio vélez espinosa",
+      "coins": 1,
+      "date": "2024-02-21"
+    }
+  ]
 }
