@@ -18,7 +18,7 @@
     {
       "id": "lovelace",
       "name": "lovelace",
-      "points": 17
+      "points": 14
     },
     {
       "id": "van_rossum",
@@ -186,7 +186,7 @@
       "name": "Javier",
       "lastName": "Cómbita Téllez",
       "clanId": "lovelace",
-      "amount": 7,
+      "amount": 3,
       "photo": "jcomte23.webp"
     }
   ],
@@ -552,7 +552,7 @@
       },
       "userId": "7",
       "attendantCoins": 1,
-      "amountDay": 4
+      "amountDay": 0
     },
     {
       "id": "31",
