@@ -2,26 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Web software for the development of academic gamification of the Riwi training center" />
-    <meta name="keywords"
-        content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH">
-    <meta name="sitedomain" content="https://ripoints.io/src/pages/coder/index.html" />
-    <meta name="organization" content="riwi" />
-    <meta name="author"
-        content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
-    <meta name="designer"
-        content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
-    <meta name="robots" content="index,follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta name="revisit-after" content="15days" />
-    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
-    <title>Coder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Web software for the development of academic gamification of the Riwi training center" />
+  <meta name="keywords"
+    content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH">
+  <meta name="sitedomain" content="https://ripoints.io/src/pages/coder/index.html" />
+  <meta name="organization" content="riwi" />
+  <meta name="author"
+    content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
+  <meta name="designer"
+    content="Javier Cómbita Téllez, Mateo Alvarez Yepes, Sebastian Moreno Echeverri, Cristian Javier Martínez Torres, Hector Alejandro Montaña, Jhoan Esteban Perez Herrera" />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
+  <meta name="revisit-after" content="15days" />
+  <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+  <script src="../../js/hooks/bootstrapSession.js"></script>
+  <title>Coder</title>
 </head>
 
-<body>
-    
+<body class="coder__body" id="coderView">
+  <div class="btn-group dropdown position-absolute top-0 z-3 end-0 my-2 mx-3">
+    <button type="button" class="btn btn-secondary dropdown-toggle text-capitalize" data-bs-toggle="dropdown"
+      aria-expanded="true" data-i18n="settings">
+    </button>
+    <ul class="dropdown-menu text-center">
+      <li id="btn-lang" class="changeLang dropdown-item d-flex justify-content-center align-items-center gap-2"><i
+          class="bi bi-translate fs-5"></i>
+        <span id="span_es" class="d-none" onclick="changeLanguage('es')">Español</span>
+        <span id="span_en" class="d-none" onclick="changeLanguage('en')">English</span>
+      </li>
+      <li><a class="dropdown-item text-capitalize" href="https://moodle.riwi.io" target="_blank"
+          data-i18n="gotomoodle"></a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><button type="button" data-i18n="logout" class="btn btn-secondary text-capitalize" id="btn-logout"></button>
+      </li>
+    </ul>
+  </div>
+
+  <section class="sectionCoder">
+    <div class="containerCoder">
+      <h3 data-i18n="yourscore" class="coder__header"></h3>
+      <div class="coder__profile profile__mint">
+        <div class="coder__profile__clanShiled"></div>
+      </div>
+      <h4 class="coder__name"></h4>
+    </div>
+  </section>
+  <section class="floatingBackground">
+  </section>
+
+  <script src="../../js/globalFunctions.js"></script>
+  <script type="module" src="../../js/main.js"></script>
+  <script type="module" src="../../js/coder/coder.js"></script>
+  <script type="module" src="../../js/translator.js"></script>
+  <script type="module" src="../../js/coder/coderAnimation.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,7 +7,7 @@
   <meta name="description"
     content="Web software for the development of academic gamification of the Riwi training center" />
   <meta name="keywords"
-    content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH">
+    content="training, center, coders, points, gamification, riwi, healthy competition, jcomte23, cristianbyte, MateoAlvarez-Dev, ralexale, Cvaz007 , estebanPerezH" />
   <meta name="sitedomain" content="https://ripoints.io" />
   <meta name="organization" content="riwi" />
   <meta name="author"
@@ -17,14 +17,56 @@
   <meta name="robots" content="index,follow" />
   <meta name="googlebot" content="index,follow" />
   <meta name="revisit-after" content="15days" />
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <title>RiPoints</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <title data-i18n="name_project">Code R</title>
 </head>
 
-<body>
+<body class="login__body">
+  <header class="container-fluid header"></header>
 
-  <script type="module" src="./src/js/translator.js"></script>
+  <main class="d-flex flex-column flex-sm-column px-2 flex-md-row justify-content-around align-items-center">
+    <section class="col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
+      <article class="text-center d-flex flex-column justify-content-center align-items-center">
+        <h1 id="welcome" class="text-white text-capitalize fw-bold" data-i18n="welcome_to">
+          welcome to
+        </h1>
+        <figure id="codigoR"
+          class="bg-secondary rounded-5 d-flex justify-content-center align-items-center text-white py-2 px-5 w-50">
+          <span data-i18n="code" class="text-capitalize fs-1 fw-bold">code</span>
+          <img src="/img/img_desktop/r-logo.svg" alt="img codigoR" id="logo-Riwi" class="w-50" width="122"
+            height="63" />
+        </figure>
+      </article>
+      <figure class="character d-flex justify-content-center">
+        <img src="./img/img_desktop/saly_desktop.webp" alt="logo login" class="w-75 h-auto" width="410" height="334" />
+      </figure>
+    </section>
+
+    <section id="sectionForm" class="col-sm-8 col-md-5 col-lg-4 col-xl-3 col-xxl-4"></section>
+  </main>
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5 border-top">
+    <div class="col-6 d-flex align-items-center">
+      <a href="https://riwi.io/" target="_blank" class="text-body-secondary text-decoration-none lh-1">
+        <span class="text-body-secondary">&copy; 2024 Riwi</span>
+      </a>
+    </div>
+    <div class="col-6 d-flex justify-content-end gap-3 align-items-center">
+      <a class="text-body-secondary" href="https://instagram.com/riwi.io/" target="_blank">
+        <i class="bi bi-instagram fs-5"></i>
+      </a>
+      <a class="text-body-secondary" href="https://www.linkedin.com/company/riwi-io/" target="_blank">
+        <i class="bi bi-linkedin fs-5"></i>
+      </a>
+      <a class="text-body-secondary" href="https://www.tiktok.com/@riwi.io" target="_blank">
+        <i class="bi bi-tiktok fs-5"></i>
+      </a>
+    </div>
+  </footer>
+
   <script type="module" src="./src/js/main.js"></script>
+  <script type="module" src="./src/js/translator.js"></script>
+  <script type="module" src="./src/js/auth/login.js"></script>
 </body>
 
 </html>

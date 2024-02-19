@@ -1,38 +1,63 @@
-import i18next from 'i18next';
-import Backend from 'i18next-http-backend';
+import i18next from "i18next";
+import Backend from "i18next-http-backend";
 
-let language
-
-function updateContent() {
-    const elements = document.querySelectorAll(".translate");
-    elements.forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        el.innerHTML = i18next.t(key);
-    });
+export function getLanguague() {
+  if (localStorage.getItem("lang")) {
+    return localStorage.getItem("lang");
+  } else {
+    return "en";
+  }
 }
 
+let language = getLanguague();
 
-if (localStorage.getItem("lang")) {
-    language=localStorage.getItem("lang")
-}else{
-    language="es"
+i18next
+  .use(Backend)
+  .init({
+    lng: language,
+    debug: false,
+    backend: {
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
+    },
+    ns: ["translation"],
+    defaultNS: "translation",
+  })
+  .then(() => updateContent());
+
+export function updateContent() {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    el.innerHTML = i18next.t(key);
+  });
 }
-
-i18next.use(Backend).init(
-    {
-        lng: language,
-        debug: true,
-        backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json'
-        },
-        ns: ['translation'],
-        defaultNS: 'translation',
-    }
-).then(() => updateContent());
-
-
 
 window.changeLanguage = function (lng) {
-    i18next.changeLanguage(lng, updateContent);
-    localStorage.setItem("lang",lng)
+  i18next.changeLanguage(lng, updateContent);
+  localStorage.setItem("lang", lng);
 };
+
+export function changeLanguageOnClick() {
+  const btnChangeLanguage = document.querySelector(".menu__header--lang");
+  const langFlag = document.querySelector(".lang--flag");
+  function upfateFlag() {
+    if (langFlag) {
+      if (language === "es") {
+        langFlag.classList.add("es");
+      } else {
+        langFlag.classList.remove("es");
+      }
+    }
+  }
+  upfateFlag()
+
+  if (btnChangeLanguage) {
+    btnChangeLanguage.querySelector("h4").innerText = language.toUpperCase();
+    btnChangeLanguage.addEventListener("click", () => {
+      language == "en" ? language = "es" : language = "en";
+      i18next.changeLanguage(language, updateContent);
+      localStorage.setItem("lang", language);
+      upfateFlag()
+    });
+  }
+}

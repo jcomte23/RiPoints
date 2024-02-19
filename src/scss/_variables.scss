@@ -1,0 +1,56 @@
+$primary: #6b5cff;
+$secondary: #181e4b;
+$mint: #5acca4;
+$yellow: #e6ca52;
+$tomato: #fe654f;
+$white: #ffffff;
+$gold: #ffd700;
+$silver: #c0c0c0;
+$bronze: #cd7f32;
+$antiflash: #ededed;
+$gray: #666666;
+$darkgray: #27272a;
+$mauve: #eaa2fc;
+$seasalt: #f9fafc;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "mint": $mint,
+    "yellow": $yellow,
+    "tomato": $tomato,
+);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.uno {
+    border: 1px solid red;
+}
+
+.dos {
+    border: 1px solid blue;
+}
+
+.tres {
+    border: 1px solid yellow;
+}
+
+// for correct work of translator on every page
+
+.changeLang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        height: 100%;
+        padding: .5rem;
+    }
+}
+
+.dropdown-item:last-child {
+    padding: .5rem;
+}

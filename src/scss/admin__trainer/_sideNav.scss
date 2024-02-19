@@ -1,0 +1,113 @@
+@use "../variables" as v;
+
+.side-nav {
+    height: 100dvh;
+    padding: 2dvh 1rem 2dvh;
+    width: 5rem;
+
+    .icon-menu{
+        cursor: pointer;
+        font-size: 50px;
+        margin-left: 190px;
+    }
+
+    .profile__pic {
+        height: 100% !important;
+        width: 100% !important;
+        img {
+            border-radius: inherit;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .container__links {
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: v.$secondary #f4f4f4;
+        overflow-x: hidden;
+       
+        li {
+            cursor: pointer;
+        }
+
+        li img {
+            min-width: 2rem;
+            min-height: 2rem;
+        }
+
+        li span {
+            pointer-events: none;
+            font-size: 1.1rem;
+        }
+    }
+    .bi-translate{
+        pointer-events: none;
+    }
+}
+
+//sm
+@media screen and (min-width: 576px) and (max-width: 768px){
+    
+
+    .side-nav {
+        width: 13rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+//md
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .side-nav {
+        width: 13rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+// lg
+@media screen and (min-width: 992px) and (max-width: 1200px){    
+    .side-nav {
+        width: 12rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+// xl
+@media screen and (min-width: 1200px) and (max-width: 1400px){  
+    .side-nav {
+        width: 12rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+// xxl
+@media screen and (min-width: 1400px){
+    .side-nav {
+        width: 15rem;
+
+        .profile__pic {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+
+
+

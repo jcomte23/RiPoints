@@ -1,0 +1,198 @@
+@use "variables" as v;
+
+.listCoders {
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 1rem v.$antiflash;
+    border-radius: 1rem;
+}
+
+.listCoders__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+    border-bottom: 0.15rem solid v.$mauve;
+    .search {
+        position: relative;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .search input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: v.$antiflash;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+    .search__icon {
+        position: absolute !important;
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        margin-right: 1rem !important;
+        fill: v.$mauve !important;
+        color: v.$mauve !important;
+    }
+}
+
+.listCoders__table {
+    width: 100%;
+    margin-top: 1rem;
+    thead tr {
+        color: v.$gray;
+        padding: 0.5rem 0;
+    }
+    tbody tr:not(:last-of-type) {
+        border-bottom: 0.1rem solid v.$antiflash;
+    }
+    tbody tr td {
+        color: v.$darkgray;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 0.5rem 0;
+    }
+}
+
+/* PLUS */
+
+.plus::after {
+    content: attr(data-plus);
+    color: v.$mint;
+    margin-left: 0.2rem;
+    animation: intermitated 1.2s ease infinite;
+}
+
+.less::after {
+    content: attr(data-plus);
+    color: v.$tomato;
+    margin-left: 0.3rem;
+    animation: intermitated 1.2s ease infinite;
+}
+
+// cards styles
+.ownClanCoins {
+    display: flex;
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    &__card {
+        width: 45%;
+        border-radius: 16px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        gap: 10px;
+        color: v.$secondary;
+
+        &-title {
+            text-align: center;
+            width: 80%;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 !important;
+        }
+
+        .border-extra {
+            border-bottom: 1px solid v.$mauve;
+        }
+
+        &-body {
+            display: flex;
+            gap: 25px;
+            width: 80%;
+            padding: 1rem 0;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid v.$mauve;
+
+            &-figure {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                font-size: 24px;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+
+                .fancyLetter {
+                    color: v.$primary;
+                    display: grid;
+                    place-items: center;
+                    font-size: 2rem;
+                    border: 0.2rem solid v.$primary;
+                    font-weight: bolder;
+                    transform: rotate(-15deg);
+                    height: 80px;
+                    width: 80px;
+                    text-transform: uppercase;
+                    border-radius: 100%;
+                    margin: 0;
+                }
+
+                span {
+                    text-transform: capitalize;
+                }
+            }
+
+            &-coins {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: bold;
+                padding: 0.5rem 1.5rem;
+                border-radius: 10px;
+
+                &:nth-child(1) {
+                    background-color: #fe664f4d;
+                    span {
+                        color: v.$tomato;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: #5acca449;
+                    span {
+                        color: v.$mint;
+                    }
+                }
+            }
+        }
+
+        &-total {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: v.$secondary;
+            justify-content: center;
+            gap: 10px;
+
+            & > * {
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@keyframes intermitated {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
